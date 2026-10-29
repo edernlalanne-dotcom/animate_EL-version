@@ -20,7 +20,8 @@
 //  Build: node <skill>/tools/build.mjs <this piece dir>
 // =====================================================================
 const FPS = 24, W = 1920, H = 1080;
-const DURATION = VOICE.duration;
+const LOGO_HOLD = 2.0;                            // the closing logo, held after the title card
+const DURATION = VOICE.duration + LOGO_HOLD;
 const NFRAMES = Math.round(DURATION * FPS);
 const LOOP_T = NFRAMES / FPS;
 const SAFE = { top: 60, bottom: 110, right: 60 };
@@ -34,7 +35,8 @@ const cu = {
 };
 // the scenes, cut on the voice-over
 const ERA_LIST = [
-  [0,                 cu.open - 0.1,    () => sceneHook()],
+  [0,                 cu.hook - 0.1,    () => sceneGlobe()],
+  [cu.hook - 0.1,     cu.open - 0.1,    () => sceneHook()],
   [cu.open - 0.1,     cu.ask - 0.1,     () => sceneAerial()],
   [cu.ask - 0.1,      cu.window - 0.1,  () => sceneDepth()],
   [cu.window - 0.1,   cu.cast - 0.1,    () => sceneCurrent()],
@@ -46,22 +48,25 @@ const ERA_LIST = [
   [cu.seal - 0.1,     cu.connect - 0.1, () => sceneSeal()],
   [cu.connect - 0.1,  cu.end - 0.1,     () => sceneConnect()],
   [cu.end - 0.1,      cu.title - 0.1,   () => sceneEnd()],
-  [cu.title - 0.1,    DURATION,         () => sceneTitle()],
+  [cu.title - 0.1,    VOICE.duration,   () => sceneTitle()],
+  [VOICE.duration,    DURATION,         () => sceneLogo()],
 ];
 const SHOTS = [
-  ['teaser',  0,  0,                 cu.open - 0.1,    'the train inside the tube, before any question'],
-  ['aerial',  1,  cu.open - 0.1,     cu.ask - 0.1,     'Istanbul from the air; the route of the tube'],
-  ['depth',   2,  cu.ask - 0.1,      cu.window - 0.1,  'challenge one: 60 m, beside a 20-storey tower'],
-  ['current', 3,  cu.window - 0.1,   cu.cast - 0.1,    'challenge two: the current'],
-  ['cast',    4,  cu.cast - 0.1,     cu.tow - 0.1,     'a 135 m section beside a bus and a football pitch'],
-  ['tow',     5,  cu.tow - 0.1,      cu.trench - 0.1,  'a tug takes a section to the strait'],
-  ['trench',  6,  cu.trench - 0.1,   cu.sink - 0.1,    'a trench dredged 14 m down'],
-  ['sink',    7,  cu.sink - 0.1,     cu.bed - 0.1,     'the section lowered, its tanks taking in water'],
-  ['bed',     8,  cu.bed - 0.1,      cu.seal - 0.1,    'gravel levelled, grout under the tube'],
-  ['seal',    9,  cu.seal - 0.1,     cu.connect - 0.1, 'the gasket seals the joint, the water is pumped out'],
-  ['shores',  10, cu.connect - 0.1,  cu.end - 0.1,     'the land cut away, a bored tunnel into the hill'],
-  ['finish',  11, cu.end - 0.1,      cu.title - 0.1,   'the train runs through the tube, followed'],
-  ['title',   12, cu.title - 0.1,    DURATION,         'the title card'],
+  ['globe',   0,  0,                 cu.hook - 0.1,    'a globe, zooming in to Turkey and the Strait of Istanbul'],
+  ['teaser',  1,  cu.hook - 0.1,     cu.open - 0.1,    'the train inside the tube, before any question'],
+  ['aerial',  2,  cu.open - 0.1,     cu.ask - 0.1,     'Istanbul from the air; the route of the tube'],
+  ['depth',   3,  cu.ask - 0.1,      cu.window - 0.1,  'challenge one: 60 m, beside a 20-storey tower'],
+  ['current', 4,  cu.window - 0.1,   cu.cast - 0.1,    'challenge two: the current'],
+  ['cast',    5,  cu.cast - 0.1,     cu.tow - 0.1,     'a 135 m section beside a bus and a football pitch'],
+  ['tow',     6,  cu.tow - 0.1,      cu.trench - 0.1,  'a tug takes a section to the strait'],
+  ['trench',  7,  cu.trench - 0.1,   cu.sink - 0.1,    'a trench dredged 14 m down'],
+  ['sink',    8,  cu.sink - 0.1,     cu.bed - 0.1,     'the section lowered, its tanks taking in water'],
+  ['bed',     9,  cu.bed - 0.1,      cu.seal - 0.1,    'gravel levelled, grout under the tube'],
+  ['seal',    10,  cu.seal - 0.1,     cu.connect - 0.1, 'the gasket seals the joint, the water is pumped out'],
+  ['shores',  11, cu.connect - 0.1,  cu.end - 0.1,     'the land cut away, a bored tunnel into the hill'],
+  ['finish',  12, cu.end - 0.1,      cu.title - 0.1,   'the train runs through the tube, followed'],
+  ['title',   13, cu.title - 0.1,    VOICE.duration,   'the title card'],
+  ['logo',    14, VOICE.duration,    DURATION,         'the closing logo, held for two seconds'],
 ];
 const TIMELINE = {
   width: W, height: H, fps: FPS, bpm: 120, gridOffset: 0, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: '16:9',
