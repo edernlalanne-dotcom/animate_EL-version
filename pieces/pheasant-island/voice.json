@@ -1,0 +1,1510 @@
+{
+ "duration": 101.951,
+ "lead": 0.9,
+ "tail": 2.2,
+ "lines": [
+  {
+   "id": "open1",
+   "text": "Two countries share this island.",
+   "t0": 0.9,
+   "t1": 2.9,
+   "take": "voice/open1.wav",
+   "words": [
+    {
+     "w": "Two",
+     "t0": 0.9,
+     "t1": 1.15,
+     "est": true
+    },
+    {
+     "w": "countries",
+     "t0": 1.15,
+     "t1": 1.775,
+     "est": true
+    },
+    {
+     "w": "share",
+     "t0": 1.775,
+     "t1": 2.15,
+     "est": true
+    },
+    {
+     "w": "this",
+     "t0": 2.15,
+     "t1": 2.462,
+     "est": true
+    },
+    {
+     "w": "island.",
+     "t0": 2.462,
+     "t1": 2.9,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "open2",
+   "text": "Every six months, one hands it to the other.",
+   "t0": 3.25,
+   "t1": 6.73,
+   "take": "voice/open2.wav",
+   "words": [
+    {
+     "w": "Every",
+     "t0": 3.25,
+     "t1": 3.736,
+     "est": true
+    },
+    {
+     "w": "six",
+     "t0": 3.736,
+     "t1": 4.059,
+     "est": true
+    },
+    {
+     "w": "months,",
+     "t0": 4.059,
+     "t1": 4.626,
+     "est": true
+    },
+    {
+     "w": "one",
+     "t0": 4.626,
+     "t1": 4.95,
+     "est": true
+    },
+    {
+     "w": "hands",
+     "t0": 4.95,
+     "t1": 5.435,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 5.435,
+     "t1": 5.678,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 5.678,
+     "t1": 5.921,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 5.921,
+     "t1": 6.244,
+     "est": true
+    },
+    {
+     "w": "other.",
+     "t0": 6.244,
+     "t1": 6.73,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "open3",
+   "text": "So who owns it?",
+   "t0": 7.88,
+   "t1": 9.51,
+   "take": "voice/open3.wav",
+   "words": [
+    {
+     "w": "So",
+     "t0": 7.88,
+     "t1": 8.206,
+     "est": true
+    },
+    {
+     "w": "who",
+     "t0": 8.206,
+     "t1": 8.641,
+     "est": true
+    },
+    {
+     "w": "owns",
+     "t0": 8.641,
+     "t1": 9.184,
+     "est": true
+    },
+    {
+     "w": "it?",
+     "t0": 9.184,
+     "t1": 9.51,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "where",
+   "text": "It sits in the Bidasoa river, between Hendaye in France and Irun in Spain.",
+   "t0": 9.96,
+   "t1": 15.3,
+   "take": "voice/where.wav",
+   "words": [
+    {
+     "w": "It",
+     "t0": 9.96,
+     "t1": 10.179,
+     "est": true
+    },
+    {
+     "w": "sits",
+     "t0": 10.179,
+     "t1": 10.545,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 10.545,
+     "t1": 10.765,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 10.765,
+     "t1": 11.057,
+     "est": true
+    },
+    {
+     "w": "Bidasoa",
+     "t0": 11.057,
+     "t1": 11.642,
+     "est": true
+    },
+    {
+     "w": "river,",
+     "t0": 11.642,
+     "t1": 12.081,
+     "est": true
+    },
+    {
+     "w": "between",
+     "t0": 12.081,
+     "t1": 12.667,
+     "est": true
+    },
+    {
+     "w": "Hendaye",
+     "t0": 12.667,
+     "t1": 13.252,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 13.252,
+     "t1": 13.471,
+     "est": true
+    },
+    {
+     "w": "France",
+     "t0": 13.471,
+     "t1": 13.983,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 13.983,
+     "t1": 14.276,
+     "est": true
+    },
+    {
+     "w": "Irun",
+     "t0": 14.276,
+     "t1": 14.642,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 14.642,
+     "t1": 14.861,
+     "est": true
+    },
+    {
+     "w": "Spain.",
+     "t0": 14.861,
+     "t1": 15.3,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "war",
+   "text": "In 1659, France and Spain ended a war that began in 1635.",
+   "t0": 16.45,
+   "t1": 21.04,
+   "take": "voice/war.wav",
+   "words": [
+    {
+     "w": "In",
+     "t0": 16.45,
+     "t1": 16.696,
+     "est": true
+    },
+    {
+     "w": "1659,",
+     "t0": 16.696,
+     "t1": 17.106,
+     "est": true
+    },
+    {
+     "w": "France",
+     "t0": 17.106,
+     "t1": 17.679,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 17.679,
+     "t1": 18.007,
+     "est": true
+    },
+    {
+     "w": "Spain",
+     "t0": 18.007,
+     "t1": 18.499,
+     "est": true
+    },
+    {
+     "w": "ended",
+     "t0": 18.499,
+     "t1": 18.991,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 18.991,
+     "t1": 19.155,
+     "est": true
+    },
+    {
+     "w": "war",
+     "t0": 19.155,
+     "t1": 19.483,
+     "est": true
+    },
+    {
+     "w": "that",
+     "t0": 19.483,
+     "t1": 19.893,
+     "est": true
+    },
+    {
+     "w": "began",
+     "t0": 19.893,
+     "t1": 20.384,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 20.384,
+     "t1": 20.63,
+     "est": true
+    },
+    {
+     "w": "1635.",
+     "t0": 20.63,
+     "t1": 21.04,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "sign",
+   "text": "They signed the peace on this island, on the seventh of November.",
+   "t0": 21.44,
+   "t1": 26.03,
+   "take": "voice/sign.wav",
+   "words": [
+    {
+     "w": "They",
+     "t0": 21.44,
+     "t1": 21.799,
+     "est": true
+    },
+    {
+     "w": "signed",
+     "t0": 21.799,
+     "t1": 22.301,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 22.301,
+     "t1": 22.588,
+     "est": true
+    },
+    {
+     "w": "peace",
+     "t0": 22.588,
+     "t1": 23.018,
+     "est": true
+    },
+    {
+     "w": "on",
+     "t0": 23.018,
+     "t1": 23.233,
+     "est": true
+    },
+    {
+     "w": "this",
+     "t0": 23.233,
+     "t1": 23.592,
+     "est": true
+    },
+    {
+     "w": "island,",
+     "t0": 23.592,
+     "t1": 24.094,
+     "est": true
+    },
+    {
+     "w": "on",
+     "t0": 24.094,
+     "t1": 24.309,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 24.309,
+     "t1": 24.596,
+     "est": true
+    },
+    {
+     "w": "seventh",
+     "t0": 24.596,
+     "t1": 25.169,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 25.169,
+     "t1": 25.385,
+     "est": true
+    },
+    {
+     "w": "November.",
+     "t0": 25.385,
+     "t1": 26.03,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "problem",
+   "text": "But nobody could fix the border through the river. Commissioners tried for almost two centuries.",
+   "t0": 27.18,
+   "t1": 32.89,
+   "take": "voice/problem.wav",
+   "words": [
+    {
+     "w": "But",
+     "t0": 27.18,
+     "t1": 27.42,
+     "est": true
+    },
+    {
+     "w": "nobody",
+     "t0": 27.42,
+     "t1": 27.841,
+     "est": true
+    },
+    {
+     "w": "could",
+     "t0": 27.841,
+     "t1": 28.202,
+     "est": true
+    },
+    {
+     "w": "fix",
+     "t0": 28.202,
+     "t1": 28.442,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 28.442,
+     "t1": 28.683,
+     "est": true
+    },
+    {
+     "w": "border",
+     "t0": 28.683,
+     "t1": 29.103,
+     "est": true
+    },
+    {
+     "w": "through",
+     "t0": 29.103,
+     "t1": 29.584,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 29.584,
+     "t1": 29.825,
+     "est": true
+    },
+    {
+     "w": "river.",
+     "t0": 29.825,
+     "t1": 30.185,
+     "est": true
+    },
+    {
+     "w": "Commissioners",
+     "t0": 30.185,
+     "t1": 31.027,
+     "est": true
+    },
+    {
+     "w": "tried",
+     "t0": 31.027,
+     "t1": 31.387,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 31.387,
+     "t1": 31.628,
+     "est": true
+    },
+    {
+     "w": "almost",
+     "t0": 31.628,
+     "t1": 32.049,
+     "est": true
+    },
+    {
+     "w": "two",
+     "t0": 32.049,
+     "t1": 32.289,
+     "est": true
+    },
+    {
+     "w": "centuries.",
+     "t0": 32.289,
+     "t1": 32.89,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "treaty",
+   "text": "In 1856, the Treaty of Bayonne chose another way.",
+   "t0": 33.29,
+   "t1": 36.77,
+   "take": "voice/treaty.wav",
+   "words": [
+    {
+     "w": "In",
+     "t0": 33.29,
+     "t1": 33.508,
+     "est": true
+    },
+    {
+     "w": "1856,",
+     "t0": 33.508,
+     "t1": 33.87,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 33.87,
+     "t1": 34.16,
+     "est": true
+    },
+    {
+     "w": "Treaty",
+     "t0": 34.16,
+     "t1": 34.667,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 34.667,
+     "t1": 34.885,
+     "est": true
+    },
+    {
+     "w": "Bayonne",
+     "t0": 34.885,
+     "t1": 35.465,
+     "est": true
+    },
+    {
+     "w": "chose",
+     "t0": 35.465,
+     "t1": 35.9,
+     "est": true
+    },
+    {
+     "w": "another",
+     "t0": 35.9,
+     "t1": 36.48,
+     "est": true
+    },
+    {
+     "w": "way.",
+     "t0": 36.48,
+     "t1": 36.77,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "joint",
+   "text": "The island would belong to both countries, undivided.",
+   "t0": 37.12,
+   "t1": 40.23,
+   "take": "voice/joint.wav",
+   "words": [
+    {
+     "w": "The",
+     "t0": 37.12,
+     "t1": 37.359,
+     "est": true
+    },
+    {
+     "w": "island",
+     "t0": 37.359,
+     "t1": 37.778,
+     "est": true
+    },
+    {
+     "w": "would",
+     "t0": 37.778,
+     "t1": 38.137,
+     "est": true
+    },
+    {
+     "w": "belong",
+     "t0": 38.137,
+     "t1": 38.555,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 38.555,
+     "t1": 38.735,
+     "est": true
+    },
+    {
+     "w": "both",
+     "t0": 38.735,
+     "t1": 39.034,
+     "est": true
+    },
+    {
+     "w": "countries,",
+     "t0": 39.034,
+     "t1": 39.632,
+     "est": true
+    },
+    {
+     "w": "undivided.",
+     "t0": 39.632,
+     "t1": 40.23,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "condo",
+   "text": "Lawyers call that a condominium. Shared ownership, with no split.",
+   "t0": 40.58,
+   "t1": 44.43,
+   "take": "voice/condo.wav",
+   "words": [
+    {
+     "w": "Lawyers",
+     "t0": 40.58,
+     "t1": 41.069,
+     "est": true
+    },
+    {
+     "w": "call",
+     "t0": 41.069,
+     "t1": 41.374,
+     "est": true
+    },
+    {
+     "w": "that",
+     "t0": 41.374,
+     "t1": 41.68,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 41.68,
+     "t1": 41.802,
+     "est": true
+    },
+    {
+     "w": "condominium.",
+     "t0": 41.802,
+     "t1": 42.536,
+     "est": true
+    },
+    {
+     "w": "Shared",
+     "t0": 42.536,
+     "t1": 42.963,
+     "est": true
+    },
+    {
+     "w": "ownership,",
+     "t0": 42.963,
+     "t1": 43.574,
+     "est": true
+    },
+    {
+     "w": "with",
+     "t0": 43.574,
+     "t1": 43.88,
+     "est": true
+    },
+    {
+     "w": "no",
+     "t0": 43.88,
+     "t1": 44.063,
+     "est": true
+    },
+    {
+     "w": "split.",
+     "t0": 44.063,
+     "t1": 44.43,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "rule1",
+   "text": "That left one question. Who enforces the law on the island today?",
+   "t0": 45.58,
+   "t1": 50.17,
+   "take": "voice/rule1.wav",
+   "words": [
+    {
+     "w": "That",
+     "t0": 45.58,
+     "t1": 45.939,
+     "est": true
+    },
+    {
+     "w": "left",
+     "t0": 45.939,
+     "t1": 46.297,
+     "est": true
+    },
+    {
+     "w": "one",
+     "t0": 46.297,
+     "t1": 46.584,
+     "est": true
+    },
+    {
+     "w": "question.",
+     "t0": 46.584,
+     "t1": 47.23,
+     "est": true
+    },
+    {
+     "w": "Who",
+     "t0": 47.23,
+     "t1": 47.516,
+     "est": true
+    },
+    {
+     "w": "enforces",
+     "t0": 47.516,
+     "t1": 48.162,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 48.162,
+     "t1": 48.449,
+     "est": true
+    },
+    {
+     "w": "law",
+     "t0": 48.449,
+     "t1": 48.736,
+     "est": true
+    },
+    {
+     "w": "on",
+     "t0": 48.736,
+     "t1": 48.951,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 48.951,
+     "t1": 49.238,
+     "est": true
+    },
+    {
+     "w": "island",
+     "t0": 49.238,
+     "t1": 49.74,
+     "est": true
+    },
+    {
+     "w": "today?",
+     "t0": 49.74,
+     "t1": 50.17,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "conv",
+   "text": "In 1901, the two states signed a convention. Policing passes between them, in turns of six months.",
+   "t0": 50.62,
+   "t1": 57.071,
+   "take": "voice/conv.wav",
+   "words": [
+    {
+     "w": "In",
+     "t0": 50.62,
+     "t1": 50.824,
+     "est": true
+    },
+    {
+     "w": "1901,",
+     "t0": 50.824,
+     "t1": 51.163,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 51.163,
+     "t1": 51.435,
+     "est": true
+    },
+    {
+     "w": "two",
+     "t0": 51.435,
+     "t1": 51.706,
+     "est": true
+    },
+    {
+     "w": "states",
+     "t0": 51.706,
+     "t1": 52.182,
+     "est": true
+    },
+    {
+     "w": "signed",
+     "t0": 52.182,
+     "t1": 52.657,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 52.657,
+     "t1": 52.793,
+     "est": true
+    },
+    {
+     "w": "convention.",
+     "t0": 52.793,
+     "t1": 53.54,
+     "est": true
+    },
+    {
+     "w": "Policing",
+     "t0": 53.54,
+     "t1": 54.151,
+     "est": true
+    },
+    {
+     "w": "passes",
+     "t0": 54.151,
+     "t1": 54.626,
+     "est": true
+    },
+    {
+     "w": "between",
+     "t0": 54.626,
+     "t1": 55.17,
+     "est": true
+    },
+    {
+     "w": "them,",
+     "t0": 55.17,
+     "t1": 55.509,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 55.509,
+     "t1": 55.713,
+     "est": true
+    },
+    {
+     "w": "turns",
+     "t0": 55.713,
+     "t1": 56.12,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 56.12,
+     "t1": 56.324,
+     "est": true
+    },
+    {
+     "w": "six",
+     "t0": 56.324,
+     "t1": 56.596,
+     "est": true
+    },
+    {
+     "w": "months.",
+     "t0": 56.596,
+     "t1": 57.071,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "spain",
+   "text": "Spain holds the duty from 1 February to 31 July.",
+   "t0": 57.521,
+   "t1": 61.371,
+   "take": "voice/spain.wav",
+   "words": [
+    {
+     "w": "Spain",
+     "t0": 57.521,
+     "t1": 58.002,
+     "est": true
+    },
+    {
+     "w": "holds",
+     "t0": 58.002,
+     "t1": 58.484,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 58.484,
+     "t1": 58.804,
+     "est": true
+    },
+    {
+     "w": "duty",
+     "t0": 58.804,
+     "t1": 59.205,
+     "est": true
+    },
+    {
+     "w": "from",
+     "t0": 59.205,
+     "t1": 59.606,
+     "est": true
+    },
+    {
+     "w": "1",
+     "t0": 59.606,
+     "t1": 59.767,
+     "est": true
+    },
+    {
+     "w": "February",
+     "t0": 59.767,
+     "t1": 60.489,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 60.489,
+     "t1": 60.729,
+     "est": true
+    },
+    {
+     "w": "31",
+     "t0": 60.729,
+     "t1": 60.97,
+     "est": true
+    },
+    {
+     "w": "July.",
+     "t0": 60.97,
+     "t1": 61.371,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "france",
+   "text": "France holds it from 1 August to 31 January.",
+   "t0": 61.721,
+   "t1": 65.201,
+   "take": "voice/france.wav",
+   "words": [
+    {
+     "w": "France",
+     "t0": 61.721,
+     "t1": 62.275,
+     "est": true
+    },
+    {
+     "w": "holds",
+     "t0": 62.275,
+     "t1": 62.749,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 62.749,
+     "t1": 62.986,
+     "est": true
+    },
+    {
+     "w": "from",
+     "t0": 62.986,
+     "t1": 63.382,
+     "est": true
+    },
+    {
+     "w": "1",
+     "t0": 63.382,
+     "t1": 63.54,
+     "est": true
+    },
+    {
+     "w": "August",
+     "t0": 63.54,
+     "t1": 64.094,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 64.094,
+     "t1": 64.331,
+     "est": true
+    },
+    {
+     "w": "31",
+     "t0": 64.331,
+     "t1": 64.568,
+     "est": true
+    },
+    {
+     "w": "January.",
+     "t0": 64.568,
+     "t1": 65.201,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "courts",
+   "text": "Citizens of either country answer to their own courts. Anyone else answers to the country on duty.",
+   "t0": 65.651,
+   "t1": 72.101,
+   "take": "voice/courts.wav",
+   "words": [
+    {
+     "w": "Citizens",
+     "t0": 65.651,
+     "t1": 66.249,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 66.249,
+     "t1": 66.449,
+     "est": true
+    },
+    {
+     "w": "either",
+     "t0": 66.449,
+     "t1": 66.914,
+     "est": true
+    },
+    {
+     "w": "country",
+     "t0": 66.914,
+     "t1": 67.446,
+     "est": true
+    },
+    {
+     "w": "answer",
+     "t0": 67.446,
+     "t1": 67.912,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 67.912,
+     "t1": 68.111,
+     "est": true
+    },
+    {
+     "w": "their",
+     "t0": 68.111,
+     "t1": 68.51,
+     "est": true
+    },
+    {
+     "w": "own",
+     "t0": 68.51,
+     "t1": 68.776,
+     "est": true
+    },
+    {
+     "w": "courts.",
+     "t0": 68.776,
+     "t1": 69.242,
+     "est": true
+    },
+    {
+     "w": "Anyone",
+     "t0": 69.242,
+     "t1": 69.707,
+     "est": true
+    },
+    {
+     "w": "else",
+     "t0": 69.707,
+     "t1": 70.04,
+     "est": true
+    },
+    {
+     "w": "answers",
+     "t0": 70.04,
+     "t1": 70.572,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 70.572,
+     "t1": 70.771,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 70.771,
+     "t1": 71.037,
+     "est": true
+    },
+    {
+     "w": "country",
+     "t0": 71.037,
+     "t1": 71.569,
+     "est": true
+    },
+    {
+     "w": "on",
+     "t0": 71.569,
+     "t1": 71.769,
+     "est": true
+    },
+    {
+     "w": "duty.",
+     "t0": 71.769,
+     "t1": 72.101,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "only",
+   "text": "Ownership stays shared. Only the duty moves.",
+   "t0": 72.501,
+   "t1": 75.241,
+   "take": "voice/only.wav",
+   "words": [
+    {
+     "w": "Ownership",
+     "t0": 72.501,
+     "t1": 73.138,
+     "est": true
+    },
+    {
+     "w": "stays",
+     "t0": 73.138,
+     "t1": 73.521,
+     "est": true
+    },
+    {
+     "w": "shared.",
+     "t0": 73.521,
+     "t1": 73.967,
+     "est": true
+    },
+    {
+     "w": "Only",
+     "t0": 73.967,
+     "t1": 74.285,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 74.285,
+     "t1": 74.54,
+     "est": true
+    },
+    {
+     "w": "duty",
+     "t0": 74.54,
+     "t1": 74.859,
+     "est": true
+    },
+    {
+     "w": "moves.",
+     "t0": 74.859,
+     "t1": 75.241,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "today1",
+   "text": "Today, the island is closed to the public.",
+   "t0": 76.391,
+   "t1": 79.501,
+   "take": "voice/today1.wav",
+   "words": [
+    {
+     "w": "Today,",
+     "t0": 76.391,
+     "t1": 76.846,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 76.846,
+     "t1": 77.15,
+     "est": true
+    },
+    {
+     "w": "island",
+     "t0": 77.15,
+     "t1": 77.681,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 77.681,
+     "t1": 77.908,
+     "est": true
+    },
+    {
+     "w": "closed",
+     "t0": 77.908,
+     "t1": 78.439,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 78.439,
+     "t1": 78.667,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 78.667,
+     "t1": 78.97,
+     "est": true
+    },
+    {
+     "w": "public.",
+     "t0": 78.97,
+     "t1": 79.501,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "size",
+   "text": "It is about 210 metres long and 40 wide. Nobody lives there.",
+   "t0": 79.901,
+   "t1": 84.491,
+   "take": "voice/size.wav",
+   "words": [
+    {
+     "w": "It",
+     "t0": 79.901,
+     "t1": 80.134,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 80.134,
+     "t1": 80.368,
+     "est": true
+    },
+    {
+     "w": "about",
+     "t0": 80.368,
+     "t1": 80.835,
+     "est": true
+    },
+    {
+     "w": "210",
+     "t0": 80.835,
+     "t1": 81.146,
+     "est": true
+    },
+    {
+     "w": "metres",
+     "t0": 81.146,
+     "t1": 81.69,
+     "est": true
+    },
+    {
+     "w": "long",
+     "t0": 81.69,
+     "t1": 82.079,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 82.079,
+     "t1": 82.39,
+     "est": true
+    },
+    {
+     "w": "40",
+     "t0": 82.39,
+     "t1": 82.624,
+     "est": true
+    },
+    {
+     "w": "wide.",
+     "t0": 82.624,
+     "t1": 83.013,
+     "est": true
+    },
+    {
+     "w": "Nobody",
+     "t0": 83.013,
+     "t1": 83.557,
+     "est": true
+    },
+    {
+     "w": "lives",
+     "t0": 83.557,
+     "t1": 84.024,
+     "est": true
+    },
+    {
+     "w": "there.",
+     "t0": 84.024,
+     "t1": 84.491,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "text": "A calendar replaced a line on a map. Lake Constance and the Moselle are shared too.",
+   "t0": 85.641,
+   "t1": 91.941,
+   "take": "voice/why.wav",
+   "words": [
+    {
+     "w": "A",
+     "t0": 85.641,
+     "t1": 85.795,
+     "est": true
+    },
+    {
+     "w": "calendar",
+     "t0": 85.795,
+     "t1": 86.486,
+     "est": true
+    },
+    {
+     "w": "replaced",
+     "t0": 86.486,
+     "t1": 87.178,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 87.178,
+     "t1": 87.331,
+     "est": true
+    },
+    {
+     "w": "line",
+     "t0": 87.331,
+     "t1": 87.715,
+     "est": true
+    },
+    {
+     "w": "on",
+     "t0": 87.715,
+     "t1": 87.946,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 87.946,
+     "t1": 88.1,
+     "est": true
+    },
+    {
+     "w": "map.",
+     "t0": 88.1,
+     "t1": 88.407,
+     "est": true
+    },
+    {
+     "w": "Lake",
+     "t0": 88.407,
+     "t1": 88.791,
+     "est": true
+    },
+    {
+     "w": "Constance",
+     "t0": 88.791,
+     "t1": 89.559,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 89.559,
+     "t1": 89.867,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 89.867,
+     "t1": 90.174,
+     "est": true
+    },
+    {
+     "w": "Moselle",
+     "t0": 90.174,
+     "t1": 90.789,
+     "est": true
+    },
+    {
+     "w": "are",
+     "t0": 90.789,
+     "t1": 91.096,
+     "est": true
+    },
+    {
+     "w": "shared",
+     "t0": 91.096,
+     "t1": 91.634,
+     "est": true
+    },
+    {
+     "w": "too.",
+     "t0": 91.634,
+     "t1": 91.941,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "close1",
+   "text": "So who owns it?",
+   "t0": 93.341,
+   "t1": 94.971,
+   "take": "voice/close1.wav",
+   "words": [
+    {
+     "w": "So",
+     "t0": 93.341,
+     "t1": 93.667,
+     "est": true
+    },
+    {
+     "w": "who",
+     "t0": 93.667,
+     "t1": 94.102,
+     "est": true
+    },
+    {
+     "w": "owns",
+     "t0": 94.102,
+     "t1": 94.645,
+     "est": true
+    },
+    {
+     "w": "it?",
+     "t0": 94.645,
+     "t1": 94.971,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "close2",
+   "text": "Both countries. All year. Only the duty changes hands.",
+   "t0": 96.271,
+   "t1": 99.751,
+   "take": "voice/close2.wav",
+   "words": [
+    {
+     "w": "Both",
+     "t0": 96.271,
+     "t1": 96.606,
+     "est": true
+    },
+    {
+     "w": "countries.",
+     "t0": 96.606,
+     "t1": 97.275,
+     "est": true
+    },
+    {
+     "w": "All",
+     "t0": 97.275,
+     "t1": 97.543,
+     "est": true
+    },
+    {
+     "w": "year.",
+     "t0": 97.543,
+     "t1": 97.877,
+     "est": true
+    },
+    {
+     "w": "Only",
+     "t0": 97.877,
+     "t1": 98.212,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 98.212,
+     "t1": 98.479,
+     "est": true
+    },
+    {
+     "w": "duty",
+     "t0": 98.479,
+     "t1": 98.814,
+     "est": true
+    },
+    {
+     "w": "changes",
+     "t0": 98.814,
+     "t1": 99.349,
+     "est": true
+    },
+    {
+     "w": "hands.",
+     "t0": 99.349,
+     "t1": 99.751,
+     "est": true
+    }
+   ]
+  }
+ ]
+}

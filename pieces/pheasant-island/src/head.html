@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pheasant Island</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #1c272d; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { max-width: 100vw; max-height: 100vh; width: auto; height: auto; display: block; cursor: pointer; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+"use strict";
+// =====================================================================
+//  PHEASANT ISLAND — "The island that changes ownership every 6 months" (it does not: only the policing rotates).
+//  16:9, voice-led. World-map style. One island, one calendar ring. Facts and sources: brief.md.
+//  Build: node <skill>/tools/build.mjs pieces/pheasant-island
+// =====================================================================
+const FPS = 24, W = 1920, H = 1080;
+const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, E16 = BEAT / 4;
+const HAND = '"Ink Free", "Segoe Print", "Bradley Hand", "Chalkboard SE", "Comic Sans MS", "Comic Neue", cursive';
+const DURATION = VOICE.duration;
+const NFRAMES = Math.round(DURATION * FPS);
+const LOOP_T = NFRAMES / FPS;
+const SAFE = { top: 60, bottom: 110, right: 60 };
+const CX = W / 2;
+
+// ---- the voice is the clock: VL(id) is a line, VT(id, word, n) is when its n-th `word` starts
+const VL = (id) => VOICE.lines.find((l) => l.id === id);
+const normW = (w) => w.toLowerCase().replace(/[^a-z0-9]/g, '');
+const VT = (id, word, n = 1) => {
+  const L = VL(id); if (!word) return L.t0;
+  let k = 0; for (const w of L.words) if (normW(w.w) === normW(word) && ++k === n) return w.t0;
+  return L.t0;
+};
+// a morph sits in the pause between two lines
+const gap = (a, b) => +((VL(a).t1 + VL(b).t0) / 2).toFixed(3);
+const M = [gap('open2', 'open3'), gap('where', 'war'), gap('sign', 'problem'), gap('condo', 'rule1'), gap('only', 'today1'), gap('size', 'why'), gap('why', 'close1')];
+const MD = 0.5;   // each bridge spans tc-MD .. tc+MD
+
+const ERA_LIST = [
+  [0, M[0], () => sceneEurope()],
+  [M[0], M[1], () => sceneHook()],
+  [M[1], M[2], () => scene1659()],
+  [M[2], M[3], () => scene1856()],
+  [M[3], M[4], () => sceneRule()],
+  [M[4], M[5], () => sceneToday()],
+  [M[5], M[6], () => sceneWhy()],
+  [M[6], DURATION, () => sceneClose()],
+];
+const SHOTS = [
+  ['europe', 0, 0, M[0], 'two countries; the camera zooms from Europe to one pin on the Bidasoa'],
+  ['hook',   1, M[0], M[1], 'the island, the calendar ring, who owns it?'],
+  ['1659',   2, M[1], M[2], 'the peace signed on the island, 7 Nov 1659, ending a war that began in 1635'],
+  ['1856',   3, M[2], M[3], 'no border line fits the river; 1856 treaty: the island belongs to both'],
+  ['rule',   4, M[3], M[4], '1901 convention: policing in turns of six months, ownership stays shared'],
+  ['today',  5, M[4], M[5], 'closed to the public, 210 m by 40 m, beside a football pitch'],
+  ['why',    6, M[5], M[6], 'a calendar replaced a line; other shared territories'],
+  ['close',  7, M[6], DURATION, 'back to the island: owned by both, policed by one'],
+];
+const TIMELINE = {
+  width: W, height: H, fps: FPS, bpm: BPM, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: '16:9',
+  format: 'morph-chain',
+  shots: SHOTS.map(([key, era, t0, t1, title], i) => ({ id: i + 1, key, era, t0, t1, title })),
+  cuts: [],
+  morphs: M,
+  cues: { hook: VL('open3').t0, ring: VT('open3', 'owns'), sign: VT('sign', 'seventh'), payoff: VL('close2').t0 - 0.45 },
+  acts: [
+    { name: '1 The question', role: 'build', t0: 0, t1: M[1] },
+    { name: '2 The problem', role: 'journey', t0: M[1], t1: M[3] },
+    { name: '3 The rule', role: 'peak', t0: M[3], t1: M[4] },
+    { name: '4 Today', role: 'build', t0: M[4], t1: M[6] },
+    { name: '5 Silence', role: 'silence', t0: M[6], t1: VL('close2').t0 - 0.45 },
+    { name: '6 The answer', role: 'gift', t0: VL('close2').t0 - 0.45, t1: DURATION },
+  ],
+  board: [
+    { t: 2.2, title: 'two countries, one pin on the map', sound: 'soft pad, a pluck on the pin', next: 'zoom into the pin' },
+    { t: 11.0, title: 'the island and the calendar ring', sound: 'pad, ticks on the months', next: 'the island becomes the treaty table' },
+    { t: 24.2, title: '7 November 1659', sound: 'a stamp slam', next: 'the island becomes a wobbling border' },
+    { t: 38.5, title: '1856: owned by both', sound: 'flag pops', next: 'the island becomes the ring' },
+    { t: 63.0, title: '1901: France on duty', sound: 'a rising tick', next: 'the ring shrinks to the island' },
+    { t: 82.5, title: '210 m by 40 m, beside a pitch', sound: 'measure ticks', next: 'the island joins the map of Europe' },
+    { t: 89.5, title: 'other shared territories', sound: 'pops', next: 'back to the island' },
+    { t: 99.5, title: 'owned by both, policed by one', sound: 'silence, then the loudest hit', next: 'ends' },
+  ],
+  narration: VOICE.lines.map((l) => ({ t0: l.t0, t1: l.t1, text: l.text })),
+};
+window.TIMELINE = TIMELINE;

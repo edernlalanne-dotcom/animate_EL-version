@@ -1,0 +1,29 @@
+{
+  "name": "pheasant-island",
+  "title": "The Island That Changes Ownership Every 6 Months",
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "bpm": 120,
+    "duration": 103.58,
+    "frames": 2486
+  },
+  "formats": [
+    "16:9"
+  ],
+  "storyFormat": "morph chain (8 eras, 7 shape morphs), voice-led",
+  "style": "world-map-blue",
+  "scenes": [
+    "src/scenes-a.js",
+    "src/scenes-b.js"
+  ],
+  "review": {
+    "safe": {
+      "top": 60,
+      "bottom": 110,
+      "right": 60
+    },
+    "refs": {}
+  }
+}
