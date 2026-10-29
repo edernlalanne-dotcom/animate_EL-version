@@ -2,12 +2,12 @@
   "name": "marmaray-documentary",
   "title": "How engineers built the Marmaray undersea tunnel",
   "format": {
-    "width": 1920,
-    "height": 1080,
+    "width": 1080,
+    "height": 1920,
     "fps": 24,
     "bpm": 120,
     "duration": 69.7,
-    "frames": 1673
+    "frames": 0
   },
   "storyFormat": "F2 chronology (overview, challenges, build, sink, join, finish)",
   "style": "isometric",

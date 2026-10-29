@@ -5,7 +5,8 @@
 //  and labels last.
 // =====================================================================
 const M3 = { navy: '#0b1d33', turq: '#2bb3a8', grey: '#7d858c', greyL: '#c9ced3', greyD: '#4b535b', amber: '#f2a33a', text: '#e9eef3' };
-const M3_FOCAL = 1000;
+const M3_FOCAL = IS_PORTRAIT ? 880 : 1000;      // a narrower frame needs a shorter focal length
+const M3_ZOOM = IS_PORTRAIT ? 1.25 : 1;        // cameras pull back in portrait so the wide scenes still fit
 const M3_LIGHT = [0.35, 0.85, 0.45];
 let M3_CAM = null, M3_Q = null;
 
@@ -32,7 +33,8 @@ function m3Camera(keys) {
   if (TT >= last[0]) a = b = last;
   else for (let i = 0; i < keys.length - 1; i++) if (TT >= keys[i][0] && TT < keys[i + 1][0]) { a = keys[i]; b = keys[i + 1]; break; }
   const u = clamp((TT - a[0]) / Math.max(1e-6, b[0] - a[0])), s = u * u * (3 - 2 * u);
-  const p = m3Lerp(a.slice(1, 4), b.slice(1, 4), s), t = m3Lerp(a.slice(4, 7), b.slice(4, 7), s);
+  const t = m3Lerp(a.slice(4, 7), b.slice(4, 7), s);
+  const p = m3Add(t, m3Mul(m3Sub(m3Lerp(a.slice(1, 4), b.slice(1, 4), s), t), M3_ZOOM));
   const f = m3Norm(m3Sub(t, p)), r = m3Norm(m3Cross(f, [0, 1, 0]));
   M3_CAM = { p, f, r, u: m3Cross(r, f) };
 }
@@ -138,18 +140,21 @@ function m3Caption(str, t0, t1) {
   if (TT < t0 || TT >= t1) return;
   const a = clamp(spring(TT, t0, { k: 120, damp: 0.85 }));
   ctx.save(); ctx.globalAlpha = a; ctx.font = `500 44px ${SANS}`; ctx.fillStyle = M3.text;
+  if (ctx.measureText(str).width > W - 160) ctx.font = `500 34px ${SANS}`;
   ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
-  ctx.fillText(str, W / 2, H - 80); ctx.restore();
+  ctx.fillText(str, W / 2, H - 340); ctx.restore();
 }
 
 // a camera at p looking at t, for shots that follow an object
 function m3Look(p, t) {
+  p = m3Add(t, m3Mul(m3Sub(p, t), M3_ZOOM));
   const f = m3Norm(m3Sub(t, p)), r = m3Norm(m3Cross(f, [0, 1, 0]));
   M3_CAM = { p, f, r, u: m3Cross(r, f) };
 }
 
 // a camera at p looking at t, for shots that follow an object
 function m3Look(p, t) {
+  p = m3Add(t, m3Mul(m3Sub(p, t), M3_ZOOM));
   const f = m3Norm(m3Sub(t, p)), r = m3Norm(m3Cross(f, [0, 1, 0]));
   M3_CAM = { p, f, r, u: m3Cross(r, f) };
 }

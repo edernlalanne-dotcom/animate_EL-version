@@ -94,5 +94,5 @@ function sceneGlobe() {
 function sceneLogo() {
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H);
-  drawAsset('logo.jpg', (W - H) / 2, 0, H, H, { fit: 'contain' });
+  drawAsset('logo.jpg', (W - W) / 2, (H - W) / 2, W, W, { fit: 'contain' });
 }

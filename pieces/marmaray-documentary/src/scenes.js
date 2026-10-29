@@ -129,7 +129,7 @@ function sceneCast() {
   }
   m3Box([-1230, -6, -22], [-1218, -2.8, -19.4], M3.grey);                    // a bus, 12 m long
   if (TT > cu.cast + 2) {
-    m3Text([-1132.5, base + ELEM_H, 7.65], '135 m', M3.amber, 48, 14, -16);
+    m3Text([-1132.5, base + ELEM_H, 7.65], '135 m', M3.amber, 48, 14, -70);
     m3Text([-1147.5, -5.7, 34], '105 m pitch', M3.text, 40, 10, 10);
     m3Text([-1218, -2.8, -19.4], '12 m bus', M3.text, 36, 10, -10);
   }

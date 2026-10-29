@@ -7,11 +7,11 @@
 <style>
   html, body { margin: 0; height: 100%; background: #0b1d33; overflow: hidden; }
   body { display: flex; align-items: center; justify-content: center; }
-  canvas { width: min(100vw, calc(100vh * 16 / 9)); height: auto; aspect-ratio: 16 / 9; display: block; cursor: pointer; }
+  canvas { height: min(100vh, calc(100vw * 16 / 9)); width: auto; aspect-ratio: 9 / 16; display: block; cursor: pointer; }
 </style>
 </head>
 <body>
-<canvas id="c" width="1920" height="1080"></canvas>
+<canvas id="c" width="1080" height="1920"></canvas>
 <script>
 "use strict";
 // =====================================================================
@@ -19,12 +19,13 @@
 //  The voice-over (Jeremy) is the clock: each scene starts on a spoken line.
 //  Build: node <skill>/tools/build.mjs <this piece dir>
 // =====================================================================
-const FPS = 24, W = 1920, H = 1080;
+const FPS = 24, W = 1080, H = 1920;                 // 9:16 portrait
+const IS_PORTRAIT = W < H;
 const LOGO_HOLD = 2.0;                            // the closing logo, held after the title card
 const DURATION = VOICE.duration + LOGO_HOLD;
 const NFRAMES = Math.round(DURATION * FPS);
 const LOOP_T = NFRAMES / FPS;
-const SAFE = { top: 60, bottom: 110, right: 60 };
+const SAFE = { top: 240, bottom: 420, right: 140 };
 const CX = W / 2;
 const VL = (id) => VOICE.lines.find((l) => l.id === id).t0;   // the start of a spoken line
 
@@ -69,7 +70,7 @@ const SHOTS = [
   ['logo',    14, VOICE.duration,    DURATION,         'the closing logo, held for two seconds'],
 ];
 const TIMELINE = {
-  width: W, height: H, fps: FPS, bpm: 120, gridOffset: 0, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: '16:9',
+  width: W, height: H, fps: FPS, bpm: 120, gridOffset: 0, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: '9:16',
   format: 'F2',
   shots: SHOTS.map(([key, era, t0, t1, title], i) => ({ id: i + 1, key, era, t0, t1, title })),
   cuts: ERA_LIST.slice(1).map((e) => e[0]),
