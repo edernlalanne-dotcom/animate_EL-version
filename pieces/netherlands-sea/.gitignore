@@ -1,0 +1,8 @@
+frames/
+renders/
+review/
+index.html
+voice/voice.wav
+voice/*.scratch.wav
+voice/urls.json
+audio*.wav

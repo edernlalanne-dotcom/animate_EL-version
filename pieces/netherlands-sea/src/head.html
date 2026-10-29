@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How the Netherlands beat the sea</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #0b1520; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { width: min(100vw, calc(100vh * 16 / 9)); height: auto; aspect-ratio: 16 / 9; display: block; cursor: pointer; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+"use strict";
+// =====================================================================
+//  HOW THE NETHERLANDS BEAT THE SEA — 9:00, 16:9, 24fps. Satellite documentary, then countryball comedy with Jeremy.
+//  Voice: ElevenLabs "Jeremy - Casual Guy Next Door" (voice/*.mp3, timed by tools/voice.mjs into voice.json).
+//  Eras are cut on the voice: each one starts half a second before the line that opens it.
+//  Facts (web-checked): lowest point ~6.76 m below NAP, near Nieuwerkerk aan den IJssel (Zuidplaspolder);
+//  1953 North Sea flood, about 1,835-1,836 Dutch deaths, about 70,000 evacuated; Afsluitdijk closed 1932;
+//  Beemster drained 1612 (UNESCO); Kinderdijk windmills (UNESCO); Benthemplein water square, Rotterdam.
+//  Build: node <skill>/tools/build.mjs pieces/netherlands-sea
+// =====================================================================
+const FORMATS = { '16:9': [1920, 1080] };
+const FORMAT = '16:9';
+const FPS = 24, [W, H] = FORMATS[FORMAT];
+{ const cv = document.getElementById('c'); cv.width = W; cv.height = H; }
+const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, E16 = BEAT / 4, GRID0 = 0;
+const DURATION = 540;
+const NFRAMES = Math.round(DURATION * FPS);
+const LOOP_T = NFRAMES / FPS;
+const SAFE = { top: 60, bottom: 110, right: 60 };
+const CX = W / 2;
+const HAND = '"Ink Free", "Segoe Print", "Bradley Hand", "Chalkboard SE", "Comic Sans MS", "Comic Neue", cursive';
+const onBeat = (t) => +(GRID0 + Math.round((t - GRID0) / E8) * E8).toFixed(4);
+// the narration's line start and end, from voice.json (tools/voice.mjs)
+const VT = (id) => VOICE.lines.find((l) => l.id === id).t0;
+const VE = (id) => VOICE.lines.find((l) => l.id === id).t1;
+// era boundaries: on the 8th grid, half a second before the line that opens the next era
+const EB = [0, onBeat(VT('low_a') - 0.5), onBeat(VT('jer_a') - 0.5), onBeat(VT('pol_a') - 0.5), onBeat(VT('pol_f') - 0.5),
+  onBeat(VT('st_a') - 0.5), onBeat(VT('dw_a') - 0.5), onBeat(VT('tw_a') - 0.5), onBeat(VT('ho_a') - 0.5),
+  onBeat(VT('cl_d') - 0.5), 538, DURATION];
+const ERA_LIST = [
+  [EB[0], EB[1], () => sceneCold()],
+  [EB[1], EB[2], () => sceneLow()],
+  [EB[2], EB[3], () => sceneJer()],
+  [EB[3], EB[4], () => scenePolder()],
+  [EB[4], EB[5], () => sceneDam()],
+  [EB[5], EB[6], () => sceneStorm()],
+  [EB[6], EB[7], () => sceneDelta()],
+  [EB[7], EB[8], () => sceneRise()],
+  [EB[8], EB[9], () => sceneHope()],
+  [EB[9], EB[10], () => sceneClosing()],
+  [EB[10], EB[11], () => sceneEnd()],
+];
+const SHOTS = [
+  ['cold',     0,  EB[0],  EB[1],  'the Netherlands from orbit: a quarter below sea level, dry'],
+  ['lowest',   1,  EB[1],  EB[2],  'zoom to the lowest point; a house roof at sea level; Jeremy asks how'],
+  ['jeremy',   2,  EB[2],  EB[3],  'Jeremy introduces the Netherlands'],
+  ['polders',  3,  EB[3],  EB[4],  'dikes, pumps and windmills; the land sinks'],
+  ['dam',      4,  EB[4],  EB[5],  'the Afsluitdijk; Schiphol; the North Sea arrives'],
+  ['storm',    5,  EB[5],  EB[6],  'the night of 31 January 1953; the water rises'],
+  ['delta',    6,  EB[6],  EB[7],  'the Delta Works; the red sea-level line through a town'],
+  ['rise',     7,  EB[7],  EB[8],  'the twist: design for a sea that keeps rising'],
+  ['hope',     8,  EB[8],  EB[9],  'room for rivers, the Sand Motor, a water square, floating homes'],
+  ['closing',  9,  EB[9],  EB[10], 'the question for the viewer'],
+  ['subscribe', 10, EB[10], EB[11], 'the channel picture, 2 seconds'],
+];
+const TIMELINE = {
+  width: W, height: H, fps: FPS, bpm: BPM, gridOffset: GRID0, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: FORMAT,
+  format: 'chronology',   // hard cuts on the voice; no shape morphs in this piece
+  shots: SHOTS.map(([key, era, t0, t1, title], i) => ({ id: i + 1, key, era, t0, t1, title })),
+  cuts: EB.slice(1, -1),
+  morphs: [],
+  cues: { lowest: VT('low_a'), section: VT('low_b'), jeremy: VT('jer_a'), storm: VT('st_b'), barrier: VT('dw_c'), seaLevel: VT('dw_e'), rise: VT('tw_b'), sand: VT('ho_c') },
+  acts: [
+    { name: '1 The sea', role: 'build', t0: 0, t1: EB[5] },
+    { name: '2 The night', role: 'peak', t0: EB[5], t1: EB[6] },
+    { name: '3 The answer', role: 'journey', t0: EB[6], t1: EB[8] },
+    { name: '4 The hope', role: 'gift', t0: EB[8], t1: EB[9] },
+    { name: '5 The question', role: 'goodbye', t0: EB[9], t1: DURATION },
+  ],
+  board: [
+    { t: 20.0, title: 'the quarter below sea level', sound: 'a low pad', next: 'zoom to the lowest point' },
+    { t: 45.0, title: 'the red line at sea level', sound: 'plucks on the section', next: 'Jeremy arrives' },
+    { t: 215.0, title: 'the storm', sound: 'drone, riser, a hit', next: 'the barrier' },
+    { t: 330.0, title: 'the red line through the town', sound: 'a chime', next: 'the rising sea' },
+    { t: 420.0, title: 'the Sand Motor', sound: 'a major chord', next: 'the question' },
+  ],
+  narration: VOICE.lines.map((l) => ({ id: l.id, t0: l.t0, t1: l.t1, text: l.text })),
+};
+window.TIMELINE = TIMELINE;

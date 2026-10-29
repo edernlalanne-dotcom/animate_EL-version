@@ -1,0 +1,312 @@
+{
+  "lead": 1.5,
+  "tail": 2.0,
+  "lines": [
+    {
+      "id": "hook_a",
+      "text": "A quarter of this country sits below sea level.",
+      "file": "hook_a.mp3",
+      "after": 0.8
+    },
+    {
+      "id": "hook_b",
+      "text": "And it stays dry.",
+      "file": "hook_b.mp3",
+      "after": 4.0
+    },
+    {
+      "id": "hook_c",
+      "text": "Not by luck. By centuries of engineering, and one terrible night in nineteen fifty three.",
+      "file": "hook_c.mp3",
+      "after": 14.0
+    },
+    {
+      "id": "low_a",
+      "text": "Zoom in on the lowest point in the Netherlands. It sits near the town of Nieuwerkerk aan den IJssel, about six point seven meters below sea level.",
+      "file": "low_a.mp3",
+      "after": 6.0
+    },
+    {
+      "id": "low_b",
+      "text": "Stand a two storey house on that spot, and its roof would sit at sea level.",
+      "file": "low_b.mp3",
+      "after": 1.5
+    },
+    {
+      "id": "low_c",
+      "text": "So how do you keep a town dry, when the ground is lower than the ocean?",
+      "file": "low_c.mp3",
+      "after": 14.0
+    },
+    {
+      "id": "jer_a",
+      "text": "Hey, I'm Jeremy. I'll be your guide through this one.",
+      "file": "jer_a.mp3",
+      "after": 0.6
+    },
+    {
+      "id": "jer_b",
+      "text": "Meet the Netherlands. A country that has spent centuries arguing with water, and mostly winning.",
+      "file": "jer_b.mp3",
+      "after": 0.8
+    },
+    {
+      "id": "nl_a",
+      "text": "Hi. Water is my whole thing.",
+      "file": "nl_a.mp3",
+      "after": 0.8
+    },
+    {
+      "id": "nl_b",
+      "text": "Honestly, water and I have been roommates for centuries. We do not always get along.",
+      "file": "nl_b.mp3",
+      "after": 1.2
+    },
+    {
+      "id": "pol_a",
+      "text": "Step one. Build a dike around a shallow lake or a salt marsh.",
+      "file": "pol_a.mp3",
+      "after": 0.6
+    },
+    {
+      "id": "pol_h",
+      "text": "The first big one, the Beemster, was drained in sixteen twelve. It is now a UNESCO World Heritage site.",
+      "file": "pol_h.mp3",
+      "after": 0.8
+    },
+    {
+      "id": "pol_b",
+      "text": "Step two. Pump the water out, and you get a polder. Dry land, below the water line, held in by walls.",
+      "file": "pol_b.mp3",
+      "after": 6.0
+    },
+    {
+      "id": "pol_c",
+      "text": "For centuries, the pumps were windmills. The wind turned the sails, the sails turned the scoop wheel, and the water went up and over the dike.",
+      "file": "pol_c.mp3",
+      "after": 4.0
+    },
+    {
+      "id": "pol_d",
+      "text": "Kinderdijk still has a row of those old windmills. You can walk right up to them.",
+      "file": "pol_d.mp3",
+      "after": 5.0
+    },
+    {
+      "id": "pol_e",
+      "text": "The catch: peat soil shrinks as it dries, so the land sinks. The pumps never get a day off.",
+      "file": "pol_e.mp3",
+      "after": 0.8
+    },
+    {
+      "id": "pol_i",
+      "text": "Stop pumping, and the lake comes back. It does not ask permission.",
+      "file": "pol_i.mp3",
+      "after": 6.0
+    },
+    {
+      "id": "wb_a",
+      "text": "Some of the water boards that run this system are among the oldest democratic bodies in the country. A few date back to the thirteen hundreds.",
+      "file": "wb_a.mp3",
+      "after": 3.0
+    },
+    {
+      "id": "pol_f",
+      "text": "In nineteen thirty two, they shut the sea out for good. The Afsluitdijk closed off the Zuiderzee, and it became the IJsselmeer, a lake.",
+      "file": "pol_f.mp3",
+      "after": 3.0
+    },
+    {
+      "id": "pol_f2",
+      "text": "That dam is more than thirty kilometers long, and it turned a sea arm into a freshwater lake.",
+      "file": "pol_f2.mp3",
+      "after": 1.2
+    },
+    {
+      "id": "pol_g",
+      "text": "Schiphol, the country's main airport, sits below sea level too. Planes land on reclaimed ground.",
+      "file": "pol_g.mp3",
+      "after": 1.0
+    },
+    {
+      "id": "ns_a",
+      "text": "Oh, and I should introduce the North Sea. He has been waiting for his cue.",
+      "file": "ns_a.mp3",
+      "after": 0.6
+    },
+    {
+      "id": "ns_b",
+      "text": "The North Sea is patient. Very patient. And very wet.",
+      "file": "ns_b.mp3",
+      "after": 8.0
+    },
+    {
+      "id": "st_a",
+      "text": "Then came the night of January thirty first, nineteen fifty three.",
+      "file": "st_a.mp3",
+      "after": 0.8
+    },
+    {
+      "id": "st_b",
+      "text": "A storm surge drove the North Sea into the south west of the country. Dikes broke. Islands and polders flooded in hours.",
+      "file": "st_b.mp3",
+      "after": 6.0
+    },
+    {
+      "id": "st_b2",
+      "text": "Some families climbed into their attics to survive.",
+      "file": "st_b2.mp3",
+      "after": 6.0
+    },
+    {
+      "id": "st_c",
+      "text": "About eighteen hundred people died in the Netherlands. Around seventy thousand more were evacuated from their homes.",
+      "file": "st_c.mp3",
+      "after": 4.0
+    },
+    {
+      "id": "st_c2",
+      "text": "A government commission studied the disaster, and it recommended a complete plan.",
+      "file": "st_c2.mp3",
+      "after": 1.2
+    },
+    {
+      "id": "st_d",
+      "text": "After that night, the country made a promise. Never again.",
+      "file": "st_d.mp3",
+      "after": 18.0
+    },
+    {
+      "id": "dw_a",
+      "text": "The answer was the Delta Works. Dams and storm barriers that close off the sea arms.",
+      "file": "dw_a.mp3",
+      "after": 0.8
+    },
+    {
+      "id": "dw_a2",
+      "text": "The rule for the most populated western part of the country is strict: a flood chance of one in ten thousand a year.",
+      "file": "dw_a2.mp3",
+      "after": 1.0
+    },
+    {
+      "id": "dw_b",
+      "text": "Most of the time, the barriers stay open, and ships and tides pass through. When a storm surge comes, the gates close.",
+      "file": "dw_b.mp3",
+      "after": 8.0
+    },
+    {
+      "id": "dw_c",
+      "text": "The Maeslant barrier is the famous one. Two huge steel gates that float on the water, and swing shut when the sea rises.",
+      "file": "dw_c.mp3",
+      "after": 8.0
+    },
+    {
+      "id": "dw_d",
+      "text": "The Oosterschelde barrier went a different way. It stays open to the sea, so the mussel and oyster farms in the estuary kept their water.",
+      "file": "dw_d.mp3",
+      "after": 8.0
+    },
+    {
+      "id": "dw_e",
+      "text": "Now picture a red line at sea level, cutting right through a town. That line is the threat. Everything the Dutch built is the answer.",
+      "file": "dw_e.mp3",
+      "after": 20.0
+    },
+    {
+      "id": "tw_a",
+      "text": "Here is the twist. Engineers no longer design for the sea they remember.",
+      "file": "tw_a.mp3",
+      "after": 0.8
+    },
+    {
+      "id": "tw_b",
+      "text": "They design for a sea that keeps rising.",
+      "file": "tw_b.mp3",
+      "after": 1.0
+    },
+    {
+      "id": "tw_b2",
+      "text": "Global sea level has risen about twenty centimeters since nineteen hundred.",
+      "file": "tw_b2.mp3",
+      "after": 1.2
+    },
+    {
+      "id": "tw_c",
+      "text": "Dutch planning now looks past the year twenty one hundred. Dikes get built with room to be raised later, so nobody has to start over.",
+      "file": "tw_c.mp3",
+      "after": 4.0
+    },
+    {
+      "id": "tw_d",
+      "text": "Engineers call this adaptive planning. The plans get reviewed, and the numbers get updated, every few years.",
+      "file": "tw_d.mp3",
+      "after": 1.2
+    },
+    {
+      "id": "tw_e",
+      "text": "The question changes. It is no longer, can we stop the sea? It is, how much room do we give it?",
+      "file": "tw_e.mp3",
+      "after": 14.0
+    },
+    {
+      "id": "ho_a",
+      "text": "And this is the part I love. The Netherlands stopped only fighting the water, and started working with it.",
+      "file": "ho_a.mp3",
+      "after": 0.8
+    },
+    {
+      "id": "ho_b",
+      "text": "Room for the River gives rivers more space to spread when they flood, instead of walls that grow higher every decade.",
+      "file": "ho_b.mp3",
+      "after": 1.2
+    },
+    {
+      "id": "ho_c",
+      "text": "The Sand Motor is a giant sandbar, dumped into the sea. Waves and wind carry that sand along the coast for years.",
+      "file": "ho_c.mp3",
+      "after": 6.0
+    },
+    {
+      "id": "ho_c2",
+      "text": "In Rotterdam, a public square called the Benthemplein turns into a water basin when heavy rain falls.",
+      "file": "ho_c2.mp3",
+      "after": 4.0
+    },
+    {
+      "id": "ho_d",
+      "text": "Some homes in the country now float, rising and falling with the water, instead of being pumped dry.",
+      "file": "ho_d.mp3",
+      "after": 8.0
+    },
+    {
+      "id": "ho_e",
+      "text": "A small country turned its biggest threat into its method.",
+      "file": "ho_e.mp3",
+      "after": 18.0
+    },
+    {
+      "id": "cl_d",
+      "text": "So let me leave you with a question. If the sea came back for your town, what would you build first?",
+      "file": "cl_d.mp3",
+      "after": 6.0
+    },
+    {
+      "id": "cl_a",
+      "text": "So, a quarter of this country sits below sea level. And it stays dry.",
+      "file": "cl_a.mp3",
+      "after": 1.0
+    },
+    {
+      "id": "cl_b",
+      "text": "Not because the sea agreed to behave. Because people kept doing the math, and kept building.",
+      "file": "cl_b.mp3",
+      "after": 1.2
+    },
+    {
+      "id": "cl_c",
+      "text": "If you want more stories like this, subscribe. I'll see you in the next one.",
+      "file": "cl_c.mp3",
+      "after": 1.5
+    }
+  ]
+}

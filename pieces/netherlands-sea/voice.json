@@ -1,0 +1,5560 @@
+{
+ "duration": 538.538,
+ "lead": 1.5,
+ "tail": 2,
+ "lines": [
+  {
+   "id": "hook_a",
+   "text": "A quarter of this country sits below sea level.",
+   "t0": 1.5,
+   "t1": 4.441,
+   "take": "voice/hook_a.mp3",
+   "words": [
+    {
+     "w": "A",
+     "t0": 1.5,
+     "t1": 1.625,
+     "est": true
+    },
+    {
+     "w": "quarter",
+     "t0": 1.625,
+     "t1": 2.126,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 2.126,
+     "t1": 2.313,
+     "est": true
+    },
+    {
+     "w": "this",
+     "t0": 2.313,
+     "t1": 2.626,
+     "est": true
+    },
+    {
+     "w": "country",
+     "t0": 2.626,
+     "t1": 3.127,
+     "est": true
+    },
+    {
+     "w": "sits",
+     "t0": 3.127,
+     "t1": 3.44,
+     "est": true
+    },
+    {
+     "w": "below",
+     "t0": 3.44,
+     "t1": 3.815,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 3.815,
+     "t1": 4.066,
+     "est": true
+    },
+    {
+     "w": "level.",
+     "t0": 4.066,
+     "t1": 4.441,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "hook_b",
+   "text": "And it stays dry.",
+   "t0": 5.241,
+   "t1": 6.682,
+   "take": "voice/hook_b.mp3",
+   "words": [
+    {
+     "w": "And",
+     "t0": 5.241,
+     "t1": 5.58,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 5.58,
+     "t1": 5.834,
+     "est": true
+    },
+    {
+     "w": "stays",
+     "t0": 5.834,
+     "t1": 6.343,
+     "est": true
+    },
+    {
+     "w": "dry.",
+     "t0": 6.343,
+     "t1": 6.682,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "hook_c",
+   "text": "Not by luck. By centuries of engineering, and one terrible night in nineteen fifty three.",
+   "t0": 10.682,
+   "t1": 17.458,
+   "take": "voice/hook_c.mp3",
+   "words": [
+    {
+     "w": "Not",
+     "t0": 10.682,
+     "t1": 10.994,
+     "est": true
+    },
+    {
+     "w": "by",
+     "t0": 10.994,
+     "t1": 11.227,
+     "est": true
+    },
+    {
+     "w": "luck.",
+     "t0": 11.227,
+     "t1": 11.617,
+     "est": true
+    },
+    {
+     "w": "By",
+     "t0": 11.617,
+     "t1": 11.85,
+     "est": true
+    },
+    {
+     "w": "centuries",
+     "t0": 11.85,
+     "t1": 12.629,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 12.629,
+     "t1": 12.863,
+     "est": true
+    },
+    {
+     "w": "engineering,",
+     "t0": 12.863,
+     "t1": 13.797,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 13.797,
+     "t1": 14.109,
+     "est": true
+    },
+    {
+     "w": "one",
+     "t0": 14.109,
+     "t1": 14.42,
+     "est": true
+    },
+    {
+     "w": "terrible",
+     "t0": 14.42,
+     "t1": 15.121,
+     "est": true
+    },
+    {
+     "w": "night",
+     "t0": 15.121,
+     "t1": 15.589,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 15.589,
+     "t1": 15.822,
+     "est": true
+    },
+    {
+     "w": "nineteen",
+     "t0": 15.822,
+     "t1": 16.523,
+     "est": true
+    },
+    {
+     "w": "fifty",
+     "t0": 16.523,
+     "t1": 16.991,
+     "est": true
+    },
+    {
+     "w": "three.",
+     "t0": 16.991,
+     "t1": 17.458,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "low_a",
+   "text": "Zoom in on the lowest point in the Netherlands. It sits near the town of Nieuwerkerk aan den IJssel, about six point seven meters below sea level.",
+   "t0": 31.458,
+   "t1": 40.316,
+   "take": "voice/low_a.mp3",
+   "words": [
+    {
+     "w": "Zoom",
+     "t0": 31.458,
+     "t1": 31.766,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 31.766,
+     "t1": 31.95,
+     "est": true
+    },
+    {
+     "w": "on",
+     "t0": 31.95,
+     "t1": 32.135,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 32.135,
+     "t1": 32.381,
+     "est": true
+    },
+    {
+     "w": "lowest",
+     "t0": 32.381,
+     "t1": 32.811,
+     "est": true
+    },
+    {
+     "w": "point",
+     "t0": 32.811,
+     "t1": 33.18,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 33.18,
+     "t1": 33.365,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 33.365,
+     "t1": 33.611,
+     "est": true
+    },
+    {
+     "w": "Netherlands.",
+     "t0": 33.611,
+     "t1": 34.349,
+     "est": true
+    },
+    {
+     "w": "It",
+     "t0": 34.349,
+     "t1": 34.534,
+     "est": true
+    },
+    {
+     "w": "sits",
+     "t0": 34.534,
+     "t1": 34.841,
+     "est": true
+    },
+    {
+     "w": "near",
+     "t0": 34.841,
+     "t1": 35.149,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 35.149,
+     "t1": 35.395,
+     "est": true
+    },
+    {
+     "w": "town",
+     "t0": 35.395,
+     "t1": 35.702,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 35.702,
+     "t1": 35.887,
+     "est": true
+    },
+    {
+     "w": "Nieuwerkerk",
+     "t0": 35.887,
+     "t1": 36.625,
+     "est": true
+    },
+    {
+     "w": "aan",
+     "t0": 36.625,
+     "t1": 36.871,
+     "est": true
+    },
+    {
+     "w": "den",
+     "t0": 36.871,
+     "t1": 37.117,
+     "est": true
+    },
+    {
+     "w": "IJssel,",
+     "t0": 37.117,
+     "t1": 37.548,
+     "est": true
+    },
+    {
+     "w": "about",
+     "t0": 37.548,
+     "t1": 37.917,
+     "est": true
+    },
+    {
+     "w": "six",
+     "t0": 37.917,
+     "t1": 38.163,
+     "est": true
+    },
+    {
+     "w": "point",
+     "t0": 38.163,
+     "t1": 38.532,
+     "est": true
+    },
+    {
+     "w": "seven",
+     "t0": 38.532,
+     "t1": 38.901,
+     "est": true
+    },
+    {
+     "w": "meters",
+     "t0": 38.901,
+     "t1": 39.332,
+     "est": true
+    },
+    {
+     "w": "below",
+     "t0": 39.332,
+     "t1": 39.701,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 39.701,
+     "t1": 39.947,
+     "est": true
+    },
+    {
+     "w": "level.",
+     "t0": 39.947,
+     "t1": 40.316,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "low_b",
+   "text": "Stand a two storey house on that spot, and its roof would sit at sea level.",
+   "t0": 46.316,
+   "t1": 50.685,
+   "take": "voice/low_b.mp3",
+   "words": [
+    {
+     "w": "Stand",
+     "t0": 46.316,
+     "t1": 46.67,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 46.67,
+     "t1": 46.788,
+     "est": true
+    },
+    {
+     "w": "two",
+     "t0": 46.788,
+     "t1": 47.024,
+     "est": true
+    },
+    {
+     "w": "storey",
+     "t0": 47.024,
+     "t1": 47.438,
+     "est": true
+    },
+    {
+     "w": "house",
+     "t0": 47.438,
+     "t1": 47.792,
+     "est": true
+    },
+    {
+     "w": "on",
+     "t0": 47.792,
+     "t1": 47.969,
+     "est": true
+    },
+    {
+     "w": "that",
+     "t0": 47.969,
+     "t1": 48.264,
+     "est": true
+    },
+    {
+     "w": "spot,",
+     "t0": 48.264,
+     "t1": 48.56,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 48.56,
+     "t1": 48.796,
+     "est": true
+    },
+    {
+     "w": "its",
+     "t0": 48.796,
+     "t1": 49.032,
+     "est": true
+    },
+    {
+     "w": "roof",
+     "t0": 49.032,
+     "t1": 49.327,
+     "est": true
+    },
+    {
+     "w": "would",
+     "t0": 49.327,
+     "t1": 49.681,
+     "est": true
+    },
+    {
+     "w": "sit",
+     "t0": 49.681,
+     "t1": 49.917,
+     "est": true
+    },
+    {
+     "w": "at",
+     "t0": 49.917,
+     "t1": 50.095,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 50.095,
+     "t1": 50.331,
+     "est": true
+    },
+    {
+     "w": "level.",
+     "t0": 50.331,
+     "t1": 50.685,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "low_c",
+   "text": "So how do you keep a town dry, when the ground is lower than the ocean?",
+   "t0": 52.185,
+   "t1": 56.636,
+   "take": "voice/low_c.mp3",
+   "words": [
+    {
+     "w": "So",
+     "t0": 52.185,
+     "t1": 52.376,
+     "est": true
+    },
+    {
+     "w": "how",
+     "t0": 52.376,
+     "t1": 52.63,
+     "est": true
+    },
+    {
+     "w": "do",
+     "t0": 52.63,
+     "t1": 52.821,
+     "est": true
+    },
+    {
+     "w": "you",
+     "t0": 52.821,
+     "t1": 53.075,
+     "est": true
+    },
+    {
+     "w": "keep",
+     "t0": 53.075,
+     "t1": 53.393,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 53.393,
+     "t1": 53.52,
+     "est": true
+    },
+    {
+     "w": "town",
+     "t0": 53.52,
+     "t1": 53.838,
+     "est": true
+    },
+    {
+     "w": "dry,",
+     "t0": 53.838,
+     "t1": 54.093,
+     "est": true
+    },
+    {
+     "w": "when",
+     "t0": 54.093,
+     "t1": 54.411,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 54.411,
+     "t1": 54.665,
+     "est": true
+    },
+    {
+     "w": "ground",
+     "t0": 54.665,
+     "t1": 55.11,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 55.11,
+     "t1": 55.301,
+     "est": true
+    },
+    {
+     "w": "lower",
+     "t0": 55.301,
+     "t1": 55.682,
+     "est": true
+    },
+    {
+     "w": "than",
+     "t0": 55.682,
+     "t1": 56,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 56,
+     "t1": 56.254,
+     "est": true
+    },
+    {
+     "w": "ocean?",
+     "t0": 56.254,
+     "t1": 56.636,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "jer_a",
+   "text": "Hey, I'm Jeremy. I'll be your guide through this one.",
+   "t0": 70.635,
+   "t1": 73.598,
+   "take": "voice/jer_a.mp3",
+   "words": [
+    {
+     "w": "Hey,",
+     "t0": 70.635,
+     "t1": 70.877,
+     "est": true
+    },
+    {
+     "w": "I'm",
+     "t0": 70.877,
+     "t1": 71.058,
+     "est": true
+    },
+    {
+     "w": "Jeremy.",
+     "t0": 71.058,
+     "t1": 71.482,
+     "est": true
+    },
+    {
+     "w": "I'll",
+     "t0": 71.482,
+     "t1": 71.723,
+     "est": true
+    },
+    {
+     "w": "be",
+     "t0": 71.723,
+     "t1": 71.905,
+     "est": true
+    },
+    {
+     "w": "your",
+     "t0": 71.905,
+     "t1": 72.207,
+     "est": true
+    },
+    {
+     "w": "guide",
+     "t0": 72.207,
+     "t1": 72.57,
+     "est": true
+    },
+    {
+     "w": "through",
+     "t0": 72.57,
+     "t1": 73.054,
+     "est": true
+    },
+    {
+     "w": "this",
+     "t0": 73.054,
+     "t1": 73.356,
+     "est": true
+    },
+    {
+     "w": "one.",
+     "t0": 73.356,
+     "t1": 73.598,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "jer_b",
+   "text": "Meet the Netherlands. A country that has spent centuries arguing with water, and mostly winning.",
+   "t0": 74.198,
+   "t1": 80.828,
+   "take": "voice/jer_b.mp3",
+   "words": [
+    {
+     "w": "Meet",
+     "t0": 74.198,
+     "t1": 74.551,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 74.551,
+     "t1": 74.833,
+     "est": true
+    },
+    {
+     "w": "Netherlands.",
+     "t0": 74.833,
+     "t1": 75.679,
+     "est": true
+    },
+    {
+     "w": "A",
+     "t0": 75.679,
+     "t1": 75.82,
+     "est": true
+    },
+    {
+     "w": "country",
+     "t0": 75.82,
+     "t1": 76.384,
+     "est": true
+    },
+    {
+     "w": "that",
+     "t0": 76.384,
+     "t1": 76.737,
+     "est": true
+    },
+    {
+     "w": "has",
+     "t0": 76.737,
+     "t1": 77.019,
+     "est": true
+    },
+    {
+     "w": "spent",
+     "t0": 77.019,
+     "t1": 77.442,
+     "est": true
+    },
+    {
+     "w": "centuries",
+     "t0": 77.442,
+     "t1": 78.148,
+     "est": true
+    },
+    {
+     "w": "arguing",
+     "t0": 78.148,
+     "t1": 78.712,
+     "est": true
+    },
+    {
+     "w": "with",
+     "t0": 78.712,
+     "t1": 79.065,
+     "est": true
+    },
+    {
+     "w": "water,",
+     "t0": 79.065,
+     "t1": 79.488,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 79.488,
+     "t1": 79.77,
+     "est": true
+    },
+    {
+     "w": "mostly",
+     "t0": 79.77,
+     "t1": 80.264,
+     "est": true
+    },
+    {
+     "w": "winning.",
+     "t0": 80.264,
+     "t1": 80.828,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "nl_a",
+   "text": "Hi. Water is my whole thing.",
+   "t0": 81.628,
+   "t1": 84.13,
+   "take": "voice/nl_a.mp3",
+   "words": [
+    {
+     "w": "Hi.",
+     "t0": 81.628,
+     "t1": 81.906,
+     "est": true
+    },
+    {
+     "w": "Water",
+     "t0": 81.906,
+     "t1": 82.462,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 82.462,
+     "t1": 82.74,
+     "est": true
+    },
+    {
+     "w": "my",
+     "t0": 82.74,
+     "t1": 83.018,
+     "est": true
+    },
+    {
+     "w": "whole",
+     "t0": 83.018,
+     "t1": 83.574,
+     "est": true
+    },
+    {
+     "w": "thing.",
+     "t0": 83.574,
+     "t1": 84.13,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "nl_b",
+   "text": "Honestly, water and I have been roommates for centuries. We do not always get along.",
+   "t0": 84.93,
+   "t1": 90.741,
+   "take": "voice/nl_b.mp3",
+   "words": [
+    {
+     "w": "Honestly,",
+     "t0": 84.93,
+     "t1": 85.568,
+     "est": true
+    },
+    {
+     "w": "water",
+     "t0": 85.568,
+     "t1": 85.993,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 85.993,
+     "t1": 86.276,
+     "est": true
+    },
+    {
+     "w": "I",
+     "t0": 86.276,
+     "t1": 86.418,
+     "est": true
+    },
+    {
+     "w": "have",
+     "t0": 86.418,
+     "t1": 86.773,
+     "est": true
+    },
+    {
+     "w": "been",
+     "t0": 86.773,
+     "t1": 87.127,
+     "est": true
+    },
+    {
+     "w": "roommates",
+     "t0": 87.127,
+     "t1": 87.836,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 87.836,
+     "t1": 88.119,
+     "est": true
+    },
+    {
+     "w": "centuries.",
+     "t0": 88.119,
+     "t1": 88.828,
+     "est": true
+    },
+    {
+     "w": "We",
+     "t0": 88.828,
+     "t1": 89.04,
+     "est": true
+    },
+    {
+     "w": "do",
+     "t0": 89.04,
+     "t1": 89.253,
+     "est": true
+    },
+    {
+     "w": "not",
+     "t0": 89.253,
+     "t1": 89.536,
+     "est": true
+    },
+    {
+     "w": "always",
+     "t0": 89.536,
+     "t1": 90.032,
+     "est": true
+    },
+    {
+     "w": "get",
+     "t0": 90.032,
+     "t1": 90.316,
+     "est": true
+    },
+    {
+     "w": "along.",
+     "t0": 90.316,
+     "t1": 90.741,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "pol_a",
+   "text": "Step one. Build a dike around a shallow lake or a salt marsh.",
+   "t0": 91.941,
+   "t1": 96.335,
+   "take": "voice/pol_a.mp3",
+   "words": [
+    {
+     "w": "Step",
+     "t0": 91.941,
+     "t1": 92.307,
+     "est": true
+    },
+    {
+     "w": "one.",
+     "t0": 92.307,
+     "t1": 92.6,
+     "est": true
+    },
+    {
+     "w": "Build",
+     "t0": 92.6,
+     "t1": 93.04,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 93.04,
+     "t1": 93.186,
+     "est": true
+    },
+    {
+     "w": "dike",
+     "t0": 93.186,
+     "t1": 93.552,
+     "est": true
+    },
+    {
+     "w": "around",
+     "t0": 93.552,
+     "t1": 94.065,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 94.065,
+     "t1": 94.211,
+     "est": true
+    },
+    {
+     "w": "shallow",
+     "t0": 94.211,
+     "t1": 94.797,
+     "est": true
+    },
+    {
+     "w": "lake",
+     "t0": 94.797,
+     "t1": 95.163,
+     "est": true
+    },
+    {
+     "w": "or",
+     "t0": 95.163,
+     "t1": 95.383,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 95.383,
+     "t1": 95.529,
+     "est": true
+    },
+    {
+     "w": "salt",
+     "t0": 95.529,
+     "t1": 95.896,
+     "est": true
+    },
+    {
+     "w": "marsh.",
+     "t0": 95.896,
+     "t1": 96.335,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "pol_h",
+   "text": "The first big one, the Beemster, was drained in sixteen twelve. It is now a UNESCO World Heritage site.",
+   "t0": 96.935,
+   "t1": 104.246,
+   "take": "voice/pol_h.mp3",
+   "words": [
+    {
+     "w": "The",
+     "t0": 96.935,
+     "t1": 97.227,
+     "est": true
+    },
+    {
+     "w": "first",
+     "t0": 97.227,
+     "t1": 97.666,
+     "est": true
+    },
+    {
+     "w": "big",
+     "t0": 97.666,
+     "t1": 97.959,
+     "est": true
+    },
+    {
+     "w": "one,",
+     "t0": 97.959,
+     "t1": 98.251,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 98.251,
+     "t1": 98.543,
+     "est": true
+    },
+    {
+     "w": "Beemster,",
+     "t0": 98.543,
+     "t1": 99.201,
+     "est": true
+    },
+    {
+     "w": "was",
+     "t0": 99.201,
+     "t1": 99.494,
+     "est": true
+    },
+    {
+     "w": "drained",
+     "t0": 99.494,
+     "t1": 100.079,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 100.079,
+     "t1": 100.298,
+     "est": true
+    },
+    {
+     "w": "sixteen",
+     "t0": 100.298,
+     "t1": 100.883,
+     "est": true
+    },
+    {
+     "w": "twelve.",
+     "t0": 100.883,
+     "t1": 101.395,
+     "est": true
+    },
+    {
+     "w": "It",
+     "t0": 101.395,
+     "t1": 101.614,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 101.614,
+     "t1": 101.833,
+     "est": true
+    },
+    {
+     "w": "now",
+     "t0": 101.833,
+     "t1": 102.126,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 102.126,
+     "t1": 102.272,
+     "est": true
+    },
+    {
+     "w": "UNESCO",
+     "t0": 102.272,
+     "t1": 102.784,
+     "est": true
+    },
+    {
+     "w": "World",
+     "t0": 102.784,
+     "t1": 103.222,
+     "est": true
+    },
+    {
+     "w": "Heritage",
+     "t0": 103.222,
+     "t1": 103.88,
+     "est": true
+    },
+    {
+     "w": "site.",
+     "t0": 103.88,
+     "t1": 104.246,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "pol_b",
+   "text": "Step two. Pump the water out, and you get a polder. Dry land, below the water line, held in by walls.",
+   "t0": 105.046,
+   "t1": 112.581,
+   "take": "voice/pol_b.mp3",
+   "words": [
+    {
+     "w": "Step",
+     "t0": 105.046,
+     "t1": 105.438,
+     "est": true
+    },
+    {
+     "w": "two.",
+     "t0": 105.438,
+     "t1": 105.752,
+     "est": true
+    },
+    {
+     "w": "Pump",
+     "t0": 105.752,
+     "t1": 106.145,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 106.145,
+     "t1": 106.459,
+     "est": true
+    },
+    {
+     "w": "water",
+     "t0": 106.459,
+     "t1": 106.93,
+     "est": true
+    },
+    {
+     "w": "out,",
+     "t0": 106.93,
+     "t1": 107.244,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 107.244,
+     "t1": 107.558,
+     "est": true
+    },
+    {
+     "w": "you",
+     "t0": 107.558,
+     "t1": 107.872,
+     "est": true
+    },
+    {
+     "w": "get",
+     "t0": 107.872,
+     "t1": 108.186,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 108.186,
+     "t1": 108.343,
+     "est": true
+    },
+    {
+     "w": "polder.",
+     "t0": 108.343,
+     "t1": 108.892,
+     "est": true
+    },
+    {
+     "w": "Dry",
+     "t0": 108.892,
+     "t1": 109.206,
+     "est": true
+    },
+    {
+     "w": "land,",
+     "t0": 109.206,
+     "t1": 109.598,
+     "est": true
+    },
+    {
+     "w": "below",
+     "t0": 109.598,
+     "t1": 110.069,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 110.069,
+     "t1": 110.383,
+     "est": true
+    },
+    {
+     "w": "water",
+     "t0": 110.383,
+     "t1": 110.854,
+     "est": true
+    },
+    {
+     "w": "line,",
+     "t0": 110.854,
+     "t1": 111.247,
+     "est": true
+    },
+    {
+     "w": "held",
+     "t0": 111.247,
+     "t1": 111.639,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 111.639,
+     "t1": 111.875,
+     "est": true
+    },
+    {
+     "w": "by",
+     "t0": 111.875,
+     "t1": 112.11,
+     "est": true
+    },
+    {
+     "w": "walls.",
+     "t0": 112.11,
+     "t1": 112.581,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "pol_c",
+   "text": "For centuries, the pumps were windmills. The wind turned the sails, the sails turned the scoop wheel, and the water went up and over the dike.",
+   "t0": 118.581,
+   "t1": 127.428,
+   "take": "voice/pol_c.mp3",
+   "words": [
+    {
+     "w": "For",
+     "t0": 118.581,
+     "t1": 118.837,
+     "est": true
+    },
+    {
+     "w": "centuries,",
+     "t0": 118.837,
+     "t1": 119.479,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 119.479,
+     "t1": 119.735,
+     "est": true
+    },
+    {
+     "w": "pumps",
+     "t0": 119.735,
+     "t1": 120.12,
+     "est": true
+    },
+    {
+     "w": "were",
+     "t0": 120.12,
+     "t1": 120.44,
+     "est": true
+    },
+    {
+     "w": "windmills.",
+     "t0": 120.44,
+     "t1": 121.081,
+     "est": true
+    },
+    {
+     "w": "The",
+     "t0": 121.081,
+     "t1": 121.338,
+     "est": true
+    },
+    {
+     "w": "wind",
+     "t0": 121.338,
+     "t1": 121.658,
+     "est": true
+    },
+    {
+     "w": "turned",
+     "t0": 121.658,
+     "t1": 122.107,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 122.107,
+     "t1": 122.363,
+     "est": true
+    },
+    {
+     "w": "sails,",
+     "t0": 122.363,
+     "t1": 122.748,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 122.748,
+     "t1": 123.004,
+     "est": true
+    },
+    {
+     "w": "sails",
+     "t0": 123.004,
+     "t1": 123.389,
+     "est": true
+    },
+    {
+     "w": "turned",
+     "t0": 123.389,
+     "t1": 123.838,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 123.838,
+     "t1": 124.094,
+     "est": true
+    },
+    {
+     "w": "scoop",
+     "t0": 124.094,
+     "t1": 124.479,
+     "est": true
+    },
+    {
+     "w": "wheel,",
+     "t0": 124.479,
+     "t1": 124.864,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 124.864,
+     "t1": 125.12,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 125.12,
+     "t1": 125.377,
+     "est": true
+    },
+    {
+     "w": "water",
+     "t0": 125.377,
+     "t1": 125.761,
+     "est": true
+    },
+    {
+     "w": "went",
+     "t0": 125.761,
+     "t1": 126.082,
+     "est": true
+    },
+    {
+     "w": "up",
+     "t0": 126.082,
+     "t1": 126.274,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 126.274,
+     "t1": 126.53,
+     "est": true
+    },
+    {
+     "w": "over",
+     "t0": 126.53,
+     "t1": 126.851,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 126.851,
+     "t1": 127.107,
+     "est": true
+    },
+    {
+     "w": "dike.",
+     "t0": 127.107,
+     "t1": 127.428,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "pol_d",
+   "text": "Kinderdijk still has a row of those old windmills. You can walk right up to them.",
+   "t0": 131.428,
+   "t1": 135.573,
+   "take": "voice/pol_d.mp3",
+   "words": [
+    {
+     "w": "Kinderdijk",
+     "t0": 131.428,
+     "t1": 131.998,
+     "est": true
+    },
+    {
+     "w": "still",
+     "t0": 131.998,
+     "t1": 132.309,
+     "est": true
+    },
+    {
+     "w": "has",
+     "t0": 132.309,
+     "t1": 132.516,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 132.516,
+     "t1": 132.62,
+     "est": true
+    },
+    {
+     "w": "row",
+     "t0": 132.62,
+     "t1": 132.827,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 132.827,
+     "t1": 132.982,
+     "est": true
+    },
+    {
+     "w": "those",
+     "t0": 132.982,
+     "t1": 133.293,
+     "est": true
+    },
+    {
+     "w": "old",
+     "t0": 133.293,
+     "t1": 133.5,
+     "est": true
+    },
+    {
+     "w": "windmills.",
+     "t0": 133.5,
+     "t1": 134.019,
+     "est": true
+    },
+    {
+     "w": "You",
+     "t0": 134.019,
+     "t1": 134.226,
+     "est": true
+    },
+    {
+     "w": "can",
+     "t0": 134.226,
+     "t1": 134.433,
+     "est": true
+    },
+    {
+     "w": "walk",
+     "t0": 134.433,
+     "t1": 134.692,
+     "est": true
+    },
+    {
+     "w": "right",
+     "t0": 134.692,
+     "t1": 135.003,
+     "est": true
+    },
+    {
+     "w": "up",
+     "t0": 135.003,
+     "t1": 135.158,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 135.158,
+     "t1": 135.314,
+     "est": true
+    },
+    {
+     "w": "them.",
+     "t0": 135.314,
+     "t1": 135.573,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "pol_e",
+   "text": "The catch: peat soil shrinks as it dries, so the land sinks. The pumps never get a day off.",
+   "t0": 140.573,
+   "t1": 147.869,
+   "take": "voice/pol_e.mp3",
+   "words": [
+    {
+     "w": "The",
+     "t0": 140.573,
+     "t1": 140.905,
+     "est": true
+    },
+    {
+     "w": "catch:",
+     "t0": 140.905,
+     "t1": 141.402,
+     "est": true
+    },
+    {
+     "w": "peat",
+     "t0": 141.402,
+     "t1": 141.817,
+     "est": true
+    },
+    {
+     "w": "soil",
+     "t0": 141.817,
+     "t1": 142.231,
+     "est": true
+    },
+    {
+     "w": "shrinks",
+     "t0": 142.231,
+     "t1": 142.894,
+     "est": true
+    },
+    {
+     "w": "as",
+     "t0": 142.894,
+     "t1": 143.143,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 143.143,
+     "t1": 143.392,
+     "est": true
+    },
+    {
+     "w": "dries,",
+     "t0": 143.392,
+     "t1": 143.889,
+     "est": true
+    },
+    {
+     "w": "so",
+     "t0": 143.889,
+     "t1": 144.138,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 144.138,
+     "t1": 144.47,
+     "est": true
+    },
+    {
+     "w": "land",
+     "t0": 144.47,
+     "t1": 144.884,
+     "est": true
+    },
+    {
+     "w": "sinks.",
+     "t0": 144.884,
+     "t1": 145.382,
+     "est": true
+    },
+    {
+     "w": "The",
+     "t0": 145.382,
+     "t1": 145.713,
+     "est": true
+    },
+    {
+     "w": "pumps",
+     "t0": 145.713,
+     "t1": 146.211,
+     "est": true
+    },
+    {
+     "w": "never",
+     "t0": 146.211,
+     "t1": 146.708,
+     "est": true
+    },
+    {
+     "w": "get",
+     "t0": 146.708,
+     "t1": 147.04,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 147.04,
+     "t1": 147.206,
+     "est": true
+    },
+    {
+     "w": "day",
+     "t0": 147.206,
+     "t1": 147.537,
+     "est": true
+    },
+    {
+     "w": "off.",
+     "t0": 147.537,
+     "t1": 147.869,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "pol_i",
+   "text": "Stop pumping, and the lake comes back. It does not ask permission.",
+   "t0": 148.669,
+   "t1": 153.215,
+   "take": "voice/pol_i.mp3",
+   "words": [
+    {
+     "w": "Stop",
+     "t0": 148.669,
+     "t1": 149.024,
+     "est": true
+    },
+    {
+     "w": "pumping,",
+     "t0": 149.024,
+     "t1": 149.592,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 149.592,
+     "t1": 149.877,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 149.877,
+     "t1": 150.161,
+     "est": true
+    },
+    {
+     "w": "lake",
+     "t0": 150.161,
+     "t1": 150.516,
+     "est": true
+    },
+    {
+     "w": "comes",
+     "t0": 150.516,
+     "t1": 150.942,
+     "est": true
+    },
+    {
+     "w": "back.",
+     "t0": 150.942,
+     "t1": 151.297,
+     "est": true
+    },
+    {
+     "w": "It",
+     "t0": 151.297,
+     "t1": 151.51,
+     "est": true
+    },
+    {
+     "w": "does",
+     "t0": 151.51,
+     "t1": 151.865,
+     "est": true
+    },
+    {
+     "w": "not",
+     "t0": 151.865,
+     "t1": 152.15,
+     "est": true
+    },
+    {
+     "w": "ask",
+     "t0": 152.15,
+     "t1": 152.434,
+     "est": true
+    },
+    {
+     "w": "permission.",
+     "t0": 152.434,
+     "t1": 153.215,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "wb_a",
+   "text": "Some of the water boards that run this system are among the oldest democratic bodies in the country. A few date back to the thirteen hundreds.",
+   "t0": 159.215,
+   "t1": 167.385,
+   "take": "voice/wb_a.mp3",
+   "words": [
+    {
+     "w": "Some",
+     "t0": 159.215,
+     "t1": 159.505,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 159.505,
+     "t1": 159.679,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 159.679,
+     "t1": 159.91,
+     "est": true
+    },
+    {
+     "w": "water",
+     "t0": 159.91,
+     "t1": 160.258,
+     "est": true
+    },
+    {
+     "w": "boards",
+     "t0": 160.258,
+     "t1": 160.664,
+     "est": true
+    },
+    {
+     "w": "that",
+     "t0": 160.664,
+     "t1": 160.953,
+     "est": true
+    },
+    {
+     "w": "run",
+     "t0": 160.953,
+     "t1": 161.185,
+     "est": true
+    },
+    {
+     "w": "this",
+     "t0": 161.185,
+     "t1": 161.475,
+     "est": true
+    },
+    {
+     "w": "system",
+     "t0": 161.475,
+     "t1": 161.88,
+     "est": true
+    },
+    {
+     "w": "are",
+     "t0": 161.88,
+     "t1": 162.112,
+     "est": true
+    },
+    {
+     "w": "among",
+     "t0": 162.112,
+     "t1": 162.46,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 162.46,
+     "t1": 162.692,
+     "est": true
+    },
+    {
+     "w": "oldest",
+     "t0": 162.692,
+     "t1": 163.097,
+     "est": true
+    },
+    {
+     "w": "democratic",
+     "t0": 163.097,
+     "t1": 163.735,
+     "est": true
+    },
+    {
+     "w": "bodies",
+     "t0": 163.735,
+     "t1": 164.14,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 164.14,
+     "t1": 164.314,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 164.314,
+     "t1": 164.546,
+     "est": true
+    },
+    {
+     "w": "country.",
+     "t0": 164.546,
+     "t1": 165.009,
+     "est": true
+    },
+    {
+     "w": "A",
+     "t0": 165.009,
+     "t1": 165.125,
+     "est": true
+    },
+    {
+     "w": "few",
+     "t0": 165.125,
+     "t1": 165.357,
+     "est": true
+    },
+    {
+     "w": "date",
+     "t0": 165.357,
+     "t1": 165.647,
+     "est": true
+    },
+    {
+     "w": "back",
+     "t0": 165.647,
+     "t1": 165.936,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 165.936,
+     "t1": 166.11,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 166.11,
+     "t1": 166.342,
+     "est": true
+    },
+    {
+     "w": "thirteen",
+     "t0": 166.342,
+     "t1": 166.864,
+     "est": true
+    },
+    {
+     "w": "hundreds.",
+     "t0": 166.864,
+     "t1": 167.385,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "pol_f",
+   "text": "In nineteen thirty two, they shut the sea out for good. The Afsluitdijk closed off the Zuiderzee, and it became the IJsselmeer, a lake.",
+   "t0": 170.385,
+   "t1": 179.34,
+   "take": "voice/pol_f.mp3",
+   "words": [
+    {
+     "w": "In",
+     "t0": 170.385,
+     "t1": 170.59,
+     "est": true
+    },
+    {
+     "w": "nineteen",
+     "t0": 170.59,
+     "t1": 171.205,
+     "est": true
+    },
+    {
+     "w": "thirty",
+     "t0": 171.205,
+     "t1": 171.684,
+     "est": true
+    },
+    {
+     "w": "two,",
+     "t0": 171.684,
+     "t1": 171.957,
+     "est": true
+    },
+    {
+     "w": "they",
+     "t0": 171.957,
+     "t1": 172.299,
+     "est": true
+    },
+    {
+     "w": "shut",
+     "t0": 172.299,
+     "t1": 172.641,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 172.641,
+     "t1": 172.914,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 172.914,
+     "t1": 173.188,
+     "est": true
+    },
+    {
+     "w": "out",
+     "t0": 173.188,
+     "t1": 173.461,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 173.461,
+     "t1": 173.735,
+     "est": true
+    },
+    {
+     "w": "good.",
+     "t0": 173.735,
+     "t1": 174.076,
+     "est": true
+    },
+    {
+     "w": "The",
+     "t0": 174.076,
+     "t1": 174.35,
+     "est": true
+    },
+    {
+     "w": "Afsluitdijk",
+     "t0": 174.35,
+     "t1": 175.17,
+     "est": true
+    },
+    {
+     "w": "closed",
+     "t0": 175.17,
+     "t1": 175.649,
+     "est": true
+    },
+    {
+     "w": "off",
+     "t0": 175.649,
+     "t1": 175.922,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 175.922,
+     "t1": 176.195,
+     "est": true
+    },
+    {
+     "w": "Zuiderzee,",
+     "t0": 176.195,
+     "t1": 176.879,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 176.879,
+     "t1": 177.153,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 177.153,
+     "t1": 177.358,
+     "est": true
+    },
+    {
+     "w": "became",
+     "t0": 177.358,
+     "t1": 177.836,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 177.836,
+     "t1": 178.11,
+     "est": true
+    },
+    {
+     "w": "IJsselmeer,",
+     "t0": 178.11,
+     "t1": 178.861,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 178.861,
+     "t1": 178.998,
+     "est": true
+    },
+    {
+     "w": "lake.",
+     "t0": 178.998,
+     "t1": 179.34,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "pol_f2",
+   "text": "That dam is more than thirty kilometers long, and it turned a sea arm into a freshwater lake.",
+   "t0": 182.34,
+   "t1": 188.258,
+   "take": "voice/pol_f2.mp3",
+   "words": [
+    {
+     "w": "That",
+     "t0": 182.34,
+     "t1": 182.662,
+     "est": true
+    },
+    {
+     "w": "dam",
+     "t0": 182.662,
+     "t1": 182.919,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 182.919,
+     "t1": 183.112,
+     "est": true
+    },
+    {
+     "w": "more",
+     "t0": 183.112,
+     "t1": 183.434,
+     "est": true
+    },
+    {
+     "w": "than",
+     "t0": 183.434,
+     "t1": 183.755,
+     "est": true
+    },
+    {
+     "w": "thirty",
+     "t0": 183.755,
+     "t1": 184.205,
+     "est": true
+    },
+    {
+     "w": "kilometers",
+     "t0": 184.205,
+     "t1": 184.913,
+     "est": true
+    },
+    {
+     "w": "long,",
+     "t0": 184.913,
+     "t1": 185.235,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 185.235,
+     "t1": 185.492,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 185.492,
+     "t1": 185.685,
+     "est": true
+    },
+    {
+     "w": "turned",
+     "t0": 185.685,
+     "t1": 186.135,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 186.135,
+     "t1": 186.264,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 186.264,
+     "t1": 186.521,
+     "est": true
+    },
+    {
+     "w": "arm",
+     "t0": 186.521,
+     "t1": 186.778,
+     "est": true
+    },
+    {
+     "w": "into",
+     "t0": 186.778,
+     "t1": 187.1,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 187.1,
+     "t1": 187.229,
+     "est": true
+    },
+    {
+     "w": "freshwater",
+     "t0": 187.229,
+     "t1": 187.936,
+     "est": true
+    },
+    {
+     "w": "lake.",
+     "t0": 187.936,
+     "t1": 188.258,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "pol_g",
+   "text": "Schiphol, the country's main airport, sits below sea level too. Planes land on reclaimed ground.",
+   "t0": 189.458,
+   "t1": 196.056,
+   "take": "voice/pol_g.mp3",
+   "words": [
+    {
+     "w": "Schiphol,",
+     "t0": 189.458,
+     "t1": 190.103,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 190.103,
+     "t1": 190.39,
+     "est": true
+    },
+    {
+     "w": "country's",
+     "t0": 190.39,
+     "t1": 191.036,
+     "est": true
+    },
+    {
+     "w": "main",
+     "t0": 191.036,
+     "t1": 191.394,
+     "est": true
+    },
+    {
+     "w": "airport,",
+     "t0": 191.394,
+     "t1": 191.968,
+     "est": true
+    },
+    {
+     "w": "sits",
+     "t0": 191.968,
+     "t1": 192.327,
+     "est": true
+    },
+    {
+     "w": "below",
+     "t0": 192.327,
+     "t1": 192.757,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 192.757,
+     "t1": 193.044,
+     "est": true
+    },
+    {
+     "w": "level",
+     "t0": 193.044,
+     "t1": 193.474,
+     "est": true
+    },
+    {
+     "w": "too.",
+     "t0": 193.474,
+     "t1": 193.761,
+     "est": true
+    },
+    {
+     "w": "Planes",
+     "t0": 193.761,
+     "t1": 194.263,
+     "est": true
+    },
+    {
+     "w": "land",
+     "t0": 194.263,
+     "t1": 194.622,
+     "est": true
+    },
+    {
+     "w": "on",
+     "t0": 194.622,
+     "t1": 194.837,
+     "est": true
+    },
+    {
+     "w": "reclaimed",
+     "t0": 194.837,
+     "t1": 195.554,
+     "est": true
+    },
+    {
+     "w": "ground.",
+     "t0": 195.554,
+     "t1": 196.056,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "ns_a",
+   "text": "Oh, and I should introduce the North Sea. He has been waiting for his cue.",
+   "t0": 197.056,
+   "t1": 201.661,
+   "take": "voice/ns_a.mp3",
+   "words": [
+    {
+     "w": "Oh,",
+     "t0": 197.056,
+     "t1": 197.248,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 197.248,
+     "t1": 197.504,
+     "est": true
+    },
+    {
+     "w": "I",
+     "t0": 197.504,
+     "t1": 197.632,
+     "est": true
+    },
+    {
+     "w": "should",
+     "t0": 197.632,
+     "t1": 198.079,
+     "est": true
+    },
+    {
+     "w": "introduce",
+     "t0": 198.079,
+     "t1": 198.719,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 198.719,
+     "t1": 198.975,
+     "est": true
+    },
+    {
+     "w": "North",
+     "t0": 198.975,
+     "t1": 199.358,
+     "est": true
+    },
+    {
+     "w": "Sea.",
+     "t0": 199.358,
+     "t1": 199.614,
+     "est": true
+    },
+    {
+     "w": "He",
+     "t0": 199.614,
+     "t1": 199.806,
+     "est": true
+    },
+    {
+     "w": "has",
+     "t0": 199.806,
+     "t1": 200.062,
+     "est": true
+    },
+    {
+     "w": "been",
+     "t0": 200.062,
+     "t1": 200.382,
+     "est": true
+    },
+    {
+     "w": "waiting",
+     "t0": 200.382,
+     "t1": 200.893,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 200.893,
+     "t1": 201.149,
+     "est": true
+    },
+    {
+     "w": "his",
+     "t0": 201.149,
+     "t1": 201.405,
+     "est": true
+    },
+    {
+     "w": "cue.",
+     "t0": 201.405,
+     "t1": 201.661,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "ns_b",
+   "text": "The North Sea is patient. Very patient. And very wet.",
+   "t0": 202.261,
+   "t1": 207.623,
+   "take": "voice/ns_b.mp3",
+   "words": [
+    {
+     "w": "The",
+     "t0": 202.261,
+     "t1": 202.682,
+     "est": true
+    },
+    {
+     "w": "North",
+     "t0": 202.682,
+     "t1": 203.312,
+     "est": true
+    },
+    {
+     "w": "Sea",
+     "t0": 203.312,
+     "t1": 203.733,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 203.733,
+     "t1": 204.048,
+     "est": true
+    },
+    {
+     "w": "patient.",
+     "t0": 204.048,
+     "t1": 204.889,
+     "est": true
+    },
+    {
+     "w": "Very",
+     "t0": 204.889,
+     "t1": 205.415,
+     "est": true
+    },
+    {
+     "w": "patient.",
+     "t0": 205.415,
+     "t1": 206.256,
+     "est": true
+    },
+    {
+     "w": "And",
+     "t0": 206.256,
+     "t1": 206.677,
+     "est": true
+    },
+    {
+     "w": "very",
+     "t0": 206.677,
+     "t1": 207.202,
+     "est": true
+    },
+    {
+     "w": "wet.",
+     "t0": 207.202,
+     "t1": 207.623,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "st_a",
+   "text": "Then came the night of January thirty first, nineteen fifty three.",
+   "t0": 215.623,
+   "t1": 219.616,
+   "take": "voice/st_a.mp3",
+   "words": [
+    {
+     "w": "Then",
+     "t0": 215.623,
+     "t1": 215.93,
+     "est": true
+    },
+    {
+     "w": "came",
+     "t0": 215.93,
+     "t1": 216.237,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 216.237,
+     "t1": 216.483,
+     "est": true
+    },
+    {
+     "w": "night",
+     "t0": 216.483,
+     "t1": 216.852,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 216.852,
+     "t1": 217.036,
+     "est": true
+    },
+    {
+     "w": "January",
+     "t0": 217.036,
+     "t1": 217.527,
+     "est": true
+    },
+    {
+     "w": "thirty",
+     "t0": 217.527,
+     "t1": 217.957,
+     "est": true
+    },
+    {
+     "w": "first,",
+     "t0": 217.957,
+     "t1": 218.326,
+     "est": true
+    },
+    {
+     "w": "nineteen",
+     "t0": 218.326,
+     "t1": 218.879,
+     "est": true
+    },
+    {
+     "w": "fifty",
+     "t0": 218.879,
+     "t1": 219.247,
+     "est": true
+    },
+    {
+     "w": "three.",
+     "t0": 219.247,
+     "t1": 219.616,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "st_b",
+   "text": "A storm surge drove the North Sea into the south west of the country. Dikes broke. Islands and polders flooded in hours.",
+   "t0": 220.416,
+   "t1": 228.516,
+   "take": "voice/st_b.mp3",
+   "words": [
+    {
+     "w": "A",
+     "t0": 220.416,
+     "t1": 220.553,
+     "est": true
+    },
+    {
+     "w": "storm",
+     "t0": 220.553,
+     "t1": 220.965,
+     "est": true
+    },
+    {
+     "w": "surge",
+     "t0": 220.965,
+     "t1": 221.377,
+     "est": true
+    },
+    {
+     "w": "drove",
+     "t0": 221.377,
+     "t1": 221.789,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 221.789,
+     "t1": 222.063,
+     "est": true
+    },
+    {
+     "w": "North",
+     "t0": 222.063,
+     "t1": 222.475,
+     "est": true
+    },
+    {
+     "w": "Sea",
+     "t0": 222.475,
+     "t1": 222.75,
+     "est": true
+    },
+    {
+     "w": "into",
+     "t0": 222.75,
+     "t1": 223.093,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 223.093,
+     "t1": 223.368,
+     "est": true
+    },
+    {
+     "w": "south",
+     "t0": 223.368,
+     "t1": 223.78,
+     "est": true
+    },
+    {
+     "w": "west",
+     "t0": 223.78,
+     "t1": 224.123,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 224.123,
+     "t1": 224.329,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 224.329,
+     "t1": 224.603,
+     "est": true
+    },
+    {
+     "w": "country.",
+     "t0": 224.603,
+     "t1": 225.152,
+     "est": true
+    },
+    {
+     "w": "Dikes",
+     "t0": 225.152,
+     "t1": 225.564,
+     "est": true
+    },
+    {
+     "w": "broke.",
+     "t0": 225.564,
+     "t1": 225.976,
+     "est": true
+    },
+    {
+     "w": "Islands",
+     "t0": 225.976,
+     "t1": 226.525,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 226.525,
+     "t1": 226.8,
+     "est": true
+    },
+    {
+     "w": "polders",
+     "t0": 226.8,
+     "t1": 227.349,
+     "est": true
+    },
+    {
+     "w": "flooded",
+     "t0": 227.349,
+     "t1": 227.898,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 227.898,
+     "t1": 228.104,
+     "est": true
+    },
+    {
+     "w": "hours.",
+     "t0": 228.104,
+     "t1": 228.516,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "st_b2",
+   "text": "Some families climbed into their attics to survive.",
+   "t0": 234.516,
+   "t1": 237.505,
+   "take": "voice/st_b2.mp3",
+   "words": [
+    {
+     "w": "Some",
+     "t0": 234.516,
+     "t1": 234.809,
+     "est": true
+    },
+    {
+     "w": "families",
+     "t0": 234.809,
+     "t1": 235.337,
+     "est": true
+    },
+    {
+     "w": "climbed",
+     "t0": 235.337,
+     "t1": 235.805,
+     "est": true
+    },
+    {
+     "w": "into",
+     "t0": 235.805,
+     "t1": 236.098,
+     "est": true
+    },
+    {
+     "w": "their",
+     "t0": 236.098,
+     "t1": 236.45,
+     "est": true
+    },
+    {
+     "w": "attics",
+     "t0": 236.45,
+     "t1": 236.86,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 236.86,
+     "t1": 237.036,
+     "est": true
+    },
+    {
+     "w": "survive.",
+     "t0": 237.036,
+     "t1": 237.505,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "st_c",
+   "text": "About eighteen hundred people died in the Netherlands. Around seventy thousand more were evacuated from their homes.",
+   "t0": 243.505,
+   "t1": 250.592,
+   "take": "voice/st_c.mp3",
+   "words": [
+    {
+     "w": "About",
+     "t0": 243.505,
+     "t1": 243.875,
+     "est": true
+    },
+    {
+     "w": "eighteen",
+     "t0": 243.875,
+     "t1": 244.429,
+     "est": true
+    },
+    {
+     "w": "hundred",
+     "t0": 244.429,
+     "t1": 244.922,
+     "est": true
+    },
+    {
+     "w": "people",
+     "t0": 244.922,
+     "t1": 245.354,
+     "est": true
+    },
+    {
+     "w": "died",
+     "t0": 245.354,
+     "t1": 245.662,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 245.662,
+     "t1": 245.847,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 245.847,
+     "t1": 246.093,
+     "est": true
+    },
+    {
+     "w": "Netherlands.",
+     "t0": 246.093,
+     "t1": 246.833,
+     "est": true
+    },
+    {
+     "w": "Around",
+     "t0": 246.833,
+     "t1": 247.264,
+     "est": true
+    },
+    {
+     "w": "seventy",
+     "t0": 247.264,
+     "t1": 247.757,
+     "est": true
+    },
+    {
+     "w": "thousand",
+     "t0": 247.757,
+     "t1": 248.312,
+     "est": true
+    },
+    {
+     "w": "more",
+     "t0": 248.312,
+     "t1": 248.62,
+     "est": true
+    },
+    {
+     "w": "were",
+     "t0": 248.62,
+     "t1": 248.928,
+     "est": true
+    },
+    {
+     "w": "evacuated",
+     "t0": 248.928,
+     "t1": 249.544,
+     "est": true
+    },
+    {
+     "w": "from",
+     "t0": 249.544,
+     "t1": 249.852,
+     "est": true
+    },
+    {
+     "w": "their",
+     "t0": 249.852,
+     "t1": 250.222,
+     "est": true
+    },
+    {
+     "w": "homes.",
+     "t0": 250.222,
+     "t1": 250.592,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "st_c2",
+   "text": "A government commission studied the disaster, and it recommended a complete plan.",
+   "t0": 254.592,
+   "t1": 259.472,
+   "take": "voice/st_c2.mp3",
+   "words": [
+    {
+     "w": "A",
+     "t0": 254.592,
+     "t1": 254.714,
+     "est": true
+    },
+    {
+     "w": "government",
+     "t0": 254.714,
+     "t1": 255.385,
+     "est": true
+    },
+    {
+     "w": "commission",
+     "t0": 255.385,
+     "t1": 256.056,
+     "est": true
+    },
+    {
+     "w": "studied",
+     "t0": 256.056,
+     "t1": 256.544,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 256.544,
+     "t1": 256.788,
+     "est": true
+    },
+    {
+     "w": "disaster,",
+     "t0": 256.788,
+     "t1": 257.337,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 257.337,
+     "t1": 257.581,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 257.581,
+     "t1": 257.764,
+     "est": true
+    },
+    {
+     "w": "recommended",
+     "t0": 257.764,
+     "t1": 258.496,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 258.496,
+     "t1": 258.618,
+     "est": true
+    },
+    {
+     "w": "complete",
+     "t0": 258.618,
+     "t1": 259.167,
+     "est": true
+    },
+    {
+     "w": "plan.",
+     "t0": 259.167,
+     "t1": 259.472,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "st_d",
+   "text": "After that night, the country made a promise. Never again.",
+   "t0": 260.672,
+   "t1": 264.994,
+   "take": "voice/st_d.mp3",
+   "words": [
+    {
+     "w": "After",
+     "t0": 260.672,
+     "t1": 261.135,
+     "est": true
+    },
+    {
+     "w": "that",
+     "t0": 261.135,
+     "t1": 261.521,
+     "est": true
+    },
+    {
+     "w": "night,",
+     "t0": 261.521,
+     "t1": 261.984,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 261.984,
+     "t1": 262.293,
+     "est": true
+    },
+    {
+     "w": "country",
+     "t0": 262.293,
+     "t1": 262.91,
+     "est": true
+    },
+    {
+     "w": "made",
+     "t0": 262.91,
+     "t1": 263.296,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 263.296,
+     "t1": 263.45,
+     "est": true
+    },
+    {
+     "w": "promise.",
+     "t0": 263.45,
+     "t1": 264.068,
+     "est": true
+    },
+    {
+     "w": "Never",
+     "t0": 264.068,
+     "t1": 264.531,
+     "est": true
+    },
+    {
+     "w": "again.",
+     "t0": 264.531,
+     "t1": 264.994,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "dw_a",
+   "text": "The answer was the Delta Works. Dams and storm barriers that close off the sea arms.",
+   "t0": 282.994,
+   "t1": 288.519,
+   "take": "voice/dw_a.mp3",
+   "words": [
+    {
+     "w": "The",
+     "t0": 282.994,
+     "t1": 283.26,
+     "est": true
+    },
+    {
+     "w": "answer",
+     "t0": 283.26,
+     "t1": 283.726,
+     "est": true
+    },
+    {
+     "w": "was",
+     "t0": 283.726,
+     "t1": 283.992,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 283.992,
+     "t1": 284.259,
+     "est": true
+    },
+    {
+     "w": "Delta",
+     "t0": 284.259,
+     "t1": 284.658,
+     "est": true
+    },
+    {
+     "w": "Works.",
+     "t0": 284.658,
+     "t1": 285.058,
+     "est": true
+    },
+    {
+     "w": "Dams",
+     "t0": 285.058,
+     "t1": 285.39,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 285.39,
+     "t1": 285.657,
+     "est": true
+    },
+    {
+     "w": "storm",
+     "t0": 285.657,
+     "t1": 286.056,
+     "est": true
+    },
+    {
+     "w": "barriers",
+     "t0": 286.056,
+     "t1": 286.655,
+     "est": true
+    },
+    {
+     "w": "that",
+     "t0": 286.655,
+     "t1": 286.988,
+     "est": true
+    },
+    {
+     "w": "close",
+     "t0": 286.988,
+     "t1": 287.387,
+     "est": true
+    },
+    {
+     "w": "off",
+     "t0": 287.387,
+     "t1": 287.654,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 287.654,
+     "t1": 287.92,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 287.92,
+     "t1": 288.186,
+     "est": true
+    },
+    {
+     "w": "arms.",
+     "t0": 288.186,
+     "t1": 288.519,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "dw_a2",
+   "text": "The rule for the most populated western part of the country is strict: a flood chance of one in ten thousand a year.",
+   "t0": 289.319,
+   "t1": 296.714,
+   "take": "voice/dw_a2.mp3",
+   "words": [
+    {
+     "w": "The",
+     "t0": 289.319,
+     "t1": 289.576,
+     "est": true
+    },
+    {
+     "w": "rule",
+     "t0": 289.576,
+     "t1": 289.898,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 289.898,
+     "t1": 290.155,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 290.155,
+     "t1": 290.412,
+     "est": true
+    },
+    {
+     "w": "most",
+     "t0": 290.412,
+     "t1": 290.734,
+     "est": true
+    },
+    {
+     "w": "populated",
+     "t0": 290.734,
+     "t1": 291.377,
+     "est": true
+    },
+    {
+     "w": "western",
+     "t0": 291.377,
+     "t1": 291.891,
+     "est": true
+    },
+    {
+     "w": "part",
+     "t0": 291.891,
+     "t1": 292.213,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 292.213,
+     "t1": 292.406,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 292.406,
+     "t1": 292.663,
+     "est": true
+    },
+    {
+     "w": "country",
+     "t0": 292.663,
+     "t1": 293.177,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 293.177,
+     "t1": 293.37,
+     "est": true
+    },
+    {
+     "w": "strict:",
+     "t0": 293.37,
+     "t1": 293.82,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 293.82,
+     "t1": 293.949,
+     "est": true
+    },
+    {
+     "w": "flood",
+     "t0": 293.949,
+     "t1": 294.335,
+     "est": true
+    },
+    {
+     "w": "chance",
+     "t0": 294.335,
+     "t1": 294.785,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 294.785,
+     "t1": 294.978,
+     "est": true
+    },
+    {
+     "w": "one",
+     "t0": 294.978,
+     "t1": 295.235,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 295.235,
+     "t1": 295.428,
+     "est": true
+    },
+    {
+     "w": "ten",
+     "t0": 295.428,
+     "t1": 295.685,
+     "est": true
+    },
+    {
+     "w": "thousand",
+     "t0": 295.685,
+     "t1": 296.264,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 296.264,
+     "t1": 296.392,
+     "est": true
+    },
+    {
+     "w": "year.",
+     "t0": 296.392,
+     "t1": 296.714,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "dw_b",
+   "text": "Most of the time, the barriers stay open, and ships and tides pass through. When a storm surge comes, the gates close.",
+   "t0": 297.714,
+   "t1": 305.433,
+   "take": "voice/dw_b.mp3",
+   "words": [
+    {
+     "w": "Most",
+     "t0": 297.714,
+     "t1": 298.053,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 298.053,
+     "t1": 298.256,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 298.256,
+     "t1": 298.527,
+     "est": true
+    },
+    {
+     "w": "time,",
+     "t0": 298.527,
+     "t1": 298.865,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 298.865,
+     "t1": 299.136,
+     "est": true
+    },
+    {
+     "w": "barriers",
+     "t0": 299.136,
+     "t1": 299.745,
+     "est": true
+    },
+    {
+     "w": "stay",
+     "t0": 299.745,
+     "t1": 300.084,
+     "est": true
+    },
+    {
+     "w": "open,",
+     "t0": 300.084,
+     "t1": 300.422,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 300.422,
+     "t1": 300.693,
+     "est": true
+    },
+    {
+     "w": "ships",
+     "t0": 300.693,
+     "t1": 301.1,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 301.1,
+     "t1": 301.37,
+     "est": true
+    },
+    {
+     "w": "tides",
+     "t0": 301.37,
+     "t1": 301.777,
+     "est": true
+    },
+    {
+     "w": "pass",
+     "t0": 301.777,
+     "t1": 302.115,
+     "est": true
+    },
+    {
+     "w": "through.",
+     "t0": 302.115,
+     "t1": 302.657,
+     "est": true
+    },
+    {
+     "w": "When",
+     "t0": 302.657,
+     "t1": 302.995,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 302.995,
+     "t1": 303.131,
+     "est": true
+    },
+    {
+     "w": "storm",
+     "t0": 303.131,
+     "t1": 303.537,
+     "est": true
+    },
+    {
+     "w": "surge",
+     "t0": 303.537,
+     "t1": 303.943,
+     "est": true
+    },
+    {
+     "w": "comes,",
+     "t0": 303.943,
+     "t1": 304.35,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 304.35,
+     "t1": 304.62,
+     "est": true
+    },
+    {
+     "w": "gates",
+     "t0": 304.62,
+     "t1": 305.027,
+     "est": true
+    },
+    {
+     "w": "close.",
+     "t0": 305.027,
+     "t1": 305.433,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "dw_c",
+   "text": "The Maeslant barrier is the famous one. Two huge steel gates that float on the water, and swing shut when the sea rises.",
+   "t0": 313.433,
+   "t1": 321.402,
+   "take": "voice/dw_c.mp3",
+   "words": [
+    {
+     "w": "The",
+     "t0": 313.433,
+     "t1": 313.703,
+     "est": true
+    },
+    {
+     "w": "Maeslant",
+     "t0": 313.703,
+     "t1": 314.311,
+     "est": true
+    },
+    {
+     "w": "barrier",
+     "t0": 314.311,
+     "t1": 314.851,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 314.851,
+     "t1": 315.054,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 315.054,
+     "t1": 315.324,
+     "est": true
+    },
+    {
+     "w": "famous",
+     "t0": 315.324,
+     "t1": 315.797,
+     "est": true
+    },
+    {
+     "w": "one.",
+     "t0": 315.797,
+     "t1": 316.067,
+     "est": true
+    },
+    {
+     "w": "Two",
+     "t0": 316.067,
+     "t1": 316.337,
+     "est": true
+    },
+    {
+     "w": "huge",
+     "t0": 316.337,
+     "t1": 316.675,
+     "est": true
+    },
+    {
+     "w": "steel",
+     "t0": 316.675,
+     "t1": 317.08,
+     "est": true
+    },
+    {
+     "w": "gates",
+     "t0": 317.08,
+     "t1": 317.485,
+     "est": true
+    },
+    {
+     "w": "that",
+     "t0": 317.485,
+     "t1": 317.823,
+     "est": true
+    },
+    {
+     "w": "float",
+     "t0": 317.823,
+     "t1": 318.228,
+     "est": true
+    },
+    {
+     "w": "on",
+     "t0": 318.228,
+     "t1": 318.431,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 318.431,
+     "t1": 318.701,
+     "est": true
+    },
+    {
+     "w": "water,",
+     "t0": 318.701,
+     "t1": 319.106,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 319.106,
+     "t1": 319.376,
+     "est": true
+    },
+    {
+     "w": "swing",
+     "t0": 319.376,
+     "t1": 319.781,
+     "est": true
+    },
+    {
+     "w": "shut",
+     "t0": 319.781,
+     "t1": 320.119,
+     "est": true
+    },
+    {
+     "w": "when",
+     "t0": 320.119,
+     "t1": 320.457,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 320.457,
+     "t1": 320.727,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 320.727,
+     "t1": 320.997,
+     "est": true
+    },
+    {
+     "w": "rises.",
+     "t0": 320.997,
+     "t1": 321.402,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "dw_d",
+   "text": "The Oosterschelde barrier went a different way. It stays open to the sea, so the mussel and oyster farms in the estuary kept their water.",
+   "t0": 329.402,
+   "t1": 337.949,
+   "take": "voice/dw_d.mp3",
+   "words": [
+    {
+     "w": "The",
+     "t0": 329.402,
+     "t1": 329.655,
+     "est": true
+    },
+    {
+     "w": "Oosterschelde",
+     "t0": 329.655,
+     "t1": 330.542,
+     "est": true
+    },
+    {
+     "w": "barrier",
+     "t0": 330.542,
+     "t1": 331.048,
+     "est": true
+    },
+    {
+     "w": "went",
+     "t0": 331.048,
+     "t1": 331.365,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 331.365,
+     "t1": 331.491,
+     "est": true
+    },
+    {
+     "w": "different",
+     "t0": 331.491,
+     "t1": 332.124,
+     "est": true
+    },
+    {
+     "w": "way.",
+     "t0": 332.124,
+     "t1": 332.378,
+     "est": true
+    },
+    {
+     "w": "It",
+     "t0": 332.378,
+     "t1": 332.568,
+     "est": true
+    },
+    {
+     "w": "stays",
+     "t0": 332.568,
+     "t1": 332.947,
+     "est": true
+    },
+    {
+     "w": "open",
+     "t0": 332.947,
+     "t1": 333.264,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 333.264,
+     "t1": 333.454,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 333.454,
+     "t1": 333.707,
+     "est": true
+    },
+    {
+     "w": "sea,",
+     "t0": 333.707,
+     "t1": 333.96,
+     "est": true
+    },
+    {
+     "w": "so",
+     "t0": 333.96,
+     "t1": 334.15,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 334.15,
+     "t1": 334.404,
+     "est": true
+    },
+    {
+     "w": "mussel",
+     "t0": 334.404,
+     "t1": 334.847,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 334.847,
+     "t1": 335.1,
+     "est": true
+    },
+    {
+     "w": "oyster",
+     "t0": 335.1,
+     "t1": 335.543,
+     "est": true
+    },
+    {
+     "w": "farms",
+     "t0": 335.543,
+     "t1": 335.923,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 335.923,
+     "t1": 336.113,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 336.113,
+     "t1": 336.366,
+     "est": true
+    },
+    {
+     "w": "estuary",
+     "t0": 336.366,
+     "t1": 336.873,
+     "est": true
+    },
+    {
+     "w": "kept",
+     "t0": 336.873,
+     "t1": 337.189,
+     "est": true
+    },
+    {
+     "w": "their",
+     "t0": 337.189,
+     "t1": 337.569,
+     "est": true
+    },
+    {
+     "w": "water.",
+     "t0": 337.569,
+     "t1": 337.949,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "dw_e",
+   "text": "Now picture a red line at sea level, cutting right through a town. That line is the threat. Everything the Dutch built is the answer.",
+   "t0": 345.949,
+   "t1": 354.804,
+   "take": "voice/dw_e.mp3",
+   "words": [
+    {
+     "w": "Now",
+     "t0": 345.949,
+     "t1": 346.221,
+     "est": true
+    },
+    {
+     "w": "picture",
+     "t0": 346.221,
+     "t1": 346.766,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 346.766,
+     "t1": 346.903,
+     "est": true
+    },
+    {
+     "w": "red",
+     "t0": 346.903,
+     "t1": 347.175,
+     "est": true
+    },
+    {
+     "w": "line",
+     "t0": 347.175,
+     "t1": 347.516,
+     "est": true
+    },
+    {
+     "w": "at",
+     "t0": 347.516,
+     "t1": 347.72,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 347.72,
+     "t1": 347.992,
+     "est": true
+    },
+    {
+     "w": "level,",
+     "t0": 347.992,
+     "t1": 348.401,
+     "est": true
+    },
+    {
+     "w": "cutting",
+     "t0": 348.401,
+     "t1": 348.946,
+     "est": true
+    },
+    {
+     "w": "right",
+     "t0": 348.946,
+     "t1": 349.355,
+     "est": true
+    },
+    {
+     "w": "through",
+     "t0": 349.355,
+     "t1": 349.9,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 349.9,
+     "t1": 350.036,
+     "est": true
+    },
+    {
+     "w": "town.",
+     "t0": 350.036,
+     "t1": 350.376,
+     "est": true
+    },
+    {
+     "w": "That",
+     "t0": 350.376,
+     "t1": 350.717,
+     "est": true
+    },
+    {
+     "w": "line",
+     "t0": 350.717,
+     "t1": 351.058,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 351.058,
+     "t1": 351.262,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 351.262,
+     "t1": 351.534,
+     "est": true
+    },
+    {
+     "w": "threat.",
+     "t0": 351.534,
+     "t1": 352.011,
+     "est": true
+    },
+    {
+     "w": "Everything",
+     "t0": 352.011,
+     "t1": 352.761,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 352.761,
+     "t1": 353.033,
+     "est": true
+    },
+    {
+     "w": "Dutch",
+     "t0": 353.033,
+     "t1": 353.442,
+     "est": true
+    },
+    {
+     "w": "built",
+     "t0": 353.442,
+     "t1": 353.85,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 353.85,
+     "t1": 354.055,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 354.055,
+     "t1": 354.327,
+     "est": true
+    },
+    {
+     "w": "answer.",
+     "t0": 354.327,
+     "t1": 354.804,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "tw_a",
+   "text": "Here is the twist. Engineers no longer design for the sea they remember.",
+   "t0": 374.804,
+   "t1": 379.838,
+   "take": "voice/tw_a.mp3",
+   "words": [
+    {
+     "w": "Here",
+     "t0": 374.804,
+     "t1": 375.159,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 375.159,
+     "t1": 375.371,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 375.371,
+     "t1": 375.655,
+     "est": true
+    },
+    {
+     "w": "twist.",
+     "t0": 375.655,
+     "t1": 376.08,
+     "est": true
+    },
+    {
+     "w": "Engineers",
+     "t0": 376.08,
+     "t1": 376.789,
+     "est": true
+    },
+    {
+     "w": "no",
+     "t0": 376.789,
+     "t1": 377.002,
+     "est": true
+    },
+    {
+     "w": "longer",
+     "t0": 377.002,
+     "t1": 377.498,
+     "est": true
+    },
+    {
+     "w": "design",
+     "t0": 377.498,
+     "t1": 377.995,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 377.995,
+     "t1": 378.278,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 378.278,
+     "t1": 378.562,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 378.562,
+     "t1": 378.845,
+     "est": true
+    },
+    {
+     "w": "they",
+     "t0": 378.845,
+     "t1": 379.2,
+     "est": true
+    },
+    {
+     "w": "remember.",
+     "t0": 379.2,
+     "t1": 379.838,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "tw_b",
+   "text": "They design for a sea that keeps rising.",
+   "t0": 380.638,
+   "t1": 383.328,
+   "take": "voice/tw_b.mp3",
+   "words": [
+    {
+     "w": "They",
+     "t0": 380.638,
+     "t1": 380.974,
+     "est": true
+    },
+    {
+     "w": "design",
+     "t0": 380.974,
+     "t1": 381.445,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 381.445,
+     "t1": 381.714,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 381.714,
+     "t1": 381.849,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 381.849,
+     "t1": 382.118,
+     "est": true
+    },
+    {
+     "w": "that",
+     "t0": 382.118,
+     "t1": 382.454,
+     "est": true
+    },
+    {
+     "w": "keeps",
+     "t0": 382.454,
+     "t1": 382.857,
+     "est": true
+    },
+    {
+     "w": "rising.",
+     "t0": 382.857,
+     "t1": 383.328,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "tw_b2",
+   "text": "Global sea level has risen about twenty centimeters since nineteen hundred.",
+   "t0": 384.328,
+   "t1": 388.529,
+   "take": "voice/tw_b2.mp3",
+   "words": [
+    {
+     "w": "Global",
+     "t0": 384.328,
+     "t1": 384.72,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 384.72,
+     "t1": 384.944,
+     "est": true
+    },
+    {
+     "w": "level",
+     "t0": 384.944,
+     "t1": 385.28,
+     "est": true
+    },
+    {
+     "w": "has",
+     "t0": 385.28,
+     "t1": 385.504,
+     "est": true
+    },
+    {
+     "w": "risen",
+     "t0": 385.504,
+     "t1": 385.84,
+     "est": true
+    },
+    {
+     "w": "about",
+     "t0": 385.84,
+     "t1": 386.176,
+     "est": true
+    },
+    {
+     "w": "twenty",
+     "t0": 386.176,
+     "t1": 386.569,
+     "est": true
+    },
+    {
+     "w": "centimeters",
+     "t0": 386.569,
+     "t1": 387.241,
+     "est": true
+    },
+    {
+     "w": "since",
+     "t0": 387.241,
+     "t1": 387.577,
+     "est": true
+    },
+    {
+     "w": "nineteen",
+     "t0": 387.577,
+     "t1": 388.081,
+     "est": true
+    },
+    {
+     "w": "hundred.",
+     "t0": 388.081,
+     "t1": 388.529,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "tw_c",
+   "text": "Dutch planning now looks past the year twenty one hundred. Dikes get built with room to be raised later, so nobody has to start over.",
+   "t0": 389.729,
+   "t1": 397.784,
+   "take": "voice/tw_c.mp3",
+   "words": [
+    {
+     "w": "Dutch",
+     "t0": 389.729,
+     "t1": 390.098,
+     "est": true
+    },
+    {
+     "w": "planning",
+     "t0": 390.098,
+     "t1": 390.651,
+     "est": true
+    },
+    {
+     "w": "now",
+     "t0": 390.651,
+     "t1": 390.897,
+     "est": true
+    },
+    {
+     "w": "looks",
+     "t0": 390.897,
+     "t1": 391.266,
+     "est": true
+    },
+    {
+     "w": "past",
+     "t0": 391.266,
+     "t1": 391.574,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 391.574,
+     "t1": 391.82,
+     "est": true
+    },
+    {
+     "w": "year",
+     "t0": 391.82,
+     "t1": 392.127,
+     "est": true
+    },
+    {
+     "w": "twenty",
+     "t0": 392.127,
+     "t1": 392.557,
+     "est": true
+    },
+    {
+     "w": "one",
+     "t0": 392.557,
+     "t1": 392.803,
+     "est": true
+    },
+    {
+     "w": "hundred.",
+     "t0": 392.803,
+     "t1": 393.295,
+     "est": true
+    },
+    {
+     "w": "Dikes",
+     "t0": 393.295,
+     "t1": 393.664,
+     "est": true
+    },
+    {
+     "w": "get",
+     "t0": 393.664,
+     "t1": 393.91,
+     "est": true
+    },
+    {
+     "w": "built",
+     "t0": 393.91,
+     "t1": 394.279,
+     "est": true
+    },
+    {
+     "w": "with",
+     "t0": 394.279,
+     "t1": 394.587,
+     "est": true
+    },
+    {
+     "w": "room",
+     "t0": 394.587,
+     "t1": 394.894,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 394.894,
+     "t1": 395.079,
+     "est": true
+    },
+    {
+     "w": "be",
+     "t0": 395.079,
+     "t1": 395.263,
+     "est": true
+    },
+    {
+     "w": "raised",
+     "t0": 395.263,
+     "t1": 395.693,
+     "est": true
+    },
+    {
+     "w": "later,",
+     "t0": 395.693,
+     "t1": 396.062,
+     "est": true
+    },
+    {
+     "w": "so",
+     "t0": 396.062,
+     "t1": 396.247,
+     "est": true
+    },
+    {
+     "w": "nobody",
+     "t0": 396.247,
+     "t1": 396.677,
+     "est": true
+    },
+    {
+     "w": "has",
+     "t0": 396.677,
+     "t1": 396.923,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 396.923,
+     "t1": 397.108,
+     "est": true
+    },
+    {
+     "w": "start",
+     "t0": 397.108,
+     "t1": 397.477,
+     "est": true
+    },
+    {
+     "w": "over.",
+     "t0": 397.477,
+     "t1": 397.784,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "tw_d",
+   "text": "Engineers call this adaptive planning. The plans get reviewed, and the numbers get updated, every few years.",
+   "t0": 401.784,
+   "t1": 408.593,
+   "take": "voice/tw_d.mp3",
+   "words": [
+    {
+     "w": "Engineers",
+     "t0": 401.784,
+     "t1": 402.432,
+     "est": true
+    },
+    {
+     "w": "call",
+     "t0": 402.432,
+     "t1": 402.757,
+     "est": true
+    },
+    {
+     "w": "this",
+     "t0": 402.757,
+     "t1": 403.081,
+     "est": true
+    },
+    {
+     "w": "adaptive",
+     "t0": 403.081,
+     "t1": 403.665,
+     "est": true
+    },
+    {
+     "w": "planning.",
+     "t0": 403.665,
+     "t1": 404.248,
+     "est": true
+    },
+    {
+     "w": "The",
+     "t0": 404.248,
+     "t1": 404.508,
+     "est": true
+    },
+    {
+     "w": "plans",
+     "t0": 404.508,
+     "t1": 404.897,
+     "est": true
+    },
+    {
+     "w": "get",
+     "t0": 404.897,
+     "t1": 405.156,
+     "est": true
+    },
+    {
+     "w": "reviewed,",
+     "t0": 405.156,
+     "t1": 405.74,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 405.74,
+     "t1": 405.999,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 405.999,
+     "t1": 406.258,
+     "est": true
+    },
+    {
+     "w": "numbers",
+     "t0": 406.258,
+     "t1": 406.777,
+     "est": true
+    },
+    {
+     "w": "get",
+     "t0": 406.777,
+     "t1": 407.037,
+     "est": true
+    },
+    {
+     "w": "updated,",
+     "t0": 407.037,
+     "t1": 407.555,
+     "est": true
+    },
+    {
+     "w": "every",
+     "t0": 407.555,
+     "t1": 407.945,
+     "est": true
+    },
+    {
+     "w": "few",
+     "t0": 407.945,
+     "t1": 408.204,
+     "est": true
+    },
+    {
+     "w": "years.",
+     "t0": 408.204,
+     "t1": 408.593,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "tw_e",
+   "text": "The question changes. It is no longer, can we stop the sea? It is, how much room do we give it?",
+   "t0": 409.793,
+   "t1": 417.043,
+   "take": "voice/tw_e.mp3",
+   "words": [
+    {
+     "w": "The",
+     "t0": 409.793,
+     "t1": 410.112,
+     "est": true
+    },
+    {
+     "w": "question",
+     "t0": 410.112,
+     "t1": 410.829,
+     "est": true
+    },
+    {
+     "w": "changes.",
+     "t0": 410.829,
+     "t1": 411.466,
+     "est": true
+    },
+    {
+     "w": "It",
+     "t0": 411.466,
+     "t1": 411.705,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 411.705,
+     "t1": 411.944,
+     "est": true
+    },
+    {
+     "w": "no",
+     "t0": 411.944,
+     "t1": 412.183,
+     "est": true
+    },
+    {
+     "w": "longer,",
+     "t0": 412.183,
+     "t1": 412.741,
+     "est": true
+    },
+    {
+     "w": "can",
+     "t0": 412.741,
+     "t1": 413.059,
+     "est": true
+    },
+    {
+     "w": "we",
+     "t0": 413.059,
+     "t1": 413.298,
+     "est": true
+    },
+    {
+     "w": "stop",
+     "t0": 413.298,
+     "t1": 413.697,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 413.697,
+     "t1": 414.016,
+     "est": true
+    },
+    {
+     "w": "sea?",
+     "t0": 414.016,
+     "t1": 414.334,
+     "est": true
+    },
+    {
+     "w": "It",
+     "t0": 414.334,
+     "t1": 414.573,
+     "est": true
+    },
+    {
+     "w": "is,",
+     "t0": 414.573,
+     "t1": 414.812,
+     "est": true
+    },
+    {
+     "w": "how",
+     "t0": 414.812,
+     "t1": 415.131,
+     "est": true
+    },
+    {
+     "w": "much",
+     "t0": 415.131,
+     "t1": 415.529,
+     "est": true
+    },
+    {
+     "w": "room",
+     "t0": 415.529,
+     "t1": 415.928,
+     "est": true
+    },
+    {
+     "w": "do",
+     "t0": 415.928,
+     "t1": 416.167,
+     "est": true
+    },
+    {
+     "w": "we",
+     "t0": 416.167,
+     "t1": 416.406,
+     "est": true
+    },
+    {
+     "w": "give",
+     "t0": 416.406,
+     "t1": 416.804,
+     "est": true
+    },
+    {
+     "w": "it?",
+     "t0": 416.804,
+     "t1": 417.043,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "ho_a",
+   "text": "And this is the part I love. The Netherlands stopped only fighting the water, and started working with it.",
+   "t0": 431.043,
+   "t1": 437.674,
+   "take": "voice/ho_a.mp3",
+   "words": [
+    {
+     "w": "And",
+     "t0": 431.043,
+     "t1": 431.298,
+     "est": true
+    },
+    {
+     "w": "this",
+     "t0": 431.298,
+     "t1": 431.617,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 431.617,
+     "t1": 431.808,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 431.808,
+     "t1": 432.063,
+     "est": true
+    },
+    {
+     "w": "part",
+     "t0": 432.063,
+     "t1": 432.382,
+     "est": true
+    },
+    {
+     "w": "I",
+     "t0": 432.382,
+     "t1": 432.509,
+     "est": true
+    },
+    {
+     "w": "love.",
+     "t0": 432.509,
+     "t1": 432.828,
+     "est": true
+    },
+    {
+     "w": "The",
+     "t0": 432.828,
+     "t1": 433.083,
+     "est": true
+    },
+    {
+     "w": "Netherlands",
+     "t0": 433.083,
+     "t1": 433.848,
+     "est": true
+    },
+    {
+     "w": "stopped",
+     "t0": 433.848,
+     "t1": 434.358,
+     "est": true
+    },
+    {
+     "w": "only",
+     "t0": 434.358,
+     "t1": 434.677,
+     "est": true
+    },
+    {
+     "w": "fighting",
+     "t0": 434.677,
+     "t1": 435.251,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 435.251,
+     "t1": 435.506,
+     "est": true
+    },
+    {
+     "w": "water,",
+     "t0": 435.506,
+     "t1": 435.889,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 435.889,
+     "t1": 436.144,
+     "est": true
+    },
+    {
+     "w": "started",
+     "t0": 436.144,
+     "t1": 436.654,
+     "est": true
+    },
+    {
+     "w": "working",
+     "t0": 436.654,
+     "t1": 437.164,
+     "est": true
+    },
+    {
+     "w": "with",
+     "t0": 437.164,
+     "t1": 437.483,
+     "est": true
+    },
+    {
+     "w": "it.",
+     "t0": 437.483,
+     "t1": 437.674,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "ho_b",
+   "text": "Room for the River gives rivers more space to spread when they flood, instead of walls that grow higher every decade.",
+   "t0": 438.474,
+   "t1": 445.443,
+   "take": "voice/ho_b.mp3",
+   "words": [
+    {
+     "w": "Room",
+     "t0": 438.474,
+     "t1": 438.774,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 438.774,
+     "t1": 439.015,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 439.015,
+     "t1": 439.255,
+     "est": true
+    },
+    {
+     "w": "River",
+     "t0": 439.255,
+     "t1": 439.615,
+     "est": true
+    },
+    {
+     "w": "gives",
+     "t0": 439.615,
+     "t1": 439.976,
+     "est": true
+    },
+    {
+     "w": "rivers",
+     "t0": 439.976,
+     "t1": 440.396,
+     "est": true
+    },
+    {
+     "w": "more",
+     "t0": 440.396,
+     "t1": 440.697,
+     "est": true
+    },
+    {
+     "w": "space",
+     "t0": 440.697,
+     "t1": 441.057,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 441.057,
+     "t1": 441.238,
+     "est": true
+    },
+    {
+     "w": "spread",
+     "t0": 441.238,
+     "t1": 441.658,
+     "est": true
+    },
+    {
+     "w": "when",
+     "t0": 441.658,
+     "t1": 441.959,
+     "est": true
+    },
+    {
+     "w": "they",
+     "t0": 441.959,
+     "t1": 442.259,
+     "est": true
+    },
+    {
+     "w": "flood,",
+     "t0": 442.259,
+     "t1": 442.619,
+     "est": true
+    },
+    {
+     "w": "instead",
+     "t0": 442.619,
+     "t1": 443.1,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 443.1,
+     "t1": 443.28,
+     "est": true
+    },
+    {
+     "w": "walls",
+     "t0": 443.28,
+     "t1": 443.641,
+     "est": true
+    },
+    {
+     "w": "that",
+     "t0": 443.641,
+     "t1": 443.941,
+     "est": true
+    },
+    {
+     "w": "grow",
+     "t0": 443.941,
+     "t1": 444.241,
+     "est": true
+    },
+    {
+     "w": "higher",
+     "t0": 444.241,
+     "t1": 444.662,
+     "est": true
+    },
+    {
+     "w": "every",
+     "t0": 444.662,
+     "t1": 445.022,
+     "est": true
+    },
+    {
+     "w": "decade.",
+     "t0": 445.022,
+     "t1": 445.443,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "ho_c",
+   "text": "The Sand Motor is a giant sandbar, dumped into the sea. Waves and wind carry that sand along the coast for years.",
+   "t0": 446.643,
+   "t1": 454.732,
+   "take": "voice/ho_c.mp3",
+   "words": [
+    {
+     "w": "The",
+     "t0": 446.643,
+     "t1": 446.934,
+     "est": true
+    },
+    {
+     "w": "Sand",
+     "t0": 446.934,
+     "t1": 447.299,
+     "est": true
+    },
+    {
+     "w": "Motor",
+     "t0": 447.299,
+     "t1": 447.736,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 447.736,
+     "t1": 447.955,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 447.955,
+     "t1": 448.1,
+     "est": true
+    },
+    {
+     "w": "giant",
+     "t0": 448.1,
+     "t1": 448.538,
+     "est": true
+    },
+    {
+     "w": "sandbar,",
+     "t0": 448.538,
+     "t1": 449.121,
+     "est": true
+    },
+    {
+     "w": "dumped",
+     "t0": 449.121,
+     "t1": 449.631,
+     "est": true
+    },
+    {
+     "w": "into",
+     "t0": 449.631,
+     "t1": 449.995,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 449.995,
+     "t1": 450.287,
+     "est": true
+    },
+    {
+     "w": "sea.",
+     "t0": 450.287,
+     "t1": 450.578,
+     "est": true
+    },
+    {
+     "w": "Waves",
+     "t0": 450.578,
+     "t1": 451.015,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 451.015,
+     "t1": 451.307,
+     "est": true
+    },
+    {
+     "w": "wind",
+     "t0": 451.307,
+     "t1": 451.671,
+     "est": true
+    },
+    {
+     "w": "carry",
+     "t0": 451.671,
+     "t1": 452.109,
+     "est": true
+    },
+    {
+     "w": "that",
+     "t0": 452.109,
+     "t1": 452.473,
+     "est": true
+    },
+    {
+     "w": "sand",
+     "t0": 452.473,
+     "t1": 452.837,
+     "est": true
+    },
+    {
+     "w": "along",
+     "t0": 452.837,
+     "t1": 453.275,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 453.275,
+     "t1": 453.566,
+     "est": true
+    },
+    {
+     "w": "coast",
+     "t0": 453.566,
+     "t1": 454.003,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 454.003,
+     "t1": 454.295,
+     "est": true
+    },
+    {
+     "w": "years.",
+     "t0": 454.295,
+     "t1": 454.732,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "ho_c2",
+   "text": "In Rotterdam, a public square called the Benthemplein turns into a water basin when heavy rain falls.",
+   "t0": 460.732,
+   "t1": 467.039,
+   "take": "voice/ho_c2.mp3",
+   "words": [
+    {
+     "w": "In",
+     "t0": 460.732,
+     "t1": 460.921,
+     "est": true
+    },
+    {
+     "w": "Rotterdam,",
+     "t0": 460.921,
+     "t1": 461.552,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 461.552,
+     "t1": 461.678,
+     "est": true
+    },
+    {
+     "w": "public",
+     "t0": 461.678,
+     "t1": 462.12,
+     "est": true
+    },
+    {
+     "w": "square",
+     "t0": 462.12,
+     "t1": 462.561,
+     "est": true
+    },
+    {
+     "w": "called",
+     "t0": 462.561,
+     "t1": 463.003,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 463.003,
+     "t1": 463.255,
+     "est": true
+    },
+    {
+     "w": "Benthemplein",
+     "t0": 463.255,
+     "t1": 464.075,
+     "est": true
+    },
+    {
+     "w": "turns",
+     "t0": 464.075,
+     "t1": 464.453,
+     "est": true
+    },
+    {
+     "w": "into",
+     "t0": 464.453,
+     "t1": 464.768,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 464.768,
+     "t1": 464.895,
+     "est": true
+    },
+    {
+     "w": "water",
+     "t0": 464.895,
+     "t1": 465.273,
+     "est": true
+    },
+    {
+     "w": "basin",
+     "t0": 465.273,
+     "t1": 465.651,
+     "est": true
+    },
+    {
+     "w": "when",
+     "t0": 465.651,
+     "t1": 465.967,
+     "est": true
+    },
+    {
+     "w": "heavy",
+     "t0": 465.967,
+     "t1": 466.345,
+     "est": true
+    },
+    {
+     "w": "rain",
+     "t0": 466.345,
+     "t1": 466.661,
+     "est": true
+    },
+    {
+     "w": "falls.",
+     "t0": 466.661,
+     "t1": 467.039,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "ho_d",
+   "text": "Some homes in the country now float, rising and falling with the water, instead of being pumped dry.",
+   "t0": 471.039,
+   "t1": 477.241,
+   "take": "voice/ho_d.mp3",
+   "words": [
+    {
+     "w": "Some",
+     "t0": 471.039,
+     "t1": 471.355,
+     "est": true
+    },
+    {
+     "w": "homes",
+     "t0": 471.355,
+     "t1": 471.735,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 471.735,
+     "t1": 471.925,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 471.925,
+     "t1": 472.178,
+     "est": true
+    },
+    {
+     "w": "country",
+     "t0": 472.178,
+     "t1": 472.684,
+     "est": true
+    },
+    {
+     "w": "now",
+     "t0": 472.684,
+     "t1": 472.938,
+     "est": true
+    },
+    {
+     "w": "float,",
+     "t0": 472.938,
+     "t1": 473.317,
+     "est": true
+    },
+    {
+     "w": "rising",
+     "t0": 473.317,
+     "t1": 473.76,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 473.76,
+     "t1": 474.013,
+     "est": true
+    },
+    {
+     "w": "falling",
+     "t0": 474.013,
+     "t1": 474.52,
+     "est": true
+    },
+    {
+     "w": "with",
+     "t0": 474.52,
+     "t1": 474.836,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 474.836,
+     "t1": 475.089,
+     "est": true
+    },
+    {
+     "w": "water,",
+     "t0": 475.089,
+     "t1": 475.469,
+     "est": true
+    },
+    {
+     "w": "instead",
+     "t0": 475.469,
+     "t1": 475.975,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 475.975,
+     "t1": 476.165,
+     "est": true
+    },
+    {
+     "w": "being",
+     "t0": 476.165,
+     "t1": 476.545,
+     "est": true
+    },
+    {
+     "w": "pumped",
+     "t0": 476.545,
+     "t1": 476.988,
+     "est": true
+    },
+    {
+     "w": "dry.",
+     "t0": 476.988,
+     "t1": 477.241,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "ho_e",
+   "text": "A small country turned its biggest threat into its method.",
+   "t0": 485.241,
+   "t1": 488.93,
+   "take": "voice/ho_e.mp3",
+   "words": [
+    {
+     "w": "A",
+     "t0": 485.241,
+     "t1": 485.368,
+     "est": true
+    },
+    {
+     "w": "small",
+     "t0": 485.368,
+     "t1": 485.75,
+     "est": true
+    },
+    {
+     "w": "country",
+     "t0": 485.75,
+     "t1": 486.259,
+     "est": true
+    },
+    {
+     "w": "turned",
+     "t0": 486.259,
+     "t1": 486.704,
+     "est": true
+    },
+    {
+     "w": "its",
+     "t0": 486.704,
+     "t1": 486.958,
+     "est": true
+    },
+    {
+     "w": "biggest",
+     "t0": 486.958,
+     "t1": 487.467,
+     "est": true
+    },
+    {
+     "w": "threat",
+     "t0": 487.467,
+     "t1": 487.912,
+     "est": true
+    },
+    {
+     "w": "into",
+     "t0": 487.912,
+     "t1": 488.23,
+     "est": true
+    },
+    {
+     "w": "its",
+     "t0": 488.23,
+     "t1": 488.485,
+     "est": true
+    },
+    {
+     "w": "method.",
+     "t0": 488.485,
+     "t1": 488.93,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "cl_d",
+   "text": "So let me leave you with a question. If the sea came back for your town, what would you build first?",
+   "t0": 506.93,
+   "t1": 512.974,
+   "take": "voice/cl_d.mp3",
+   "words": [
+    {
+     "w": "So",
+     "t0": 506.93,
+     "t1": 507.115,
+     "est": true
+    },
+    {
+     "w": "let",
+     "t0": 507.115,
+     "t1": 507.362,
+     "est": true
+    },
+    {
+     "w": "me",
+     "t0": 507.362,
+     "t1": 507.547,
+     "est": true
+    },
+    {
+     "w": "leave",
+     "t0": 507.547,
+     "t1": 507.917,
+     "est": true
+    },
+    {
+     "w": "you",
+     "t0": 507.917,
+     "t1": 508.163,
+     "est": true
+    },
+    {
+     "w": "with",
+     "t0": 508.163,
+     "t1": 508.472,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 508.472,
+     "t1": 508.595,
+     "est": true
+    },
+    {
+     "w": "question.",
+     "t0": 508.595,
+     "t1": 509.15,
+     "est": true
+    },
+    {
+     "w": "If",
+     "t0": 509.15,
+     "t1": 509.335,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 509.335,
+     "t1": 509.582,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 509.582,
+     "t1": 509.829,
+     "est": true
+    },
+    {
+     "w": "came",
+     "t0": 509.829,
+     "t1": 510.137,
+     "est": true
+    },
+    {
+     "w": "back",
+     "t0": 510.137,
+     "t1": 510.445,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 510.445,
+     "t1": 510.692,
+     "est": true
+    },
+    {
+     "w": "your",
+     "t0": 510.692,
+     "t1": 511,
+     "est": true
+    },
+    {
+     "w": "town,",
+     "t0": 511,
+     "t1": 511.309,
+     "est": true
+    },
+    {
+     "w": "what",
+     "t0": 511.309,
+     "t1": 511.617,
+     "est": true
+    },
+    {
+     "w": "would",
+     "t0": 511.617,
+     "t1": 511.987,
+     "est": true
+    },
+    {
+     "w": "you",
+     "t0": 511.987,
+     "t1": 512.234,
+     "est": true
+    },
+    {
+     "w": "build",
+     "t0": 512.234,
+     "t1": 512.604,
+     "est": true
+    },
+    {
+     "w": "first?",
+     "t0": 512.604,
+     "t1": 512.974,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "cl_a",
+   "text": "So, a quarter of this country sits below sea level. And it stays dry.",
+   "t0": 518.974,
+   "t1": 524.351,
+   "take": "voice/cl_a.mp3",
+   "words": [
+    {
+     "w": "So,",
+     "t0": 518.974,
+     "t1": 519.215,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 519.215,
+     "t1": 519.375,
+     "est": true
+    },
+    {
+     "w": "quarter",
+     "t0": 519.375,
+     "t1": 520.017,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 520.017,
+     "t1": 520.258,
+     "est": true
+    },
+    {
+     "w": "this",
+     "t0": 520.258,
+     "t1": 520.659,
+     "est": true
+    },
+    {
+     "w": "country",
+     "t0": 520.659,
+     "t1": 521.301,
+     "est": true
+    },
+    {
+     "w": "sits",
+     "t0": 521.301,
+     "t1": 521.703,
+     "est": true
+    },
+    {
+     "w": "below",
+     "t0": 521.703,
+     "t1": 522.184,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 522.184,
+     "t1": 522.505,
+     "est": true
+    },
+    {
+     "w": "level.",
+     "t0": 522.505,
+     "t1": 522.987,
+     "est": true
+    },
+    {
+     "w": "And",
+     "t0": 522.987,
+     "t1": 523.308,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 523.308,
+     "t1": 523.548,
+     "est": true
+    },
+    {
+     "w": "stays",
+     "t0": 523.548,
+     "t1": 524.03,
+     "est": true
+    },
+    {
+     "w": "dry.",
+     "t0": 524.03,
+     "t1": 524.351,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "cl_b",
+   "text": "Not because the sea agreed to behave. Because people kept doing the math, and kept building.",
+   "t0": 525.351,
+   "t1": 531.519,
+   "take": "voice/cl_b.mp3",
+   "words": [
+    {
+     "w": "Not",
+     "t0": 525.351,
+     "t1": 525.625,
+     "est": true
+    },
+    {
+     "w": "because",
+     "t0": 525.625,
+     "t1": 526.173,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 526.173,
+     "t1": 526.448,
+     "est": true
+    },
+    {
+     "w": "sea",
+     "t0": 526.448,
+     "t1": 526.722,
+     "est": true
+    },
+    {
+     "w": "agreed",
+     "t0": 526.722,
+     "t1": 527.201,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 527.201,
+     "t1": 527.407,
+     "est": true
+    },
+    {
+     "w": "behave.",
+     "t0": 527.407,
+     "t1": 527.887,
+     "est": true
+    },
+    {
+     "w": "Because",
+     "t0": 527.887,
+     "t1": 528.435,
+     "est": true
+    },
+    {
+     "w": "people",
+     "t0": 528.435,
+     "t1": 528.915,
+     "est": true
+    },
+    {
+     "w": "kept",
+     "t0": 528.915,
+     "t1": 529.257,
+     "est": true
+    },
+    {
+     "w": "doing",
+     "t0": 529.257,
+     "t1": 529.669,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 529.669,
+     "t1": 529.943,
+     "est": true
+    },
+    {
+     "w": "math,",
+     "t0": 529.943,
+     "t1": 530.285,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 530.285,
+     "t1": 530.56,
+     "est": true
+    },
+    {
+     "w": "kept",
+     "t0": 530.56,
+     "t1": 530.902,
+     "est": true
+    },
+    {
+     "w": "building.",
+     "t0": 530.902,
+     "t1": 531.519,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "cl_c",
+   "text": "If you want more stories like this, subscribe. I'll see you in the next one.",
+   "t0": 532.719,
+   "t1": 536.538,
+   "take": "voice/cl_c.mp3",
+   "words": [
+    {
+     "w": "If",
+     "t0": 532.719,
+     "t1": 532.876,
+     "est": true
+    },
+    {
+     "w": "you",
+     "t0": 532.876,
+     "t1": 533.085,
+     "est": true
+    },
+    {
+     "w": "want",
+     "t0": 533.085,
+     "t1": 533.347,
+     "est": true
+    },
+    {
+     "w": "more",
+     "t0": 533.347,
+     "t1": 533.608,
+     "est": true
+    },
+    {
+     "w": "stories",
+     "t0": 533.608,
+     "t1": 534.027,
+     "est": true
+    },
+    {
+     "w": "like",
+     "t0": 534.027,
+     "t1": 534.288,
+     "est": true
+    },
+    {
+     "w": "this,",
+     "t0": 534.288,
+     "t1": 534.55,
+     "est": true
+    },
+    {
+     "w": "subscribe.",
+     "t0": 534.55,
+     "t1": 535.073,
+     "est": true
+    },
+    {
+     "w": "I'll",
+     "t0": 535.073,
+     "t1": 535.282,
+     "est": true
+    },
+    {
+     "w": "see",
+     "t0": 535.282,
+     "t1": 535.492,
+     "est": true
+    },
+    {
+     "w": "you",
+     "t0": 535.492,
+     "t1": 535.701,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 535.701,
+     "t1": 535.858,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 535.858,
+     "t1": 536.067,
+     "est": true
+    },
+    {
+     "w": "next",
+     "t0": 536.067,
+     "t1": 536.329,
+     "est": true
+    },
+    {
+     "w": "one.",
+     "t0": 536.329,
+     "t1": 536.538,
+     "est": true
+    }
+   ]
+  }
+ ]
+}
