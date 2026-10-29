@@ -28,29 +28,40 @@ const CX = W / 2;
 const VL = (id) => VOICE.lines.find((l) => l.id === id).t0;   // the start of a spoken line
 
 const cu = {
-  open: VL('open'), ask: VL('ask'), deep: VL('deep'), window: VL('window'), cast: VL('cast'), tow: VL('tow'),
-  trench: VL('trench'), sink: VL('sink'), bed: VL('bed'), seal: VL('seal'), connect: VL('connect'), end: VL('end'),
+  hook: VL('hook'), open: VL('open'), ask: VL('ask'), deep: VL('deep'), window: VL('window'), cast: VL('cast'),
+  tow: VL('tow'), trench: VL('trench'), sink: VL('sink'), bed: VL('bed'), seal: VL('seal'), connect: VL('connect'),
+  end: VL('end'), title: VL('title'),
 };
 // the scenes, cut on the voice-over
 const ERA_LIST = [
-  [0,                 cu.deep - 0.1,    () => sceneAerial()],
-  [cu.deep - 0.1,     cu.cast - 0.1,    () => sceneChallenge()],
+  [0,                 cu.open - 0.1,    () => sceneHook()],
+  [cu.open - 0.1,     cu.ask - 0.1,     () => sceneAerial()],
+  [cu.ask - 0.1,      cu.window - 0.1,  () => sceneDepth()],
+  [cu.window - 0.1,   cu.cast - 0.1,    () => sceneCurrent()],
   [cu.cast - 0.1,     cu.tow - 0.1,     () => sceneCast()],
   [cu.tow - 0.1,      cu.trench - 0.1,  () => sceneTow()],
-  [cu.trench - 0.1,   cu.seal - 0.1,    () => sceneTrench()],
+  [cu.trench - 0.1,   cu.sink - 0.1,    () => sceneTrench()],
+  [cu.sink - 0.1,     cu.bed - 0.1,     () => sceneSink()],
+  [cu.bed - 0.1,      cu.seal - 0.1,    () => sceneBed()],
   [cu.seal - 0.1,     cu.connect - 0.1, () => sceneSeal()],
   [cu.connect - 0.1,  cu.end - 0.1,     () => sceneConnect()],
-  [cu.end - 0.1,      DURATION,         () => sceneEnd()],
+  [cu.end - 0.1,      cu.title - 0.1,   () => sceneEnd()],
+  [cu.title - 0.1,    DURATION,         () => sceneTitle()],
 ];
 const SHOTS = [
-  ['aerial',    0, 0,                  cu.deep - 0.1,    'Istanbul from the air; the strait and the route'],
-  ['challenge', 1, cu.deep - 0.1,      cu.cast - 0.1,    'depth and current under the water'],
-  ['cast',      2, cu.cast - 0.1,      cu.tow - 0.1,     'a section cast in a dry dock, beside a football pitch'],
-  ['tow',       3, cu.tow - 0.1,       cu.trench - 0.1,  'a section towed to the strait'],
-  ['trench',    4, cu.trench - 0.1,    cu.seal - 0.1,    'a trench dredged, the section lowered, gravel laid'],
-  ['seal',      5, cu.seal - 0.1,      cu.connect - 0.1, 'the joint sealed and dried'],
-  ['shores',    6, cu.connect - 0.1,   cu.end - 0.1,     'bored tunnels link the tube to each shore'],
-  ['finish',    7, cu.end - 0.1,       DURATION,         'the whole tube, and a train crossing'],
+  ['teaser',  0,  0,                 cu.open - 0.1,    'the train inside the tube, before any question'],
+  ['aerial',  1,  cu.open - 0.1,     cu.ask - 0.1,     'Istanbul from the air; the route of the tube'],
+  ['depth',   2,  cu.ask - 0.1,      cu.window - 0.1,  'challenge one: 60 m, beside a 20-storey tower'],
+  ['current', 3,  cu.window - 0.1,   cu.cast - 0.1,    'challenge two: the current'],
+  ['cast',    4,  cu.cast - 0.1,     cu.tow - 0.1,     'a 135 m section beside a bus and a football pitch'],
+  ['tow',     5,  cu.tow - 0.1,      cu.trench - 0.1,  'a tug takes a section to the strait'],
+  ['trench',  6,  cu.trench - 0.1,   cu.sink - 0.1,    'a trench dredged 14 m down'],
+  ['sink',    7,  cu.sink - 0.1,     cu.bed - 0.1,     'the section lowered, its tanks taking in water'],
+  ['bed',     8,  cu.bed - 0.1,      cu.seal - 0.1,    'gravel levelled, grout under the tube'],
+  ['seal',    9,  cu.seal - 0.1,     cu.connect - 0.1, 'the gasket seals the joint, the water is pumped out'],
+  ['shores',  10, cu.connect - 0.1,  cu.end - 0.1,     'the land cut away, a bored tunnel into the hill'],
+  ['finish',  11, cu.end - 0.1,      cu.title - 0.1,   'the train runs through the tube, followed'],
+  ['title',   12, cu.title - 0.1,    DURATION,         'the title card'],
 ];
 const TIMELINE = {
   width: W, height: H, fps: FPS, bpm: 120, gridOffset: 0, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: '16:9',

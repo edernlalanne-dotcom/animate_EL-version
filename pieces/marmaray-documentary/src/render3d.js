@@ -141,3 +141,15 @@ function m3Caption(str, t0, t1) {
   ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
   ctx.fillText(str, W / 2, H - 80); ctx.restore();
 }
+
+// a camera at p looking at t, for shots that follow an object
+function m3Look(p, t) {
+  const f = m3Norm(m3Sub(t, p)), r = m3Norm(m3Cross(f, [0, 1, 0]));
+  M3_CAM = { p, f, r, u: m3Cross(r, f) };
+}
+
+// a camera at p looking at t, for shots that follow an object
+function m3Look(p, t) {
+  const f = m3Norm(m3Sub(t, p)), r = m3Norm(m3Cross(f, [0, 1, 0]));
+  M3_CAM = { p, f, r, u: m3Cross(r, f) };
+}

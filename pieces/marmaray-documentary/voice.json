@@ -1,283 +1,268 @@
 {
- "duration": 71.683,
- "lead": 1.2,
+ "duration": 59.816,
+ "lead": 0.6,
  "tail": 2,
  "lines": [
   {
-   "id": "open",
-   "text": "Istanbul sits on two continents, split by the Bosphorus, a strait of water between Europe and Asia.",
-   "t0": 1.2,
-   "t1": 7.571,
-   "take": "voice/open.mp3",
+   "id": "hook",
+   "text": "A train now runs under the sea, from Europe to Asia.",
+   "t0": 0.6,
+   "t1": 4.331,
+   "take": "voice/hook.mp3",
    "words": [
     {
-     "w": "Istanbul",
-     "t0": 1.2,
-     "t1": 1.791,
+     "w": "A",
+     "t0": 0.6,
+     "t1": 0.746,
      "est": true
     },
     {
-     "w": "sits",
-     "t0": 1.791,
-     "t1": 2.12,
+     "w": "train",
+     "t0": 0.746,
+     "t1": 1.185,
      "est": true
     },
     {
-     "w": "on",
-     "t0": 2.12,
-     "t1": 2.317,
+     "w": "now",
+     "t0": 1.185,
+     "t1": 1.478,
      "est": true
     },
     {
-     "w": "two",
-     "t0": 2.317,
-     "t1": 2.579,
+     "w": "runs",
+     "t0": 1.478,
+     "t1": 1.844,
      "est": true
     },
     {
-     "w": "continents,",
-     "t0": 2.579,
-     "t1": 3.302,
-     "est": true
-    },
-    {
-     "w": "split",
-     "t0": 3.302,
-     "t1": 3.696,
-     "est": true
-    },
-    {
-     "w": "by",
-     "t0": 3.696,
-     "t1": 3.893,
+     "w": "under",
+     "t0": 1.844,
+     "t1": 2.283,
      "est": true
     },
     {
      "w": "the",
-     "t0": 3.893,
-     "t1": 4.156,
+     "t0": 2.283,
+     "t1": 2.575,
      "est": true
     },
     {
-     "w": "Bosphorus,",
-     "t0": 4.156,
-     "t1": 4.812,
+     "w": "sea,",
+     "t0": 2.575,
+     "t1": 2.868,
      "est": true
     },
     {
-     "w": "a",
-     "t0": 4.812,
-     "t1": 4.944,
-     "est": true
-    },
-    {
-     "w": "strait",
-     "t0": 4.944,
-     "t1": 5.404,
-     "est": true
-    },
-    {
-     "w": "of",
-     "t0": 5.404,
-     "t1": 5.601,
-     "est": true
-    },
-    {
-     "w": "water",
-     "t0": 5.601,
-     "t1": 5.995,
-     "est": true
-    },
-    {
-     "w": "between",
-     "t0": 5.995,
-     "t1": 6.52,
+     "w": "from",
+     "t0": 2.868,
+     "t1": 3.234,
      "est": true
     },
     {
      "w": "Europe",
-     "t0": 6.52,
-     "t1": 6.98,
+     "t0": 3.234,
+     "t1": 3.746,
      "est": true
     },
     {
-     "w": "and",
-     "t0": 6.98,
-     "t1": 7.243,
+     "w": "to",
+     "t0": 3.746,
+     "t1": 3.965,
      "est": true
     },
     {
      "w": "Asia.",
-     "t0": 7.243,
-     "t1": 7.571,
+     "t0": 3.965,
+     "t1": 4.331,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "open",
+   "text": "Istanbul sits on two continents, split by the Bosphorus.",
+   "t0": 4.731,
+   "t1": 8.501,
+   "take": "voice/open.mp3",
+   "words": [
+    {
+     "w": "Istanbul",
+     "t0": 4.731,
+     "t1": 5.348,
+     "est": true
+    },
+    {
+     "w": "sits",
+     "t0": 5.348,
+     "t1": 5.691,
+     "est": true
+    },
+    {
+     "w": "on",
+     "t0": 5.691,
+     "t1": 5.896,
+     "est": true
+    },
+    {
+     "w": "two",
+     "t0": 5.896,
+     "t1": 6.17,
+     "est": true
+    },
+    {
+     "w": "continents,",
+     "t0": 6.17,
+     "t1": 6.924,
+     "est": true
+    },
+    {
+     "w": "split",
+     "t0": 6.924,
+     "t1": 7.336,
+     "est": true
+    },
+    {
+     "w": "by",
+     "t0": 7.336,
+     "t1": 7.541,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 7.541,
+     "t1": 7.816,
+     "est": true
+    },
+    {
+     "w": "Bosphorus.",
+     "t0": 7.816,
+     "t1": 8.501,
      "est": true
     }
    ]
   },
   {
    "id": "ask",
-   "text": "So how do you get a railway under the sea? Engineers did it in pieces.",
-   "t0": 8.071,
-   "t1": 13.391,
+   "text": "So how do you get a railway under the sea?",
+   "t0": 8.901,
+   "t1": 11.767,
    "take": "voice/ask.mp3",
    "words": [
     {
      "w": "So",
-     "t0": 8.071,
-     "t1": 8.302,
+     "t0": 8.901,
+     "t1": 9.106,
      "est": true
     },
     {
      "w": "how",
-     "t0": 8.302,
-     "t1": 8.611,
+     "t0": 9.106,
+     "t1": 9.379,
      "est": true
     },
     {
      "w": "do",
-     "t0": 8.611,
-     "t1": 8.842,
+     "t0": 9.379,
+     "t1": 9.583,
      "est": true
     },
     {
      "w": "you",
-     "t0": 8.842,
-     "t1": 9.15,
+     "t0": 9.583,
+     "t1": 9.856,
      "est": true
     },
     {
      "w": "get",
-     "t0": 9.15,
-     "t1": 9.459,
+     "t0": 9.856,
+     "t1": 10.129,
      "est": true
     },
     {
      "w": "a",
-     "t0": 9.459,
-     "t1": 9.613,
+     "t0": 10.129,
+     "t1": 10.266,
      "est": true
     },
     {
      "w": "railway",
-     "t0": 9.613,
-     "t1": 10.23,
+     "t0": 10.266,
+     "t1": 10.812,
      "est": true
     },
     {
      "w": "under",
-     "t0": 10.23,
-     "t1": 10.692,
+     "t0": 10.812,
+     "t1": 11.221,
      "est": true
     },
     {
      "w": "the",
-     "t0": 10.692,
-     "t1": 11.001,
+     "t0": 11.221,
+     "t1": 11.494,
      "est": true
     },
     {
      "w": "sea?",
-     "t0": 11.001,
-     "t1": 11.309,
-     "est": true
-    },
-    {
-     "w": "Engineers",
-     "t0": 11.309,
-     "t1": 12.08,
-     "est": true
-    },
-    {
-     "w": "did",
-     "t0": 12.08,
-     "t1": 12.389,
-     "est": true
-    },
-    {
-     "w": "it",
-     "t0": 12.389,
-     "t1": 12.62,
-     "est": true
-    },
-    {
-     "w": "in",
-     "t0": 12.62,
-     "t1": 12.851,
-     "est": true
-    },
-    {
-     "w": "pieces.",
-     "t0": 12.851,
-     "t1": 13.391,
+     "t0": 11.494,
+     "t1": 11.767,
      "est": true
     }
    ]
   },
   {
    "id": "deep",
-   "text": "The deepest point sits near sixty meters below the surface.",
-   "t0": 13.991,
-   "t1": 17.596,
+   "text": "The deepest point sits near sixty meters down.",
+   "t0": 12.167,
+   "t1": 15.126,
    "take": "voice/deep.mp3",
    "words": [
     {
      "w": "The",
-     "t0": 13.991,
-     "t1": 14.235,
+     "t0": 12.167,
+     "t1": 12.424,
      "est": true
     },
     {
      "w": "deepest",
-     "t0": 14.235,
-     "t1": 14.724,
+     "t0": 12.424,
+     "t1": 12.939,
      "est": true
     },
     {
      "w": "point",
-     "t0": 14.724,
-     "t1": 15.091,
+     "t0": 12.939,
+     "t1": 13.325,
      "est": true
     },
     {
      "w": "sits",
-     "t0": 15.091,
-     "t1": 15.396,
+     "t0": 13.325,
+     "t1": 13.646,
      "est": true
     },
     {
      "w": "near",
-     "t0": 15.396,
-     "t1": 15.702,
+     "t0": 13.646,
+     "t1": 13.968,
      "est": true
     },
     {
      "w": "sixty",
-     "t0": 15.702,
-     "t1": 16.068,
+     "t0": 13.968,
+     "t1": 14.354,
      "est": true
     },
     {
      "w": "meters",
-     "t0": 16.068,
-     "t1": 16.496,
+     "t0": 14.354,
+     "t1": 14.804,
      "est": true
     },
     {
-     "w": "below",
-     "t0": 16.496,
-     "t1": 16.863,
-     "est": true
-    },
-    {
-     "w": "the",
-     "t0": 16.863,
-     "t1": 17.107,
-     "est": true
-    },
-    {
-     "w": "surface.",
-     "t0": 17.107,
-     "t1": 17.596,
+     "w": "down.",
+     "t0": 14.804,
+     "t1": 15.126,
      "est": true
     }
    ]
@@ -285,872 +270,725 @@
   {
    "id": "window",
    "text": "They only sank a section when the current ran under three knots.",
-   "t0": 18.196,
-   "t1": 21.845,
+   "t0": 15.526,
+   "t1": 19.174,
    "take": "voice/window.mp3",
    "words": [
     {
      "w": "They",
-     "t0": 18.196,
-     "t1": 18.481,
+     "t0": 15.526,
+     "t1": 15.811,
      "est": true
     },
     {
      "w": "only",
-     "t0": 18.481,
-     "t1": 18.766,
+     "t0": 15.811,
+     "t1": 16.096,
      "est": true
     },
     {
      "w": "sank",
-     "t0": 18.766,
-     "t1": 19.051,
+     "t0": 16.096,
+     "t1": 16.381,
      "est": true
     },
     {
      "w": "a",
-     "t0": 19.051,
-     "t1": 19.165,
+     "t0": 16.381,
+     "t1": 16.495,
      "est": true
     },
     {
      "w": "section",
-     "t0": 19.165,
-     "t1": 19.621,
+     "t0": 16.495,
+     "t1": 16.951,
      "est": true
     },
     {
      "w": "when",
-     "t0": 19.621,
-     "t1": 19.906,
+     "t0": 16.951,
+     "t1": 17.236,
      "est": true
     },
     {
      "w": "the",
-     "t0": 19.906,
-     "t1": 20.135,
+     "t0": 17.236,
+     "t1": 17.464,
      "est": true
     },
     {
      "w": "current",
-     "t0": 20.135,
-     "t1": 20.591,
+     "t0": 17.464,
+     "t1": 17.92,
      "est": true
     },
     {
      "w": "ran",
-     "t0": 20.591,
-     "t1": 20.819,
+     "t0": 17.92,
+     "t1": 18.148,
      "est": true
     },
     {
      "w": "under",
-     "t0": 20.819,
-     "t1": 21.161,
+     "t0": 18.148,
+     "t1": 18.49,
      "est": true
     },
     {
      "w": "three",
-     "t0": 21.161,
-     "t1": 21.503,
+     "t0": 18.49,
+     "t1": 18.832,
      "est": true
     },
     {
      "w": "knots.",
-     "t0": 21.503,
-     "t1": 21.845,
+     "t0": 18.832,
+     "t1": 19.174,
      "est": true
     }
    ]
   },
   {
    "id": "cast",
-   "text": "First, they cast eleven concrete sections in dry docks. Each one weighs up to eighteen thousand tonnes.",
-   "t0": 22.445,
-   "t1": 29.591,
+   "text": "First, they cast eleven sections. Each one is longer than a football pitch.",
+   "t0": 19.574,
+   "t1": 25.002,
    "take": "voice/cast.mp3",
    "words": [
     {
      "w": "First,",
-     "t0": 22.445,
-     "t1": 22.87,
+     "t0": 19.574,
+     "t1": 20.02,
      "est": true
     },
     {
      "w": "they",
-     "t0": 22.87,
-     "t1": 23.223,
+     "t0": 20.02,
+     "t1": 20.392,
      "est": true
     },
     {
      "w": "cast",
-     "t0": 23.223,
-     "t1": 23.577,
+     "t0": 20.392,
+     "t1": 20.764,
      "est": true
     },
     {
      "w": "eleven",
-     "t0": 23.577,
-     "t1": 24.072,
+     "t0": 20.764,
+     "t1": 21.284,
      "est": true
     },
     {
-     "w": "concrete",
-     "t0": 24.072,
-     "t1": 24.709,
-     "est": true
-    },
-    {
-     "w": "sections",
-     "t0": 24.709,
-     "t1": 25.346,
-     "est": true
-    },
-    {
-     "w": "in",
-     "t0": 25.346,
-     "t1": 25.558,
-     "est": true
-    },
-    {
-     "w": "dry",
-     "t0": 25.558,
-     "t1": 25.841,
-     "est": true
-    },
-    {
-     "w": "docks.",
-     "t0": 25.841,
-     "t1": 26.266,
+     "w": "sections.",
+     "t0": 21.284,
+     "t1": 21.953,
      "est": true
     },
     {
      "w": "Each",
-     "t0": 26.266,
-     "t1": 26.619,
+     "t0": 21.953,
+     "t1": 22.325,
      "est": true
     },
     {
      "w": "one",
-     "t0": 26.619,
-     "t1": 26.902,
+     "t0": 22.325,
+     "t1": 22.623,
      "est": true
     },
     {
-     "w": "weighs",
-     "t0": 26.902,
-     "t1": 27.398,
+     "w": "is",
+     "t0": 22.623,
+     "t1": 22.846,
      "est": true
     },
     {
-     "w": "up",
-     "t0": 27.398,
-     "t1": 27.61,
+     "w": "longer",
+     "t0": 22.846,
+     "t1": 23.366,
      "est": true
     },
     {
-     "w": "to",
-     "t0": 27.61,
-     "t1": 27.822,
+     "w": "than",
+     "t0": 23.366,
+     "t1": 23.738,
      "est": true
     },
     {
-     "w": "eighteen",
-     "t0": 27.822,
-     "t1": 28.459,
+     "w": "a",
+     "t0": 23.738,
+     "t1": 23.887,
      "est": true
     },
     {
-     "w": "thousand",
-     "t0": 28.459,
-     "t1": 29.096,
+     "w": "football",
+     "t0": 23.887,
+     "t1": 24.556,
      "est": true
     },
     {
-     "w": "tonnes.",
-     "t0": 29.096,
-     "t1": 29.591,
+     "w": "pitch.",
+     "t0": 24.556,
+     "t1": 25.002,
      "est": true
     }
    ]
   },
   {
    "id": "tow",
-   "text": "Then they tested each section and towed it out to the strait.",
-   "t0": 30.091,
-   "t1": 33.728,
+   "text": "Then each section was towed to the strait.",
+   "t0": 25.402,
+   "t1": 28.16,
    "take": "voice/tow.mp3",
    "words": [
     {
      "w": "Then",
-     "t0": 30.091,
-     "t1": 30.389,
-     "est": true
-    },
-    {
-     "w": "they",
-     "t0": 30.389,
-     "t1": 30.687,
-     "est": true
-    },
-    {
-     "w": "tested",
-     "t0": 30.687,
-     "t1": 31.105,
+     "t0": 25.402,
+     "t1": 25.73,
      "est": true
     },
     {
      "w": "each",
-     "t0": 31.105,
-     "t1": 31.403,
+     "t0": 25.73,
+     "t1": 26.059,
      "est": true
     },
     {
      "w": "section",
-     "t0": 31.403,
-     "t1": 31.88,
+     "t0": 26.059,
+     "t1": 26.584,
      "est": true
     },
     {
-     "w": "and",
-     "t0": 31.88,
-     "t1": 32.118,
+     "w": "was",
+     "t0": 26.584,
+     "t1": 26.847,
      "est": true
     },
     {
      "w": "towed",
-     "t0": 32.118,
-     "t1": 32.476,
-     "est": true
-    },
-    {
-     "w": "it",
-     "t0": 32.476,
-     "t1": 32.655,
-     "est": true
-    },
-    {
-     "w": "out",
-     "t0": 32.655,
-     "t1": 32.893,
+     "t0": 26.847,
+     "t1": 27.241,
      "est": true
     },
     {
      "w": "to",
-     "t0": 32.893,
-     "t1": 33.072,
+     "t0": 27.241,
+     "t1": 27.438,
      "est": true
     },
     {
      "w": "the",
-     "t0": 33.072,
-     "t1": 33.311,
+     "t0": 27.438,
+     "t1": 27.7,
      "est": true
     },
     {
      "w": "strait.",
-     "t0": 33.311,
-     "t1": 33.728,
+     "t0": 27.7,
+     "t1": 28.16,
      "est": true
     }
    ]
   },
   {
    "id": "trench",
-   "text": "Crews dredged a trench into the seabed, about fourteen meters deep.",
-   "t0": 34.228,
-   "t1": 38.372,
+   "text": "Crews dredged a trench about fourteen meters down.",
+   "t0": 28.56,
+   "t1": 31.703,
    "take": "voice/trench.mp3",
    "words": [
     {
      "w": "Crews",
-     "t0": 34.228,
-     "t1": 34.605,
+     "t0": 28.56,
+     "t1": 28.937,
      "est": true
     },
     {
      "w": "dredged",
-     "t0": 34.605,
-     "t1": 35.107,
+     "t0": 28.937,
+     "t1": 29.44,
      "est": true
     },
     {
      "w": "a",
-     "t0": 35.107,
-     "t1": 35.233,
+     "t0": 29.44,
+     "t1": 29.566,
      "est": true
     },
     {
      "w": "trench",
-     "t0": 35.233,
-     "t1": 35.672,
-     "est": true
-    },
-    {
-     "w": "into",
-     "t0": 35.672,
-     "t1": 35.986,
-     "est": true
-    },
-    {
-     "w": "the",
-     "t0": 35.986,
-     "t1": 36.237,
-     "est": true
-    },
-    {
-     "w": "seabed,",
-     "t0": 36.237,
-     "t1": 36.677,
+     "t0": 29.566,
+     "t1": 30.006,
      "est": true
     },
     {
      "w": "about",
-     "t0": 36.677,
-     "t1": 37.053,
+     "t0": 30.006,
+     "t1": 30.383,
      "est": true
     },
     {
      "w": "fourteen",
-     "t0": 37.053,
-     "t1": 37.619,
+     "t0": 30.383,
+     "t1": 30.949,
      "est": true
     },
     {
      "w": "meters",
-     "t0": 37.619,
-     "t1": 38.058,
+     "t0": 30.949,
+     "t1": 31.389,
      "est": true
     },
     {
-     "w": "deep.",
-     "t0": 38.058,
-     "t1": 38.372,
+     "w": "down.",
+     "t0": 31.389,
+     "t1": 31.703,
      "est": true
     }
    ]
   },
   {
    "id": "sink",
-   "text": "The sections were lowered by filling internal tanks with water, slowly, under control.",
-   "t0": 38.872,
-   "t1": 44.482,
+   "text": "Then it was lowered, slowly, as its tanks took in water.",
+   "t0": 32.103,
+   "t1": 36.54,
    "take": "voice/sink.mp3",
    "words": [
     {
-     "w": "The",
-     "t0": 38.872,
-     "t1": 39.139,
+     "w": "Then",
+     "t0": 32.103,
+     "t1": 32.514,
      "est": true
     },
     {
-     "w": "sections",
-     "t0": 39.139,
-     "t1": 39.74,
+     "w": "it",
+     "t0": 32.514,
+     "t1": 32.76,
      "est": true
     },
     {
-     "w": "were",
-     "t0": 39.74,
-     "t1": 40.074,
+     "w": "was",
+     "t0": 32.76,
+     "t1": 33.089,
      "est": true
     },
     {
-     "w": "lowered",
-     "t0": 40.074,
-     "t1": 40.608,
-     "est": true
-    },
-    {
-     "w": "by",
-     "t0": 40.608,
-     "t1": 40.809,
-     "est": true
-    },
-    {
-     "w": "filling",
-     "t0": 40.809,
-     "t1": 41.343,
-     "est": true
-    },
-    {
-     "w": "internal",
-     "t0": 41.343,
-     "t1": 41.944,
-     "est": true
-    },
-    {
-     "w": "tanks",
-     "t0": 41.944,
-     "t1": 42.345,
-     "est": true
-    },
-    {
-     "w": "with",
-     "t0": 42.345,
-     "t1": 42.679,
-     "est": true
-    },
-    {
-     "w": "water,",
-     "t0": 42.679,
-     "t1": 43.08,
+     "w": "lowered,",
+     "t0": 33.089,
+     "t1": 33.746,
      "est": true
     },
     {
      "w": "slowly,",
-     "t0": 43.08,
-     "t1": 43.547,
+     "t0": 33.746,
+     "t1": 34.322,
      "est": true
     },
     {
-     "w": "under",
-     "t0": 43.547,
-     "t1": 43.948,
+     "w": "as",
+     "t0": 34.322,
+     "t1": 34.568,
      "est": true
     },
     {
-     "w": "control.",
-     "t0": 43.948,
-     "t1": 44.482,
+     "w": "its",
+     "t0": 34.568,
+     "t1": 34.897,
+     "est": true
+    },
+    {
+     "w": "tanks",
+     "t0": 34.897,
+     "t1": 35.39,
+     "est": true
+    },
+    {
+     "w": "took",
+     "t0": 35.39,
+     "t1": 35.8,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 35.8,
+     "t1": 36.047,
+     "est": true
+    },
+    {
+     "w": "water.",
+     "t0": 36.047,
+     "t1": 36.54,
      "est": true
     }
    ]
   },
   {
    "id": "bed",
-   "text": "Machines levelled a gravel bed, and grout filled the gaps underneath.",
-   "t0": 44.982,
-   "t1": 49.06,
+   "text": "Machines levelled gravel, and grout filled the gaps.",
+   "t0": 36.94,
+   "t1": 40.229,
    "take": "voice/bed.mp3",
    "words": [
     {
      "w": "Machines",
-     "t0": 44.982,
-     "t1": 45.522,
+     "t0": 36.94,
+     "t1": 37.52,
      "est": true
     },
     {
      "w": "levelled",
-     "t0": 45.522,
-     "t1": 46.061,
+     "t0": 37.52,
+     "t1": 38.101,
      "est": true
     },
     {
-     "w": "a",
-     "t0": 46.061,
-     "t1": 46.181,
-     "est": true
-    },
-    {
-     "w": "gravel",
-     "t0": 46.181,
-     "t1": 46.601,
-     "est": true
-    },
-    {
-     "w": "bed,",
-     "t0": 46.601,
-     "t1": 46.841,
+     "w": "gravel,",
+     "t0": 38.101,
+     "t1": 38.552,
      "est": true
     },
     {
      "w": "and",
-     "t0": 46.841,
-     "t1": 47.081,
+     "t0": 38.552,
+     "t1": 38.81,
      "est": true
     },
     {
      "w": "grout",
-     "t0": 47.081,
-     "t1": 47.441,
+     "t0": 38.81,
+     "t1": 39.197,
      "est": true
     },
     {
      "w": "filled",
-     "t0": 47.441,
-     "t1": 47.861,
+     "t0": 39.197,
+     "t1": 39.649,
      "est": true
     },
     {
      "w": "the",
-     "t0": 47.861,
-     "t1": 48.1,
+     "t0": 39.649,
+     "t1": 39.907,
      "est": true
     },
     {
-     "w": "gaps",
-     "t0": 48.1,
-     "t1": 48.4,
-     "est": true
-    },
-    {
-     "w": "underneath.",
-     "t0": 48.4,
-     "t1": 49.06,
+     "w": "gaps.",
+     "t0": 39.907,
+     "t1": 40.229,
      "est": true
     }
    ]
   },
   {
    "id": "seal",
-   "text": "Each joint is sealed with rubber gaskets, and then the water is pumped out.",
-   "t0": 49.56,
-   "t1": 54.237,
+   "text": "Rubber gaskets seal each joint, and the water is pumped out.",
+   "t0": 40.63,
+   "t1": 44.539,
    "take": "voice/seal.mp3",
    "words": [
     {
-     "w": "Each",
-     "t0": 49.56,
-     "t1": 49.876,
+     "w": "Rubber",
+     "t0": 40.63,
+     "t1": 41.094,
      "est": true
     },
     {
-     "w": "joint",
-     "t0": 49.876,
-     "t1": 50.255,
+     "w": "gaskets",
+     "t0": 41.094,
+     "t1": 41.624,
      "est": true
     },
     {
-     "w": "is",
-     "t0": 50.255,
-     "t1": 50.445,
+     "w": "seal",
+     "t0": 41.624,
+     "t1": 41.955,
      "est": true
     },
     {
-     "w": "sealed",
-     "t0": 50.445,
-     "t1": 50.887,
+     "w": "each",
+     "t0": 41.955,
+     "t1": 42.286,
      "est": true
     },
     {
-     "w": "with",
-     "t0": 50.887,
-     "t1": 51.203,
-     "est": true
-    },
-    {
-     "w": "rubber",
-     "t0": 51.203,
-     "t1": 51.646,
-     "est": true
-    },
-    {
-     "w": "gaskets,",
-     "t0": 51.646,
-     "t1": 52.151,
+     "w": "joint,",
+     "t0": 42.286,
+     "t1": 42.684,
      "est": true
     },
     {
      "w": "and",
-     "t0": 52.151,
-     "t1": 52.404,
-     "est": true
-    },
-    {
-     "w": "then",
-     "t0": 52.404,
-     "t1": 52.72,
+     "t0": 42.684,
+     "t1": 42.949,
      "est": true
     },
     {
      "w": "the",
-     "t0": 52.72,
-     "t1": 52.973,
+     "t0": 42.949,
+     "t1": 43.214,
      "est": true
     },
     {
      "w": "water",
-     "t0": 52.973,
-     "t1": 53.352,
+     "t0": 43.214,
+     "t1": 43.611,
      "est": true
     },
     {
      "w": "is",
-     "t0": 53.352,
-     "t1": 53.542,
+     "t0": 43.611,
+     "t1": 43.81,
      "est": true
     },
     {
      "w": "pumped",
-     "t0": 53.542,
-     "t1": 53.984,
+     "t0": 43.81,
+     "t1": 44.274,
      "est": true
     },
     {
      "w": "out.",
-     "t0": 53.984,
-     "t1": 54.237,
+     "t0": 44.274,
+     "t1": 44.539,
      "est": true
     }
    ]
   },
   {
    "id": "connect",
-   "text": "At each shore, the tube links to bored tunnels that run into the hills.",
-   "t0": 54.737,
-   "t1": 59.12,
+   "text": "At each shore, the tube links to bored tunnels in the hills.",
+   "t0": 44.939,
+   "t1": 48.773,
    "take": "voice/connect.mp3",
    "words": [
     {
      "w": "At",
-     "t0": 54.737,
-     "t1": 54.925,
+     "t0": 44.939,
+     "t1": 45.134,
      "est": true
     },
     {
      "w": "each",
-     "t0": 54.925,
-     "t1": 55.238,
+     "t0": 45.134,
+     "t1": 45.459,
      "est": true
     },
     {
      "w": "shore,",
-     "t0": 55.238,
-     "t1": 55.614,
+     "t0": 45.459,
+     "t1": 45.849,
      "est": true
     },
     {
      "w": "the",
-     "t0": 55.614,
-     "t1": 55.864,
+     "t0": 45.849,
+     "t1": 46.109,
      "est": true
     },
     {
      "w": "tube",
-     "t0": 55.864,
-     "t1": 56.177,
+     "t0": 46.109,
+     "t1": 46.434,
      "est": true
     },
     {
      "w": "links",
-     "t0": 56.177,
-     "t1": 56.553,
+     "t0": 46.434,
+     "t1": 46.824,
      "est": true
     },
     {
      "w": "to",
-     "t0": 56.553,
-     "t1": 56.741,
+     "t0": 46.824,
+     "t1": 47.018,
      "est": true
     },
     {
      "w": "bored",
-     "t0": 56.741,
-     "t1": 57.116,
+     "t0": 47.018,
+     "t1": 47.408,
      "est": true
     },
     {
      "w": "tunnels",
-     "t0": 57.116,
-     "t1": 57.617,
+     "t0": 47.408,
+     "t1": 47.928,
      "est": true
     },
     {
-     "w": "that",
-     "t0": 57.617,
-     "t1": 57.93,
-     "est": true
-    },
-    {
-     "w": "run",
-     "t0": 57.93,
-     "t1": 58.181,
-     "est": true
-    },
-    {
-     "w": "into",
-     "t0": 58.181,
-     "t1": 58.494,
+     "w": "in",
+     "t0": 47.928,
+     "t1": 48.123,
      "est": true
     },
     {
      "w": "the",
-     "t0": 58.494,
-     "t1": 58.744,
+     "t0": 48.123,
+     "t1": 48.383,
      "est": true
     },
     {
      "w": "hills.",
-     "t0": 58.744,
-     "t1": 59.12,
+     "t0": 48.383,
+     "t1": 48.773,
      "est": true
     }
    ]
   },
   {
    "id": "end",
-   "text": "Joined end to end, the sections make a tube of about one thousand, three hundred eighty seven meters. Trains now cross under the water, from Europe to Asia.",
-   "t0": 59.62,
-   "t1": 69.683,
+   "text": "Joined end to end, the tube is one thousand, three hundred eighty seven meters.",
+   "t0": 49.173,
+   "t1": 54.238,
    "take": "voice/end.mp3",
    "words": [
     {
      "w": "Joined",
-     "t0": 59.62,
-     "t1": 60.083,
+     "t0": 49.173,
+     "t1": 49.633,
      "est": true
     },
     {
      "w": "end",
-     "t0": 60.083,
-     "t1": 60.348,
+     "t0": 49.633,
+     "t1": 49.897,
      "est": true
     },
     {
      "w": "to",
-     "t0": 60.348,
-     "t1": 60.547,
+     "t0": 49.897,
+     "t1": 50.094,
      "est": true
     },
     {
      "w": "end,",
-     "t0": 60.547,
-     "t1": 60.812,
+     "t0": 50.094,
+     "t1": 50.357,
      "est": true
     },
     {
      "w": "the",
-     "t0": 60.812,
-     "t1": 61.076,
-     "est": true
-    },
-    {
-     "w": "sections",
-     "t0": 61.076,
-     "t1": 61.672,
-     "est": true
-    },
-    {
-     "w": "make",
-     "t0": 61.672,
-     "t1": 62.003,
-     "est": true
-    },
-    {
-     "w": "a",
-     "t0": 62.003,
-     "t1": 62.136,
+     "t0": 50.357,
+     "t1": 50.62,
      "est": true
     },
     {
      "w": "tube",
-     "t0": 62.136,
-     "t1": 62.467,
+     "t0": 50.62,
+     "t1": 50.949,
      "est": true
     },
     {
-     "w": "of",
-     "t0": 62.467,
-     "t1": 62.665,
-     "est": true
-    },
-    {
-     "w": "about",
-     "t0": 62.665,
-     "t1": 63.063,
+     "w": "is",
+     "t0": 50.949,
+     "t1": 51.146,
      "est": true
     },
     {
      "w": "one",
-     "t0": 63.063,
-     "t1": 63.327,
+     "t0": 51.146,
+     "t1": 51.409,
      "est": true
     },
     {
      "w": "thousand,",
-     "t0": 63.327,
-     "t1": 63.923,
+     "t0": 51.409,
+     "t1": 52.002,
      "est": true
     },
     {
      "w": "three",
-     "t0": 63.923,
-     "t1": 64.32,
+     "t0": 52.002,
+     "t1": 52.396,
      "est": true
     },
     {
      "w": "hundred",
-     "t0": 64.32,
-     "t1": 64.85,
+     "t0": 52.396,
+     "t1": 52.922,
      "est": true
     },
     {
      "w": "eighty",
-     "t0": 64.85,
-     "t1": 65.314,
+     "t0": 52.922,
+     "t1": 53.383,
      "est": true
     },
     {
      "w": "seven",
-     "t0": 65.314,
-     "t1": 65.711,
+     "t0": 53.383,
+     "t1": 53.778,
      "est": true
     },
     {
      "w": "meters.",
-     "t0": 65.711,
-     "t1": 66.174,
+     "t0": 53.778,
+     "t1": 54.238,
      "est": true
-    },
-    {
-     "w": "Trains",
-     "t0": 66.174,
-     "t1": 66.638,
-     "est": true
-    },
-    {
-     "w": "now",
-     "t0": 66.638,
-     "t1": 66.902,
-     "est": true
-    },
-    {
-     "w": "cross",
-     "t0": 66.902,
-     "t1": 67.3,
-     "est": true
-    },
-    {
-     "w": "under",
-     "t0": 67.3,
-     "t1": 67.697,
-     "est": true
-    },
-    {
-     "w": "the",
-     "t0": 67.697,
-     "t1": 67.962,
-     "est": true
-    },
-    {
-     "w": "water,",
-     "t0": 67.962,
-     "t1": 68.359,
-     "est": true
-    },
-    {
-     "w": "from",
-     "t0": 68.359,
-     "t1": 68.69,
-     "est": true
-    },
+    }
+   ]
+  },
+  {
+   "id": "title",
+   "text": "Europe to Asia, built one piece at a time.",
+   "t0": 54.638,
+   "t1": 57.816,
+   "take": "voice/title.mp3",
+   "words": [
     {
      "w": "Europe",
-     "t0": 68.69,
-     "t1": 69.153,
+     "t0": 54.638,
+     "t1": 55.181,
      "est": true
     },
     {
      "w": "to",
-     "t0": 69.153,
-     "t1": 69.352,
+     "t0": 55.181,
+     "t1": 55.413,
      "est": true
     },
     {
-     "w": "Asia.",
-     "t0": 69.352,
-     "t1": 69.683,
+     "w": "Asia,",
+     "t0": 55.413,
+     "t1": 55.801,
+     "est": true
+    },
+    {
+     "w": "built",
+     "t0": 55.801,
+     "t1": 56.266,
+     "est": true
+    },
+    {
+     "w": "one",
+     "t0": 56.266,
+     "t1": 56.576,
+     "est": true
+    },
+    {
+     "w": "piece",
+     "t0": 56.576,
+     "t1": 57.041,
+     "est": true
+    },
+    {
+     "w": "at",
+     "t0": 57.041,
+     "t1": 57.273,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 57.273,
+     "t1": 57.428,
+     "est": true
+    },
+    {
+     "w": "time.",
+     "t0": 57.428,
+     "t1": 57.816,
      "est": true
     }
    ]
