@@ -1,0 +1,10 @@
+{
+  "name": "marmaray-documentary",
+  "title": "How engineers built the Marmaray undersea tunnel",
+  "format": { "width": 1920, "height": 1080, "fps": 24, "bpm": 120, "duration": 69.7, "frames": 1673 },
+  "storyFormat": "F2 chronology (overview, challenges, build, sink, join, finish)",
+  "style": "isometric",
+  "build": ["src/head.html", "kit/core.js", "style", "src/render3d.js", "src/scenes.js", "src/bridges.js", "kit/morph.js", "kit/board.js", "kit/score-head.js", "src/score.js", "kit/score-tail.js"],
+  "voice": { "file": "voice/voice.wav", "music": -12 },
+  "review": { "safe": { "top": 60, "bottom": 110, "right": 60 }, "refs": {} }
+}

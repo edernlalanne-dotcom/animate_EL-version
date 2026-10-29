@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How engineers built the Marmaray undersea tunnel</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #0b1d33; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { width: min(100vw, calc(100vh * 16 / 9)); height: auto; aspect-ratio: 16 / 9; display: block; cursor: pointer; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+"use strict";
+// =====================================================================
+//  HOW ENGINEERS BUILT THE MARMARAY UNDERSEA TUNNEL — a 3D documentary, 16:9, navy / turquoise / concrete / amber.
+//  The voice-over (Jeremy) is the clock: each scene starts on a spoken line.
+//  Build: node <skill>/tools/build.mjs <this piece dir>
+// =====================================================================
+const FPS = 24, W = 1920, H = 1080;
+const DURATION = VOICE.duration;
+const NFRAMES = Math.round(DURATION * FPS);
+const LOOP_T = NFRAMES / FPS;
+const SAFE = { top: 60, bottom: 110, right: 60 };
+const CX = W / 2;
+const VL = (id) => VOICE.lines.find((l) => l.id === id).t0;   // the start of a spoken line
+
+const cu = {
+  open: VL('open'), ask: VL('ask'), deep: VL('deep'), window: VL('window'), cast: VL('cast'), tow: VL('tow'),
+  trench: VL('trench'), sink: VL('sink'), bed: VL('bed'), seal: VL('seal'), connect: VL('connect'), end: VL('end'),
+};
+// the scenes, cut on the voice-over
+const ERA_LIST = [
+  [0,                 cu.deep - 0.1,    () => sceneAerial()],
+  [cu.deep - 0.1,     cu.cast - 0.1,    () => sceneChallenge()],
+  [cu.cast - 0.1,     cu.tow - 0.1,     () => sceneCast()],
+  [cu.tow - 0.1,      cu.trench - 0.1,  () => sceneTow()],
+  [cu.trench - 0.1,   cu.seal - 0.1,    () => sceneTrench()],
+  [cu.seal - 0.1,     cu.connect - 0.1, () => sceneSeal()],
+  [cu.connect - 0.1,  cu.end - 0.1,     () => sceneConnect()],
+  [cu.end - 0.1,      DURATION,         () => sceneEnd()],
+];
+const SHOTS = [
+  ['aerial',    0, 0,                  cu.deep - 0.1,    'Istanbul from the air; the strait and the route'],
+  ['challenge', 1, cu.deep - 0.1,      cu.cast - 0.1,    'depth and current under the water'],
+  ['cast',      2, cu.cast - 0.1,      cu.tow - 0.1,     'a section cast in a dry dock, beside a football pitch'],
+  ['tow',       3, cu.tow - 0.1,       cu.trench - 0.1,  'a section towed to the strait'],
+  ['trench',    4, cu.trench - 0.1,    cu.seal - 0.1,    'a trench dredged, the section lowered, gravel laid'],
+  ['seal',      5, cu.seal - 0.1,      cu.connect - 0.1, 'the joint sealed and dried'],
+  ['shores',    6, cu.connect - 0.1,   cu.end - 0.1,     'bored tunnels link the tube to each shore'],
+  ['finish',    7, cu.end - 0.1,       DURATION,         'the whole tube, and a train crossing'],
+];
+const TIMELINE = {
+  width: W, height: H, fps: FPS, bpm: 120, gridOffset: 0, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: '16:9',
+  format: 'F2',
+  shots: SHOTS.map(([key, era, t0, t1, title], i) => ({ id: i + 1, key, era, t0, t1, title })),
+  cuts: ERA_LIST.slice(1).map((e) => e[0]),
+  morphs: [],
+  cues: { ...cu },
+  acts: [
+    { name: '1 Overview', role: 'build', t0: 0, t1: cu.cast - 0.1 },
+    { name: '2 Build',    role: 'build', t0: cu.cast - 0.1, t1: cu.seal - 0.1 },
+    { name: '3 Join',     role: 'gift',  t0: cu.seal - 0.1, t1: DURATION },
+  ],
+  board: SHOTS.map(([key, era, t0, t1, title]) => ({ t: t0 + 0.6, title, sound: 'a low pad; soft moves', next: 'cut' })),
+  narration: VOICE.lines.map((l) => ({ id: l.id, t0: l.t0, t1: l.t1, text: l.text })),
+};
+window.TIMELINE = TIMELINE;
