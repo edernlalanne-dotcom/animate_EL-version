@@ -115,7 +115,7 @@ function sceneHook(labelled, tEnd) {
     }
   }
   if (TT > y0) { const sw = swept < 0.5 ? y0 : swept < 1 ? y0 + (b - y0) * 0.5 / 1.2 : y0 + (b - y0) / 1.2; pmFlag(IC[0], IC[1] - 40, sw, who, 76, { ph: who === 'FR' ? 0.5 : 0 }); }
-  if (TT >= VT('open3', 'who')) wmStamp('?', 1160, 380, VT('open3', 'who'), { r: 64 });
+  if (TT >= VT('open3', 'who')) wmStamp('?', 1300, 300, VT('open3', 'who'), { r: 64 });
   wmCaption('Who owns it?', { hl: ['OWNS'], size: 60, y: 985, max: 1500, at: capAt(VT('open3', 'who')) });
   heroG(0.1, VT('open3', 'who'));
 }
@@ -137,7 +137,7 @@ function scene1659() {
   if (TT < out + 0.5) {
     const bar = EZ.io(ev(VT('war', 'began') - 0.3, 1.0)), fade = 1 - EZ.i2(ev(out, 0.3));
     ctx.save(); ctx.globalAlpha = fade;
-    wmMeasure([1300, 190], [620, 190], bar, (f) => `${Math.round(24 * f)} years of war`, { off: 56, size: 40 });
+    wmMeasure([620, 190], [1300, 190], bar, (f) => `${Math.round(24 * f)} years of war`, { off: 56, size: 40 });
     ctx.restore();
     wmBadge('1659', 1300, 140, VT('war', '1659'), { c: WM.navy, size: 40 });
     wmBadge('1635', 620, 140, VT('war', '1635'), { c: WM.navy, size: 40 });
@@ -168,9 +168,9 @@ function scene1856() {
       if (TT >= t0 + 0.9 && TT < t0 + 1.4) wmStamp('?', bx, 520, t0 + 0.9, { r: 52 });
     });
     const bar = EZ.io(ev(VT('problem', 'centuries') - 0.8, 1.4));
-    wmMeasure([1330, 150], [610, 150], bar, (f) => `${Math.round(197 * f)} years`, { off: 52, size: 38 });
-    wmBadge('1659', 1330, 100, a + 0.3, { c: WM.navy, size: 36 });
-    wmBadge('1856', 610, 100, VT('problem', 'centuries') - 0.5, { c: WM.navy, size: 36 });
+    wmMeasure([610, 150], [1330, 150], bar, (f) => `${Math.round(197 * f)} years`, { off: 52, size: 38 });
+    wmBadge('1659', 610, 100, a + 0.3, { c: WM.navy, size: 36 });
+    wmBadge('1856', 1330, 100, VT('problem', 'centuries') - 0.5, { c: WM.navy, size: 36 });
   } else {
     pmFlag(760, 600, VT('joint', 'both'), 'ES', 84);
     pmFlag(1180, 600, VT('joint', 'both') + 0.15, 'FR', 84, { ph: 0.5 });

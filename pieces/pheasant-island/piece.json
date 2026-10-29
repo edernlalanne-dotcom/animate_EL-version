@@ -6,8 +6,8 @@
     "height": 1080,
     "fps": 24,
     "bpm": 120,
-    "duration": 103.58,
-    "frames": 2486
+    "duration": 101.168,
+    "frames": 2428
   },
   "formats": [
     "16:9"
@@ -25,5 +25,10 @@
       "right": 60
     },
     "refs": {}
+  },
+  "voice": {
+    "file": "voice/voice.wav",
+    "music": -14,
+    "gain": 0
   }
 }

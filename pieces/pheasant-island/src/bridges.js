@@ -14,9 +14,13 @@ function pieceCam(era, t) {
   }
   if (era === 6) {   // the pin, out to three places, back to the pin
     const out = EZ.io(seg(t, M[5] + MD, VL('why').t0 + 1.8)), back = EZ.io(seg(t, VL('why').t1 - 0.5, M[6] - 0.1));
-    const wide = camOf({ z: 2.8, p: [1038, 420], to: [960, 500] });
+    const wide = camOf({ z: 2.4, p: [1038, 420], to: [960, 560] });
     const a = camMix(DEEPC(), wide, out);
     return camMix(a, DEEPC(), back);
+  }
+  if (era === 7) {   // a slow push-in on the answer
+    const u = EZ.io(seg(t, TIMELINE.cues.payoff, DURATION));
+    return u > 0 ? camMix(CAM0, camOf({ z: 1.06, p: IC, to: IC }), u) : null;
   }
   return null;
 }

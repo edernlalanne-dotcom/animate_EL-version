@@ -77,11 +77,11 @@ function sceneWhy() {
   wmLand(DOT, { raw: true, fill: WM.gold, shadow: false });
   const z = Math.max(1, ctx.getTransform().a);
   wmPin(ISLE[0], ISLE[1], L.t0 - 5, { size: 60 });
-  wmLabel('Pheasant Island', ISLE[0] + wmPx(10), ISLE[1] - wmPx(130), VT('why', 'calendar'), 38, { box: WM.gold, color: WM.line, out: M[6] - 0.6 });
+  wmLabel('Pheasant Island', ISLE[0] + wmPx(10), ISLE[1] - wmPx(130), VT('why', 'calendar'), 38, { box: WM.gold, color: WM.line, out: L.t1 - 0.75 });
   wmPin(LAKE[0], LAKE[1], VT('why', 'Constance') - 0.3, { c: WM.navy, size: 56 });
-  wmLabel('Lake Constance', LAKE[0] + wmPx(10), LAKE[1] - wmPx(120), VT('why', 'Constance'), 36, { box: WM.white, color: WM.line, out: M[6] - 0.6 });
+  wmLabel('Lake Constance', LAKE[0] + wmPx(10), LAKE[1] - wmPx(120), VT('why', 'Constance'), 36, { box: WM.white, color: WM.line, out: L.t1 - 0.75 });
   wmPin(MOSEL[0], MOSEL[1], VT('why', 'Moselle') - 0.3, { c: WM.navy, size: 56 });
-  wmLabel('Moselle', MOSEL[0] - wmPx(10), MOSEL[1] - wmPx(120), VT('why', 'Moselle'), 36, { box: WM.white, color: WM.line, out: M[6] - 0.6 });
+  wmLabel('Moselle', MOSEL[0] - wmPx(10), MOSEL[1] - wmPx(120), VT('why', 'Moselle'), 36, { box: WM.white, color: WM.line, out: L.t1 - 0.75 });
   wmTag('Shared places', { x: 80, y: 90, at: capAt(L.t0) });
   const cap = TT < VT('why', 'Lake') - 0.2 ? 'A calendar replaced a line' : 'Other places are shared too';
   wmCaption(cap, { hl: ['CALENDAR', 'SHARED'], size: 54, y: 985, max: 1500, at: capAt(TT < VT('why', 'Lake') - 0.2 ? L.t0 + 0.2 : VT('why', 'Lake') + 0.1) });
@@ -98,7 +98,7 @@ function sceneClose() {
   wmText('1 Aug', IC[0], IC[1] - 300 - wmPx(46), 34, { box: WM.line });
   pmFlag(IC[0] - 170, IC[1] + 70, M[6] + 0.2, 'ES', 80);
   pmFlag(IC[0] + 100, IC[1] + 70, M[6] + 0.35, 'FR', 80, { ph: 0.5 });
-  if (TT >= c1.t0 && TT < pay) wmStamp('?', 1160, 380, c1.t0, { r: 64 });
+  if (TT >= c1.t0 && TT < pay) wmStamp('?', 1300, 300, c1.t0, { r: 64 });
   if (TT >= pay) {
     wmBadge('Owned by both', 380, IC[1], pay, { c: WM.navy, color: WM.white, size: 46 });
     wmBadge('Policed by one', 1540, IC[1], pay + 0.15, { c: WM.gold, color: WM.line, size: 46 });

@@ -37,7 +37,7 @@ const VT = (id, word, n = 1) => {
   return L.t0;
 };
 // a morph sits in the pause between two lines
-const gap = (a, b) => +((VL(a).t1 + VL(b).t0) / 2).toFixed(3);
+const gap = (a, b) => +(Math.round((VL(a).t1 + VL(b).t0) / 2 / E8) * E8).toFixed(3);
 const M = [gap('open2', 'open3'), gap('where', 'war'), gap('sign', 'problem'), gap('condo', 'rule1'), gap('only', 'today1'), gap('size', 'why'), gap('why', 'close1')];
 const MD = 0.5;   // each bridge spans tc-MD .. tc+MD
 
