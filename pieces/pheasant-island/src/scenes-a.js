@@ -80,10 +80,13 @@ function sceneEurope() {
   drawEurope();
   wmBorder(PYR, EZ.o2(ev(a + 0.5, 0.9)), { solid: true, w: 5 });
   const fr = GEO(2.4, 47.0), sp = GEO(-3.6, 40.5);
+  littleMan(fr[0], fr[1] + wmPx(215), D_INTRO - 0.5, 'FR', 150, { out: VT('open1', 'island') - 0.1, ph: 0.5 });
+  littleMan(sp[0], sp[1] + wmPx(215), D_INTRO - 0.3, 'ES', 150, { out: VT('open1', 'island') - 0.1, ph: 2 });
+  introGlobe();
   wmLabel('France', fr[0], fr[1], VT('open1', 'countries'), 64, { box: WM.line, out: zs });
   wmLabel('Spain', sp[0], sp[1], VT('open1', 'countries') + 0.18, 64, { box: WM.line, out: zs });
-  pmFlag(fr[0] + 170, fr[1] - 10, VT('open1', 'countries') + 0.1, 'FR', 90, { out: zs });
-  pmFlag(sp[0] + 170, sp[1] - 10, VT('open1', 'countries') + 0.28, 'ES', 90, { out: zs, ph: 1.3 });
+  pmFlag(fr[0] - wmPx(10), fr[1] - wmPx(48), VT('open1', 'countries') + 0.1, 'FR', 90, { out: zs });
+  pmFlag(sp[0] - wmPx(10), sp[1] - wmPx(48), VT('open1', 'countries') + 0.28, 'ES', 90, { out: zs, ph: 1.3 });
   wmLand(DOT, { raw: true, fill: WM.gold, shadow: false });
   if (TT < M[0] - MD - 0.1) {
     wmPin(ISLE[0], ISLE[1], VT('open1', 'island'), { size: 70 });
@@ -184,4 +187,78 @@ function scene1856() {
   const cap = TT < tr ? 'No line fits the river' : TT < cd ? 'Both countries own it' : 'Shared ownership. No split.';
   wmCaption(cap, { hl: ['RIVER', 'BOTH', 'SPLIT.'], size: 54, y: CAPY, max: CAPW, at: capAt(TT < tr ? a + 0.4 : TT < cd ? jt + 0.1 : VT('condo', 'shared')) });
   heroG(0.1, VT('treaty', 'Bayonne'));
+}
+
+
+// ---- intro: the Earth, a pull-back, then a push-in to the Bidasoa; two little men arrive with the map
+const D_INTRO = 4.4;
+const CONT = [
+  [[-9.5, 36.5], [-9, 43.5], [-1.8, 43.4], [-4.5, 48], [2, 51], [8, 54], [10, 57.5], [5, 62], [15, 69], [30, 71], [60, 70], [100, 77], [140, 72], [180, 68], [180, 50], [140, 45], [130, 35], [122, 30], [110, 20], [105, 10], [100, 2], [95, 15], [80, 8], [72, 20], [60, 25], [50, 30], [36, 36], [27, 37], [22, 36.5], [12, 38], [8, 44], [3, 43], [0, 38], [-5.5, 36]],
+  [[-17, 21], [-10, 35], [10, 37], [32, 31], [34, 28], [43, 12], [51, 12], [40, -15], [35, -25], [20, -35], [12, -17], [9, 4], [-8, 4], [-17, 14]],
+  [[-168, 66], [-140, 70], [-95, 72], [-60, 60], [-55, 50], [-70, 43], [-76, 35], [-81, 25], [-97, 26], [-95, 16], [-85, 10], [-78, 8], [-90, 15], [-105, 20], [-117, 32], [-125, 42], [-125, 50], [-140, 60], [-168, 55]],
+  [[-78, 8], [-60, 10], [-35, -6], [-40, -22], [-58, -38], [-68, -54], [-75, -45], [-71, -18], [-81, -5]],
+  [[-55, 60], [-45, 60], [-20, 70], [-20, 82], [-60, 82], [-70, 76]],
+];
+function introCam(t) {   // the map is wide while the globe fades, then settles on the normal view
+  if (t >= D_INTRO + 1.0) return null;
+  return camMix(camOf({ z: 0.7, p: ISLE, to: [960, 540] }), CAM0, EZ.io(seg(t, D_INTRO - 0.4, D_INTRO + 1.0)));
+}
+function drawGlobeIntro() {
+  const t = TT; if (t > D_INTRO) return;
+  const alpha = 1 - EZ.io(seg(t, D_INTRO - 1.1, D_INTRO - 0.3)); if (alpha <= 0.01) return;
+  const cx = W / 2, cy = H / 2, Rfull = Math.min(W, H) * 0.31;
+  const Rend = 34 * 0.7 * (VERT ? VK : 1) * 57.3;
+  const u1 = EZ.io(seg(t, 0, 2.0)), u3 = EZ.io(seg(t, 2.0, D_INTRO - 0.6));
+  const R = (t < 2.0 ? lerp(Rfull * 2.6, Rfull, u1) : Rfull * Math.pow(Rend / Rfull, u3));
+  const lon0 = -1.8 - 50 * (1 - u1), lat0 = 43.4 - 18 * (1 - u1);
+  const l0 = lon0 * Math.PI / 180, p0 = lat0 * Math.PI / 180;
+  const proj = (lon, lat) => {
+    const l = lon * Math.PI / 180, p = lat * Math.PI / 180, dl = l - l0;
+    let x = Math.cos(p) * Math.sin(dl), y = Math.cos(p0) * Math.sin(p) - Math.sin(p0) * Math.cos(p) * Math.cos(dl);
+    const vis = Math.sin(p0) * Math.sin(p) + Math.cos(p0) * Math.cos(p) * Math.cos(dl);
+    if (vis < 0) { const m = Math.hypot(x, y) || 1; x /= m; y /= m; }
+    return [cx + x * R, cy - y * R];
+  };
+  ctx.save(); ctx.globalAlpha = alpha;
+  ctx.fillStyle = '#0b1f38'; ctx.fillRect(0, 0, W, H);
+  for (let i = 0; i < 90; i++) { const sx = (Math.sin(i * 91.7) * 0.5 + 0.5) * W, sy = (Math.sin(i * 37.3 + 2) * 0.5 + 0.5) * H, sr = 1 + (i % 3); ctx.fillStyle = 'rgba(255,255,255,' + (0.35 + 0.35 * Math.sin(t * 2 + i)) + ')'; ctx.beginPath(); ctx.arc(sx, sy, sr, 0, TAU); ctx.fill(); }
+  ctx.beginPath(); ctx.arc(cx, cy, R * 1.04, 0, TAU); ctx.fillStyle = 'rgba(124,196,238,0.25)'; ctx.fill();
+  ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, R, 0, TAU); ctx.fillStyle = WM.ocean; ctx.fill(); ctx.clip();
+  for (const poly of CONT) {
+    const P = [];
+    for (let i = 0; i < poly.length; i++) {
+      const a = poly[i], b = poly[(i + 1) % poly.length], n = Math.max(1, Math.ceil(Math.hypot(b[0] - a[0], b[1] - a[1]) / 3));
+      for (let k = 0; k < n; k++) P.push(proj(lerp(a[0], b[0], k / n), lerp(a[1], b[1], k / n)));
+    }
+    ctx.beginPath(); P.forEach((q, i) => (i ? ctx.lineTo(q[0], q[1]) : ctx.moveTo(q[0], q[1]))); ctx.closePath();
+    ctx.fillStyle = WM.land; ctx.fill(); wmStroke(WM.line, 3); ctx.stroke();
+  }
+  ctx.restore();
+  ctx.beginPath(); ctx.arc(cx, cy, R, 0, TAU); wmStroke(WM.line, 6); ctx.stroke();
+  const pin = EZ.o2(seg(t, 1.8, 2.4)) * (1 + 0.25 * Math.sin(t * 8));
+  if (pin > 0) { ctx.beginPath(); ctx.arc(cx, cy, 12 * pin, 0, TAU); ctx.fillStyle = WM.gold; ctx.fill(); wmStroke(WM.line, 4); ctx.stroke(); }
+  ctx.restore();
+}
+function introGlobe() { if (TT < D_INTRO && DEFER) DEFER.push(drawGlobeIntro); }
+
+// a little man whose belly is a flag
+function littleMan(x, y, t0, which, h, o = {}) {
+  const k = popS(t0) * (o.out != null ? 1 - EZ.i2(ev(o.out, 0.25)) : 1); if (k <= 0.01) return;
+  const H0 = wmPx(h) * k, bob = Math.sin(TT * 5 + (o.ph ?? 0)) * H0 * 0.02;
+  ctx.save(); ctx.translate(x, y + bob); wmStroke(WM.line, 4); ctx.lineCap = 'round';
+  const wave = Math.sin(TT * 7 + (o.ph ?? 0)) * 0.25;
+  for (const s of [-1, 1]) { ctx.beginPath(); ctx.moveTo(s * H0 * 0.12, -H0 * 0.3); ctx.lineTo(s * H0 * 0.14, -H0 * 0.03); ctx.stroke(); ctx.beginPath(); ctx.ellipse(s * H0 * 0.17, -H0 * 0.015, H0 * 0.09, H0 * 0.04, 0, 0, TAU); ctx.fillStyle = WM.line; ctx.fill(); }
+  ctx.beginPath(); ctx.moveTo(-H0 * 0.24, -H0 * 0.6); ctx.lineTo(-H0 * 0.4, -H0 * 0.4); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(H0 * 0.24, -H0 * 0.6); ctx.lineTo(H0 * 0.4, -H0 * (0.62 + wave)); ctx.stroke();
+  const bx = 0, by = -H0 * 0.48, rx = H0 * 0.28, ry = H0 * 0.27;
+  ctx.save(); ctx.beginPath(); ctx.ellipse(bx, by, rx, ry, 0, 0, TAU); ctx.clip();
+  const bars = which === 'FR' ? [['#0055a4', 0, 1 / 3], ['#ffffff', 1 / 3, 2 / 3], ['#ef4135', 2 / 3, 1]] : [['#aa151b', 0, 0.25], ['#f1bf00', 0.25, 0.75], ['#aa151b', 0.75, 1]];
+  for (const [c, a, b] of bars) { ctx.fillStyle = c; if (which === 'FR') ctx.fillRect(bx - rx + a * 2 * rx, by - ry, (b - a) * 2 * rx, 2 * ry); else ctx.fillRect(bx - rx, by - ry + a * 2 * ry, 2 * rx, (b - a) * 2 * ry); }
+  ctx.restore();
+  ctx.beginPath(); ctx.ellipse(bx, by, rx, ry, 0, 0, TAU); wmStroke(WM.line, 4); ctx.stroke();
+  const hy = -H0 * 0.88, hr = H0 * 0.17;
+  ctx.beginPath(); ctx.arc(0, hy, hr, 0, TAU); ctx.fillStyle = '#f6d7b0'; ctx.fill(); ctx.stroke();
+  ctx.fillStyle = WM.line; for (const s of [-1, 1]) { ctx.beginPath(); ctx.arc(s * hr * 0.38, hy - hr * 0.1, hr * 0.11, 0, TAU); ctx.fill(); }
+  ctx.beginPath(); ctx.arc(0, hy + hr * 0.1, hr * 0.45, 0.2 * Math.PI, 0.8 * Math.PI); ctx.stroke();
+  ctx.restore();
 }

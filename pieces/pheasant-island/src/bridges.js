@@ -10,7 +10,8 @@ function pieceCam(era, t) {
   return { z: k.z * VK, tx: VK * (k.tx - 960) + W / 2, ty: VK * (k.ty - 540) + H / 2 };
 }
 function rawCam(era, t) {
-  if (era === 0) {   // Europe -> the pin
+  if (era === 0) {   // the globe, then Europe -> the pin
+    const ic = introCam(t); if (ic) return ic;
     const u = EZ.io(seg(t, VL('open2').t0 + 0.1, M[0] - MD - 0.1));
     return u > 0 ? camMix(CAM0, DEEPC(), u) : null;
   }

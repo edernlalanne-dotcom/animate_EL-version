@@ -3,3 +3,4 @@ voice/*.wav
 voice/*.mp3
 renders/
 frames-*/
+voice/orig/
