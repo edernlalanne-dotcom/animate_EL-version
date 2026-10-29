@@ -19,13 +19,18 @@
 //  16:9, voice-led. World-map style. One island, one calendar ring. Facts and sources: brief.md.
 //  Build: node <skill>/tools/build.mjs pieces/pheasant-island
 // =====================================================================
-const FPS = 24, W = 1920, H = 1080;
+const FMT = new URLSearchParams(location.search).get('format');
+const VERT = FMT === '9:16';   // the Short: 1080x1920, the 16:9 world seen at 0.9x through a tall window
+const FPS = 24, W = VERT ? 1080 : 1920, H = VERT ? 1920 : 1080;
+const VK = 0.9;
+{ const cv0 = document.getElementById('c'); cv0.width = W; cv0.height = H; }
+const CAPY = VERT ? 1500 : 985, TAGY = VERT ? 270 : 90, CAPW = VERT ? 1010 : 1500, HERO = VERT ? [930, 340] : [125, 905];
 const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, E16 = BEAT / 4;
 const HAND = '"Ink Free", "Segoe Print", "Bradley Hand", "Chalkboard SE", "Comic Sans MS", "Comic Neue", cursive';
 const DURATION = VOICE.duration;
 const NFRAMES = Math.round(DURATION * FPS);
 const LOOP_T = NFRAMES / FPS;
-const SAFE = { top: 60, bottom: 110, right: 60 };
+const SAFE = VERT ? { top: 240, bottom: 420, right: 140 } : { top: 60, bottom: 110, right: 60 };
 const CX = W / 2;
 
 // ---- the voice is the clock: VL(id) is a line, VT(id, word, n) is when its n-th `word` starts
@@ -62,7 +67,7 @@ const SHOTS = [
   ['close',  7, M[6], DURATION, 'back to the island: owned by both, policed by one'],
 ];
 const TIMELINE = {
-  width: W, height: H, fps: FPS, bpm: BPM, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: '16:9',
+  width: W, height: H, fps: FPS, bpm: BPM, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: VERT ? '9:16' : '16:9',
   format: 'morph-chain',
   shots: SHOTS.map(([key, era, t0, t1, title], i) => ({ id: i + 1, key, era, t0, t1, title })),
   cuts: [],

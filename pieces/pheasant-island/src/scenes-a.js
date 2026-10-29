@@ -8,7 +8,7 @@ const GEO = (lon, lat) => [960 + (lon - 1.5) * 34, 520 - (lat - 44.5) * 47];
 const EU = [[-5.4, 36.1], [-6.3, 36.5], [-7.4, 37.2], [-9.0, 37.0], [-8.8, 38.4], [-9.4, 38.7], [-8.8, 40.2], [-8.7, 41.1], [-8.9, 42.2], [-9.3, 43.0], [-8.4, 43.4],
   [-7.0, 43.6], [-5.7, 43.6], [-4.0, 43.4], [-2.5, 43.4], [-1.8, 43.4], [-1.3, 44.5], [-1.2, 45.6], [-1.1, 46.2], [-2.1, 46.8], [-2.4, 47.3], [-3.0, 47.5], [-4.3, 47.8],
   [-4.8, 48.4], [-3.5, 48.8], [-2.0, 48.7], [-1.5, 48.6], [-1.9, 49.6], [-1.2, 49.7], [0.1, 49.5], [1.2, 50.1], [1.9, 50.9], [3.2, 51.3], [4.0, 51.5], [4.5, 52.4],
-  [4.8, 53.1], [6.0, 53.4], [7.2, 53.6], [8.6, 53.9], [8.6, 54.9], [30, 56], [30, 36.4], [22.4, 36.5], [21.5, 37.9], [20.2, 39.6], [19.4, 41.5], [19.0, 42.2], [16.2, 43.5],
+  [4.8, 53.1], [6.0, 53.4], [7.2, 53.6], [8.6, 53.9], [8.6, 54.9], [10.5, 57.5], [14, 70], [32, 70], [32, 36.4], [22.4, 36.5], [21.5, 37.9], [20.2, 39.6], [19.4, 41.5], [19.0, 42.2], [16.2, 43.5],
   [14.0, 44.9], [13.7, 45.7], [12.4, 45.3], [12.3, 44.2], [13.6, 43.5], [14.2, 42.3], [15.9, 41.9], [18.5, 40.1], [17.2, 40.4], [16.8, 39.7], [17.1, 39.0], [16.5, 38.4],
   [16.0, 37.95], [15.65, 38.1], [16.0, 39.0], [15.6, 40.0], [14.9, 40.2], [14.0, 40.8], [13.0, 41.3], [12.3, 41.7], [11.2, 42.4], [10.5, 43.0], [10.2, 43.8], [9.1, 44.3],
   [8.5, 44.3], [7.6, 43.8], [7.3, 43.7], [6.0, 43.1], [5.0, 43.4], [4.2, 43.5], [3.2, 43.1], [3.2, 42.3], [3.3, 41.9], [2.2, 41.4], [1.5, 41.2], [0.9, 40.7], [0.2, 40.1],
@@ -22,8 +22,8 @@ const LAKE = GEO(9.4, 47.6), MOSEL = GEO(6.4, 49.6);
 const IC = [960, 540];
 const ISL_P = ellipsePts(IC[0], IC[1], 32, 165, 0, 40);      // 40 m wide, 210 m long at 1.57 px per metre
 const xL = (y) => 700 + 60 * Math.sin(y / 230 + 0.6), xR = (y) => 1220 + 55 * Math.sin(y / 260 + 2.0);
-const BANK_L = (() => { const P = [[-400, -400]]; for (let y = -400; y <= 1500; y += 50) P.push([xL(y), y]); P.push([-400, 1500]); return P; })();
-const BANK_R = (() => { const P = [[2400, -400]]; for (let y = -400; y <= 1500; y += 50) P.push([xR(y), y]); P.push([2400, 1500]); return P; })();
+const BANK_L = (() => { const P = [[-400, -3000]]; for (let y = -3000; y <= 4000; y += 50) P.push([xL(y), y]); P.push([-400, 4000]); return P; })();
+const BANK_R = (() => { const P = [[2400, -3000]]; for (let y = -3000; y <= 4000; y += 50) P.push([xR(y), y]); P.push([2400, 4000]); return P; })();
 const ISL_SHAPE = () => ({ P: wmCoast(ISL_P, 'isl', 4), c: WM.gold });
 const DOT_SHAPE = () => ({ P: wmCoast(DOT, 'dot', 2, 6), c: WM.gold });
 
@@ -34,7 +34,7 @@ function riverBase() {
   wmLand(BANK_R, { key: 'br', fill: WM.land, amt: 7 });
 }
 const drawIsland = () => wmLand(ISL_P, { key: 'isl', fill: WM.gold, amt: 4 });
-const heroG = (look = 0.5, hop) => { if (DEFER) DEFER.push(() => wmGlobe(125, 905, 58, { key: 'hero', look, hop })); };
+const heroG = (look = 0.5, hop) => { if (DEFER) DEFER.push(() => wmGlobe(HERO[0], HERO[1], 58, { key: 'hero', look, hop })); };
 const capAt = (t) => t - E0;
 
 // a flag that waves: 'FR' blue-white-red, 'ES' red-yellow-red (simplified, no coat of arms)
@@ -89,8 +89,8 @@ function sceneEurope() {
     wmPin(ISLE[0], ISLE[1], VT('open1', 'island'), { size: 70 });
     wmLabel('Pheasant Island', ISLE[0] - wmPx(20), ISLE[1] - wmPx(135), VT('open1', 'island') + 0.35, 40, { box: WM.gold, color: WM.line });
   }
-  wmTag('Europe', { x: 80, y: 90, at: capAt(a) + 0.1 });
-  wmCaption('Two countries. One island.', { hl: ['ONE', 'ISLAND.'], size: 56, y: 985, max: 1500, at: capAt(a) + 0.2 });
+  wmTag('Europe', { x: 80, y: TAGY, at: capAt(a) + 0.1 });
+  wmCaption('Two countries. One island.', { hl: ['ONE', 'ISLAND.'], size: 56, y: CAPY, max: CAPW, at: capAt(a) + 0.2 });
   heroG(0.6, VT('open1', 'island'));
 }
 
@@ -98,8 +98,8 @@ function sceneEurope() {
 function sceneHook(labelled, tEnd) {
   const a = VL('open3').t0, b = VL('where').t1, y0 = a + 0.5;
   riverBase(); drawIsland();
-  wmLabel('Spain', 330, 560, M[0] + 0.3, 64, { box: WM.line });
-  wmLabel('France', 1590, 560, M[0] + 0.45, 64, { box: WM.line });
+  wmLabel('Spain', VERT ? 960 : 330, VERT ? 60 : 560, M[0] + 0.3, 64, { box: WM.line });
+  wmLabel('France', VERT ? 960 : 1590, VERT ? 985 : 560, M[0] + 0.45, 64, { box: WM.line });
   wmPin(1330, 340, VT('where', 'Hendaye') - 0.25, { c: WM.navy, size: 56 });
   wmLabel('Hendaye', 1330 + wmPx(10), 340 - wmPx(100), VT('where', 'Hendaye'), 42, { box: WM.line });
   wmPin(560, 780, VT('where', 'Irun') - 0.25, { c: WM.navy, size: 56 });
@@ -115,8 +115,8 @@ function sceneHook(labelled, tEnd) {
     }
   }
   if (TT > y0) { const sw = swept < 0.5 ? y0 : swept < 1 ? y0 + (b - y0) * 0.5 / 1.2 : y0 + (b - y0) / 1.2; pmFlag(IC[0], IC[1] - 40, sw, who, 76, { ph: who === 'FR' ? 0.5 : 0 }); }
-  if (TT >= VT('open3', 'who')) wmStamp('?', 1300, 300, VT('open3', 'who'), { r: 64 });
-  wmCaption('Who owns it?', { hl: ['OWNS'], size: 60, y: 985, max: 1500, at: capAt(VT('open3', 'who')) });
+  if (TT >= VT('open3', 'who')) wmStamp('?', VERT ? 1330 : 1300, VERT ? 20 : 300, VT('open3', 'who'), { r: 64 });
+  wmCaption('Who owns it?', { hl: ['OWNS'], size: 60, y: CAPY, max: CAPW, at: capAt(VT('open3', 'who')) });
   heroG(0.1, VT('open3', 'who'));
 }
 
@@ -151,8 +151,8 @@ function scene1659() {
     ctx.restore();
     wmBadge('7 Nov 1659', IC[0] + wmPx(10), IC[1] - wmPx(95), VT('sign', 'seventh'), { c: WM.gold, color: WM.line, size: 44 });
   }
-  wmTag('1659', { x: 80, y: 90, at: capAt(VT('war', '1659')) });
-  wmCaption(TT < s - 0.2 ? 'A war that began in 1635' : 'The peace was signed here', { hl: ['1635', 'HERE'], size: 54, y: 985, max: 1500, at: capAt(TT < s - 0.2 ? a + 0.3 : s + 0.2) });
+  wmTag('1659', { x: 80, y: TAGY, at: capAt(VT('war', '1659')) });
+  wmCaption(TT < s - 0.2 ? 'A war that began in 1635' : 'The peace was signed here', { hl: ['1635', 'HERE'], size: 54, y: CAPY, max: CAPW, at: capAt(TT < s - 0.2 ? a + 0.3 : s + 0.2) });
   heroG(0.1, VT('sign', 'seventh'));
 }
 
@@ -179,9 +179,9 @@ function scene1856() {
     wmLabel('Owned by both', IC[0], IC[1] - wmPx(150), VT('joint', 'both'), 46, { box: WM.navy, color: WM.white });
     wmLabel('Condominium', IC[0], IC[1] + wmPx(150), VT('condo', 'condominium'), 52, { box: WM.gold, color: WM.line });
   }
-  if (TT >= tr) wmBadge('Treaty of Bayonne', 1500, 90, VT('treaty', 'Bayonne'), { c: WM.navy, size: 40, align: 'right' });
-  wmTag('1856', { x: 80, y: 90, at: capAt(tr) });
+  if (TT >= tr) wmBadge('Treaty of Bayonne', VERT ? 960 : 1500, 90, VT('treaty', 'Bayonne'), { c: WM.navy, size: 40, align: VERT ? 'center' : 'right' });
+  wmTag('1856', { x: 80, y: TAGY, at: capAt(tr) });
   const cap = TT < tr ? 'No line fits the river' : TT < cd ? 'Both countries own it' : 'Shared ownership. No split.';
-  wmCaption(cap, { hl: ['RIVER', 'BOTH', 'SPLIT.'], size: 54, y: 985, max: 1500, at: capAt(TT < tr ? a + 0.4 : TT < cd ? jt + 0.1 : VT('condo', 'shared')) });
+  wmCaption(cap, { hl: ['RIVER', 'BOTH', 'SPLIT.'], size: 54, y: CAPY, max: CAPW, at: capAt(TT < tr ? a + 0.4 : TT < cd ? jt + 0.1 : VT('condo', 'shared')) });
   heroG(0.1, VT('treaty', 'Bayonne'));
 }

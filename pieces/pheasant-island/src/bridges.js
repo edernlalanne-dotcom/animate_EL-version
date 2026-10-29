@@ -4,17 +4,23 @@
 const ERA_BG = [WM.ocean, WM.ocean, WM.ocean, WM.ocean, WM.ocean, WM.ocean, WM.ocean, WM.ocean];
 const DEEPC = () => camOf({ z: 9, p: ISLE, to: IC });
 function pieceCam(era, t) {
+  const c = rawCam(era, t);
+  if (!VERT) return c;
+  const k = c || CAM0;   // the 16:9 design screen sits in the tall frame at VK, centred
+  return { z: k.z * VK, tx: VK * (k.tx - 960) + W / 2, ty: VK * (k.ty - 540) + H / 2 };
+}
+function rawCam(era, t) {
   if (era === 0) {   // Europe -> the pin
     const u = EZ.io(seg(t, VL('open2').t0 + 0.1, M[0] - MD - 0.1));
     return u > 0 ? camMix(CAM0, DEEPC(), u) : null;
   }
   if (era === 4) {   // the ring slides left to make room for the court rules
     const u = EZ.io(seg(t, VL('courts').t0 - 0.2, VL('courts').t0 + 1.0));
-    return u > 0 ? camMix(CAM0, camOf({ z: 1, p: IC, to: [620, 540] }), u) : null;
+    return u > 0 ? camMix(CAM0, camOf({ z: 1, p: IC, to: VERT ? [960, 251] : [620, 540] }), u) : null;
   }
   if (era === 6) {   // the pin, out to three places, back to the pin
     const out = EZ.io(seg(t, M[5] + MD, VL('why').t0 + 1.8)), back = EZ.io(seg(t, VL('why').t1 - 0.5, M[6] - 0.1));
-    const wide = camOf({ z: 2.4, p: [1038, 420], to: [960, 560] });
+    const wide = (VERT ? camOf({ z: 1.8, p: [1038, 420], to: [960, 362] }) : camOf({ z: 2.4, p: [1038, 420], to: [960, 560] }));
     const a = camMix(DEEPC(), wide, out);
     return camMix(a, DEEPC(), back);
   }

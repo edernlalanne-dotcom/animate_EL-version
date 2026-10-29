@@ -29,18 +29,18 @@ function sceneRule() {
   const fade = 1 - EZ.i2(ev(ct.t0 - 0.3, 0.25));
   if (fade > 0.01) {
     ctx.save(); ctx.globalAlpha = fade;
-    wmBadge('Spain: 1 Feb to 31 Jul', IC[0] - 330, IC[1], sp.t0 + 0.2, { c: WM.gold, color: WM.line, size: 36, align: 'right' });
-    wmBadge('France: 1 Aug to 31 Jan', IC[0] + 330, IC[1], fr.t0 + 0.2, { c: WM.rival, color: WM.line, size: 36, align: 'left' });
+    wmBadge('Spain: 1 Feb to 31 Jul', VERT ? IC[0] : IC[0] - 330, VERT ? IC[1] + 400 : IC[1], sp.t0 + 0.2, { c: WM.gold, color: WM.line, size: 36, align: VERT ? 'center' : 'right' });
+    wmBadge('France: 1 Aug to 31 Jan', VERT ? IC[0] : IC[0] + 330, VERT ? IC[1] + 490 : IC[1], fr.t0 + 0.2, { c: WM.rival, color: WM.line, size: 36, align: VERT ? 'center' : 'left' });
     ctx.restore();
   }
   // the rules on courts, to the right of the ring once it has moved left
-  wmBadge('Spanish or French: own courts', 1330, 380, VT('courts', 'citizens'), { c: WM.white, color: WM.line, size: 34, align: 'left' });
-  wmBadge('Anyone else: courts of the state on duty', 1330, 560, VT('courts', 'else'), { c: WM.gold, color: WM.line, size: 34, align: 'left' });
-  if (TT >= on.t0) wmBadge('Owner: both', 1330, 740, VT('only', 'Ownership'), { c: WM.navy, color: WM.white, size: 36, align: 'left' });
-  wmTag('1901', { x: 80, y: 90, at: capAt(cv.t0) });
+  wmBadge('Spanish or French: own courts', VERT ? 960 : 1330, VERT ? 995 : 380, VT('courts', 'citizens'), { c: WM.white, color: WM.line, size: 34, align: VERT ? 'center' : 'left' });
+  wmBadge('Anyone else: courts of the state on duty', VERT ? 960 : 1330, VERT ? 1150 : 560, VT('courts', 'else'), { c: WM.gold, color: WM.line, size: 34, align: VERT ? 'center' : 'left' });
+  if (TT >= on.t0) wmBadge('Owner: both', VERT ? 960 : 1330, VERT ? 1306 : 740, VT('only', 'Ownership'), { c: WM.navy, color: WM.white, size: 36, align: VERT ? 'center' : 'left' });
+  wmTag('1901', { x: 80, y: TAGY, at: capAt(cv.t0) });
   const cap = TT < cv.t0 ? 'Who enforces the law?' : TT < sp.t0 ? 'Policing passes in turns' : TT < ct.t0 ? 'Six months each' : TT < on.t0 ? 'Which courts apply?' : 'Only the duty moves';
   const at = TT < cv.t0 ? r1.t0 + 0.8 : TT < sp.t0 ? cv.t0 + 1.2 : TT < ct.t0 ? sp.t0 + 0.3 : TT < on.t0 ? ct.t0 + 0.1 : on.t0 + 0.1;
-  wmCaption(cap, { hl: ['LAW?', 'TURNS', 'EACH', 'COURTS', 'DUTY'], size: 54, y: 985, max: 1500, at: capAt(at) });
+  wmCaption(cap, { hl: ['LAW?', 'TURNS', 'EACH', 'COURTS', 'DUTY'], size: 54, y: CAPY, max: CAPW, at: capAt(at) });
   heroG(0.1, mv);
 }
 
@@ -63,9 +63,9 @@ function sceneToday() {
   wmMeasure([IC[0] + 80, IC[1] + 165], [IC[0] + 80, IC[1] - 165], mL, (f) => `${Math.round(210 * f)} m`, { off: 90, size: 40 });
   wmMeasure([IC[0] - 32, IC[1] + 215], [IC[0] + 32, IC[1] + 215], mW, (f) => `${Math.round(40 * f)} m`, { off: 50, size: 34 });
   wmStamp('Closed', IC[0] + 40, IC[1] - 60, VT('today1', 'closed'), { r: 100, c: WM.crimson, rot: -10 });
-  wmTag('Today', { x: 80, y: 90, at: capAt(t1.t0) });
+  wmTag('Today', { x: 80, y: TAGY, at: capAt(t1.t0) });
   const cap = TT < sz.t0 - 0.2 ? 'Closed to the public' : 'About 210 m long. Nobody lives here.';
-  wmCaption(cap, { hl: ['CLOSED', '210', 'NOBODY'], size: 54, y: 985, max: 1500, at: capAt(TT < sz.t0 - 0.2 ? t1.t0 + 0.1 : sz.t0 + 0.1) });
+  wmCaption(cap, { hl: ['CLOSED', '210', 'NOBODY'], size: 54, y: CAPY, max: CAPW, at: capAt(TT < sz.t0 - 0.2 ? t1.t0 + 0.1 : sz.t0 + 0.1) });
   heroG(0.1, VT('size', 'metres'));
 }
 
@@ -82,9 +82,9 @@ function sceneWhy() {
   wmLabel('Lake Constance', LAKE[0] + wmPx(10), LAKE[1] - wmPx(120), VT('why', 'Constance'), 36, { box: WM.white, color: WM.line, out: L.t1 - 0.75 });
   wmPin(MOSEL[0], MOSEL[1], VT('why', 'Moselle') - 0.3, { c: WM.navy, size: 56 });
   wmLabel('Moselle', MOSEL[0] - wmPx(10), MOSEL[1] - wmPx(120), VT('why', 'Moselle'), 36, { box: WM.white, color: WM.line, out: L.t1 - 0.75 });
-  wmTag('Shared places', { x: 80, y: 90, at: capAt(L.t0) });
+  wmTag('Shared places', { x: 80, y: TAGY, at: capAt(L.t0) });
   const cap = TT < VT('why', 'Lake') - 0.2 ? 'A calendar replaced a line' : 'Other places are shared too';
-  wmCaption(cap, { hl: ['CALENDAR', 'SHARED'], size: 54, y: 985, max: 1500, at: capAt(TT < VT('why', 'Lake') - 0.2 ? L.t0 + 0.2 : VT('why', 'Lake') + 0.1) });
+  wmCaption(cap, { hl: ['CALENDAR', 'SHARED'], size: 54, y: CAPY, max: CAPW, at: capAt(TT < VT('why', 'Lake') - 0.2 ? L.t0 + 0.2 : VT('why', 'Lake') + 0.1) });
   heroG(0.1, VT('why', 'Lake'));
 }
 
@@ -98,13 +98,13 @@ function sceneClose() {
   wmText('1 Aug', IC[0], IC[1] - 300 - wmPx(46), 34, { box: WM.line });
   pmFlag(IC[0] - 170, IC[1] + 70, M[6] + 0.2, 'ES', 80);
   pmFlag(IC[0] + 100, IC[1] + 70, M[6] + 0.35, 'FR', 80, { ph: 0.5 });
-  if (TT >= c1.t0 && TT < pay) wmStamp('?', 1300, 300, c1.t0, { r: 64 });
+  if (TT >= c1.t0 && TT < pay) wmStamp('?', VERT ? 1330 : 1300, VERT ? 20 : 300, c1.t0, { r: 64 });
   if (TT >= pay) {
-    wmBadge('Owned by both', 380, IC[1], pay, { c: WM.navy, color: WM.white, size: 46 });
-    wmBadge('Policed by one', 1540, IC[1], pay + 0.15, { c: WM.gold, color: WM.line, size: 46 });
+    wmBadge('Owned by both', VERT ? 960 : 380, VERT ? IC[1] - 470 : IC[1], pay, { c: WM.navy, color: WM.white, size: 46 });
+    wmBadge('Policed by one', VERT ? 960 : 1540, VERT ? IC[1] + 470 : IC[1], pay + 0.15, { c: WM.gold, color: WM.line, size: 46 });
   }
-  wmTag('So', { x: 80, y: 90, at: capAt(c1.t0) });
-  if (TT < pay) wmCaption('So who owns it?', { hl: ['OWNS'], size: 60, y: 985, max: 1500, at: capAt(c1.t0 + 0.1) });
-  else wmCaption('Owned by both. Policed by one.', { hl: ['BOTH.', 'ONE.'], size: 56, y: 985, max: 1600, at: capAt(pay + 0.1) });
+  wmTag('So', { x: 80, y: TAGY, at: capAt(c1.t0) });
+  if (TT < pay) wmCaption('So who owns it?', { hl: ['OWNS'], size: 60, y: CAPY, max: CAPW, at: capAt(c1.t0 + 0.1) });
+  else wmCaption('Owned by both. Policed by one.', { hl: ['BOTH.', 'ONE.'], size: 56, y: CAPY, max: CAPW, at: capAt(pay + 0.1) });
   heroG(0.1, pay);
 }
