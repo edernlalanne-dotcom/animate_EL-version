@@ -1,0 +1,9 @@
+{
+  "name": "bosphorus-tunnel",
+  "title": "How engineers built an undersea tunnel between two continents",
+  "format": { "width": 1920, "height": 1080, "fps": 24, "bpm": 120, "duration": 61.0, "frames": 1464 },
+  "storyFormat": "F2 chronology (eleven sections, one process, one payoff)",
+  "style": "isometric",
+  "voice": { "file": "voice/voice.wav", "music": -12 },
+  "review": { "safe": { "top": 60, "bottom": 110, "right": 60 }, "refs": {} }
+}

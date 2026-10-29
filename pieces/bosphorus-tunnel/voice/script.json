@@ -1,0 +1,16 @@
+{
+  "lead": 1.2,
+  "tail": 1.8,
+  "lines": [
+    { "id": "open",   "text": "Istanbul sits on two continents, split by the Bosphorus, a strait of water between Europe and Asia.", "after": 0.45, "file": "open.mp3" },
+    { "id": "ask",    "text": "So how do you get a railway under the sea? Engineers did it in pieces.", "after": 0.6, "file": "ask.mp3" },
+    { "id": "cast",   "text": "First, they cast eleven concrete sections in dry docks. Each one weighs up to eighteen thousand tonnes.", "after": 0.45, "file": "cast.mp3" },
+    { "id": "tow",    "text": "Then they tested each section and towed it out to the strait.", "after": 0.45, "file": "tow.mp3" },
+    { "id": "trench", "text": "Crews dredged a trench into the seabed, about fourteen meters deep.", "after": 0.45, "file": "trench.mp3" },
+    { "id": "sink",   "text": "The sections were lowered by filling internal tanks with water, slowly, under control.", "after": 0.45, "file": "sink.mp3" },
+    { "id": "window", "text": "They only sank a section when the current ran under three knots.", "after": 0.45, "file": "window.mp3" },
+    { "id": "bed",    "text": "Machines levelled a gravel bed, and grout filled the gaps underneath.", "after": 0.45, "file": "bed.mp3" },
+    { "id": "deep",   "text": "The deepest point sits near sixty meters below the surface.", "after": 0.6, "file": "deep.mp3" },
+    { "id": "end",    "text": "Joined end to end, the sections make a tube of about one thousand, three hundred eighty seven meters. Trains now cross under the water, from Europe to Asia.", "after": 0, "file": "end.mp3" }
+  ]
+}

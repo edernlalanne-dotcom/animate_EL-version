@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How engineers built an undersea tunnel between two continents</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #e6e6ea; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { width: min(100vw, calc(100vh * 16 / 9)); height: auto; aspect-ratio: 16 / 9; display: block; cursor: pointer; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+"use strict";
+// =====================================================================
+//  HOW ENGINEERS BUILT AN UNDERSEA TUNNEL BETWEEN TWO CONTINENTS
+//  16:9, isometric line art, voice-over (Jeremy). The voice is the clock: every cut and cue sits on a spoken line.
+//  Build: node <skill>/tools/build.mjs <this piece dir>
+// =====================================================================
+const FPS = 24, W = 1920, H = 1080;
+const DURATION = VOICE.duration;
+const NFRAMES = Math.round(DURATION * FPS);
+const LOOP_T = NFRAMES / FPS;
+const SAFE = { top: 60, bottom: 110, right: 60 };
+const CX = W / 2;
+const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2;
+const VL = (id) => VOICE.lines.find((l) => l.id === id).t0;   // the start of a spoken line
+
+// the voice's lines, as cues
+const cu = {
+  open: VL('open'), ask: VL('ask'), cast: VL('cast'), tow: VL('tow'), trench: VL('trench'),
+  sink: VL('sink'), window: VL('window'), bed: VL('bed'), deep: VL('deep'), end: VL('end'),
+};
+// hard cuts between eras, each one at the start of a spoken beat
+const ERA_LIST = [
+  [0.0,        cu.ask - 0.1,  () => sceneStrait()],
+  [cu.ask - 0.1, cu.tow - 0.1, () => sceneBasin()],
+  [cu.tow - 0.1, cu.sink - 0.1, () => sceneTow()],
+  [cu.sink - 0.1, cu.bed - 0.1, () => sceneSink()],
+  [cu.bed - 0.1, cu.end - 0.1, () => sceneBed()],
+  [cu.end - 0.1, DURATION,     () => sceneTunnel()],
+];
+const SHOTS = [
+  ['strait', 0, 0.0,              cu.ask - 0.1,  'Istanbul: Europe and Asia, split by the Bosphorus'],
+  ['basin',  1, cu.ask - 0.1,     cu.tow - 0.1,  'eleven concrete sections cast in a dry dock'],
+  ['tow',    2, cu.tow - 0.1,     cu.sink - 0.1, 'a section is towed out; the seabed trench is dredged'],
+  ['sink',   3, cu.sink - 0.1,    cu.bed - 0.1,  'the section is lowered into the trench'],
+  ['bed',    4, cu.bed - 0.1,     cu.end - 0.1,  'gravel bed and grout; the depth gauge'],
+  ['tunnel', 5, cu.end - 0.1,     DURATION,      'the sections joined; a train crosses'],
+];
+const TIMELINE = {
+  width: W, height: H, fps: FPS, bpm: BPM, gridOffset: 0, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: '16:9',
+  format: 'F2',
+  shots: SHOTS.map(([key, era, t0, t1, title], i) => ({ id: i + 1, key, era, t0, t1, title })),
+  cuts: ERA_LIST.slice(1).map((e) => e[0]),
+  morphs: [],
+  cues: { ...cu },
+  acts: [
+    { name: '1 Strait', role: 'build', t0: 0, t1: cu.tow - 0.1 },
+    { name: '2 Build',  role: 'build', t0: cu.tow - 0.1, t1: cu.bed - 0.1 },
+    { name: '3 Sink',   role: 'gift',  t0: cu.bed - 0.1, t1: DURATION },
+  ],
+  board: SHOTS.map(([key, era, t0, t1, title]) => ({ t: t0 + 0.6, title, sound: 'a low pad; clicks on each move', next: 'cut' })),
+  narration: VOICE.lines.map((l) => ({ id: l.id, t0: l.t0, t1: l.t1, text: l.text })),
+};
+window.TIMELINE = TIMELINE;
