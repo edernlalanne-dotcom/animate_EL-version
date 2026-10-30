@@ -220,8 +220,8 @@ function eiffelLayer(t) {
   ctx.stroke();
   ctx.restore();
   const dimA = a * seg(t, T_.eiffel.t0 + 0.9, T_.eiffel.t0 + 1.6);
-  drDim(200, 1262, 2600, 1262, 'SHIP  1,200 FT', { alpha: dimA, size: 28 });
-  drDim(x0, 1310, x0 + 2166, 1310, 'EIFFEL TOWER  1,083 FT', { alpha: dimA * seg(t, T_.eiffel.t0 + 1.6, T_.eiffel.t0 + 2.2), size: 28, color: DR.amber });
+  drDim(200, 1262, 2600, 1262, 'SHIP  1,200 FT', { alpha: dimA, size: 28, dy: -44 });
+  drDim(x0, 1310, x0 + 2166, 1310, 'EIFFEL TOWER  1,083 FT', { alpha: dimA * seg(t, T_.eiffel.t0 + 1.6, T_.eiffel.t0 + 2.2), size: 28, color: DR.amber, dy: 44 });
 }
 
 // ---- the clearance meter: the gap per side, live
