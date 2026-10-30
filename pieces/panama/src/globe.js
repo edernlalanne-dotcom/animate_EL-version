@@ -100,28 +100,35 @@ function introGlobe(tAbs) {
     ctx.save(); ctx.globalAlpha = fade * mA; ctx.fillStyle = DR.red; ctx.shadowColor = DR.red; ctx.shadowBlur = 24; ctx.beginPath(); ctx.arc(mx, my, 9, 0, TAU); ctx.fill(); ctx.restore();
     const lA = EZ.o2(seg(t, GL_T.zoom0 + 1.4, GL_T.zoom0 + 2.2)) * (1 - EZ.o2(seg(t, GD - 1.4, GD - 0.8)));
     if (lA > 0) {
-      ctx.save(); ctx.globalAlpha = fade * lA; ctx.strokeStyle = DR.red; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(mx + 14, my - 10); ctx.lineTo(mx + 120, my - 90); ctx.lineTo(mx + 340, my - 90); ctx.stroke(); ctx.restore();
-      drText('PANAMA CANAL', mx + 130, my - 104, 54, DR.white, { alpha: fade * lA, track: 5 });
-      drText('ATLANTIC OCEAN', mx - 420, my - 190, 28, DR.cyan, { alpha: fade * lA * 0.9, track: 8 });
-      drText('PACIFIC OCEAN', mx - 140, my + 250, 28, DR.cyan, { alpha: fade * lA * 0.9, track: 8 });
+      ctx.save(); ctx.globalAlpha = fade * lA; ctx.strokeStyle = DR.red; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(mx + 6, my - 14); if (PORTRAIT) ctx.lineTo(mx, my - 120); else { ctx.lineTo(mx + 120, my - 90); ctx.lineTo(mx + 340, my - 90); } ctx.stroke(); ctx.restore();
+      if (PORTRAIT) {
+        drText('PANAMA CANAL', mx, my - 150, 50, DR.white, { align: 'center', alpha: fade * lA, track: 5 });
+        drText('ATLANTIC OCEAN', mx - 160, my - 300, 26, DR.cyan, { align: 'center', alpha: fade * lA * 0.9, track: 8 });
+        drText('PACIFIC OCEAN', mx + 190, my + 90, 26, DR.cyan, { align: 'center', alpha: fade * lA * 0.9, track: 8 });
+      } else {
+        drText('PANAMA CANAL', mx + 130, my - 104, 54, DR.white, { alpha: fade * lA, track: 5 });
+        drText('ATLANTIC OCEAN', mx - 420, my - 190, 28, DR.cyan, { alpha: fade * lA * 0.9, track: 8 });
+        drText('PACIFIC OCEAN', mx - 140, my + 250, 28, DR.cyan, { alpha: fade * lA * 0.9, track: 8 });
+      }
     }
   }
   // the numbers, as the voice says them
   const cA = EZ.o2(seg(t, GL_T.counters, GL_T.counters + 0.7)) * (1 - EZ.o2(seg(t, GD - 1.9, GD - 1.2)));
+  const c1x = PORTRAIT ? (W - 560) / 2 - 40 : 60, c1y = PORTRAIT ? 1030 : H - 300, c2x = PORTRAIT ? (W - 560) / 2 - 40 : W - 620, c2y = PORTRAIT ? 1260 : H - 300;
   if (cA > 0) {
     const n = Math.round(13951 * EZ.o3(seg(t, GL_T.counters + 0.2, GL_T.counters + 3.2)));
-    ctx.save(); ctx.globalAlpha = fade * cA; ctx.fillStyle = 'rgba(2,6,10,0.62)'; ctx.beginPath(); ctx.roundRect(60, H - 300, 560, 210, 10); ctx.fill();
+    ctx.save(); ctx.globalAlpha = fade * cA; ctx.fillStyle = 'rgba(2,6,10,0.62)'; ctx.beginPath(); ctx.roundRect(c1x, c1y, 560, 210, 10); ctx.fill();
     ctx.strokeStyle = DR.cyan; ctx.lineWidth = 2; ctx.stroke(); ctx.restore();
-    drText(fmtInt(n), 90, H - 190, 112, DR.white, { alpha: fade * cA, font: DR_MONO, glow: 'rgba(95,227,255,0.55)', blur: 18 });
-    drText('SHIPS CROSS EVERY YEAR', 94, H - 148, 30, DR.cyan, { alpha: fade * cA, track: 3 });
-    drText('FISCAL YEAR 2026', 94, H - 112, 22, DR.white, { alpha: fade * cA * 0.7, track: 4 });
+    drText(fmtInt(n), c1x + 30, c1y + 110, 112, DR.white, { alpha: fade * cA, font: DR_MONO, glow: 'rgba(95,227,255,0.55)', blur: 18 });
+    drText('SHIPS CROSS EVERY YEAR', c1x + 34, c1y + 152, 30, DR.cyan, { alpha: fade * cA, track: 3 });
+    drText('FISCAL YEAR 2026', c1x + 34, c1y + 188, 22, DR.white, { alpha: fade * cA * 0.7, track: 4 });
     const sA = EZ.o2(seg(t, GL_T.share, GL_T.share + 0.7)) * (1 - EZ.o2(seg(t, GD - 1.9, GD - 1.2)));
     if (sA > 0) {
-      ctx.save(); ctx.globalAlpha = fade * sA; ctx.fillStyle = 'rgba(2,6,10,0.62)'; ctx.beginPath(); ctx.roundRect(W - 620, H - 300, 560, 210, 10); ctx.fill();
+      ctx.save(); ctx.globalAlpha = fade * sA; ctx.fillStyle = 'rgba(2,6,10,0.62)'; ctx.beginPath(); ctx.roundRect(c2x, c2y, 560, 210, 10); ctx.fill();
       ctx.strokeStyle = DR.red; ctx.lineWidth = 2; ctx.stroke(); ctx.restore();
-      drText('38 MIN', W - 590, H - 190, 112, DR.white, { alpha: fade * sA, font: DR_MONO, glow: 'rgba(255,43,58,0.6)', blur: 18 });
-      drText('BETWEEN SHIPS, ON AVERAGE', W - 586, H - 148, 28, DR.red, { alpha: fade * sA, track: 3 });
-      drText('~5% OF WORLD TRADE', W - 586, H - 112, 22, DR.white, { alpha: fade * sA * 0.7, track: 4 });
+      drText('38 MIN', c2x + 30, c2y + 110, 112, DR.white, { alpha: fade * sA, font: DR_MONO, glow: 'rgba(255,43,58,0.6)', blur: 18 });
+      drText('BETWEEN SHIPS, ON AVERAGE', c2x + 34, c2y + 152, 28, DR.red, { alpha: fade * sA, track: 3 });
+      drText('~5% OF WORLD TRADE', c2x + 34, c2y + 188, 22, DR.white, { alpha: fade * sA * 0.7, track: 4 });
     }
   }
   ctx.restore();

@@ -2,10 +2,10 @@
   "name": "panama",
   "title": "How Mega Ships Fit Through The Narrow Panama Canal Locks",
   "format": { "width": 1920, "height": 1080, "fps": 24, "bpm": 120, "duration": 78.94, "frames": 1895 },
-  "formats": ["16:9"],
+  "formats": ["16:9", "9:16"],
   "storyFormat": "process (voice-led, top-down drone view)",
   "style": "drone",
   "scenes": ["src/globe.js", "src/scenes.js"],
   "voice": { "file": "voice/voice.wav", "music": -10 },
-  "review": { "safe": { "top": 60, "bottom": 110, "right": 60 }, "refs": {} }
+  "review": { "safe": { "top": 240, "bottom": 420, "right": 140 }, "refs": {} }
 }

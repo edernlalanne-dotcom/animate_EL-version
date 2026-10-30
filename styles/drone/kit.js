@@ -127,7 +127,8 @@ function drTag(wx, wy, str, o = {}) {
     const s = (o.size ?? 30) * 1.5, w = drTextW(str, s, { font: o.font, track: 1 }) + 34, h = s * 1.75, a = o.alpha ?? 1;
     if (sx < -w || sx > W + w || sy < -h || sy > H + h) return;
     ctx.save(); ctx.globalAlpha = a;
-    const x = clamp(sx - w / 2 + (o.dx ?? 0), 24, W - w - 24), y = clamp(sy - h / 2 + (o.dy ?? 0), 24, H - h - 24);   // a label slides along the frame edge instead of being cut off
+    const ox_ = PORTRAIT ? -(o.dy ?? 0) : (o.dx ?? 0), oy_ = PORTRAIT ? (o.dx ?? 0) : (o.dy ?? 0);   // offsets are given for 16:9 and turn with the rotated world in 9:16
+    const x = clamp(sx - w / 2 + ox_, 24, W - w - 150), y = clamp(sy - h / 2 + oy_, PORTRAIT ? 250 : 24, PORTRAIT ? H - 420 - h : H - h - 24);   // a label slides along the frame edge instead of being cut off
     ctx.fillStyle = 'rgba(6,9,12,0.82)'; ctx.beginPath(); ctx.roundRect(x, y, w, h, 6); ctx.fill();
     ctx.strokeStyle = o.color ?? DR.red; ctx.lineWidth = 2; ctx.shadowColor = o.color ?? DR.red; ctx.shadowBlur = 14; ctx.stroke(); ctx.shadowBlur = 0;
     drText(str, x + w / 2, y + h / 2 + s * 0.36, s, o.text ?? DR.white, { align: 'center', track: 1, font: o.font });

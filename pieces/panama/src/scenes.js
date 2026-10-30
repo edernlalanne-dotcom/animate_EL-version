@@ -9,6 +9,12 @@
 const OLD = { len: 2100, wid: 220, y: 0 }, NEO = { len: 2800, wid: 360, y: 900 };
 const OSHIP = { len: 1930, beam: 212 }, NSHIP = { len: 2400, beam: 336 };
 const frac = (L, f) => L.t0 + (L.t1 - L.t0) * f;       // a moment inside a line (word times are estimated, so cues use line fractions)
+// 9:16: the whole drone world is turned 90 degrees so the lock runs down the tall frame; overlays are laid out for the phone safe zones
+const SZ = { top: 240, bottom: 420, right: 140 };
+const HB = PORTRAIT ? 1400 : H - 120;          // baseline of the main bottom line of text
+const RX = PORTRAIT ? W - SZ.right : W - 70;   // right edge for right-aligned text
+const LX0 = PORTRAIT ? 80 : 70;                // left edge for left-aligned text
+const TY = PORTRAIT ? 330 : 110;               // baseline of the main top line of text
 const T_ = {
   hook: VL('hook'), box: VL('box'), park: VL('park'), mules: VL('mules'), gates: VL('gates'), guess: VL('guess'), water: VL('water'), lift: VL('lift'),
   neo: VL('neo'), eiffel: VL('eiffel'), pay: VL('payoff'), teaser: VL('teaser'), cta: VL('cta'),
@@ -58,10 +64,13 @@ function camState(t) {
 }
 const hookCamX = (t) => oldShipX(t) + OSHIP.len / 2 - 150;
 function pieceCam(era, t) {
-  if (t < G0 + 0.46) return camOf({ z: 5.8, p: [hookCamX(t), -95], to: [W / 2, H * 0.5] });   // the cold open tracks the bow along the wall
+  const rot = (p) => (PORTRAIT ? [-p[1], p[0]] : p);   // world (x, y) becomes (-y, x) when the world is turned
+  if (t < G0 + 0.46) return camOf({ z: 5.8, p: rot([hookCamX(t), -95]), to: [W / 2, H * 0.5] });   // the cold open tracks the bow along the wall
   const c = camState(t), dive = lerp(2.4, 1, EZ.o3(seg(t, G1 - 1.0, G1 + 2.0)));
+  const amt = PORTRAIT ? seg(t, G1 - 0.6, G1 + 0.2) * (1 - seg(t, T_.mules.t0 + 0.15, fm(0.10))) : 0;   // 9:16: frame the 2,100 px chamber inside the phone safe band
+  c.z *= lerp(1, 0.74, amt) * (1 + (PORTRAIT ? 0.07 * seg(t, T_.box.t1, T_.mules.t0 + 0.1) : 0)); c.s = lerp(c.s, 0.38, amt);   // 9:16 also creeps in slowly during the car gag
   const sh = Math.sin(seg(t, fm(0.24), fm(0.40)) * Math.PI) * 1.6;   // the frame shakes as the gap closes
-  return camOf({ z: c.z * dive, p: [c.x + sh * Math.sin(t * 61), c.y + sh * Math.cos(t * 53)], to: [W / 2, H * c.s] });
+  return camOf({ z: c.z * dive, p: rot([c.x + sh * Math.sin(t * 61), c.y + sh * Math.cos(t * 53)]), to: [W / 2, H * c.s] });
 }
 const ERA_BG = [DR.ground];
 const BRIDGES = [];
@@ -101,13 +110,14 @@ function cutawayFill(t) {
   ctx.save(); ctx.globalAlpha = out;
   ctx.beginPath(); ctx.rect(0, py, W, H - py); ctx.clip();
   ctx.fillStyle = '#06101a'; ctx.fillRect(0, py, W, H - py);
-  const floor = H - 170, xL = 300, xR = 1620, lo = floor - 250, hi = floor - 560, lv = lerp(lo, hi, u), pyOff = py;
+  const L9 = PORTRAIT ? { floor: 1330, xL: 110, xR: 970, dLo: 250, dHi: 520 } : { floor: H - 170, xL: 300, xR: 1620, dLo: 250, dHi: 560 };
+  const floor = L9.floor, xL = L9.xL, xR = L9.xR, lo = floor - L9.dLo, hi = floor - L9.dHi, lv = lerp(lo, hi, u), pyOff = py;
   ctx.translate(0, pyOff);   // the whole panel rides up as one piece
   ctx.fillStyle = DR.water; ctx.fillRect(0, lo, xL, floor - lo); ctx.fillStyle = '#0d3140'; ctx.fillRect(xR, hi, W - xR, floor - hi);
   ctx.fillStyle = '#0f3a4d'; ctx.fillRect(xL, lv, xR - xL, floor - lv);
   ctx.strokeStyle = 'rgba(140,220,240,0.8)'; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(xL, lv); ctx.lineTo(xR, lv); ctx.stroke();
   ctx.fillStyle = DR.concrete; ctx.fillRect(0, floor, W, H); ctx.fillStyle = '#06101a'; ctx.fillRect(xL - 10, floor + 36, xR - xL + 20, 26);
-  ctx.fillStyle = DR.concreteD; ctx.fillRect(0, hi - 40, 170, 40); ctx.fillRect(W - 170, hi - 40, 170, 40);
+  ctx.fillStyle = DR.concreteD; ctx.fillRect(0, hi - 40, PORTRAIT ? 60 : 170, 40); ctx.fillRect(W - (PORTRAIT ? 60 : 170), hi - 40, PORTRAIT ? 60 : 170, 40);
   ctx.fillStyle = DR.steel; ctx.fillRect(xL - 14, hi - 30, 28, floor - hi + 30); ctx.fillRect(xR - 14, hi - 30, 28, floor - hi + 30);
   ctx.strokeStyle = 'rgba(120,220,245,0.9)'; ctx.lineWidth = 5; ctx.setLineDash([26, 20]); ctx.lineDashOffset = -(t * 190);
   ctx.globalAlpha = out * (u > 0 && u < 1 ? 1 : 0.2); ctx.beginPath(); ctx.moveTo(xR + 10, floor + 49); ctx.lineTo(xL - 10, floor + 49); ctx.stroke(); ctx.setLineDash([]);
@@ -119,25 +129,25 @@ function cutawayFill(t) {
     }
   }
   ctx.globalAlpha = out;
-  drShipSide(960, lv, 900, 92, 50);
+  if (PORTRAIT) drShipSide(540, lv, 620, 64, 36); else drShipSide(960, lv, 900, 92, 50);
   const lab = seg(slide, 0.85, 1);
-  drText('SIDE CUTAWAY  ·  ONE CHAMBER', 70, 92, 32, DR.cyan, { track: 3, alpha: 0.9 * lab * out });
+  drText('SIDE CUTAWAY  ·  ONE CHAMBER', LX0, PORTRAIT ? 300 : 92, PORTRAIT ? 28 : 32, DR.cyan, { track: 3, alpha: 0.9 * lab * out });
   const num = guessing ? Math.floor(RNG('spin', Math.floor(t * 24)).f() * 99999999) : 26e6 * u;   // the counter spins while the viewer guesses
-  drText(fmtInt(num), W - 70, 140, 108, guessing ? DR.amber : DR.white, { align: 'right', font: DR_MONO, glow: guessing ? 'rgba(240,168,28,0.6)' : 'rgba(95,227,255,0.6)', blur: 24, alpha: lab * out });
-  drText(guessing ? 'GUESS?' : 'GALLONS IN', W - 70, 190, guessing ? 44 : 32, guessing ? DR.amber : DR.cyan, { align: 'right', track: 4, alpha: lab * out * (guessing ? 0.6 + 0.4 * Math.sin(t * 10) : 1) });
+  drText(fmtInt(num), RX, PORTRAIT ? 420 : 140, PORTRAIT ? 84 : 108, guessing ? DR.amber : DR.white, { align: 'right', font: DR_MONO, glow: guessing ? 'rgba(240,168,28,0.6)' : 'rgba(95,227,255,0.6)', blur: 24, alpha: lab * out });
+  drText(guessing ? 'GUESS?' : 'GALLONS IN', RX, PORTRAIT ? 470 : 190, guessing ? 44 : 32, guessing ? DR.amber : DR.cyan, { align: 'right', track: 4, alpha: lab * out * (guessing ? 0.6 + 0.4 * Math.sin(t * 10) : 1) });
   // forty Olympic pools, filled one by one as the voice says it
   const lit = Math.floor(40 * poolsU);
   if (poolsU > 0.01) {
-    drText('= ABOUT 40 OLYMPIC POOLS', 70, 236, 24, DR.cyan, { track: 2, alpha: out * seg(poolsU, 0.02, 0.15) });
+    drText('= ABOUT 40 OLYMPIC POOLS', LX0, PORTRAIT ? 512 : 236, 24, DR.cyan, { track: 2, alpha: out * seg(poolsU, 0.02, 0.15) });
     for (let i = 0; i < 40; i++) {
-      const px = 70 + (i % 4) * 56, py2 = 256 + Math.floor(i / 4) * 33, on = i < lit;
+      const px = PORTRAIT ? 80 + (i % 10) * 54 : 70 + (i % 4) * 56, py2 = PORTRAIT ? 530 + Math.floor(i / 10) * 31 : 256 + Math.floor(i / 4) * 33, on = i < lit;
       ctx.fillStyle = on ? '#2b8fb8' : 'rgba(40,70,90,0.35)'; ctx.fillRect(px, py2, 46, 25);
       ctx.strokeStyle = on ? '#bfeaf7' : 'rgba(120,170,190,0.45)'; ctx.lineWidth = 2; ctx.strokeRect(px, py2, 46, 25);
       if (on) { ctx.strokeStyle = 'rgba(255,255,255,0.35)'; ctx.lineWidth = 1; for (let k = 1; k < 5; k++) { ctx.beginPath(); ctx.moveTo(px + 3, py2 + k * 5); ctx.lineTo(px + 43, py2 + k * 5); ctx.stroke(); } }
     }
   }
-  drText('GRAVITY FED  ·  NO PUMPS', W / 2, floor + 118, 36, DR.white, { align: 'center', track: 4, alpha: seg(t, T_.water.t0 + 0.2, T_.water.t0 + 1.0) * out });
-  if (guessing && t > T_.guess.t0) drText('?', 960, 700, 380, DR.amber, { align: 'center', alpha: out * lab * (0.22 + 0.1 * Math.sin(t * 8)), weight: 900 });
+  drText('GRAVITY FED  ·  NO PUMPS', W / 2, PORTRAIT ? floor + 120 : floor + 118, PORTRAIT ? 32 : 36, DR.white, { align: 'center', track: 4, alpha: seg(t, T_.water.t0 + 0.2, T_.water.t0 + 1.0) * out });
+  if (guessing && t > T_.guess.t0) drText('?', W / 2, PORTRAIT ? 1000 : 700, PORTRAIT ? 300 : 380, DR.amber, { align: 'center', alpha: out * lab * (0.22 + 0.1 * Math.sin(t * 8)), weight: 900 });
   ctx.restore();
 }
 function cutawayLift(t) {
@@ -145,8 +155,8 @@ function cutawayLift(t) {
   if (inn <= 0 || out <= 0) return;
   ctx.save(); ctx.globalAlpha = out * inn;
   ctx.fillStyle = '#06101a'; ctx.fillRect(0, 0, W, H);
-  const yb = H * 0.80, dy = H * 0.15, s = EZ.io(seg(t, T_.lift.t0 + 0.2, T_.lift.t1 - 0.1)) * 3;
-  const cw = 520, x0 = 150, cx = (k) => x0 + cw * k + cw / 2, pk = (k) => EZ.io(seg(s - k, 0, 0.65));
+  const yb = PORTRAIT ? 1330 : H * 0.80, dy = PORTRAIT ? 150 : H * 0.15, s = EZ.io(seg(t, T_.lift.t0 + 0.2, T_.lift.t1 - 0.1)) * 3;
+  const cw = PORTRAIT ? 290 : 520, x0 = PORTRAIT ? 50 : 150, cx = (k) => x0 + cw * k + cw / 2, pk = (k) => EZ.io(seg(s - k, 0, 0.65));
   const level = (k) => yb - dy * (k + pk(k)), floorY = (k) => yb + 50 - dy * k;
   ctx.fillStyle = DR.water; ctx.fillRect(0, yb, x0, H);
   for (let k = 0; k < 3; k++) {
@@ -161,13 +171,13 @@ function cutawayLift(t) {
   ctx.fillStyle = DR.steel; ctx.fillRect(lx0 - 11, lakeY - 22, 22, floorY(2) - lakeY + 22);
   ctx.fillStyle = DR.concrete; ctx.fillRect(0, yb + 50, x0, H);
   const k = Math.min(2, Math.floor(s)), local = s - k, mv = EZ.io(seg(local, 0.7, 1));
-  const sx = lerp(cx(k), k === 2 ? lx0 + 200 : cx(k + 1), mv) + (s >= 3 ? 220 * EZ.o2(seg(s, 3, 3.01)) : 0), sy = local >= 0.7 ? yb - dy * (k + 1) : level(k);
-  drShipSide(sx, sy, 330, 40, 22);
+  const sx = lerp(cx(k), k === 2 ? lx0 + (PORTRAIT ? 70 : 200) : cx(k + 1), mv) + (s >= 3 ? (PORTRAIT ? 60 : 220) * EZ.o2(seg(s, 3, 3.01)) : 0), sy = local >= 0.7 ? yb - dy * (k + 1) : level(k);
+  if (PORTRAIT) drShipSide(sx, sy, 200, 26, 14); else drShipSide(sx, sy, 330, 40, 22);
   const prog = (pk(0) + pk(1) + pk(2)) / 3;
-  drText('GATUN LOCKS  ·  3 STEPS', 70, 110, 44, DR.white, { track: 3 });
-  drText('not to scale', 70, 152, 26, DR.cyan, { track: 2, alpha: 0.7 });
-  drText('+' + Math.round(85 * prog) + ' FT', W - 70, 134, 120, DR.white, { align: 'right', font: DR_MONO, glow: 'rgba(95,227,255,0.6)', blur: 22 });
-  drText('ABOVE SEA LEVEL', W - 70, 180, 30, DR.cyan, { align: 'right', track: 3 });
+  drText('GATUN LOCKS  ·  3 STEPS', LX0, PORTRAIT ? 310 : 110, PORTRAIT ? 36 : 44, DR.white, { track: 3 });
+  drText('not to scale', LX0, PORTRAIT ? 350 : 152, 26, DR.cyan, { track: 2, alpha: 0.7 });
+  drText('+' + Math.round(85 * prog) + ' FT', RX, PORTRAIT ? 470 : 134, PORTRAIT ? 96 : 120, DR.white, { align: 'right', font: DR_MONO, glow: 'rgba(95,227,255,0.6)', blur: 22 });
+  drText('ABOVE SEA LEVEL', RX, PORTRAIT ? 516 : 180, 30, DR.cyan, { align: 'right', track: 3 });
   ctx.restore();
 }
 
@@ -186,7 +196,9 @@ function fieldsLayer(t) {
     for (let k = 1; k < (w / 60); k++) { ctx.moveTo(x + k * 60, y0 + off); ctx.lineTo(x + k * 60, y0 + off + h); }
     ctx.stroke();
     ctx.restore();
-    drText(i < 3 ? String(i + 1) : '½', x + w / 2, y0 + off + h * 0.66, 190, DR.white, { align: 'center', alpha: 0.9 * a0 * pop });
+    ctx.save(); ctx.translate(x + w / 2, y0 + off + h * 0.66); if (PORTRAIT) ctx.rotate(-Math.PI / 2);   // the numbers stay upright when the world is turned
+    drText(i < 3 ? String(i + 1) : '½', 0, 0, 190, DR.white, { align: 'center', alpha: 0.9 * a0 * pop });
+    ctx.restore();
   }
 }
 
@@ -220,8 +232,8 @@ function eiffelLayer(t) {
   ctx.stroke();
   ctx.restore();
   const dimA = a * seg(t, T_.eiffel.t0 + 0.9, T_.eiffel.t0 + 1.6);
-  drDim(200, 1262, 2600, 1262, 'SHIP  1,200 FT', { alpha: dimA, size: 28, dy: -44 });
-  drDim(x0, 1310, x0 + 2166, 1310, 'EIFFEL TOWER  1,083 FT', { alpha: dimA * seg(t, T_.eiffel.t0 + 1.6, T_.eiffel.t0 + 2.2), size: 28, color: DR.amber, dy: 44 });
+  drDim(200, 1262, 2600, 1262, 'SHIP  1,200 FT', { alpha: dimA, size: 28, dy: PORTRAIT ? 0 : -44, dx: PORTRAIT ? -520 : 0 });
+  drDim(x0, 1310, x0 + 2166, 1310, 'EIFFEL TOWER  1,083 FT', { alpha: dimA * seg(t, T_.eiffel.t0 + 1.6, T_.eiffel.t0 + 2.2), size: 28, color: DR.amber, dy: PORTRAIT ? 0 : 44, dx: PORTRAIT ? 520 : 0 });
 }
 
 // ---- the clearance meter: the gap per side, live
@@ -239,14 +251,16 @@ function meterLayer(t) {
   const pulse = danger ? (0.55 + 0.45 * Math.abs(Math.sin(t * 14))) : 1;
   const f = () => {
     ctx.save(); ctx.globalAlpha = m.a;
-    ctx.fillStyle = 'rgba(2,6,10,0.74)'; ctx.beginPath(); ctx.roundRect(W - 540, 50, 480, 190, 12); ctx.fill();
+    const mx0 = PORTRAIT ? W - SZ.right - 480 : W - 540, my0 = PORTRAIT ? 260 : 50;
+    ctx.fillStyle = 'rgba(2,6,10,0.74)'; ctx.beginPath(); ctx.roundRect(mx0, my0, 480, 190, 12); ctx.fill();
     ctx.strokeStyle = col; ctx.lineWidth = 3; ctx.shadowColor = col; ctx.shadowBlur = danger ? 26 * pulse : 10; ctx.stroke(); ctx.shadowBlur = 0;
-    drText(m.label, W - 510, 92, 24, DR.cyan, { track: 3 });
-    drText(m.ft.toFixed(1) + ' FT', W - 510, 176, 92, col, { font: DR_MONO, glow: col, blur: danger ? 24 : 12, alpha: pulse });
-    ctx.fillStyle = 'rgba(80,100,115,0.5)'; ctx.fillRect(W - 510, 202, 420, 14);
-    ctx.fillStyle = col; ctx.fillRect(W - 510, 202, 420 * clamp(m.ft / m.max), 14);
-    if (danger) drText('SCRAPE RISK', W - 570, 150, 40, DR.red, { align: 'right', track: 3, alpha: pulse, glow: 'rgba(255,43,58,0.7)', blur: 18 });
-    if (safe) drText('SAFE', W - 570, 150, 40, '#3bff7a', { align: 'right', track: 4 });
+    drText(m.label, mx0 + 30, my0 + 42, 24, DR.cyan, { track: 3 });
+    drText(m.ft.toFixed(1) + ' FT', mx0 + 30, my0 + 126, 92, col, { font: DR_MONO, glow: col, blur: danger ? 24 : 12, alpha: pulse });
+    ctx.fillStyle = 'rgba(80,100,115,0.5)'; ctx.fillRect(mx0 + 30, my0 + 152, 420, 14);
+    ctx.fillStyle = col; ctx.fillRect(mx0 + 30, my0 + 152, 420 * clamp(m.ft / m.max), 14);
+    if (danger) { const sx2 = PORTRAIT ? mx0 + 240 : mx0 - 30, sy2 = PORTRAIT ? my0 + 250 : my0 + 100; ctx.fillStyle = 'rgba(2,6,10,0.78)'; ctx.beginPath(); ctx.roundRect(sx2 - (PORTRAIT ? 170 : 330), sy2 - 42, 340, 60, 8); ctx.fill(); }
+    if (danger) drText('SCRAPE RISK', PORTRAIT ? mx0 + 240 : mx0 - 30, PORTRAIT ? my0 + 250 : my0 + 100, 40, DR.red, { align: PORTRAIT ? 'center' : 'right', track: 3, alpha: pulse, glow: 'rgba(255,43,58,0.7)', blur: 18 });
+    if (safe) drText('SAFE', PORTRAIT ? mx0 + 240 : mx0 - 30, PORTRAIT ? my0 + 250 : my0 + 100, 40, '#3bff7a', { align: PORTRAIT ? 'center' : 'right', track: 4 });
     ctx.restore();
   };
   DEFER.push(f);
@@ -275,6 +289,7 @@ function workersLayer(t) {
 // ---- the scene ----------------------------------------------------------------------------------
 function scenePanama() {
   const t = TT, ox = oldShipX(t), nx = neoShipX(t), dy = driftY(t);
+  if (PORTRAIT) ctx.rotate(Math.PI / 2);   // 9:16: the lock runs down the frame
   drGround(-3600, -1300, 5000, 2200);
   // ===== lane 1: the original lock
   lockLane(OLD, -700, 2800, 120);
@@ -301,11 +316,11 @@ function scenePanama() {
   workersLayer(t);
   const boxA = EZ.o2(seg(t, fb(0.04), fb(0.12))) * (1 - EZ.o2(seg(t, T_.park.t0 - 0.2, T_.park.t0 + 0.4)));
   if (boxA > 0.01) {
-    drDim(0, -640, OLD.len, -640, 'CHAMBER  1,050 FT  =  3.5 FIELDS', { alpha: boxA * seg(t, fb(0.52), fb(0.60)), size: 24 });
+    drDim(0, -640, OLD.len, -640, PORTRAIT ? '1,050 FT  =  3.5 FIELDS' : 'CHAMBER  1,050 FT  =  3.5 FIELDS', { alpha: boxA * seg(t, fb(0.52), fb(0.60)), size: 24 });
     const fit = EZ.o2(seg(t, fb(0.70), fb(0.76))) * (1 - EZ.o2(seg(t, fb(0.95), fb(1.0))));
     if (fit > 0.01) {
       ctx.save(); ctx.globalAlpha = fit * (0.7 + 0.3 * Math.sin(t * 5)); ctx.strokeStyle = DR.cyan; ctx.lineWidth = drHair(3.5); ctx.strokeRect(-6, -116, OLD.len + 12, 232); ctx.restore();
-      drTag(1050, -116, 'SHIPS ARE BUILT TO FIT THIS BOX', { dy: -70, alpha: fit, size: 24, color: DR.cyan });
+      drTag(PORTRAIT ? 380 : 1050, -116, PORTRAIT ? 'BUILT TO FIT THIS BOX' : 'SHIPS ARE BUILT TO FIT THIS BOX', { dy: -70, alpha: fit, size: 24, color: DR.cyan });
     }
   }
   // mules: they appear after the hull has drifted, and pull it back with cables that glow when they tighten
@@ -328,7 +343,7 @@ function scenePanama() {
   if (pullA > 0.01) drTag(ox + 640, -110, 'CABLES PULL IT BACK', { dy: 100, alpha: pullA, size: 22, color: DR.amber });
   const muleA = seg(t, fm(0.40), fm(0.46)) * (1 - seg(t, fm(0.62), fm(0.68)));
   if (muleA > 0.01) drTag(ox + 640, -148, 'MULE', { dy: -50, alpha: muleA, size: 24, color: DR.amber });
-  drTag(180, 0, 'GATES CLOSE', { dy: -170, alpha: seg(t, T_.gates.t0 + 0.2, T_.gates.t0 + 0.7) * (1 - seg(t, T_.gates.t1 + 0.4, T_.gates.t1 + 0.9)), size: 30, color: DR.cyan });
+  drTag(180, 0, 'GATES CLOSE', { dy: -170, alpha: seg(t, T_.gates.t0 + 0.2, T_.gates.t0 + 0.7) * (1 - seg(t, T_.gates.t1 - 0.1, T_.gates.t1 + 0.3)), size: 30, color: DR.cyan });
 
   // ===== lane 2: the Neopanamax lock
   if (t > T_.neo.t0 - 3) {
@@ -377,26 +392,35 @@ function scenePanama() {
 
 function hud(t) {
   const f = () => {
+    const sc = PORTRAIT ? 0.82 : 1;
     const b = EZ.o2(seg(t, fb(0.04), fb(0.12))) * (1 - EZ.o2(seg(t, T_.park.t0 - 0.2, T_.park.t0 + 0.3)));
     const b2 = EZ.o2(seg(t, T_.park.t0 + 0.2, T_.park.t0 + 0.8)) * (1 - EZ.o2(seg(t, T_.mules.t0 - 0.5, T_.mules.t0 - 0.1)));
-    if (b2 > 0) { drText('PARALLEL PARKING', 70, H - 150, 80, DR.white, { alpha: b2, track: 4 }); drText('BUT THE CAR IS 965 FT LONG', 70, H - 100, 32, DR.cyan, { alpha: b2, track: 5 }); }
-    if (b > 0) { drText('ORIGINAL LOCKS', 70, H - 150, 80, DR.white, { alpha: b, track: 4 }); drText('PANAMAX SIZE  ·  1914', 70, H - 100, 32, DR.cyan, { alpha: b, track: 5 }); }
+    const p1a = EZ.o2(seg(t, fp(0.02), fp(0.08))) * (1 - EZ.o2(seg(t, fp(0.46), fp(0.50)))), p2a = EZ.o2(seg(t, fp(0.52), fp(0.58))) * (1 - EZ.o2(seg(t, T_.pay.t1 + 0.1, T_.pay.t1 + 0.4)));
+    const tza = EZ.o2(seg(t, T_.teaser.t0, T_.teaser.t0 + 0.4)) * (1 - EZ.o2(seg(t, T_.cta.t0 - 0.1, T_.cta.t0 + 0.2))), da = EZ.o2(seg(t, T_.cta.t0, T_.cta.t0 + 0.3)) * (1 - seg(t, END_T - 0.4, END_T));
+    const ca = EZ.o2(seg(t, T_.neo.t0 + 0.4, T_.neo.t0 + 1.0)) * (1 - EZ.o2(seg(t, fn(0.52), fn(0.58))));
+    if (PORTRAIT) {   // a dark band behind the text, so it reads over the ship
+      const bandB = Math.max(b, b2, p1a, p2a, tza, da);
+      if (bandB > 0) { ctx.fillStyle = 'rgba(2,6,10,' + (0.78 * bandB) + ')'; ctx.fillRect(0, HB - 130, W, 230); }
+      if (ca > 0) { ctx.fillStyle = 'rgba(2,6,10,' + (0.78 * ca) + ')'; ctx.fillRect(0, TY - 90, W, 170); }
+    }
+    if (b2 > 0) { drText('PARALLEL PARKING', LX0, HB, 80 * sc, DR.white, { alpha: b2, track: 4 }); drText('BUT THE CAR IS 965 FT LONG', LX0, HB + 50, 32 * sc, DR.cyan, { alpha: b2, track: 5 }); }
+    if (b > 0) { drText('ORIGINAL LOCKS', LX0, HB, 80 * sc, DR.white, { alpha: b, track: 4 }); drText('PANAMAX SIZE  ·  1914', LX0, HB + 50, 32 * sc, DR.cyan, { alpha: b, track: 5 }); }
     const c = EZ.o2(seg(t, T_.neo.t0 + 0.4, T_.neo.t0 + 1.0)) * (1 - EZ.o2(seg(t, fn(0.52), fn(0.58))));
-    if (c > 0) { drText('NEOPANAMAX', 70, 110, 78, DR.white, { alpha: c, track: 4 }); drText('NEW LOCKS  ·  2016', 70, 156, 32, DR.cyan, { alpha: c, track: 5 }); }
+    if (c > 0) { drText('NEOPANAMAX', LX0, TY, 78 * sc, DR.white, { alpha: c, track: 4 }); drText('NEW LOCKS  ·  2016', LX0, TY + 46, 32 * sc, DR.cyan, { alpha: c, track: 5 }); }
     // payoff: the opening number, then the two feet, then the channel
     const p1 = EZ.o2(seg(t, fp(0.02), fp(0.08))) * (1 - EZ.o2(seg(t, fp(0.46), fp(0.50))));
-    if (p1 > 0) { drText('1 SHIP  /  38 MIN', W / 2, H - 120, 86, DR.white, { align: 'center', alpha: p1, track: 6, glow: 'rgba(95,227,255,0.5)', blur: 20 }); }
+    if (p1 > 0) { drText('1 SHIP  /  38 MIN', W / 2, HB, 86 * sc, DR.white, { align: 'center', alpha: p1, track: 6, glow: 'rgba(95,227,255,0.5)', blur: 20 }); }
     const p2 = EZ.o2(seg(t, fp(0.52), fp(0.58))) * (1 - EZ.o2(seg(t, T_.pay.t1 + 0.1, T_.pay.t1 + 0.4)));
-    if (p2 > 0) { drText('2 FT AT A TIME', W / 2, H - 120, 86, DR.white, { align: 'center', alpha: p2, track: 6, glow: 'rgba(255,43,58,0.6)', blur: 22 }); }
+    if (p2 > 0) { drText('2 FT AT A TIME', W / 2, HB, 86 * sc, DR.white, { align: 'center', alpha: p2, track: 6, glow: 'rgba(255,43,58,0.6)', blur: 22 }); }
     // the teaser for the next video
     const tz = EZ.o2(seg(t, T_.teaser.t0, T_.teaser.t0 + 0.4)) * (1 - EZ.o2(seg(t, T_.cta.t0 - 0.1, T_.cta.t0 + 0.2)));
     if (tz > 0) {
-      drText('NEXT TIME', W / 2, H - 196, 34, DR.cyan, { align: 'center', alpha: tz, track: 8 });
-      drText('WHEN THE LAKE RUNS DRY', W / 2, H - 120, 74, DR.white, { align: 'center', alpha: tz, track: 4 });
-      drText('2023 DROUGHT: TRANSITS FELL 20% IN FY2024, TO 11,240', W / 2, H - 70, 26, DR.amber, { align: 'center', alpha: tz * seg(t, T_.teaser.t0 + 1.0, T_.teaser.t0 + 1.6), track: 2 });
+      drText('NEXT TIME', W / 2, HB - 76, 34 * sc, DR.cyan, { align: 'center', alpha: tz, track: 8 });
+      drText('WHEN THE LAKE RUNS DRY', W / 2, HB, 74 * (PORTRAIT ? 0.66 : 1), DR.white, { align: 'center', alpha: tz, track: 4 });
+      drText('2023 DROUGHT: TRANSITS FELL 20% IN FY2024, TO 11,240', W / 2, HB + 50, 26 * (PORTRAIT ? 0.84 : 1), DR.amber, { align: 'center', alpha: tz * seg(t, T_.teaser.t0 + 1.0, T_.teaser.t0 + 1.6), track: 2 });
     }
     const d = EZ.o2(seg(t, T_.cta.t0, T_.cta.t0 + 0.3)) * (1 - seg(t, END_T - 0.4, END_T));
-    if (d > 0) { drText('WORLD IN THE MAKING', W / 2, H - 120, 60, DR.white, { align: 'center', alpha: d, track: 8 }); drText('@WorldInTheMakingStudio', W / 2, H - 74, 28, DR.cyan, { align: 'center', alpha: d, track: 3 }); }
+    if (d > 0) { drText('WORLD IN THE MAKING', W / 2, HB, 60 * (PORTRAIT ? 0.85 : 1), DR.white, { align: 'center', alpha: d, track: 8 }); drText('@WorldInTheMakingStudio', W / 2, HB + 46, 28 * sc, DR.cyan, { align: 'center', alpha: d, track: 3 }); }
   };
   DEFER.push(f);
 }
@@ -404,6 +428,7 @@ function hud(t) {
 function endCard(t) {
   if (t < END_T) return;
   ctx.save(); ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H);   // a hard cut onto the card
-  const s = H; if (!drawAsset('subscribe.jpg', (W - s) / 2, 0, s, s, { fit: 'contain' })) drText('SUBSCRIBE', W / 2, H / 2, 120, DR.white, { align: 'center' });
+  const s = PORTRAIT ? W : H;   // the square image fills the width in 9:16, the height in 16:9
+  if (!drawAsset('subscribe.jpg', (W - s) / 2, (H - s) / 2, s, s, { fit: 'contain' })) drText('SUBSCRIBE', W / 2, H / 2, 120, DR.white, { align: 'center' });
   ctx.restore();
 }

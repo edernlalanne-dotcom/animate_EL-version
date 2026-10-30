@@ -7,7 +7,7 @@
 <style>
   html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
   body { display: flex; align-items: center; justify-content: center; }
-  canvas { max-width: 100vw; max-height: 100vh; aspect-ratio: 16 / 9; display: block; cursor: pointer; }
+  canvas { max-width: 100vw; max-height: 100vh; display: block; cursor: pointer; }
 </style>
 </head>
 <body>
@@ -21,15 +21,15 @@
 //  original locks 1914, mules on the walls, gravity fill ~26 million gallons per chamber, Gatun 3 steps +85 ft,
 //  Neopanamax locks 2016: chamber 1,400 x 180 ft, ships to 1,200 ft long, ~6 ft each side, tugboats.
 // =====================================================================
-const FORMATS = { '16:9': [1920, 1080] };
-const FORMAT = '16:9';
+const FORMATS = { '16:9': [1920, 1080], '9:16': [1080, 1920] };
+const FORMAT = new URLSearchParams(location.search).get('format') || '16:9';   // the main format first
 const FPS = 24, [W, H] = FORMATS[FORMAT];
 document.getElementById('c').width = W; document.getElementById('c').height = H;
 const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, GRID0 = 0;
 const DURATION = VOICE.duration;
 const NFRAMES = Math.round(DURATION * FPS);
 const LOOP_T = NFRAMES / FPS;
-const SAFE = { top: 60, bottom: 110, right: 60 };
+const SAFE = { '16:9': { top: 60, bottom: 110, right: 60 }, '9:16': { top: 240, bottom: 420, right: 140 } }[FORMAT];
 const HAND = '"Segoe UI", Arial, sans-serif';
 const CX = W / 2;
 const END_T = DURATION - 2.0;                      // the subscribe card holds the last 2 seconds
