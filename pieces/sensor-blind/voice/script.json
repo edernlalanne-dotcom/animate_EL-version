@@ -1,0 +1,15 @@
+{ "lead": 0.8, "tail": 0.1, "lines": [
+ { "id": "open", "text": "This is what you see. And this is what your car sees. Right now, they match.", "file": "open.mp3", "after": 0.5 },
+ { "id": "rain", "text": "Then the rain starts.", "file": "rain.mp3", "after": 0.5 },
+ { "id": "camera", "text": "Cameras need contrast. Rain cuts it. Fog erases it. The boxes flicker, and cars drop off the list.", "file": "camera.mp3", "after": 0.4 },
+ { "id": "lidar", "text": "LiDAR fires laser pulses and times the echo. But every water droplet sends back an echo too. The pulse returns early, and the points scatter.", "file": "lidar.mp3", "after": 0.4 },
+ { "id": "study", "text": "Tests show fog hurts LiDAR more than rain does. In one fog chamber, detection dropped by half.", "file": "study.mp3", "after": 1.7 },
+ { "id": "blind", "text": "And just like that, the car is blind.", "file": "blind.mp3", "after": 0.9 },
+ { "id": "how", "text": "So how do engineers fix it?", "file": "how.mp3", "after": 0.35 },
+ { "id": "radar", "text": "First, radar. Its waves pass through fog with almost no loss.", "file": "radar.mp3", "after": 0.35 },
+ { "id": "l1550", "text": "Second, lasers at fifteen fifty nanometers. Eye safety rules allow more power, so more signal survives.", "file": "l1550.mp3", "after": 0.35 },
+ { "id": "thermal", "text": "Third, thermal cameras. They read heat, not light, so warm bodies still stand out.", "file": "thermal.mp3", "after": 0.35 },
+ { "id": "clean", "text": "And coatings, air puffers, and wipers keep every lens clear.", "file": "clean.mp3", "after": 0.45 },
+ { "id": "fusion", "text": "No single sensor decides. The car blends them all. When one goes blind, the others cover.", "file": "fusion.mp3", "after": 0.5 },
+ { "id": "outro", "text": "Subscribe to World in the Making.", "file": "outro.mp3", "after": 0 }
+] }

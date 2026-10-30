@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Rain and Fog Blind Autonomous Vehicle Sensors</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { height: min(100vh, calc(100vw * 16 / 9)); width: auto; aspect-ratio: 9 / 16; display: block; cursor: pointer; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+"use strict";
+// =====================================================================
+//  HOW RAIN AND FOG BLIND AUTONOMOUS VEHICLE SENSORS — 9:16, 77s @ 24fps, voice-over is the clock.
+//  Split screen: top = what you see (dashcam), bottom = what the car senses (LiDAR, boxes, HUD).
+//  One era for the drive, one hard cut to the subscribe end card (the last 2s).
+// =====================================================================
+const FPS = 24, W = 1080, H = 1920;
+const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, E16 = BEAT / 4;
+const DURATION = 77.0;
+const NFRAMES = Math.round(DURATION * FPS);
+const LOOP_T = NFRAMES / FPS;
+const SAFE = { top: 240, bottom: 420, right: 140 };
+const HAND = '"Inter", Arial, sans-serif';
+const CX = 540;
+
+// voice lines by id: the voice is the clock
+const LN = {}; VOICE.lines.forEach((l) => { LN[l.id] = l; });
+const T = {
+  rain: LN.rain.t0, cam: LN.camera.t0, lidar: LN.lidar.t0, study: LN.study.t0, quiet: LN.study.t1,
+  blind: LN.blind.t0 - 0.6,          // the payoff hit lands in the pause before the line that names it
+  how: LN.how.t0, radar: LN.radar.t0, l1550: LN.l1550.t0, thermal: LN.thermal.t0, clean: LN.clean.t0, fusion: LN.fusion.t0,
+  card: DURATION - 2.0,              // the end card: the user's logo for 2s
+};
+const ERA_LIST = [[0, T.card, () => sceneDrive()], [T.card, DURATION, () => sceneCard()]];
+const ERA_BG = ['#04070a', '#000000'];
+const BEATS_LIST = [
+  ['open', 0, T.rain, 'clear night: both views match'],
+  ['rain', T.rain, T.cam, 'rain starts'],
+  ['camera', T.cam, T.lidar, 'cameras lose contrast, boxes flicker, tracks drop'],
+  ['lidar', T.lidar, T.study, 'pulses hit droplets, points scatter'],
+  ['study', T.study, T.quiet, 'fog hurts LiDAR more than rain'],
+  ['silence', T.quiet, T.blind, 'white wall, silence'],
+  ['blind', T.blind, T.how, 'glitch, LiDAR 0%, camera BLINDED'],
+  ['radar', T.how, T.l1550, 'how to fix it: radar'],
+  ['l1550', T.l1550, T.thermal, '1550 nm lasers'],
+  ['thermal', T.thermal, T.clean, 'thermal cameras'],
+  ['clean', T.clean, T.fusion, 'coatings, air puffer, wipers'],
+  ['fusion', T.fusion, T.card, 'sensor fusion: tracks return'],
+  ['card', T.card, DURATION, 'subscribe end card'],
+];
+const SHOTS = BEATS_LIST.map(([key, t0, t1, title], i) => ({ id: i + 1, key, era: i === BEATS_LIST.length - 1 ? 1 : 0, t0, t1, title }));
+const TIMELINE = {
+  width: W, height: H, fps: FPS, bpm: BPM, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE,
+  format: 'chronology of one drive, split screen',
+  shots: SHOTS,
+  cuts: [T.card],
+  morphs: [],
+  cues: { rain: T.rain, cam: T.cam, lidar: T.lidar, quiet: T.quiet, blind: T.blind, fusion: T.fusion, card: T.card },
+  acts: [
+    { name: '1 Match',   role: 'build',   t0: 0, t1: T.cam },
+    { name: '2 Fail',    role: 'journey', t0: T.cam, t1: T.lidar },
+    { name: '3 Scatter', role: 'peak',    t0: T.lidar, t1: T.quiet },
+    { name: '4 Silence', role: 'silence', t0: T.quiet, t1: T.blind },
+    { name: '5 Blind',   role: 'gift',    t0: T.blind, t1: T.how },
+    { name: '6 Fix',     role: 'journey', t0: T.how, t1: T.card },
+    { name: '7 Card',    role: 'goodbye', t0: T.card, t1: DURATION },
+  ],
+  board: BEATS_LIST.map(([key, t0, t1, title]) => ({ t: Math.min(DURATION - 0.1, (t0 + t1) / 2 + (key === 'silence' ? 0.2 : 0)), title, sound: '', next: '' })),
+  narration: VOICE.lines.map((l) => ({ t0: l.t0, t1: l.t1, text: l.text })),
+};
+window.TIMELINE = TIMELINE;
