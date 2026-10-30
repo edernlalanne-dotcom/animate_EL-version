@@ -1,0 +1,1177 @@
+{
+ "duration": 78.941,
+ "lead": 0.25,
+ "tail": 2.4,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "A hundred six feet of ship. A hundred ten feet of lock. Two feet to spare.",
+   "t0": 0.25,
+   "t1": 5.788,
+   "take": "voice/n_hook.mp3",
+   "words": [
+    {
+     "w": "A",
+     "t0": 0.25,
+     "t1": 0.404,
+     "est": true
+    },
+    {
+     "w": "hundred",
+     "t0": 0.404,
+     "t1": 1.019,
+     "est": true
+    },
+    {
+     "w": "six",
+     "t0": 1.019,
+     "t1": 1.327,
+     "est": true
+    },
+    {
+     "w": "feet",
+     "t0": 1.327,
+     "t1": 1.711,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 1.711,
+     "t1": 1.942,
+     "est": true
+    },
+    {
+     "w": "ship.",
+     "t0": 1.942,
+     "t1": 2.327,
+     "est": true
+    },
+    {
+     "w": "A",
+     "t0": 2.327,
+     "t1": 2.481,
+     "est": true
+    },
+    {
+     "w": "hundred",
+     "t0": 2.481,
+     "t1": 3.096,
+     "est": true
+    },
+    {
+     "w": "ten",
+     "t0": 3.096,
+     "t1": 3.404,
+     "est": true
+    },
+    {
+     "w": "feet",
+     "t0": 3.404,
+     "t1": 3.788,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 3.788,
+     "t1": 4.019,
+     "est": true
+    },
+    {
+     "w": "lock.",
+     "t0": 4.019,
+     "t1": 4.404,
+     "est": true
+    },
+    {
+     "w": "Two",
+     "t0": 4.404,
+     "t1": 4.711,
+     "est": true
+    },
+    {
+     "w": "feet",
+     "t0": 4.711,
+     "t1": 5.096,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 5.096,
+     "t1": 5.327,
+     "est": true
+    },
+    {
+     "w": "spare.",
+     "t0": 5.327,
+     "t1": 5.788,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "globe",
+   "text": "This is Panama. Almost fourteen thousand ships a year. One every thirty eight minutes.",
+   "t0": 6.238,
+   "t1": 13.198,
+   "take": "voice/n_globe.mp3",
+   "words": [
+    {
+     "w": "This",
+     "t0": 6.238,
+     "t1": 6.652,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 6.652,
+     "t1": 6.901,
+     "est": true
+    },
+    {
+     "w": "Panama.",
+     "t0": 6.901,
+     "t1": 7.481,
+     "est": true
+    },
+    {
+     "w": "Almost",
+     "t0": 7.481,
+     "t1": 8.061,
+     "est": true
+    },
+    {
+     "w": "fourteen",
+     "t0": 8.061,
+     "t1": 8.807,
+     "est": true
+    },
+    {
+     "w": "thousand",
+     "t0": 8.807,
+     "t1": 9.552,
+     "est": true
+    },
+    {
+     "w": "ships",
+     "t0": 9.552,
+     "t1": 10.049,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 10.049,
+     "t1": 10.215,
+     "est": true
+    },
+    {
+     "w": "year.",
+     "t0": 10.215,
+     "t1": 10.629,
+     "est": true
+    },
+    {
+     "w": "One",
+     "t0": 10.629,
+     "t1": 10.961,
+     "est": true
+    },
+    {
+     "w": "every",
+     "t0": 10.961,
+     "t1": 11.458,
+     "est": true
+    },
+    {
+     "w": "thirty",
+     "t0": 11.458,
+     "t1": 12.038,
+     "est": true
+    },
+    {
+     "w": "eight",
+     "t0": 12.038,
+     "t1": 12.535,
+     "est": true
+    },
+    {
+     "w": "minutes.",
+     "t0": 12.535,
+     "t1": 13.198,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "box",
+   "text": "The original locks, built in 1914, are three and a half football fields long. Ships are built to fit that box.",
+   "t0": 13.698,
+   "t1": 21.679,
+   "take": "voice/n_box.mp3",
+   "words": [
+    {
+     "w": "The",
+     "t0": 13.698,
+     "t1": 13.996,
+     "est": true
+    },
+    {
+     "w": "original",
+     "t0": 13.996,
+     "t1": 14.668,
+     "est": true
+    },
+    {
+     "w": "locks,",
+     "t0": 14.668,
+     "t1": 15.115,
+     "est": true
+    },
+    {
+     "w": "built",
+     "t0": 15.115,
+     "t1": 15.563,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 15.563,
+     "t1": 15.786,
+     "est": true
+    },
+    {
+     "w": "1914,",
+     "t0": 15.786,
+     "t1": 16.159,
+     "est": true
+    },
+    {
+     "w": "are",
+     "t0": 16.159,
+     "t1": 16.458,
+     "est": true
+    },
+    {
+     "w": "three",
+     "t0": 16.458,
+     "t1": 16.905,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 16.905,
+     "t1": 17.204,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 17.204,
+     "t1": 17.353,
+     "est": true
+    },
+    {
+     "w": "half",
+     "t0": 17.353,
+     "t1": 17.726,
+     "est": true
+    },
+    {
+     "w": "football",
+     "t0": 17.726,
+     "t1": 18.397,
+     "est": true
+    },
+    {
+     "w": "fields",
+     "t0": 18.397,
+     "t1": 18.919,
+     "est": true
+    },
+    {
+     "w": "long.",
+     "t0": 18.919,
+     "t1": 19.292,
+     "est": true
+    },
+    {
+     "w": "Ships",
+     "t0": 19.292,
+     "t1": 19.74,
+     "est": true
+    },
+    {
+     "w": "are",
+     "t0": 19.74,
+     "t1": 20.038,
+     "est": true
+    },
+    {
+     "w": "built",
+     "t0": 20.038,
+     "t1": 20.486,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 20.486,
+     "t1": 20.709,
+     "est": true
+    },
+    {
+     "w": "fit",
+     "t0": 20.709,
+     "t1": 21.008,
+     "est": true
+    },
+    {
+     "w": "that",
+     "t0": 21.008,
+     "t1": 21.381,
+     "est": true
+    },
+    {
+     "w": "box.",
+     "t0": 21.381,
+     "t1": 21.679,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "park",
+   "text": "Think parallel parking, but the car is nine hundred sixty five feet long.",
+   "t0": 22.179,
+   "t1": 27.263,
+   "take": "voice/f_park.mp3",
+   "words": [
+    {
+     "w": "Think",
+     "t0": 22.179,
+     "t1": 22.603,
+     "est": true
+    },
+    {
+     "w": "parallel",
+     "t0": 22.603,
+     "t1": 23.238,
+     "est": true
+    },
+    {
+     "w": "parking,",
+     "t0": 23.238,
+     "t1": 23.803,
+     "est": true
+    },
+    {
+     "w": "but",
+     "t0": 23.803,
+     "t1": 24.085,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 24.085,
+     "t1": 24.368,
+     "est": true
+    },
+    {
+     "w": "car",
+     "t0": 24.368,
+     "t1": 24.65,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 24.65,
+     "t1": 24.862,
+     "est": true
+    },
+    {
+     "w": "nine",
+     "t0": 24.862,
+     "t1": 25.215,
+     "est": true
+    },
+    {
+     "w": "hundred",
+     "t0": 25.215,
+     "t1": 25.78,
+     "est": true
+    },
+    {
+     "w": "sixty",
+     "t0": 25.78,
+     "t1": 26.204,
+     "est": true
+    },
+    {
+     "w": "five",
+     "t0": 26.204,
+     "t1": 26.557,
+     "est": true
+    },
+    {
+     "w": "feet",
+     "t0": 26.557,
+     "t1": 26.91,
+     "est": true
+    },
+    {
+     "w": "long.",
+     "t0": 26.91,
+     "t1": 27.263,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "mules",
+   "text": "But no ship steers itself in two feet. So electric locomotives called mules hold it with cables from both walls.",
+   "t0": 27.713,
+   "t1": 35.711,
+   "take": "voice/n_mules.mp3",
+   "words": [
+    {
+     "w": "But",
+     "t0": 27.713,
+     "t1": 28.001,
+     "est": true
+    },
+    {
+     "w": "no",
+     "t0": 28.001,
+     "t1": 28.217,
+     "est": true
+    },
+    {
+     "w": "ship",
+     "t0": 28.217,
+     "t1": 28.578,
+     "est": true
+    },
+    {
+     "w": "steers",
+     "t0": 28.578,
+     "t1": 29.082,
+     "est": true
+    },
+    {
+     "w": "itself",
+     "t0": 29.082,
+     "t1": 29.586,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 29.586,
+     "t1": 29.803,
+     "est": true
+    },
+    {
+     "w": "two",
+     "t0": 29.803,
+     "t1": 30.091,
+     "est": true
+    },
+    {
+     "w": "feet.",
+     "t0": 30.091,
+     "t1": 30.451,
+     "est": true
+    },
+    {
+     "w": "So",
+     "t0": 30.451,
+     "t1": 30.667,
+     "est": true
+    },
+    {
+     "w": "electric",
+     "t0": 30.667,
+     "t1": 31.316,
+     "est": true
+    },
+    {
+     "w": "locomotives",
+     "t0": 31.316,
+     "t1": 32.18,
+     "est": true
+    },
+    {
+     "w": "called",
+     "t0": 32.18,
+     "t1": 32.685,
+     "est": true
+    },
+    {
+     "w": "mules",
+     "t0": 32.685,
+     "t1": 33.117,
+     "est": true
+    },
+    {
+     "w": "hold",
+     "t0": 33.117,
+     "t1": 33.477,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 33.477,
+     "t1": 33.693,
+     "est": true
+    },
+    {
+     "w": "with",
+     "t0": 33.693,
+     "t1": 34.054,
+     "est": true
+    },
+    {
+     "w": "cables",
+     "t0": 34.054,
+     "t1": 34.558,
+     "est": true
+    },
+    {
+     "w": "from",
+     "t0": 34.558,
+     "t1": 34.918,
+     "est": true
+    },
+    {
+     "w": "both",
+     "t0": 34.918,
+     "t1": 35.279,
+     "est": true
+    },
+    {
+     "w": "walls.",
+     "t0": 35.279,
+     "t1": 35.711,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "gates",
+   "text": "Gates close.",
+   "t0": 36.411,
+   "t1": 37.543,
+   "take": "voice/n_gates.mp3",
+   "words": [
+    {
+     "w": "Gates",
+     "t0": 36.411,
+     "t1": 36.977,
+     "est": true
+    },
+    {
+     "w": "close.",
+     "t0": 36.977,
+     "t1": 37.543,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "guess",
+   "text": "Guess how much water.",
+   "t0": 38.543,
+   "t1": 39.791,
+   "take": "voice/f_guess.mp3",
+   "words": [
+    {
+     "w": "Guess",
+     "t0": 38.543,
+     "t1": 38.9,
+     "est": true
+    },
+    {
+     "w": "how",
+     "t0": 38.9,
+     "t1": 39.137,
+     "est": true
+    },
+    {
+     "w": "much",
+     "t0": 39.137,
+     "t1": 39.434,
+     "est": true
+    },
+    {
+     "w": "water.",
+     "t0": 39.434,
+     "t1": 39.791,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "water",
+   "text": "No pumps. Gravity pulls in twenty six million gallons from the lake. About forty Olympic pools.",
+   "t0": 40.141,
+   "t1": 47.065,
+   "take": "voice/f_water.mp3",
+   "words": [
+    {
+     "w": "No",
+     "t0": 40.141,
+     "t1": 40.364,
+     "est": true
+    },
+    {
+     "w": "pumps.",
+     "t0": 40.364,
+     "t1": 40.811,
+     "est": true
+    },
+    {
+     "w": "Gravity",
+     "t0": 40.811,
+     "t1": 41.407,
+     "est": true
+    },
+    {
+     "w": "pulls",
+     "t0": 41.407,
+     "t1": 41.853,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 41.853,
+     "t1": 42.077,
+     "est": true
+    },
+    {
+     "w": "twenty",
+     "t0": 42.077,
+     "t1": 42.598,
+     "est": true
+    },
+    {
+     "w": "six",
+     "t0": 42.598,
+     "t1": 42.896,
+     "est": true
+    },
+    {
+     "w": "million",
+     "t0": 42.896,
+     "t1": 43.491,
+     "est": true
+    },
+    {
+     "w": "gallons",
+     "t0": 43.491,
+     "t1": 44.087,
+     "est": true
+    },
+    {
+     "w": "from",
+     "t0": 44.087,
+     "t1": 44.459,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 44.459,
+     "t1": 44.757,
+     "est": true
+    },
+    {
+     "w": "lake.",
+     "t0": 44.757,
+     "t1": 45.129,
+     "est": true
+    },
+    {
+     "w": "About",
+     "t0": 45.129,
+     "t1": 45.576,
+     "est": true
+    },
+    {
+     "w": "forty",
+     "t0": 45.576,
+     "t1": 46.023,
+     "est": true
+    },
+    {
+     "w": "Olympic",
+     "t0": 46.023,
+     "t1": 46.618,
+     "est": true
+    },
+    {
+     "w": "pools.",
+     "t0": 46.618,
+     "t1": 47.065,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "lift",
+   "text": "Three steps. Eighty five feet up.",
+   "t0": 47.565,
+   "t1": 50.142,
+   "take": "voice/n_lift.mp3",
+   "words": [
+    {
+     "w": "Three",
+     "t0": 47.565,
+     "t1": 48.048,
+     "est": true
+    },
+    {
+     "w": "steps.",
+     "t0": 48.048,
+     "t1": 48.531,
+     "est": true
+    },
+    {
+     "w": "Eighty",
+     "t0": 48.531,
+     "t1": 49.095,
+     "est": true
+    },
+    {
+     "w": "five",
+     "t0": 49.095,
+     "t1": 49.498,
+     "est": true
+    },
+    {
+     "w": "feet",
+     "t0": 49.498,
+     "t1": 49.9,
+     "est": true
+    },
+    {
+     "w": "up.",
+     "t0": 49.9,
+     "t1": 50.142,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "neo",
+   "text": "In 2016, new locks opened. Ships twelve hundred feet long fit, with about six feet to spare, guided by tugboats.",
+   "t0": 50.942,
+   "t1": 59.632,
+   "take": "voice/n_neo.mp3",
+   "words": [
+    {
+     "w": "In",
+     "t0": 50.942,
+     "t1": 51.183,
+     "est": true
+    },
+    {
+     "w": "2016,",
+     "t0": 51.183,
+     "t1": 51.586,
+     "est": true
+    },
+    {
+     "w": "new",
+     "t0": 51.586,
+     "t1": 51.908,
+     "est": true
+    },
+    {
+     "w": "locks",
+     "t0": 51.908,
+     "t1": 52.39,
+     "est": true
+    },
+    {
+     "w": "opened.",
+     "t0": 52.39,
+     "t1": 52.954,
+     "est": true
+    },
+    {
+     "w": "Ships",
+     "t0": 52.954,
+     "t1": 53.436,
+     "est": true
+    },
+    {
+     "w": "twelve",
+     "t0": 53.436,
+     "t1": 54,
+     "est": true
+    },
+    {
+     "w": "hundred",
+     "t0": 54,
+     "t1": 54.643,
+     "est": true
+    },
+    {
+     "w": "feet",
+     "t0": 54.643,
+     "t1": 55.046,
+     "est": true
+    },
+    {
+     "w": "long",
+     "t0": 55.046,
+     "t1": 55.448,
+     "est": true
+    },
+    {
+     "w": "fit,",
+     "t0": 55.448,
+     "t1": 55.77,
+     "est": true
+    },
+    {
+     "w": "with",
+     "t0": 55.77,
+     "t1": 56.172,
+     "est": true
+    },
+    {
+     "w": "about",
+     "t0": 56.172,
+     "t1": 56.655,
+     "est": true
+    },
+    {
+     "w": "six",
+     "t0": 56.655,
+     "t1": 56.977,
+     "est": true
+    },
+    {
+     "w": "feet",
+     "t0": 56.977,
+     "t1": 57.379,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 57.379,
+     "t1": 57.62,
+     "est": true
+    },
+    {
+     "w": "spare,",
+     "t0": 57.62,
+     "t1": 58.103,
+     "est": true
+    },
+    {
+     "w": "guided",
+     "t0": 58.103,
+     "t1": 58.666,
+     "est": true
+    },
+    {
+     "w": "by",
+     "t0": 58.666,
+     "t1": 58.908,
+     "est": true
+    },
+    {
+     "w": "tugboats.",
+     "t0": 58.908,
+     "t1": 59.632,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "eiffel",
+   "text": "That ship is longer than the Eiffel Tower is tall.",
+   "t0": 60.232,
+   "t1": 63.561,
+   "take": "voice/f_eiffel.mp3",
+   "words": [
+    {
+     "w": "That",
+     "t0": 60.232,
+     "t1": 60.565,
+     "est": true
+    },
+    {
+     "w": "ship",
+     "t0": 60.565,
+     "t1": 60.898,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 60.898,
+     "t1": 61.098,
+     "est": true
+    },
+    {
+     "w": "longer",
+     "t0": 61.098,
+     "t1": 61.564,
+     "est": true
+    },
+    {
+     "w": "than",
+     "t0": 61.564,
+     "t1": 61.897,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 61.897,
+     "t1": 62.163,
+     "est": true
+    },
+    {
+     "w": "Eiffel",
+     "t0": 62.163,
+     "t1": 62.629,
+     "est": true
+    },
+    {
+     "w": "Tower",
+     "t0": 62.629,
+     "t1": 63.028,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 63.028,
+     "t1": 63.228,
+     "est": true
+    },
+    {
+     "w": "tall.",
+     "t0": 63.228,
+     "t1": 63.561,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "payoff",
+   "text": "One ship every thirty eight minutes. Two feet at a time.",
+   "t0": 64.111,
+   "t1": 68.335,
+   "take": "voice/f_pay1.mp3",
+   "words": [
+    {
+     "w": "One",
+     "t0": 64.111,
+     "t1": 64.418,
+     "est": true
+    },
+    {
+     "w": "ship",
+     "t0": 64.418,
+     "t1": 64.802,
+     "est": true
+    },
+    {
+     "w": "every",
+     "t0": 64.802,
+     "t1": 65.263,
+     "est": true
+    },
+    {
+     "w": "thirty",
+     "t0": 65.263,
+     "t1": 65.801,
+     "est": true
+    },
+    {
+     "w": "eight",
+     "t0": 65.801,
+     "t1": 66.261,
+     "est": true
+    },
+    {
+     "w": "minutes.",
+     "t0": 66.261,
+     "t1": 66.876,
+     "est": true
+    },
+    {
+     "w": "Two",
+     "t0": 66.876,
+     "t1": 67.183,
+     "est": true
+    },
+    {
+     "w": "feet",
+     "t0": 67.183,
+     "t1": 67.567,
+     "est": true
+    },
+    {
+     "w": "at",
+     "t0": 67.567,
+     "t1": 67.797,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 67.797,
+     "t1": 67.951,
+     "est": true
+    },
+    {
+     "w": "time.",
+     "t0": 67.951,
+     "t1": 68.335,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "teaser",
+   "text": "Next time: what happens when the lake runs dry.",
+   "t0": 68.735,
+   "t1": 72.162,
+   "take": "voice/f_teaser.mp3",
+   "words": [
+    {
+     "w": "Next",
+     "t0": 68.735,
+     "t1": 69.108,
+     "est": true
+    },
+    {
+     "w": "time:",
+     "t0": 69.108,
+     "t1": 69.48,
+     "est": true
+    },
+    {
+     "w": "what",
+     "t0": 69.48,
+     "t1": 69.853,
+     "est": true
+    },
+    {
+     "w": "happens",
+     "t0": 69.853,
+     "t1": 70.449,
+     "est": true
+    },
+    {
+     "w": "when",
+     "t0": 70.449,
+     "t1": 70.821,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 70.821,
+     "t1": 71.119,
+     "est": true
+    },
+    {
+     "w": "lake",
+     "t0": 71.119,
+     "t1": 71.492,
+     "est": true
+    },
+    {
+     "w": "runs",
+     "t0": 71.492,
+     "t1": 71.864,
+     "est": true
+    },
+    {
+     "w": "dry.",
+     "t0": 71.864,
+     "t1": 72.162,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "text": "Subscribe to World in the Making for more engineering at this scale.",
+   "t0": 72.562,
+   "t1": 76.541,
+   "take": "voice/f_cta.mp3",
+   "words": [
+    {
+     "w": "Subscribe",
+     "t0": 72.562,
+     "t1": 73.147,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 73.147,
+     "t1": 73.323,
+     "est": true
+    },
+    {
+     "w": "World",
+     "t0": 73.323,
+     "t1": 73.674,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 73.674,
+     "t1": 73.849,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 73.849,
+     "t1": 74.083,
+     "est": true
+    },
+    {
+     "w": "Making",
+     "t0": 74.083,
+     "t1": 74.493,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 74.493,
+     "t1": 74.727,
+     "est": true
+    },
+    {
+     "w": "more",
+     "t0": 74.727,
+     "t1": 75.02,
+     "est": true
+    },
+    {
+     "w": "engineering",
+     "t0": 75.02,
+     "t1": 75.722,
+     "est": true
+    },
+    {
+     "w": "at",
+     "t0": 75.722,
+     "t1": 75.897,
+     "est": true
+    },
+    {
+     "w": "this",
+     "t0": 75.897,
+     "t1": 76.19,
+     "est": true
+    },
+    {
+     "w": "scale.",
+     "t0": 76.19,
+     "t1": 76.541,
+     "est": true
+    }
+   ]
+  }
+ ]
+}

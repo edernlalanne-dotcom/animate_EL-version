@@ -1,0 +1,90 @@
+{
+ "lead": 0.25,
+ "tail": 2.4,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "A hundred six feet of ship. A hundred ten feet of lock. Two feet to spare.",
+   "file": "n_hook.mp3",
+   "after": 0.45
+  },
+  {
+   "id": "globe",
+   "text": "This is Panama. Almost fourteen thousand ships a year. One every thirty eight minutes.",
+   "file": "n_globe.mp3",
+   "after": 0.5
+  },
+  {
+   "id": "box",
+   "text": "The original locks, built in 1914, are three and a half football fields long. Ships are built to fit that box.",
+   "file": "n_box.mp3",
+   "after": 0.5
+  },
+  {
+   "id": "park",
+   "text": "Think parallel parking, but the car is nine hundred sixty five feet long.",
+   "file": "f_park.mp3",
+   "after": 0.45
+  },
+  {
+   "id": "mules",
+   "text": "But no ship steers itself in two feet. So electric locomotives called mules hold it with cables from both walls.",
+   "file": "n_mules.mp3",
+   "after": 0.7
+  },
+  {
+   "id": "gates",
+   "text": "Gates close.",
+   "file": "n_gates.mp3",
+   "after": 1.0
+  },
+  {
+   "id": "guess",
+   "text": "Guess how much water.",
+   "file": "f_guess.mp3",
+   "after": 0.35
+  },
+  {
+   "id": "water",
+   "text": "No pumps. Gravity pulls in twenty six million gallons from the lake. About forty Olympic pools.",
+   "file": "f_water.mp3",
+   "after": 0.5
+  },
+  {
+   "id": "lift",
+   "text": "Three steps. Eighty five feet up.",
+   "file": "n_lift.mp3",
+   "after": 0.8
+  },
+  {
+   "id": "neo",
+   "text": "In 2016, new locks opened. Ships twelve hundred feet long fit, with about six feet to spare, guided by tugboats.",
+   "file": "n_neo.mp3",
+   "after": 0.6
+  },
+  {
+   "id": "eiffel",
+   "text": "That ship is longer than the Eiffel Tower is tall.",
+   "file": "f_eiffel.mp3",
+   "after": 0.55
+  },
+  {
+   "id": "payoff",
+   "text": "One ship every thirty eight minutes. Two feet at a time.",
+   "file": "f_pay1.mp3",
+   "after": 0.4
+  },
+  {
+   "id": "teaser",
+   "text": "Next time: what happens when the lake runs dry.",
+   "file": "f_teaser.mp3",
+   "after": 0.4
+  },
+  {
+   "id": "cta",
+   "text": "Subscribe to World in the Making for more engineering at this scale.",
+   "file": "f_cta.mp3",
+   "after": 0.3
+  }
+ ]
+}

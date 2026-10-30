@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Mega Ships Fit Through The Panama Canal Locks</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { max-width: 100vw; max-height: 100vh; aspect-ratio: 16 / 9; display: block; cursor: pointer; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+"use strict";
+// =====================================================================
+//  HOW MEGA SHIPS FIT THROUGH THE PANAMA CANAL LOCKS — 16:9, voice-led, 24fps, top-down drone view.
+//  The voice is the clock (VOICE from voice.json). One continuous scene, flown by the camera, then a 2s subscribe card.
+//  Facts on screen (all checked, see brief.md): Panamax beam 106 ft in a 110 ft chamber (2 ft each side), chamber 1,050 ft long,
+//  original locks 1914, mules on the walls, gravity fill ~26 million gallons per chamber, Gatun 3 steps +85 ft,
+//  Neopanamax locks 2016: chamber 1,400 x 180 ft, ships to 1,200 ft long, ~6 ft each side, tugboats.
+// =====================================================================
+const FORMATS = { '16:9': [1920, 1080] };
+const FORMAT = '16:9';
+const FPS = 24, [W, H] = FORMATS[FORMAT];
+document.getElementById('c').width = W; document.getElementById('c').height = H;
+const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, GRID0 = 0;
+const DURATION = VOICE.duration;
+const NFRAMES = Math.round(DURATION * FPS);
+const LOOP_T = NFRAMES / FPS;
+const SAFE = { top: 60, bottom: 110, right: 60 };
+const HAND = '"Segoe UI", Arial, sans-serif';
+const CX = W / 2;
+const END_T = DURATION - 2.0;                      // the subscribe card holds the last 2 seconds
+const VL = (id) => VOICE.lines.find((l) => l.id === id);
+const G0 = VL('globe').t0 - 0.4;                // the globe overlay fades in here, over the cold open
+const G1 = VL('box').t0 + 0.3;                  // and has dissolved into the drone view by here
+
+const ERA_LIST = [[0, DURATION, () => scenePanama()]];
+const SHOTS = [
+  ['gap-hook',    0, 0.0,            G0,                'cold open on the 2 ft gap beside the hull'],
+  ['globe-zoom',  0, G0,             VL('box').t0,      'the Earth, a zoom into the Panama Canal, 13,951 ships a year, one every 38 minutes'],
+  ['box',         0, VL('box').t0,   VL('park').t0,     'three and a half football fields: the original chamber'],
+  ['park',        0, VL('park').t0,  VL('mules').t0,    'parallel parking with a 965 ft car: scale gag'],
+  ['mules',       0, VL('mules').t0, VL('gates').t0,    'the hull drifts, the clearance meter drops, the mules pull it back'],
+  ['gates-guess', 0, VL('gates').t0, VL('water').t0,    'gates close, the viewer is asked to guess, a drumroll'],
+  ['water-fill',  0, VL('water').t0, VL('lift').t0,     '26 million gallons by gravity, 40 Olympic pools'],
+  ['lift',        0, VL('lift').t0,  VL('neo').t0,      'three steps, 85 ft'],
+  ['neopanamax',  0, VL('neo').t0,   VL('eiffel').t0,   'the 2016 locks: size comparison, 6 ft, tugboats'],
+  ['eiffel',      0, VL('eiffel').t0, VL('payoff').t0,  'the ship against the Eiffel Tower'],
+  ['payoff',      0, VL('payoff').t0, VL('teaser').t0,  'one ship every 38 minutes, two feet at a time'],
+  ['teaser-cta',  0, VL('teaser').t0, END_T,            'next time: the lake runs dry, then subscribe'],
+  ['subscribe',   0, END_T,           DURATION,         'subscribe card, 2s'],
+];
+const TIMELINE = {
+  width: W, height: H, fps: FPS, bpm: BPM, gridOffset: GRID0, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: FORMAT,
+  format: 'morph-chain',
+  shots: SHOTS.map(([key, era, t0, t1, title], i) => ({ id: i + 1, key, era, t0, t1, title })),
+  cuts: [END_T],
+  morphs: [],
+  cues: {
+    gates: VL('gates').t0, fill: VL('water').t0, lift: VL('lift').t0, neo: VL('neo').t0, end: END_T,
+  },
+  acts: [
+    { name: '1 Hook',   role: 'build',   t0: 0.0, t1: VL('mules').t0 },
+    { name: '2 Mules',  role: 'journey', t0: VL('mules').t0, t1: VL('gates').t0 },
+    { name: '3 Water',  role: 'peak',    t0: VL('gates').t0, t1: VL('neo').t0 },
+    { name: '4 New locks', role: 'gift', t0: VL('neo').t0, t1: END_T },
+    { name: '5 Subscribe', role: 'gift', t0: END_T, t1: DURATION },
+  ],
+  board: [
+    { t: 3.0,  title: 'two feet beside the hull', sound: 'drone, water, red pulse', next: 'dissolve to the globe' },
+    { t: 10.0, title: 'Panama, 13,951 ships a year', sound: 'sweep and horn', next: 'dissolve into the drone view' },
+    { t: 18.0, title: 'three and a half football fields', sound: 'drone', next: 'parallel parking' },
+    { t: 25.0, title: 'a 15 ft car against a 965 ft ship', sound: 'drone', next: 'the hull drifts' },
+    { t: 31.5, title: 'clearance meter hits 0.3 ft', sound: 'groan, alarm, twang', next: 'the gates' },
+    { t: 39.0, title: 'guess how much water', sound: 'drumroll', next: 'the fill' },
+    { t: 43.5, title: '26 million gallons, 40 pools', sound: 'water rush, dings', next: 'three steps' },
+    { t: 49.0, title: 'three steps, +85 ft', sound: 'quiet', next: 'the new locks' },
+    { t: 55.0, title: 'old ship inside the new chamber', sound: 'hit then drone', next: 'six feet' },
+    { t: 62.0, title: 'ship against the Eiffel Tower', sound: 'drone', next: 'payoff' },
+    { t: 70.0, title: 'next time: the lake runs dry', sound: 'resolve', next: 'subscribe' },
+    { t: 77.5, title: 'subscribe', sound: 'silence', next: 'end' },
+  ],
+  narration: VOICE.lines.map((l) => ({ t0: l.t0, t1: l.t1, text: l.text })),
+};
+window.TIMELINE = TIMELINE;
