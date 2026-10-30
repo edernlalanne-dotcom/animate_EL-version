@@ -1,0 +1,1087 @@
+{
+ "duration": 71.525,
+ "lead": 0.4,
+ "tail": 0.1,
+ "lines": [
+  {
+   "id": "cold1",
+   "text": "This car just went blind.",
+   "t0": 0.4,
+   "t1": 2.287,
+   "take": "voice/cold1.mp3",
+   "words": [
+    {
+     "w": "This",
+     "t0": 0.4,
+     "t1": 0.777,
+     "est": true
+    },
+    {
+     "w": "car",
+     "t0": 0.777,
+     "t1": 1.079,
+     "est": true
+    },
+    {
+     "w": "just",
+     "t0": 1.079,
+     "t1": 1.457,
+     "est": true
+    },
+    {
+     "w": "went",
+     "t0": 1.457,
+     "t1": 1.834,
+     "est": true
+    },
+    {
+     "w": "blind.",
+     "t0": 1.834,
+     "t1": 2.287,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "cold2",
+   "text": "Three seconds earlier, it saw everything.",
+   "t0": 2.587,
+   "t1": 5.51,
+   "take": "voice/cold2.mp3",
+   "words": [
+    {
+     "w": "Three",
+     "t0": 2.587,
+     "t1": 3.025,
+     "est": true
+    },
+    {
+     "w": "seconds",
+     "t0": 3.025,
+     "t1": 3.61,
+     "est": true
+    },
+    {
+     "w": "earlier,",
+     "t0": 3.61,
+     "t1": 4.195,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 4.195,
+     "t1": 4.414,
+     "est": true
+    },
+    {
+     "w": "saw",
+     "t0": 4.414,
+     "t1": 4.706,
+     "est": true
+    },
+    {
+     "w": "everything.",
+     "t0": 4.706,
+     "t1": 5.51,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "watch",
+   "text": "Watch the green boxes. Three objects tracked.",
+   "t0": 6.01,
+   "t1": 9.248,
+   "take": "voice/watch.mp3",
+   "words": [
+    {
+     "w": "Watch",
+     "t0": 6.01,
+     "t1": 6.452,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 6.452,
+     "t1": 6.746,
+     "est": true
+    },
+    {
+     "w": "green",
+     "t0": 6.746,
+     "t1": 7.187,
+     "est": true
+    },
+    {
+     "w": "boxes.",
+     "t0": 7.187,
+     "t1": 7.629,
+     "est": true
+    },
+    {
+     "w": "Three",
+     "t0": 7.629,
+     "t1": 8.071,
+     "est": true
+    },
+    {
+     "w": "objects",
+     "t0": 8.071,
+     "t1": 8.659,
+     "est": true
+    },
+    {
+     "w": "tracked.",
+     "t0": 8.659,
+     "t1": 9.248,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "rain",
+   "text": "Then the rain starts.",
+   "t0": 9.598,
+   "t1": 11.739,
+   "take": "voice/rain.mp3",
+   "words": [
+    {
+     "w": "Then",
+     "t0": 9.598,
+     "t1": 10.108,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 10.108,
+     "t1": 10.516,
+     "est": true
+    },
+    {
+     "w": "rain",
+     "t0": 10.516,
+     "t1": 11.025,
+     "est": true
+    },
+    {
+     "w": "starts.",
+     "t0": 11.025,
+     "t1": 11.739,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "cam",
+   "text": "Cameras need contrast. Water takes it.",
+   "t0": 12.089,
+   "t1": 15.121,
+   "take": "voice/cam.mp3",
+   "words": [
+    {
+     "w": "Cameras",
+     "t0": 12.089,
+     "t1": 12.745,
+     "est": true
+    },
+    {
+     "w": "need",
+     "t0": 12.745,
+     "t1": 13.154,
+     "est": true
+    },
+    {
+     "w": "contrast.",
+     "t0": 13.154,
+     "t1": 13.892,
+     "est": true
+    },
+    {
+     "w": "Water",
+     "t0": 13.892,
+     "t1": 14.383,
+     "est": true
+    },
+    {
+     "w": "takes",
+     "t0": 14.383,
+     "t1": 14.875,
+     "est": true
+    },
+    {
+     "w": "it.",
+     "t0": 14.875,
+     "t1": 15.121,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "lidar",
+   "text": "LiDAR fires a laser and times the echo. But a raindrop echoes too. The car sees a ghost point three meters ahead, and the real car behind it fades.",
+   "t0": 15.571,
+   "t1": 26.164,
+   "take": "voice/lidar.mp3",
+   "words": [
+    {
+     "w": "LiDAR",
+     "t0": 15.571,
+     "t1": 16.012,
+     "est": true
+    },
+    {
+     "w": "fires",
+     "t0": 16.012,
+     "t1": 16.454,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 16.454,
+     "t1": 16.601,
+     "est": true
+    },
+    {
+     "w": "laser",
+     "t0": 16.601,
+     "t1": 17.042,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 17.042,
+     "t1": 17.337,
+     "est": true
+    },
+    {
+     "w": "times",
+     "t0": 17.337,
+     "t1": 17.778,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 17.778,
+     "t1": 18.072,
+     "est": true
+    },
+    {
+     "w": "echo.",
+     "t0": 18.072,
+     "t1": 18.44,
+     "est": true
+    },
+    {
+     "w": "But",
+     "t0": 18.44,
+     "t1": 18.734,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 18.734,
+     "t1": 18.881,
+     "est": true
+    },
+    {
+     "w": "raindrop",
+     "t0": 18.881,
+     "t1": 19.543,
+     "est": true
+    },
+    {
+     "w": "echoes",
+     "t0": 19.543,
+     "t1": 20.058,
+     "est": true
+    },
+    {
+     "w": "too.",
+     "t0": 20.058,
+     "t1": 20.353,
+     "est": true
+    },
+    {
+     "w": "The",
+     "t0": 20.353,
+     "t1": 20.647,
+     "est": true
+    },
+    {
+     "w": "car",
+     "t0": 20.647,
+     "t1": 20.941,
+     "est": true
+    },
+    {
+     "w": "sees",
+     "t0": 20.941,
+     "t1": 21.309,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 21.309,
+     "t1": 21.456,
+     "est": true
+    },
+    {
+     "w": "ghost",
+     "t0": 21.456,
+     "t1": 21.897,
+     "est": true
+    },
+    {
+     "w": "point",
+     "t0": 21.897,
+     "t1": 22.339,
+     "est": true
+    },
+    {
+     "w": "three",
+     "t0": 22.339,
+     "t1": 22.78,
+     "est": true
+    },
+    {
+     "w": "meters",
+     "t0": 22.78,
+     "t1": 23.295,
+     "est": true
+    },
+    {
+     "w": "ahead,",
+     "t0": 23.295,
+     "t1": 23.736,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 23.736,
+     "t1": 24.031,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 24.031,
+     "t1": 24.325,
+     "est": true
+    },
+    {
+     "w": "real",
+     "t0": 24.325,
+     "t1": 24.693,
+     "est": true
+    },
+    {
+     "w": "car",
+     "t0": 24.693,
+     "t1": 24.987,
+     "est": true
+    },
+    {
+     "w": "behind",
+     "t0": 24.987,
+     "t1": 25.502,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 25.502,
+     "t1": 25.723,
+     "est": true
+    },
+    {
+     "w": "fades.",
+     "t0": 25.723,
+     "t1": 26.164,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "fog",
+   "text": "Fog is worse. In one fog chamber test, detection dropped by half.",
+   "t0": 26.564,
+   "t1": 31.811,
+   "take": "voice/fog.mp3",
+   "words": [
+    {
+     "w": "Fog",
+     "t0": 26.564,
+     "t1": 26.897,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 26.897,
+     "t1": 27.147,
+     "est": true
+    },
+    {
+     "w": "worse.",
+     "t0": 27.147,
+     "t1": 27.647,
+     "est": true
+    },
+    {
+     "w": "In",
+     "t0": 27.647,
+     "t1": 27.897,
+     "est": true
+    },
+    {
+     "w": "one",
+     "t0": 27.897,
+     "t1": 28.23,
+     "est": true
+    },
+    {
+     "w": "fog",
+     "t0": 28.23,
+     "t1": 28.563,
+     "est": true
+    },
+    {
+     "w": "chamber",
+     "t0": 28.563,
+     "t1": 29.229,
+     "est": true
+    },
+    {
+     "w": "test,",
+     "t0": 29.229,
+     "t1": 29.646,
+     "est": true
+    },
+    {
+     "w": "detection",
+     "t0": 29.646,
+     "t1": 30.478,
+     "est": true
+    },
+    {
+     "w": "dropped",
+     "t0": 30.478,
+     "t1": 31.145,
+     "est": true
+    },
+    {
+     "w": "by",
+     "t0": 31.145,
+     "t1": 31.395,
+     "est": true
+    },
+    {
+     "w": "half.",
+     "t0": 31.395,
+     "t1": 31.811,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "blind",
+   "text": "Zero tracks left.",
+   "t0": 33.511,
+   "t1": 34.967,
+   "take": "voice/blind.mp3",
+   "words": [
+    {
+     "w": "Zero",
+     "t0": 33.511,
+     "t1": 33.939,
+     "est": true
+    },
+    {
+     "w": "tracks",
+     "t0": 33.939,
+     "t1": 34.539,
+     "est": true
+    },
+    {
+     "w": "left.",
+     "t0": 34.539,
+     "t1": 34.967,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "thesis",
+   "text": "Engineers do not fix one sensor. They add sensors that fail differently.",
+   "t0": 35.467,
+   "t1": 40.384,
+   "take": "voice/thesis.mp3",
+   "words": [
+    {
+     "w": "Engineers",
+     "t0": 35.467,
+     "t1": 36.16,
+     "est": true
+    },
+    {
+     "w": "do",
+     "t0": 36.16,
+     "t1": 36.367,
+     "est": true
+    },
+    {
+     "w": "not",
+     "t0": 36.367,
+     "t1": 36.644,
+     "est": true
+    },
+    {
+     "w": "fix",
+     "t0": 36.644,
+     "t1": 36.921,
+     "est": true
+    },
+    {
+     "w": "one",
+     "t0": 36.921,
+     "t1": 37.198,
+     "est": true
+    },
+    {
+     "w": "sensor.",
+     "t0": 37.198,
+     "t1": 37.683,
+     "est": true
+    },
+    {
+     "w": "They",
+     "t0": 37.683,
+     "t1": 38.029,
+     "est": true
+    },
+    {
+     "w": "add",
+     "t0": 38.029,
+     "t1": 38.306,
+     "est": true
+    },
+    {
+     "w": "sensors",
+     "t0": 38.306,
+     "t1": 38.86,
+     "est": true
+    },
+    {
+     "w": "that",
+     "t0": 38.86,
+     "t1": 39.207,
+     "est": true
+    },
+    {
+     "w": "fail",
+     "t0": 39.207,
+     "t1": 39.553,
+     "est": true
+    },
+    {
+     "w": "differently.",
+     "t0": 39.553,
+     "t1": 40.384,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "radar",
+   "text": "Radar passes through fog. But in heavy rain, it gains little.",
+   "t0": 40.734,
+   "t1": 45.218,
+   "take": "voice/radar.mp3",
+   "words": [
+    {
+     "w": "Radar",
+     "t0": 40.734,
+     "t1": 41.19,
+     "est": true
+    },
+    {
+     "w": "passes",
+     "t0": 41.19,
+     "t1": 41.722,
+     "est": true
+    },
+    {
+     "w": "through",
+     "t0": 41.722,
+     "t1": 42.33,
+     "est": true
+    },
+    {
+     "w": "fog.",
+     "t0": 42.33,
+     "t1": 42.634,
+     "est": true
+    },
+    {
+     "w": "But",
+     "t0": 42.634,
+     "t1": 42.938,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 42.938,
+     "t1": 43.166,
+     "est": true
+    },
+    {
+     "w": "heavy",
+     "t0": 43.166,
+     "t1": 43.622,
+     "est": true
+    },
+    {
+     "w": "rain,",
+     "t0": 43.622,
+     "t1": 44.002,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 44.002,
+     "t1": 44.23,
+     "est": true
+    },
+    {
+     "w": "gains",
+     "t0": 44.23,
+     "t1": 44.686,
+     "est": true
+    },
+    {
+     "w": "little.",
+     "t0": 44.686,
+     "t1": 45.218,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "l1550",
+   "text": "A laser at fifteen fifty nanometers is allowed more power, so more signal survives.",
+   "t0": 45.568,
+   "t1": 51.297,
+   "take": "voice/l1550.mp3",
+   "words": [
+    {
+     "w": "A",
+     "t0": 45.568,
+     "t1": 45.708,
+     "est": true
+    },
+    {
+     "w": "laser",
+     "t0": 45.708,
+     "t1": 46.127,
+     "est": true
+    },
+    {
+     "w": "at",
+     "t0": 46.127,
+     "t1": 46.337,
+     "est": true
+    },
+    {
+     "w": "fifteen",
+     "t0": 46.337,
+     "t1": 46.895,
+     "est": true
+    },
+    {
+     "w": "fifty",
+     "t0": 46.895,
+     "t1": 47.315,
+     "est": true
+    },
+    {
+     "w": "nanometers",
+     "t0": 47.315,
+     "t1": 48.083,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 48.083,
+     "t1": 48.293,
+     "est": true
+    },
+    {
+     "w": "allowed",
+     "t0": 48.293,
+     "t1": 48.852,
+     "est": true
+    },
+    {
+     "w": "more",
+     "t0": 48.852,
+     "t1": 49.201,
+     "est": true
+    },
+    {
+     "w": "power,",
+     "t0": 49.201,
+     "t1": 49.62,
+     "est": true
+    },
+    {
+     "w": "so",
+     "t0": 49.62,
+     "t1": 49.83,
+     "est": true
+    },
+    {
+     "w": "more",
+     "t0": 49.83,
+     "t1": 50.179,
+     "est": true
+    },
+    {
+     "w": "signal",
+     "t0": 50.179,
+     "t1": 50.668,
+     "est": true
+    },
+    {
+     "w": "survives.",
+     "t0": 50.668,
+     "t1": 51.297,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "thermal",
+   "text": "Thermal cameras read heat, so warm bodies still stand out.",
+   "t0": 51.647,
+   "t1": 55.759,
+   "take": "voice/thermal.mp3",
+   "words": [
+    {
+     "w": "Thermal",
+     "t0": 51.647,
+     "t1": 52.224,
+     "est": true
+    },
+    {
+     "w": "cameras",
+     "t0": 52.224,
+     "t1": 52.801,
+     "est": true
+    },
+    {
+     "w": "read",
+     "t0": 52.801,
+     "t1": 53.162,
+     "est": true
+    },
+    {
+     "w": "heat,",
+     "t0": 53.162,
+     "t1": 53.523,
+     "est": true
+    },
+    {
+     "w": "so",
+     "t0": 53.523,
+     "t1": 53.739,
+     "est": true
+    },
+    {
+     "w": "warm",
+     "t0": 53.739,
+     "t1": 54.1,
+     "est": true
+    },
+    {
+     "w": "bodies",
+     "t0": 54.1,
+     "t1": 54.605,
+     "est": true
+    },
+    {
+     "w": "still",
+     "t0": 54.605,
+     "t1": 55.038,
+     "est": true
+    },
+    {
+     "w": "stand",
+     "t0": 55.038,
+     "t1": 55.47,
+     "est": true
+    },
+    {
+     "w": "out.",
+     "t0": 55.47,
+     "t1": 55.759,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "clean",
+   "text": "And coatings, air puffers, and wipers keep every lens clear.",
+   "t0": 56.109,
+   "t1": 60.27,
+   "take": "voice/clean.mp3",
+   "words": [
+    {
+     "w": "And",
+     "t0": 56.109,
+     "t1": 56.396,
+     "est": true
+    },
+    {
+     "w": "coatings,",
+     "t0": 56.396,
+     "t1": 57.042,
+     "est": true
+    },
+    {
+     "w": "air",
+     "t0": 57.042,
+     "t1": 57.329,
+     "est": true
+    },
+    {
+     "w": "puffers,",
+     "t0": 57.329,
+     "t1": 57.903,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 57.903,
+     "t1": 58.189,
+     "est": true
+    },
+    {
+     "w": "wipers",
+     "t0": 58.189,
+     "t1": 58.692,
+     "est": true
+    },
+    {
+     "w": "keep",
+     "t0": 58.692,
+     "t1": 59.05,
+     "est": true
+    },
+    {
+     "w": "every",
+     "t0": 59.05,
+     "t1": 59.481,
+     "est": true
+    },
+    {
+     "w": "lens",
+     "t0": 59.481,
+     "t1": 59.84,
+     "est": true
+    },
+    {
+     "w": "clear.",
+     "t0": 59.84,
+     "t1": 60.27,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "callback",
+   "text": "Same storm. The driver sees a white wall. The car sees three objects.",
+   "t0": 60.77,
+   "t1": 66.336,
+   "take": "voice/callback.mp3",
+   "words": [
+    {
+     "w": "Same",
+     "t0": 60.77,
+     "t1": 61.185,
+     "est": true
+    },
+    {
+     "w": "storm.",
+     "t0": 61.185,
+     "t1": 61.684,
+     "est": true
+    },
+    {
+     "w": "The",
+     "t0": 61.684,
+     "t1": 62.016,
+     "est": true
+    },
+    {
+     "w": "driver",
+     "t0": 62.016,
+     "t1": 62.598,
+     "est": true
+    },
+    {
+     "w": "sees",
+     "t0": 62.598,
+     "t1": 63.013,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 63.013,
+     "t1": 63.179,
+     "est": true
+    },
+    {
+     "w": "white",
+     "t0": 63.179,
+     "t1": 63.678,
+     "est": true
+    },
+    {
+     "w": "wall.",
+     "t0": 63.678,
+     "t1": 64.093,
+     "est": true
+    },
+    {
+     "w": "The",
+     "t0": 64.093,
+     "t1": 64.425,
+     "est": true
+    },
+    {
+     "w": "car",
+     "t0": 64.425,
+     "t1": 64.758,
+     "est": true
+    },
+    {
+     "w": "sees",
+     "t0": 64.758,
+     "t1": 65.173,
+     "est": true
+    },
+    {
+     "w": "three",
+     "t0": 65.173,
+     "t1": 65.671,
+     "est": true
+    },
+    {
+     "w": "objects.",
+     "t0": 65.671,
+     "t1": 66.336,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "trust",
+   "text": "Would you trust it with only one sensor?",
+   "t0": 66.686,
+   "t1": 69.103,
+   "take": "voice/trust.mp3",
+   "words": [
+    {
+     "w": "Would",
+     "t0": 66.686,
+     "t1": 67.049,
+     "est": true
+    },
+    {
+     "w": "you",
+     "t0": 67.049,
+     "t1": 67.29,
+     "est": true
+    },
+    {
+     "w": "trust",
+     "t0": 67.29,
+     "t1": 67.653,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 67.653,
+     "t1": 67.834,
+     "est": true
+    },
+    {
+     "w": "with",
+     "t0": 67.834,
+     "t1": 68.136,
+     "est": true
+    },
+    {
+     "w": "only",
+     "t0": 68.136,
+     "t1": 68.438,
+     "est": true
+    },
+    {
+     "w": "one",
+     "t0": 68.438,
+     "t1": 68.68,
+     "est": true
+    },
+    {
+     "w": "sensor?",
+     "t0": 68.68,
+     "t1": 69.103,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "text": "Subscribe to World in the Making.",
+   "t0": 69.553,
+   "t1": 71.425,
+   "take": "voice/outro.mp3",
+   "words": [
+    {
+     "w": "Subscribe",
+     "t0": 69.553,
+     "t1": 70.12,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 70.12,
+     "t1": 70.29,
+     "est": true
+    },
+    {
+     "w": "World",
+     "t0": 70.29,
+     "t1": 70.631,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 70.631,
+     "t1": 70.801,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 70.801,
+     "t1": 71.028,
+     "est": true
+    },
+    {
+     "w": "Making.",
+     "t0": 71.028,
+     "t1": 71.425,
+     "est": true
+    }
+   ]
+  }
+ ]
+}

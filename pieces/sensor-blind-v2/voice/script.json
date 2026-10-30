@@ -1,0 +1,18 @@
+{ "lead": 0.4, "tail": 0.1, "lines": [
+ { "id": "cold1", "text": "This car just went blind.", "file": "cold1.mp3", "after": 0.3 },
+ { "id": "cold2", "text": "Three seconds earlier, it saw everything.", "file": "cold2.mp3", "after": 0.5 },
+ { "id": "watch", "text": "Watch the green boxes. Three objects tracked.", "file": "watch.mp3", "after": 0.35 },
+ { "id": "rain", "text": "Then the rain starts.", "file": "rain.mp3", "after": 0.35 },
+ { "id": "cam", "text": "Cameras need contrast. Water takes it.", "file": "cam.mp3", "after": 0.45 },
+ { "id": "lidar", "text": "LiDAR fires a laser and times the echo. But a raindrop echoes too. The car sees a ghost point three meters ahead, and the real car behind it fades.", "file": "lidar.mp3", "after": 0.4 },
+ { "id": "fog", "text": "Fog is worse. In one fog chamber test, detection dropped by half.", "file": "fog.mp3", "after": 1.7 },
+ { "id": "blind", "text": "Zero tracks left.", "file": "blind.mp3", "after": 0.5 },
+ { "id": "thesis", "text": "Engineers do not fix one sensor. They add sensors that fail differently.", "file": "thesis.mp3", "after": 0.35 },
+ { "id": "radar", "text": "Radar passes through fog. But in heavy rain, it gains little.", "file": "radar.mp3", "after": 0.35 },
+ { "id": "l1550", "text": "A laser at fifteen fifty nanometers is allowed more power, so more signal survives.", "file": "l1550.mp3", "after": 0.35 },
+ { "id": "thermal", "text": "Thermal cameras read heat, so warm bodies still stand out.", "file": "thermal.mp3", "after": 0.35 },
+ { "id": "clean", "text": "And coatings, air puffers, and wipers keep every lens clear.", "file": "clean.mp3", "after": 0.5 },
+ { "id": "callback", "text": "Same storm. The driver sees a white wall. The car sees three objects.", "file": "callback.mp3", "after": 0.35 },
+ { "id": "trust", "text": "Would you trust it with only one sensor?", "file": "trust.mp3", "after": 0.45 },
+ { "id": "outro", "text": "Subscribe to World in the Making.", "file": "outro.mp3", "after": 0 }
+] }
