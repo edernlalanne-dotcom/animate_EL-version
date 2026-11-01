@@ -1,0 +1,9 @@
+{
+  "name": "godocs-cartoon-demo",
+  "title": "Cartoon Style GoDocs style: look check",
+  "format": { "width": 1080, "height": 1920, "fps": 24, "bpm": 120, "duration": 12.0, "frames": 288 },
+  "formats": ["9:16", "16:9"],
+  "storyFormat": "F2 morph chain",
+  "style": "godocs-cartoon",
+  "review": { "safe": { "top": 240, "bottom": 420, "right": 140 }, "refs": {} }
+}
