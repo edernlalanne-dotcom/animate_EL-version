@@ -121,7 +121,9 @@ function drNeon(x1, y1, x2, y2, o = {}) {
 }
 
 // a label chip drawn in screen space at a world point (DEFER keeps it sharp and readable under any zoom)
+const DR_CLEAN = new URLSearchParams(location.search).has('clean');   // ?clean=1 draws frames without labels, for thumbnails
 function drTag(wx, wy, str, o = {}) {
+  if (DR_CLEAN) return;
   const [sx, sy] = toScreen(wx, wy);   // projected now, under the camera; drawn later in screen space
   const f = () => {
     const s = (o.size ?? 30) * 1.5, w = drTextW(str, s, { font: o.font, track: 1 }) + 34, h = s * 1.75, a = o.alpha ?? 1;

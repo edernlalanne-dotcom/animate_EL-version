@@ -64,6 +64,7 @@ function camState(t) {
 }
 const hookCamX = (t) => oldShipX(t) + OSHIP.len / 2 - 150;
 function pieceCam(era, t) {
+  if (window.THUMB_CAM) return camOf(window.THUMB_CAM);   // thumbnails set their own camera
   const rot = (p) => (PORTRAIT ? [-p[1], p[0]] : p);   // world (x, y) becomes (-y, x) when the world is turned
   if (t < G0 + 0.46) return camOf({ z: 5.8, p: rot([hookCamX(t), -95]), to: [W / 2, H * 0.5] });   // the cold open tracks the bow along the wall
   const c = camState(t), dive = lerp(2.4, 1, EZ.o3(seg(t, G1 - 1.0, G1 + 2.0)));
@@ -246,6 +247,7 @@ function meterState(t) {
   return null;
 }
 function meterLayer(t) {
+  if (DR_CLEAN) return;
   const m = meterState(t); if (!m || m.a <= 0.01) return;
   const danger = m.live && m.ft < 0.7, safe = m.live && t > fm(0.54), col = danger ? DR.red : safe ? '#3bff7a' : (m.calm ? DR.cyan : DR.white);
   const pulse = danger ? (0.55 + 0.45 * Math.abs(Math.sin(t * 14))) : 1;
@@ -391,6 +393,7 @@ function scenePanama() {
 }
 
 function hud(t) {
+  if (DR_CLEAN) return;
   const f = () => {
     const sc = PORTRAIT ? 0.82 : 1;
     const b = EZ.o2(seg(t, fb(0.04), fb(0.12))) * (1 - EZ.o2(seg(t, T_.park.t0 - 0.2, T_.park.t0 + 0.3)));

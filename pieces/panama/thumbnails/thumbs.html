@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html, body { margin: 0; background: #000; }
+  .t { position: relative; width: 1280px; height: 720px; overflow: hidden; font-family: 'Inter', 'Inter Display', 'DejaVu Sans', Arial, sans-serif; color: #fff; }
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .shade { position: absolute; inset: 0; }
+  .tag { position: absolute; left: 40px; top: 34px; background: #ff2b3a; color: #fff; font-weight: 800; font-size: 30px; letter-spacing: 4px; padding: 8px 20px; border-radius: 6px; box-shadow: 0 0 24px rgba(255,43,58,0.7); }
+  .big { position: absolute; font-weight: 900; line-height: 0.9; text-transform: uppercase; -webkit-text-stroke: 10px #05080b; paint-order: stroke fill; text-shadow: 0 8px 28px rgba(0,0,0,0.75); letter-spacing: -2px; }
+  .sub { position: absolute; font-weight: 800; text-transform: uppercase; -webkit-text-stroke: 7px #05080b; paint-order: stroke fill; letter-spacing: 3px; text-shadow: 0 4px 16px rgba(0,0,0,0.7); }
+  .ring { position: absolute; border: 6px solid #ff2b3a; border-radius: 50%; box-shadow: 0 0 30px #ff2b3a, inset 0 0 30px rgba(255,43,58,0.5); }
+  svg { position: absolute; inset: 0; }
+</style></head><body>
+
+<!-- 1: the two-foot gap -->
+<div class="t" id="t1">
+  <img class="bg" src="raw_gap.png" style="object-position: 70% 50%; transform: scale(1.0)">
+  <div class="shade" style="background: linear-gradient(90deg, rgba(5,8,11,0.78) 0%, rgba(5,8,11,0.25) 50%, rgba(5,8,11,0) 75%)"></div>
+  <div class="tag">PANAMA CANAL</div>
+  <div class="big" style="left: 40px; top: 360px; font-size: 220px; color: #ff2b3a;">2 FEET</div>
+  <div class="sub" style="left: 46px; top: 575px; font-size: 54px; color: #fff;">to fit a 965 ft ship</div>
+  <svg viewBox="0 0 1280 720">
+    <defs><marker id="ah" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#ff2b3a"/></marker></defs>
+    <path d="M 470 300 C 560 255, 650 240, 735 305" stroke="#ff2b3a" stroke-width="9" fill="none" marker-end="url(#ah)" style="filter: drop-shadow(0 0 10px #ff2b3a)"/>
+  </svg>
+  <div class="ring" style="left: 700px; top: 285px; width: 80px; height: 80px;"></div>
+</div>
+
+<!-- 2: the water -->
+<div class="t" id="t2">
+  <img class="bg" src="raw_water.png">
+  <div class="shade" style="background: linear-gradient(180deg, rgba(5,8,11,0) 40%, rgba(5,8,11,0.55) 100%)"></div>
+  <div class="tag" style="top: 104px">PANAMA CANAL</div>
+  <div class="big" style="left: 40px; top: 285px; font-size: 230px; color: #fff;">NO <span style="color:#5fe3ff">PUMPS</span></div>
+  <div class="sub" style="left: 46px; top: 520px; font-size: 62px; color: #f0a81c;">26 million gallons</div>
+  <div class="sub" style="left: 46px; top: 600px; font-size: 40px; color: #fff;">by gravity alone</div>
+</div>
+
+<!-- 3: the Eiffel Tower -->
+<div class="t" id="t3">
+  <img class="bg" src="raw_eiffel.png" style="object-position: 50% 60%">
+  <div class="shade" style="background: linear-gradient(270deg, rgba(5,8,11,0.82) 0%, rgba(5,8,11,0.35) 55%, rgba(5,8,11,0) 85%)"></div>
+  <div class="tag" style="left: auto; right: 40px">PANAMA CANAL</div>
+  <div class="sub" style="right: 46px; top: 330px; font-size: 62px; color: #fff; text-align: right;">Longer than</div>
+  <div class="big" style="right: 40px; top: 400px; font-size: 128px; color: #f0a81c; text-align: right;">THE EIFFEL<br>TOWER</div>
+</div>
+</body></html>
