@@ -1,0 +1,132 @@
+{
+ "lead": 0.8,
+ "tail": 1.8,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Why do companies rent expensive humanoid robots instead of buying them?",
+   "after": 0.5,
+   "file": "hook.mp3"
+  },
+  {
+   "id": "c1",
+   "text": "Humanoid robots are two-legged machines built for human spaces.",
+   "after": 0.35,
+   "file": "c1.mp3"
+  },
+  {
+   "id": "c2",
+   "text": "Companies rent them through Robotics as a Service, or RaaS.",
+   "after": 0.35,
+   "file": "c2.mp3"
+  },
+  {
+   "id": "c3",
+   "text": "RaaS is a subscription model for leasing robotic labor.",
+   "after": 0.5,
+   "file": "c3.mp3"
+  },
+  {
+   "id": "s1a",
+   "text": "First, companies avoid paying huge cash outlays upfront.",
+   "after": 0.3,
+   "file": "s1a.mp3"
+  },
+  {
+   "id": "s1b",
+   "text": "Purchasing hardware locks up capital in depreciating assets.",
+   "after": 0.3,
+   "file": "s1b.mp3"
+  },
+  {
+   "id": "s1c",
+   "text": "Renting converts robotic labor into an operating expense.",
+   "after": 0.3,
+   "file": "s1c.mp3"
+  },
+  {
+   "id": "s1d",
+   "text": "Businesses get cutting-edge physical AI without long commitments.",
+   "after": 0.5,
+   "file": "s1d.mp3"
+  },
+  {
+   "id": "s2a",
+   "text": "Second, renting dodges rapid hardware obsolescence.",
+   "after": 0.3,
+   "file": "s2a.mp3"
+  },
+  {
+   "id": "s2b",
+   "text": "Humanoid designs keep upgrading.",
+   "after": 0.3,
+   "file": "s2b.mp3"
+  },
+  {
+   "id": "s2c",
+   "text": "A purchased robot quickly becomes outdated technology.",
+   "after": 0.3,
+   "file": "s2c.mp3"
+  },
+  {
+   "id": "s2d",
+   "text": "Under rental contracts, vendors swap old models for new ones.",
+   "after": 0.5,
+   "file": "s2d.mp3"
+  },
+  {
+   "id": "e1",
+   "text": "In June 2024, GXO deployed Digit humanoids in Flowery Branch, Georgia.",
+   "after": 0.3,
+   "file": "e1.mp3"
+  },
+  {
+   "id": "e2",
+   "text": "Those rented bipedal robots moved over 100,000 totes across live operations.",
+   "after": 0.3,
+   "file": "e2.mp3"
+  },
+  {
+   "id": "e3",
+   "text": "In October 2026, GXO announced rentals in North Carolina and Tennessee.",
+   "after": 0.3,
+   "file": "e3.mp3"
+  },
+  {
+   "id": "e4",
+   "text": "Those deployments start in early 2027.",
+   "after": 0.7,
+   "file": "e4.mp3"
+  },
+  {
+   "id": "a1",
+   "text": "Some think humanoids are already cheaper than workers and fully autonomous.",
+   "after": 0.7,
+   "file": "a1.mp3"
+  },
+  {
+   "id": "a2",
+   "text": "In 2026, GXO's CEO said zero warehouse humanoids would reach production.",
+   "after": 1.3,
+   "file": "a2.mp3"
+  },
+  {
+   "id": "a3",
+   "text": "Companies rent humanoids because financial payback at scale remains unproven.",
+   "after": 0.3,
+   "file": "a3.mp3"
+  },
+  {
+   "id": "a4",
+   "text": "Renting lets firms test automation while shifting maintenance risks to vendors.",
+   "after": 0.7,
+   "file": "a4.mp3"
+  },
+  {
+   "id": "q",
+   "text": "Would you rent or buy a robot to do your job?",
+   "after": 0,
+   "file": "q.mp3"
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+1
+00:00:00,800 --> 00:00:04,815
+Why do companies rent expensive humanoid robots instead of buying them?
+
+2
+00:00:05,315 --> 00:00:09,135
+Humanoid robots are two-legged machines built for human spaces.
+
+3
+00:00:09,485 --> 00:00:13,790
+Companies rent them through Robotics as a Service, or RaaS.
+
+4
+00:00:14,140 --> 00:00:17,297
+RaaS is a subscription model for leasing robotic labor.
+
+5
+00:00:17,797 --> 00:00:21,413
+First, companies avoid paying huge cash outlays upfront.
+
+6
+00:00:21,713 --> 00:00:25,319
+Purchasing hardware locks up capital in depreciating assets.
+
+7
+00:00:25,619 --> 00:00:29,087
+Renting converts robotic labor into an operating expense.
+
+8
+00:00:29,387 --> 00:00:33,103
+Businesses get cutting-edge physical AI without long commitments.
+
+9
+00:00:33,603 --> 00:00:37,117
+Second, renting dodges rapid hardware obsolescence.
+
+10
+00:00:37,417 --> 00:00:39,438
+Humanoid designs keep upgrading.
+
+11
+00:00:39,738 --> 00:00:42,834
+A purchased robot quickly becomes outdated technology.
+
+12
+00:00:43,134 --> 00:00:46,713
+Under rental contracts, vendors swap old models for new ones.
+
+13
+00:00:47,213 --> 00:00:52,345
+In June 2024, GXO deployed Digit humanoids in Flowery Branch, Georgia.
+
+14
+00:00:52,645 --> 00:00:57,943
+Those rented bipedal robots moved over 100,000 totes across live operations.
+
+15
+00:00:58,243 --> 00:01:03,058
+In October 2026, GXO announced rentals in North Carolina and Tennessee.
+
+16
+00:01:03,358 --> 00:01:05,957
+Those deployments start in early 2027.
+
+17
+00:01:06,657 --> 00:01:10,745
+Some think humanoids are already cheaper than workers and fully autonomous.
+
+18
+00:01:11,445 --> 00:01:16,714
+In 2026, GXO's CEO said zero warehouse humanoids would reach production.
+
+19
+00:01:18,014 --> 00:01:22,545
+Companies rent humanoids because financial payback at scale remains unproven.
+
+20
+00:01:22,845 --> 00:01:27,167
+Renting lets firms test automation while shifting maintenance risks to vendors.
+
+21
+00:01:27,867 --> 00:01:31,015
+Would you rent or buy a robot to do your job?

@@ -1,0 +1,1342 @@
+{
+ "duration": 92.815,
+ "lead": 0.8,
+ "tail": 1.8,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Why do companies rent expensive humanoid robots instead of buying them?",
+   "t0": 0.8,
+   "t1": 4.815,
+   "take": "voice/hook.mp3",
+   "words": [
+    {
+     "w": "Why",
+     "t0": 0.8,
+     "t1": 1.026,
+     "est": true
+    },
+    {
+     "w": "do",
+     "t0": 1.026,
+     "t1": 1.196,
+     "est": true
+    },
+    {
+     "w": "companies",
+     "t0": 1.196,
+     "t1": 1.761,
+     "est": true
+    },
+    {
+     "w": "rent",
+     "t0": 1.761,
+     "t1": 2.044,
+     "est": true
+    },
+    {
+     "w": "expensive",
+     "t0": 2.044,
+     "t1": 2.61,
+     "est": true
+    },
+    {
+     "w": "humanoid",
+     "t0": 2.61,
+     "t1": 3.119,
+     "est": true
+    },
+    {
+     "w": "robots",
+     "t0": 3.119,
+     "t1": 3.514,
+     "est": true
+    },
+    {
+     "w": "instead",
+     "t0": 3.514,
+     "t1": 3.967,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 3.967,
+     "t1": 4.136,
+     "est": true
+    },
+    {
+     "w": "buying",
+     "t0": 4.136,
+     "t1": 4.532,
+     "est": true
+    },
+    {
+     "w": "them?",
+     "t0": 4.532,
+     "t1": 4.815,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "c1",
+   "text": "Humanoid robots are two-legged machines built for human spaces.",
+   "t0": 5.315,
+   "t1": 9.135,
+   "take": "voice/c1.mp3",
+   "words": [
+    {
+     "w": "Humanoid",
+     "t0": 5.315,
+     "t1": 5.87,
+     "est": true
+    },
+    {
+     "w": "robots",
+     "t0": 5.87,
+     "t1": 6.301,
+     "est": true
+    },
+    {
+     "w": "are",
+     "t0": 6.301,
+     "t1": 6.547,
+     "est": true
+    },
+    {
+     "w": "two-legged",
+     "t0": 6.547,
+     "t1": 7.163,
+     "est": true
+    },
+    {
+     "w": "machines",
+     "t0": 7.163,
+     "t1": 7.718,
+     "est": true
+    },
+    {
+     "w": "built",
+     "t0": 7.718,
+     "t1": 8.088,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 8.088,
+     "t1": 8.334,
+     "est": true
+    },
+    {
+     "w": "human",
+     "t0": 8.334,
+     "t1": 8.704,
+     "est": true
+    },
+    {
+     "w": "spaces.",
+     "t0": 8.704,
+     "t1": 9.135,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "text": "Companies rent them through Robotics as a Service, or RaaS.",
+   "t0": 9.485,
+   "t1": 13.79,
+   "take": "voice/c2.mp3",
+   "words": [
+    {
+     "w": "Companies",
+     "t0": 9.485,
+     "t1": 10.227,
+     "est": true
+    },
+    {
+     "w": "rent",
+     "t0": 10.227,
+     "t1": 10.598,
+     "est": true
+    },
+    {
+     "w": "them",
+     "t0": 10.598,
+     "t1": 10.969,
+     "est": true
+    },
+    {
+     "w": "through",
+     "t0": 10.969,
+     "t1": 11.563,
+     "est": true
+    },
+    {
+     "w": "Robotics",
+     "t0": 11.563,
+     "t1": 12.231,
+     "est": true
+    },
+    {
+     "w": "as",
+     "t0": 12.231,
+     "t1": 12.454,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 12.454,
+     "t1": 12.602,
+     "est": true
+    },
+    {
+     "w": "Service,",
+     "t0": 12.602,
+     "t1": 13.196,
+     "est": true
+    },
+    {
+     "w": "or",
+     "t0": 13.196,
+     "t1": 13.419,
+     "est": true
+    },
+    {
+     "w": "RaaS.",
+     "t0": 13.419,
+     "t1": 13.79,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "text": "RaaS is a subscription model for leasing robotic labor.",
+   "t0": 14.14,
+   "t1": 17.297,
+   "take": "voice/c3.mp3",
+   "words": [
+    {
+     "w": "RaaS",
+     "t0": 14.14,
+     "t1": 14.427,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 14.427,
+     "t1": 14.599,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 14.599,
+     "t1": 14.714,
+     "est": true
+    },
+    {
+     "w": "subscription",
+     "t0": 14.714,
+     "t1": 15.46,
+     "est": true
+    },
+    {
+     "w": "model",
+     "t0": 15.46,
+     "t1": 15.805,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 15.805,
+     "t1": 16.034,
+     "est": true
+    },
+    {
+     "w": "leasing",
+     "t0": 16.034,
+     "t1": 16.493,
+     "est": true
+    },
+    {
+     "w": "robotic",
+     "t0": 16.493,
+     "t1": 16.953,
+     "est": true
+    },
+    {
+     "w": "labor.",
+     "t0": 16.953,
+     "t1": 17.297,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "s1a",
+   "text": "First, companies avoid paying huge cash outlays upfront.",
+   "t0": 17.797,
+   "t1": 21.413,
+   "take": "voice/s1a.mp3",
+   "words": [
+    {
+     "w": "First,",
+     "t0": 17.797,
+     "t1": 18.191,
+     "est": true
+    },
+    {
+     "w": "companies",
+     "t0": 18.191,
+     "t1": 18.849,
+     "est": true
+    },
+    {
+     "w": "avoid",
+     "t0": 18.849,
+     "t1": 19.243,
+     "est": true
+    },
+    {
+     "w": "paying",
+     "t0": 19.243,
+     "t1": 19.704,
+     "est": true
+    },
+    {
+     "w": "huge",
+     "t0": 19.704,
+     "t1": 20.032,
+     "est": true
+    },
+    {
+     "w": "cash",
+     "t0": 20.032,
+     "t1": 20.361,
+     "est": true
+    },
+    {
+     "w": "outlays",
+     "t0": 20.361,
+     "t1": 20.887,
+     "est": true
+    },
+    {
+     "w": "upfront.",
+     "t0": 20.887,
+     "t1": 21.413,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "s1b",
+   "text": "Purchasing hardware locks up capital in depreciating assets.",
+   "t0": 21.713,
+   "t1": 25.319,
+   "take": "voice/s1b.mp3",
+   "words": [
+    {
+     "w": "Purchasing",
+     "t0": 21.713,
+     "t1": 22.374,
+     "est": true
+    },
+    {
+     "w": "hardware",
+     "t0": 22.374,
+     "t1": 22.915,
+     "est": true
+    },
+    {
+     "w": "locks",
+     "t0": 22.915,
+     "t1": 23.276,
+     "est": true
+    },
+    {
+     "w": "up",
+     "t0": 23.276,
+     "t1": 23.456,
+     "est": true
+    },
+    {
+     "w": "capital",
+     "t0": 23.456,
+     "t1": 23.937,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 23.937,
+     "t1": 24.117,
+     "est": true
+    },
+    {
+     "w": "depreciating",
+     "t0": 24.117,
+     "t1": 24.898,
+     "est": true
+    },
+    {
+     "w": "assets.",
+     "t0": 24.898,
+     "t1": 25.319,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "s1c",
+   "text": "Renting converts robotic labor into an operating expense.",
+   "t0": 25.619,
+   "t1": 29.087,
+   "take": "voice/s1c.mp3",
+   "words": [
+    {
+     "w": "Renting",
+     "t0": 25.619,
+     "t1": 26.106,
+     "est": true
+    },
+    {
+     "w": "converts",
+     "t0": 26.106,
+     "t1": 26.653,
+     "est": true
+    },
+    {
+     "w": "robotic",
+     "t0": 26.653,
+     "t1": 27.14,
+     "est": true
+    },
+    {
+     "w": "labor",
+     "t0": 27.14,
+     "t1": 27.505,
+     "est": true
+    },
+    {
+     "w": "into",
+     "t0": 27.505,
+     "t1": 27.809,
+     "est": true
+    },
+    {
+     "w": "an",
+     "t0": 27.809,
+     "t1": 27.992,
+     "est": true
+    },
+    {
+     "w": "operating",
+     "t0": 27.992,
+     "t1": 28.6,
+     "est": true
+    },
+    {
+     "w": "expense.",
+     "t0": 28.6,
+     "t1": 29.087,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "s1d",
+   "text": "Businesses get cutting-edge physical AI without long commitments.",
+   "t0": 29.387,
+   "t1": 33.103,
+   "take": "voice/s1d.mp3",
+   "words": [
+    {
+     "w": "Businesses",
+     "t0": 29.387,
+     "t1": 30.026,
+     "est": true
+    },
+    {
+     "w": "get",
+     "t0": 30.026,
+     "t1": 30.258,
+     "est": true
+    },
+    {
+     "w": "cutting-edge",
+     "t0": 30.258,
+     "t1": 30.955,
+     "est": true
+    },
+    {
+     "w": "physical",
+     "t0": 30.955,
+     "t1": 31.477,
+     "est": true
+    },
+    {
+     "w": "AI",
+     "t0": 31.477,
+     "t1": 31.651,
+     "est": true
+    },
+    {
+     "w": "without",
+     "t0": 31.651,
+     "t1": 32.116,
+     "est": true
+    },
+    {
+     "w": "long",
+     "t0": 32.116,
+     "t1": 32.406,
+     "est": true
+    },
+    {
+     "w": "commitments.",
+     "t0": 32.406,
+     "t1": 33.103,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "s2a",
+   "text": "Second, renting dodges rapid hardware obsolescence.",
+   "t0": 33.603,
+   "t1": 37.117,
+   "take": "voice/s2a.mp3",
+   "words": [
+    {
+     "w": "Second,",
+     "t0": 33.603,
+     "t1": 34.095,
+     "est": true
+    },
+    {
+     "w": "renting",
+     "t0": 34.095,
+     "t1": 34.657,
+     "est": true
+    },
+    {
+     "w": "dodges",
+     "t0": 34.657,
+     "t1": 35.149,
+     "est": true
+    },
+    {
+     "w": "rapid",
+     "t0": 35.149,
+     "t1": 35.571,
+     "est": true
+    },
+    {
+     "w": "hardware",
+     "t0": 35.571,
+     "t1": 36.203,
+     "est": true
+    },
+    {
+     "w": "obsolescence.",
+     "t0": 36.203,
+     "t1": 37.117,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "s2b",
+   "text": "Humanoid designs keep upgrading.",
+   "t0": 37.417,
+   "t1": 39.438,
+   "take": "voice/s2b.mp3",
+   "words": [
+    {
+     "w": "Humanoid",
+     "t0": 37.417,
+     "t1": 37.985,
+     "est": true
+    },
+    {
+     "w": "designs",
+     "t0": 37.985,
+     "t1": 38.491,
+     "est": true
+    },
+    {
+     "w": "keep",
+     "t0": 38.491,
+     "t1": 38.806,
+     "est": true
+    },
+    {
+     "w": "upgrading.",
+     "t0": 38.806,
+     "t1": 39.438,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "s2c",
+   "text": "A purchased robot quickly becomes outdated technology.",
+   "t0": 39.738,
+   "t1": 42.834,
+   "take": "voice/s2c.mp3",
+   "words": [
+    {
+     "w": "A",
+     "t0": 39.738,
+     "t1": 39.853,
+     "est": true
+    },
+    {
+     "w": "purchased",
+     "t0": 39.853,
+     "t1": 40.426,
+     "est": true
+    },
+    {
+     "w": "robot",
+     "t0": 40.426,
+     "t1": 40.77,
+     "est": true
+    },
+    {
+     "w": "quickly",
+     "t0": 40.77,
+     "t1": 41.229,
+     "est": true
+    },
+    {
+     "w": "becomes",
+     "t0": 41.229,
+     "t1": 41.687,
+     "est": true
+    },
+    {
+     "w": "outdated",
+     "t0": 41.687,
+     "t1": 42.203,
+     "est": true
+    },
+    {
+     "w": "technology.",
+     "t0": 42.203,
+     "t1": 42.834,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "s2d",
+   "text": "Under rental contracts, vendors swap old models for new ones.",
+   "t0": 43.134,
+   "t1": 46.713,
+   "take": "voice/s2d.mp3",
+   "words": [
+    {
+     "w": "Under",
+     "t0": 43.134,
+     "t1": 43.492,
+     "est": true
+    },
+    {
+     "w": "rental",
+     "t0": 43.492,
+     "t1": 43.909,
+     "est": true
+    },
+    {
+     "w": "contracts,",
+     "t0": 43.909,
+     "t1": 44.506,
+     "est": true
+    },
+    {
+     "w": "vendors",
+     "t0": 44.506,
+     "t1": 44.983,
+     "est": true
+    },
+    {
+     "w": "swap",
+     "t0": 44.983,
+     "t1": 45.281,
+     "est": true
+    },
+    {
+     "w": "old",
+     "t0": 45.281,
+     "t1": 45.52,
+     "est": true
+    },
+    {
+     "w": "models",
+     "t0": 45.52,
+     "t1": 45.938,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 45.938,
+     "t1": 46.176,
+     "est": true
+    },
+    {
+     "w": "new",
+     "t0": 46.176,
+     "t1": 46.415,
+     "est": true
+    },
+    {
+     "w": "ones.",
+     "t0": 46.415,
+     "t1": 46.713,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "e1",
+   "text": "In June 2024, GXO deployed Digit humanoids in Flowery Branch, Georgia.",
+   "t0": 47.213,
+   "t1": 52.345,
+   "take": "voice/e1.mp3",
+   "words": [
+    {
+     "w": "In",
+     "t0": 47.213,
+     "t1": 47.439,
+     "est": true
+    },
+    {
+     "w": "June",
+     "t0": 47.439,
+     "t1": 47.817,
+     "est": true
+    },
+    {
+     "w": "2024,",
+     "t0": 47.817,
+     "t1": 48.194,
+     "est": true
+    },
+    {
+     "w": "GXO",
+     "t0": 48.194,
+     "t1": 48.496,
+     "est": true
+    },
+    {
+     "w": "deployed",
+     "t0": 48.496,
+     "t1": 49.175,
+     "est": true
+    },
+    {
+     "w": "Digit",
+     "t0": 49.175,
+     "t1": 49.628,
+     "est": true
+    },
+    {
+     "w": "humanoids",
+     "t0": 49.628,
+     "t1": 50.383,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 50.383,
+     "t1": 50.609,
+     "est": true
+    },
+    {
+     "w": "Flowery",
+     "t0": 50.609,
+     "t1": 51.213,
+     "est": true
+    },
+    {
+     "w": "Branch,",
+     "t0": 51.213,
+     "t1": 51.741,
+     "est": true
+    },
+    {
+     "w": "Georgia.",
+     "t0": 51.741,
+     "t1": 52.345,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "e2",
+   "text": "Those rented bipedal robots moved over 100,000 totes across live operations.",
+   "t0": 52.645,
+   "t1": 57.943,
+   "take": "voice/e2.mp3",
+   "words": [
+    {
+     "w": "Those",
+     "t0": 52.645,
+     "t1": 53.069,
+     "est": true
+    },
+    {
+     "w": "rented",
+     "t0": 53.069,
+     "t1": 53.563,
+     "est": true
+    },
+    {
+     "w": "bipedal",
+     "t0": 53.563,
+     "t1": 54.128,
+     "est": true
+    },
+    {
+     "w": "robots",
+     "t0": 54.128,
+     "t1": 54.623,
+     "est": true
+    },
+    {
+     "w": "moved",
+     "t0": 54.623,
+     "t1": 55.047,
+     "est": true
+    },
+    {
+     "w": "over",
+     "t0": 55.047,
+     "t1": 55.4,
+     "est": true
+    },
+    {
+     "w": "100,000",
+     "t0": 55.4,
+     "t1": 55.894,
+     "est": true
+    },
+    {
+     "w": "totes",
+     "t0": 55.894,
+     "t1": 56.318,
+     "est": true
+    },
+    {
+     "w": "across",
+     "t0": 56.318,
+     "t1": 56.813,
+     "est": true
+    },
+    {
+     "w": "live",
+     "t0": 56.813,
+     "t1": 57.166,
+     "est": true
+    },
+    {
+     "w": "operations.",
+     "t0": 57.166,
+     "t1": 57.943,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "e3",
+   "text": "In October 2026, GXO announced rentals in North Carolina and Tennessee.",
+   "t0": 58.243,
+   "t1": 63.058,
+   "take": "voice/e3.mp3",
+   "words": [
+    {
+     "w": "In",
+     "t0": 58.243,
+     "t1": 58.449,
+     "est": true
+    },
+    {
+     "w": "October",
+     "t0": 58.449,
+     "t1": 59,
+     "est": true
+    },
+    {
+     "w": "2026,",
+     "t0": 59,
+     "t1": 59.344,
+     "est": true
+    },
+    {
+     "w": "GXO",
+     "t0": 59.344,
+     "t1": 59.619,
+     "est": true
+    },
+    {
+     "w": "announced",
+     "t0": 59.619,
+     "t1": 60.307,
+     "est": true
+    },
+    {
+     "w": "rentals",
+     "t0": 60.307,
+     "t1": 60.857,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 60.857,
+     "t1": 61.063,
+     "est": true
+    },
+    {
+     "w": "North",
+     "t0": 61.063,
+     "t1": 61.476,
+     "est": true
+    },
+    {
+     "w": "Carolina",
+     "t0": 61.476,
+     "t1": 62.095,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 62.095,
+     "t1": 62.37,
+     "est": true
+    },
+    {
+     "w": "Tennessee.",
+     "t0": 62.37,
+     "t1": 63.058,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "e4",
+   "text": "Those deployments start in early 2027.",
+   "t0": 63.358,
+   "t1": 65.957,
+   "take": "voice/e4.mp3",
+   "words": [
+    {
+     "w": "Those",
+     "t0": 63.358,
+     "t1": 63.768,
+     "est": true
+    },
+    {
+     "w": "deployments",
+     "t0": 63.768,
+     "t1": 64.589,
+     "est": true
+    },
+    {
+     "w": "start",
+     "t0": 64.589,
+     "t1": 64.999,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 64.999,
+     "t1": 65.205,
+     "est": true
+    },
+    {
+     "w": "early",
+     "t0": 65.205,
+     "t1": 65.615,
+     "est": true
+    },
+    {
+     "w": "2027.",
+     "t0": 65.615,
+     "t1": 65.957,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "a1",
+   "text": "Some think humanoids are already cheaper than workers and fully autonomous.",
+   "t0": 66.657,
+   "t1": 70.745,
+   "take": "voice/a1.mp3",
+   "words": [
+    {
+     "w": "Some",
+     "t0": 66.657,
+     "t1": 66.93,
+     "est": true
+    },
+    {
+     "w": "think",
+     "t0": 66.93,
+     "t1": 67.257,
+     "est": true
+    },
+    {
+     "w": "humanoids",
+     "t0": 67.257,
+     "t1": 67.802,
+     "est": true
+    },
+    {
+     "w": "are",
+     "t0": 67.802,
+     "t1": 68.02,
+     "est": true
+    },
+    {
+     "w": "already",
+     "t0": 68.02,
+     "t1": 68.456,
+     "est": true
+    },
+    {
+     "w": "cheaper",
+     "t0": 68.456,
+     "t1": 68.892,
+     "est": true
+    },
+    {
+     "w": "than",
+     "t0": 68.892,
+     "t1": 69.164,
+     "est": true
+    },
+    {
+     "w": "workers",
+     "t0": 69.164,
+     "t1": 69.6,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 69.6,
+     "t1": 69.818,
+     "est": true
+    },
+    {
+     "w": "fully",
+     "t0": 69.818,
+     "t1": 70.145,
+     "est": true
+    },
+    {
+     "w": "autonomous.",
+     "t0": 70.145,
+     "t1": 70.745,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "a2",
+   "text": "In 2026, GXO's CEO said zero warehouse humanoids would reach production.",
+   "t0": 71.445,
+   "t1": 76.714,
+   "take": "voice/a2.mp3",
+   "words": [
+    {
+     "w": "In",
+     "t0": 71.445,
+     "t1": 71.671,
+     "est": true
+    },
+    {
+     "w": "2026,",
+     "t0": 71.671,
+     "t1": 72.047,
+     "est": true
+    },
+    {
+     "w": "GXO's",
+     "t0": 72.047,
+     "t1": 72.424,
+     "est": true
+    },
+    {
+     "w": "CEO",
+     "t0": 72.424,
+     "t1": 72.725,
+     "est": true
+    },
+    {
+     "w": "said",
+     "t0": 72.725,
+     "t1": 73.101,
+     "est": true
+    },
+    {
+     "w": "zero",
+     "t0": 73.101,
+     "t1": 73.477,
+     "est": true
+    },
+    {
+     "w": "warehouse",
+     "t0": 73.477,
+     "t1": 74.23,
+     "est": true
+    },
+    {
+     "w": "humanoids",
+     "t0": 74.23,
+     "t1": 74.983,
+     "est": true
+    },
+    {
+     "w": "would",
+     "t0": 74.983,
+     "t1": 75.434,
+     "est": true
+    },
+    {
+     "w": "reach",
+     "t0": 75.434,
+     "t1": 75.886,
+     "est": true
+    },
+    {
+     "w": "production.",
+     "t0": 75.886,
+     "t1": 76.714,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "a3",
+   "text": "Companies rent humanoids because financial payback at scale remains unproven.",
+   "t0": 78.014,
+   "t1": 82.545,
+   "take": "voice/a3.mp3",
+   "words": [
+    {
+     "w": "Companies",
+     "t0": 78.014,
+     "t1": 78.602,
+     "est": true
+    },
+    {
+     "w": "rent",
+     "t0": 78.602,
+     "t1": 78.897,
+     "est": true
+    },
+    {
+     "w": "humanoids",
+     "t0": 78.897,
+     "t1": 79.485,
+     "est": true
+    },
+    {
+     "w": "because",
+     "t0": 79.485,
+     "t1": 79.956,
+     "est": true
+    },
+    {
+     "w": "financial",
+     "t0": 79.956,
+     "t1": 80.544,
+     "est": true
+    },
+    {
+     "w": "payback",
+     "t0": 80.544,
+     "t1": 81.015,
+     "est": true
+    },
+    {
+     "w": "at",
+     "t0": 81.015,
+     "t1": 81.192,
+     "est": true
+    },
+    {
+     "w": "scale",
+     "t0": 81.192,
+     "t1": 81.545,
+     "est": true
+    },
+    {
+     "w": "remains",
+     "t0": 81.545,
+     "t1": 82.015,
+     "est": true
+    },
+    {
+     "w": "unproven.",
+     "t0": 82.015,
+     "t1": 82.545,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "a4",
+   "text": "Renting lets firms test automation while shifting maintenance risks to vendors.",
+   "t0": 82.845,
+   "t1": 87.167,
+   "take": "voice/a4.mp3",
+   "words": [
+    {
+     "w": "Renting",
+     "t0": 82.845,
+     "t1": 83.283,
+     "est": true
+    },
+    {
+     "w": "lets",
+     "t0": 83.283,
+     "t1": 83.556,
+     "est": true
+    },
+    {
+     "w": "firms",
+     "t0": 83.556,
+     "t1": 83.884,
+     "est": true
+    },
+    {
+     "w": "test",
+     "t0": 83.884,
+     "t1": 84.158,
+     "est": true
+    },
+    {
+     "w": "automation",
+     "t0": 84.158,
+     "t1": 84.76,
+     "est": true
+    },
+    {
+     "w": "while",
+     "t0": 84.76,
+     "t1": 85.088,
+     "est": true
+    },
+    {
+     "w": "shifting",
+     "t0": 85.088,
+     "t1": 85.58,
+     "est": true
+    },
+    {
+     "w": "maintenance",
+     "t0": 85.58,
+     "t1": 86.237,
+     "est": true
+    },
+    {
+     "w": "risks",
+     "t0": 86.237,
+     "t1": 86.565,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 86.565,
+     "t1": 86.729,
+     "est": true
+    },
+    {
+     "w": "vendors.",
+     "t0": 86.729,
+     "t1": 87.167,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "q",
+   "text": "Would you rent or buy a robot to do your job?",
+   "t0": 87.867,
+   "t1": 91.015,
+   "take": "voice/q.mp3",
+   "words": [
+    {
+     "w": "Would",
+     "t0": 87.867,
+     "t1": 88.287,
+     "est": true
+    },
+    {
+     "w": "you",
+     "t0": 88.287,
+     "t1": 88.567,
+     "est": true
+    },
+    {
+     "w": "rent",
+     "t0": 88.567,
+     "t1": 88.916,
+     "est": true
+    },
+    {
+     "w": "or",
+     "t0": 88.916,
+     "t1": 89.126,
+     "est": true
+    },
+    {
+     "w": "buy",
+     "t0": 89.126,
+     "t1": 89.406,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 89.406,
+     "t1": 89.546,
+     "est": true
+    },
+    {
+     "w": "robot",
+     "t0": 89.546,
+     "t1": 89.966,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 89.966,
+     "t1": 90.176,
+     "est": true
+    },
+    {
+     "w": "do",
+     "t0": 90.176,
+     "t1": 90.385,
+     "est": true
+    },
+    {
+     "w": "your",
+     "t0": 90.385,
+     "t1": 90.735,
+     "est": true
+    },
+    {
+     "w": "job?",
+     "t0": 90.735,
+     "t1": 91.015,
+     "est": true
+    }
+   ]
+  }
+ ]
+}

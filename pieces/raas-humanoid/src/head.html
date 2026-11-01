@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rent or buy a humanoid robot</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #04101f; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { height: min(100vh, calc(100vw * 16 / 9)); width: auto; aspect-ratio: 9 / 16; display: block; cursor: pointer; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+"use strict";
+// =====================================================================
+//  RENT OR BUY A HUMANOID ROBOT — 9:16 YouTube Short, voice-led, 24fps. One faceless industrial humanoid walks a
+//  warehouse sheet from the Buy/Rent fork to the same fork again. The voice is the clock: every cue comes from VOICE.
+//  Style: iso3d (shaded 2.5D isometric, navy and teal, amber highlights, red risk marks).
+// =====================================================================
+const FPS = 24, W = 1080, H = 1920;
+const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, E16 = BEAT / 4;
+const DURATION = Math.round(VOICE.duration * FPS) / FPS;
+const NFRAMES = Math.round(DURATION * FPS);
+const LOOP_T = NFRAMES / FPS;
+const SAFE = { top: 240, bottom: 420, right: 140 };
+const CX = 500;
+
+// ---- the voice is the clock
+const VL = (id) => { const l = VOICE.lines.find((x) => x.id === id); if (!l) throw new Error('no voice line ' + id); return l; };
+const Ts = (id) => VL(id).t0, Te = (id) => VL(id).t1;
+const Wt = (id, n) => { const w = VL(id).words; return w[Math.min(Math.max(0, n), w.length - 1)].t0; };   // start of the n-th spoken word (0-based)
+
+const ERA_LIST = [[0, DURATION, () => sceneAll()]];
+const SEG = [   // shots: [key, first line, last line, title]
+  ['fork', 'hook', 'hook', 'the hero stands between Buy and Rent'],
+  ['raas', 'c1', 'c3', 'the aisle: what a humanoid is, what RaaS is'],
+  ['capex', 's1a', 's1b', 'buying: cash leaves, value falls'],
+  ['opex', 's1c', 's1d', 'renting: a small monthly cost, no lock-in'],
+  ['upgrade', 's2a', 's2d', 'obsolescence: the vendor swaps the model'],
+  ['proof', 'e1', 'e4', 'GXO: Georgia, 100,000 totes, NC and TN'],
+  ['doubt', 'a1', 'a2', 'the misconception and zero in production'],
+  ['payoff', 'a3', 'a4', 'unproven payback means rent first'],
+  ['close', 'q', 'q', 'the fork again'],
+];
+const SHOT_T0 = SEG.map(([, a], i) => (i === 0 ? 0 : Math.max(0.5, Ts(a) - 0.3)));
+const TIMELINE = {
+  width: W, height: H, fps: FPS, bpm: BPM, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE,
+  format: 'morph-chain',
+  shots: SEG.map(([key, a, b, title], i) => ({ id: i + 1, key, era: 0, t0: SHOT_T0[i], t1: i + 1 < SEG.length ? SHOT_T0[i + 1] : DURATION, title })),
+  cuts: [],
+  morphs: [],
+  cues: {},
+  acts: [
+    { name: '1 Hook',     role: 'build',   t0: 0, t1: SHOT_T0[2] },
+    { name: '2 Money',    role: 'journey', t0: SHOT_T0[2], t1: SHOT_T0[5] },
+    { name: '3 Proof',    role: 'peak',    t0: SHOT_T0[5], t1: SHOT_T0[6] },
+    { name: '4 Doubt',    role: 'silence', t0: SHOT_T0[6], t1: Te('a2') + 0.55 },
+    { name: '5 Payoff',   role: 'gift',    t0: Te('a2') + 0.55, t1: Te('a4') },
+    { name: '6 Question', role: 'goodbye', t0: Te('a4'), t1: DURATION },
+  ],
+  board: SEG.map(([key, a, b, title], i) => ({ t: (Ts(a) + Te(b)) / 2, title, sound: ['low pad, a question mark chime', 'pad rises, soft sweep on the card', 'cash whooshes out, a low sub', 'pad lightens, clicks per month', 'steps blip up one by one, a swap slide', 'fuller pad, a click per tote', 'pad drops out to silence', 'ONE loud hit on the tipped scale', 'pad resolves'][i], next: ['walks into the aisle', 'walks to the vault', 'the cash stays', 'walks to the upgrade steps', 'walks to Georgia', 'walks to the doubt', 'the scale rises', 'walks back to the fork', 'loops'][i] })),
+  narration: VOICE.lines.map((l) => ({ t0: l.t0, t1: l.t1, text: l.text })),
+};
+window.TIMELINE = TIMELINE;
