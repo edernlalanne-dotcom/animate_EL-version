@@ -1,0 +1,73 @@
+shot 1 (45 pilots, zero in production, so why rent?): 59 frames [0,6,12,18,24,30,36,42,48,54,60,66,72,78,84,90,96,102,108,114,120,126,132,138,144,150,156,162,168,174,180,186,192,198,204,210,216,222,228,234,240,246,252,258,264,270,276,282,288,294,300,306,312,318,324,330,336,342,348] -> review/shot01-sheet.jpg
+shot 2 (reason one: buying locks cash in a falling asset): 25 frames [351,357,363,369,375,381,387,393,399,405,411,417,423,429,435,441,447,453,459,465,471,477,483,489,495] -> review/shot02-sheet.jpg
+shot 3 (reason one: renting is monthly, no long commitment): 22 frames [497,503,509,515,521,527,533,539,545,551,557,563,569,575,581,587,593,599,605,611,617,623] -> review/shot03-sheet.jpg
+shot 4 (reason two: the next model ships, Digit 4 to Digit 5): 66 frames [627,633,639,645,651,657,663,669,675,681,687,693,699,705,711,717,723,729,735,741,747,753,759,765,771,777,783,789,795,801,807,813,819,825,831,837,843,849,855,861,867,873,879,885,891,897,903,909,915,921,927,933,939,945,951,957,963,969,975,981,987,993,999,1005,1011,1017] -> review/shot04-sheet.jpg
+shot 5 (GXO: Georgia, 100,000 totes, two more sites): 61 frames [1023,1029,1035,1041,1047,1053,1059,1065,1071,1077,1083,1089,1095,1101,1107,1113,1119,1125,1131,1137,1143,1149,1155,1161,1167,1173,1179,1185,1191,1197,1203,1209,1215,1221,1227,1233,1239,1245,1251,1257,1263,1269,1275,1281,1287,1293,1299,1305,1311,1317,1323,1329,1335,1341,1347,1353,1359,1365,1371,1377,1383] -> review/shot05-sheet.jpg
+shot 6 (no return yet, production two years out): 32 frames [1386,1392,1398,1404,1410,1416,1422,1428,1434,1440,1446,1452,1458,1464,1470,1476,1482,1488,1494,1500,1506,1512,1518,1524,1530,1536,1542,1548,1554,1560,1566,1572] -> review/shot06-sheet.jpg
+shot 7 (renting is a test, not a bet): 20 frames [1576,1582,1588,1594,1600,1606,1612,1618,1624,1630,1636,1642,1648,1654,1660,1666,1672,1678,1684,1690] -> review/shot07-sheet.jpg
+shot 8 (the fork again, then the subscribe card): 21 frames [1694,1700,1706,1712,1718,1724,1730,1736,1742,1748,1754,1760,1766,1772,1778,1784,1790,1796,1802,1808,1814] -> review/shot08-sheet.jpg
+
+CUTS vs beat grid @ 120 BPM, 24fps (8ths = 0.25s)
+ #   cut t     grid  grid#   nominal f  cut f   cut f t     err(f)  Δ@cut  peak(±2f)          shot change           result
+all cuts on grid within 1 frame: PASS
+
+PACING: 0 hard cuts (0 in the last 5s), mean segment 75.63s, shortest 75.63s, plus 0 on-2s montage steps
+FLAT FRAMES (contrast < 6/255): none
+LOOP: diff(last=1814, first=0) = 55.01; typical consecutive diff in the first 40 frames = 0.51 (info: F4/F6 loop pixel-exactly and F4 checks it; other formats return to the opening image, changed)
+
+NARRATION (voice-over added outside; checks density and word hits)
+ #   t0-t1          words  wps   shot  line
+ 1  0.80-4.34s      6  1.69     1  "GXO ran 45 humanoid robot pilots."
+ 2  4.59-7.60s      9  2.99     1  "Its CEO says zero go into production this year."
+ 3  8.40-10.71s      7  3.03     1  "So why do companies still rent them?"
+ 4  11.01-14.21s      7  2.19     1  "Two reasons. The second one surprises people."
+ 5  14.91-17.91s      7  2.33     2  "One. Buying locks your cash up front."
+ 6  18.06-20.53s      8  3.25     2  "It sits in a machine that loses value."
+ 7  21.03-23.55s      6  2.37     3  "Rent instead, and you pay monthly."
+ 8  23.70-25.84s      5  2.35     3  "And you avoid long commitments."
+ 9  26.44-30.24s     12  3.15     4  "Two. The robot you buy is old when the next model ships."
+10  30.54-34.52s      7  1.76     4  "Agility unveiled Digit 5 in September 2026."
+11  34.72-37.72s     10  3.33     4  "Own a Digit 4, and you own the old model."
+12  38.12-42.31s     12  2.86     4  "GXO's new sites start with Digit 4, then switch to Digit 5."
+13  42.91-46.98s     10  2.46     5  "Since June 2024, rented Digit robots have worked in Georgia."
+14  47.13-50.29s      5  1.58     5  "They moved over 100,000 totes."
+15  50.69-54.88s     10  2.39     5  "GXO announced two more sites, in North Carolina and Tennessee."
+16  55.03-57.34s      5  2.17     5  "They start in early 2027."
+17  58.03-61.36s     10  3.01     6  "But GXO has not yet seen a return from humanoids."
+18  61.86-64.69s      8  2.83     6  "Its CEO puts production about two years away."
+19  65.98-68.64s      8  3.02     7  "So renting is not a bet on robots."
+20  68.89-70.28s      4  2.87     7  "It is a test."
+21  70.88-72.73s      5  2.70     8  "Would you rent, or buy?"
+narration: 161 words, density PASS (<= 3.5 words/s, no overlaps), word hits PASS (<= 2 frames from a cut)
+
+STORY ARC (loudness in dBFS over 100ms windows: median / 90th percentile; music = music stem median)
+ act          role       t0-t1         cuts  cuts/s  motion   mix med  mix p90  music
+ 1 Hook       build      0.00-14.61s      0    0.00     1.6    -19.5    -16.8   -19.6
+ 2 Reasons    journey    14.61-42.61s      0    0.00     1.3    -16.0    -14.3   -16.0
+ 3 Proof      peak       42.61-57.73s      0    0.00     1.2    -17.9    -15.9   -18.0
+ 4 Doubt      silence    57.73-65.23s      0    0.00     1.0   -120.0    -52.6  -120.0
+ 5 Payoff     gift       65.23-70.28s      0    0.00     2.9    -12.5    -10.7   -12.5
+ 6 Question   goodbye    70.28-75.63s      0    0.00     1.6    -27.3    -22.4   -27.8
+  info  no cut-rate rule (no hard cuts, or eras joined by morphs): peak motion 1.2 vs max other 2.9 (pixel motion includes noise/boil, so it is not a rule here)
+  PASS  gift is the loudest act (p90 -10.7 vs next -14.3)
+  PASS  gift p90 >= peak p90 + 1 dB (-10.7 vs -15.9): the busiest moment is not the loudest
+  PASS  silence median <= peak median - 15 dB (-120.0 vs -17.9)
+  PASS  journey music stays present under the voice: median >= gift - 8 dB (-16.0 vs -12.5)
+  PASS  gift is held: <= 0.5 cuts/s (0.00)
+  PASS  goodbye decays: median <= gift median - 6 dB (-27.3 vs -12.5)
+story arc: PASS (6/6 rules)
+
+TEXT (every string drawn, traced to screen; 317 frames sampled, morph windows skipped)
+  FAIL  overlaps other text: "DEPRECIATION" × "CASH"  at 21.50s (1 frames)
+text: FAIL (1 cut-off/overlap, 0 in the safe zone)
+
+SOUND (the payoff window on the score without the voice: renders/audio-score.wav; loudness on the mix)
+  loudest 100ms window: 65.5s (-9.2 dBFS) - in the payoff act 65.235-70.281s
+  silence before it: 1.9s at <= -40 dBFS ending 65.4s in the 2s before (craft.md wants 0.5-4s when the story has a turn)
+  loudness: -14.5 LUFS integrated, range 3.3 LU, true peak -1.5 dBFS (phone target about -16 to -14 LUFS, peak <= -1)
+
+DEAD BEATS (the picture's change over 0.5s, every 0.25s; median 2.68, "still" below 0.80; silence acts are exempt)
+dead beats: PASS (0 stretches over 3s)
+PHONE SHEET: review/phone.jpg (one frame a second at 360px wide — read every caption at this size)
+
+video: 1080x1920, 1815 frames decoded

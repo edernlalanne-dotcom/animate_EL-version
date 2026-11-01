@@ -3,16 +3,15 @@
 //  World units ~ px at zoom 1. ISO fixed; the camera (pieceCam) puts the focus on the screen.
 // =====================================================================
 const ISOB = { ox: 540, oy: 960, u: 1 };
-const ST = { fork: 0, aisle: 630, capex: 1200, upg: 1800, proof: 2450, doubt: 3100, end: 3800 };
+const ST = { fork: 0, capex: 700, upg: 1300, proof: 1950, doubt: 2600, end: 3300 };
 const STAND = (x) => x - 70;   // where the hero stands at a station
 // the hero's walk: [t0, t1, target x] in sequence
 const WALKS = [
-  [Ts('c1') - 0.2, Te('c1') + 0.1, STAND(ST.aisle)],
-  [Ts('c3') + 1.0, Ts('s1a') + 0.6, STAND(ST.capex)],
-  [Ts('s1d') + 1.6, Ts('s2a') + 1.0, STAND(ST.upg)],
-  [Ts('s2d') + 2.0, Ts('e1') + 1.0, STAND(ST.proof)],
-  [Ts('e4') + 0.6, Ts('a1') + 0.8, STAND(ST.doubt)],
-  [Ts('a4') + 1.9, Ts('q') + 0.4, STAND(ST.end)],
+  [Ts('l2') + 0.6, Ts('s1a') + 0.5, STAND(ST.capex)],
+  [Ts('s1d') + 0.4, Ts('s2a') + 0.9, STAND(ST.upg)],
+  [Ts('s2d') + 1.8, Ts('e1') + 0.9, STAND(ST.proof)],
+  [Ts('e4') + 0.5, Ts('a1') + 0.8, STAND(ST.doubt)],
+  [Ts('a4') + 0.1, Ts('q') + 0.3, STAND(ST.end)],
 ];
 function heroXat(t) {
   let v = STAND(ST.fork), prev = v;
@@ -24,8 +23,8 @@ function heroState() {
   return { x, moving: clamp(Math.abs(sp) / 110), phase: x * 0.046 };
 }
 // camera zoom keys: [t, zoom]; eased over 1s from each key time
-const ZKEYS = [[0, 1.0], [Ts('hook') + 2.4, 1.1], [Ts('c1'), 1.0], [Ts('s1b') - 0.3, 1.1], [Ts('s1c'), 1.0], [Ts('s2c') - 0.2, 1.1], [Ts('s2d'), 1.0],
-  [Ts('e2') - 0.2, 1.16], [Ts('e3') - 0.2, 1.0], [Ts('a2') - 0.3, 1.14], [Ts('a3'), 1.0], [Ts('q') - 0.2, 0.84]];
+const ZKEYS = [[0, 1.0], [Wt('h2', 3) - 0.2, 1.3], [Ts('l1'), 1.0], [Ts('s1b') - 0.3, 1.2], [Ts('s1c'), 1.0], [Ts('s2b') + 0.2, 1.22], [Ts('s2d'), 1.0],
+  [Ts('e2') - 0.2, 1.28], [Ts('e3') - 0.2, 1.0], [Ts('a2') - 0.3, 1.3], [Ts('a3') - 0.6, 1.0], [Ts('a3') + 0.5, 1.2], [Ts('a4') - 0.2, 1.0], [Ts('q') - 0.2, 0.84]];
 const LEADKEYS = [[0, 150], [Ts('e1') - 1.6, 240], [Ts('a1') - 0.8, 150]];   // the camera looks this far ahead of the hero
 const camLead = () => keyTrack(LEADKEYS, 1.2);
 

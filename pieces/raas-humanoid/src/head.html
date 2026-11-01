@@ -34,15 +34,14 @@ const Wt = (id, n) => { const w = VL(id).words; return w[Math.min(Math.max(0, n)
 
 const ERA_LIST = [[0, DURATION, () => sceneAll()]];
 const SEG = [   // shots: [key, first line, last line, title]
-  ['fork', 'hook', 'hook', 'the hero stands between Buy and Rent'],
-  ['raas', 'c1', 'c3', 'the aisle: what a humanoid is, what RaaS is'],
-  ['capex', 's1a', 's1b', 'buying: cash leaves, value falls'],
-  ['opex', 's1c', 's1d', 'renting: a small monthly cost, no lock-in'],
-  ['upgrade', 's2a', 's2d', 'obsolescence: the vendor swaps the model'],
-  ['proof', 'e1', 'e4', 'GXO: Georgia, 100,000 totes, NC and TN'],
-  ['doubt', 'a1', 'a2', 'the misconception and zero in production'],
-  ['payoff', 'a3', 'a4', 'unproven payback means rent first'],
-  ['close', 'q', 'q', 'the fork again'],
+  ['hook', 'h1', 'l2', '45 pilots, zero in production, so why rent?'],
+  ['capex', 's1a', 's1b', 'reason one: buying locks cash in a falling asset'],
+  ['opex', 's1c', 's1d', 'reason one: renting is monthly, no long commitment'],
+  ['upgrade', 's2a', 's2d', 'reason two: the next model ships, Digit 4 to Digit 5'],
+  ['proof', 'e1', 'e4', 'GXO: Georgia, 100,000 totes, two more sites'],
+  ['doubt', 'a1', 'a2', 'no return yet, production two years out'],
+  ['payoff', 'a3', 'a4', 'renting is a test, not a bet'],
+  ['close', 'q', 'q', 'the fork again, then the subscribe card'],
 ];
 const SHOT_T0 = SEG.map(([, a], i) => (i === 0 ? 0 : Math.max(0.5, Ts(a) - 0.3)));
 const TIMELINE = {
@@ -53,14 +52,14 @@ const TIMELINE = {
   morphs: [],
   cues: {},
   acts: [
-    { name: '1 Hook',     role: 'build',   t0: 0, t1: SHOT_T0[2] },
-    { name: '2 Money',    role: 'journey', t0: SHOT_T0[2], t1: SHOT_T0[5] },
-    { name: '3 Proof',    role: 'peak',    t0: SHOT_T0[5], t1: SHOT_T0[6] },
-    { name: '4 Doubt',    role: 'silence', t0: SHOT_T0[6], t1: Te('a2') + 0.55 },
+    { name: '1 Hook',     role: 'build',   t0: 0, t1: SHOT_T0[1] },
+    { name: '2 Reasons',  role: 'journey', t0: SHOT_T0[1], t1: SHOT_T0[4] },
+    { name: '3 Proof',    role: 'peak',    t0: SHOT_T0[4], t1: SHOT_T0[5] },
+    { name: '4 Doubt',    role: 'silence', t0: SHOT_T0[5], t1: Te('a2') + 0.55 },
     { name: '5 Payoff',   role: 'gift',    t0: Te('a2') + 0.55, t1: Te('a4') },
     { name: '6 Question', role: 'goodbye', t0: Te('a4'), t1: DURATION },
   ],
-  board: SEG.map(([key, a, b, title], i) => ({ t: (Ts(a) + Te(b)) / 2, title, sound: ['low pad, a question mark chime', 'pad rises, soft sweep on the card', 'cash whooshes out, a low sub', 'pad lightens, clicks per month', 'steps blip up one by one, a swap slide', 'fuller pad, a click per tote', 'pad drops out to silence', 'ONE loud hit on the tipped scale', 'pad resolves'][i], next: ['walks into the aisle', 'walks to the vault', 'the cash stays', 'walks to the upgrade steps', 'walks to Georgia', 'walks to the doubt', 'the scale rises', 'walks back to the fork', 'loops'][i] })),
+  board: SEG.map(([key, a, b, title], i) => ({ t: (Ts(a) + Te(b)) / 2, title, sound: ['low pad, a slam on the zero', 'cash whoosh, a low sub', 'pad lightens, clicks per month', 'steps blip up, a swap slide', 'fuller pad, a click per tote', 'pad drops out to silence', 'ONE loud hit, then a flat chord', 'pad resolves, a chime on the card'][i], next: ['walks to the vault', 'the cash stays', 'walks to the upgrade steps', 'walks to Georgia', 'walks to the doubt', 'the scale rises', 'walks back to the fork', 'subscribe card'][i] })),
   narration: VOICE.lines.map((l) => ({ t0: l.t0, t1: l.t1, text: l.text })),
 };
 window.TIMELINE = TIMELINE;

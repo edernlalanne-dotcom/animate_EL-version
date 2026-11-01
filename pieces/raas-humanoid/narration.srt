@@ -1,83 +1,83 @@
 1
-00:00:00,800 --> 00:00:04,815
-Why do companies rent expensive humanoid robots instead of buying them?
+00:00:00,800 --> 00:00:04,340
+GXO ran 45 humanoid robot pilots.
 
 2
-00:00:05,315 --> 00:00:09,135
-Humanoid robots are two-legged machines built for human spaces.
+00:00:04,590 --> 00:00:07,598
+Its CEO says zero go into production this year.
 
 3
-00:00:09,485 --> 00:00:13,790
-Companies rent them through Robotics as a Service, or RaaS.
+00:00:08,398 --> 00:00:10,707
+So why do companies still rent them?
 
 4
-00:00:14,140 --> 00:00:17,297
-RaaS is a subscription model for leasing robotic labor.
+00:00:11,007 --> 00:00:14,210
+Two reasons. The second one surprises people.
 
 5
-00:00:17,797 --> 00:00:21,413
-First, companies avoid paying huge cash outlays upfront.
+00:00:14,910 --> 00:00:17,912
+One. Buying locks your cash up front.
 
 6
-00:00:21,713 --> 00:00:25,319
-Purchasing hardware locks up capital in depreciating assets.
+00:00:18,062 --> 00:00:20,526
+It sits in a machine that loses value.
 
 7
-00:00:25,619 --> 00:00:29,087
-Renting converts robotic labor into an operating expense.
+00:00:21,026 --> 00:00:23,555
+Rent instead, and you pay monthly.
 
 8
-00:00:29,387 --> 00:00:33,103
-Businesses get cutting-edge physical AI without long commitments.
+00:00:23,705 --> 00:00:25,837
+And you avoid long commitments.
 
 9
-00:00:33,603 --> 00:00:37,117
-Second, renting dodges rapid hardware obsolescence.
+00:00:26,437 --> 00:00:30,243
+Two. The robot you buy is old when the next model ships.
 
 10
-00:00:37,417 --> 00:00:39,438
-Humanoid designs keep upgrading.
+00:00:30,543 --> 00:00:34,517
+Agility unveiled Digit 5 in September 2026.
 
 11
-00:00:39,738 --> 00:00:42,834
-A purchased robot quickly becomes outdated technology.
+00:00:34,717 --> 00:00:37,721
+Own a Digit 4, and you own the old model.
 
 12
-00:00:43,134 --> 00:00:46,713
-Under rental contracts, vendors swap old models for new ones.
+00:00:38,121 --> 00:00:42,310
+GXO's new sites start with Digit 4, then switch to Digit 5.
 
 13
-00:00:47,213 --> 00:00:52,345
-In June 2024, GXO deployed Digit humanoids in Flowery Branch, Georgia.
+00:00:42,910 --> 00:00:46,975
+Since June 2024, rented Digit robots have worked in Georgia.
 
 14
-00:00:52,645 --> 00:00:57,943
-Those rented bipedal robots moved over 100,000 totes across live operations.
+00:00:47,125 --> 00:00:50,289
+They moved over 100,000 totes.
 
 15
-00:00:58,243 --> 00:01:03,058
-In October 2026, GXO announced rentals in North Carolina and Tennessee.
+00:00:50,689 --> 00:00:54,878
+GXO announced two more sites, in North Carolina and Tennessee.
 
 16
-00:01:03,358 --> 00:01:05,957
-Those deployments start in early 2027.
+00:00:55,028 --> 00:00:57,335
+They start in early 2027.
 
 17
-00:01:06,657 --> 00:01:10,745
-Some think humanoids are already cheaper than workers and fully autonomous.
+00:00:58,035 --> 00:01:01,358
+But GXO has not yet seen a return from humanoids.
 
 18
-00:01:11,445 --> 00:01:16,714
-In 2026, GXO's CEO said zero warehouse humanoids would reach production.
+00:01:01,858 --> 00:01:04,685
+Its CEO puts production about two years away.
 
 19
-00:01:18,014 --> 00:01:22,545
-Companies rent humanoids because financial payback at scale remains unproven.
+00:01:05,985 --> 00:01:08,636
+So renting is not a bet on robots.
 
 20
-00:01:22,845 --> 00:01:27,167
-Renting lets firms test automation while shifting maintenance risks to vendors.
+00:01:08,886 --> 00:01:10,281
+It is a test.
 
 21
-00:01:27,867 --> 00:01:31,015
-Would you rent or buy a robot to do your job?
+00:01:10,881 --> 00:01:12,735
+Would you rent, or buy?

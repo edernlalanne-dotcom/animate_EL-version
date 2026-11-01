@@ -45,8 +45,8 @@ function stationUpgrade(X, hx) {
     const sT = Ts('s2c') + 0.9, sd = dropIn(sT, 260, { k: 150, damp: 0.45 });
     if (TT > sT - 0.02 && swap < 0.4) {
       const sx = px - 20, sy = padY + 70;
-      glow(PAL.red, 22, () => isoPanelY(sx - 80, sy, 20 + sd, 160, 62, 8, { col: '#7a1f2c', r: 8, edge: PAL.red, ew: 2.2 }));
-      isoText(panelFaceY(sx - 80, sy, 20 + sd, 160, 62, 8), 'OUTDATED', 80, 41, 31, { align: 'center', color: '#ffe3e6' });
+      glow(PAL.red, 22, () => isoPanelY(sx - 80, sy, 120 + sd, 160, 62, 8, { col: '#7a1f2c', r: 8, edge: PAL.red, ew: 2.2 }));
+      isoText(panelFaceY(sx - 80, sy, 120 + sd, 160, 62, 8), 'OUTDATED', 80, 41, 31, { align: 'center', color: '#ffe3e6' });
     }
   }
   // ---- s2d: the vendor swaps the model: the old pad slides out, a new robot rides in
@@ -59,6 +59,6 @@ function stationUpgrade(X, hx) {
   const vA = popS2(Ts('s2d') + 0.1);
   if (vA > 0.02) {
     const f = groundFace(X + 230, -70, 0), s = Math.min(1, vA);
-    ctx.save(); ctx.globalAlpha = s; faceRR(f, 0, 0, 180, 52, 10, { fill: withA('#06132a', 0.85), stroke: PAL.teal, w: 2.5 }); isoText(f, 'VENDOR SWAP', 90, 35, 25, { align: 'center', color: PAL.teal, glow: PAL.teal }); ctx.restore();
+    ctx.save(); ctx.globalAlpha = s; faceRR(f, -20, 0, 220, 52, 10, { fill: withA('#06132a', 0.85), stroke: PAL.teal, w: 2.5 }); isoText(f, 'SWITCH TO DIGIT 5', 90, 35, 21, { align: 'center', color: PAL.teal, glow: PAL.teal }); ctx.restore();
   }
 }

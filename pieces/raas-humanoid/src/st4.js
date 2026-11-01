@@ -19,7 +19,7 @@ function stationProof(X, hx) {
     isoPanelY(mx, my, mz, 520, 300, 12, { col: '#0c2c52', r: 12, edge: withA(PAL.teal, 0.6), ew: 2 });
     const f = panelFaceY(mx, my, mz, 520, 300, 12);
     facePath(f, US.map(([lo, la]) => mapUV(lo, la)), true); ctx.fillStyle = withA(PAL.teal, 0.28); ctx.fill(); hair(PAL.teal, 2.2); ctx.stroke();
-    mapPin(f, 'GA', Wt('e1', 5), PAL.amber, 'GA', true);
+    mapPin(f, 'GA', Wt('e1', 9), PAL.amber, 'GA', true);
     // arcs from GA to NC and TN, then their pins
     const e3 = Ts('e3') + 0.5;
     for (const [k, col, lbl, dt] of [['NC', PAL.teal, 'NC', 0], ['TN', PAL.teal, 'TN', 0.45]]) {
@@ -74,22 +74,21 @@ function stationDoubt(X, hx) {
     const cx = X - 120, cy = -230, w = 300, h = 210, z = 10 - (1 - Math.min(1, cA)) * 260;
     isoPanelY(cx, cy, z, w, h, 12, { col: '#0d2f55', r: 12, edge: withA(PAL.amber, 0.7), ew: 2 });
     const f = panelFaceY(cx, cy, z, w, h, 12);
-    isoText(f, 'COST PER HOUR', 16, 30, 20, { color: PAL.textD, font: ISOMONO });
-    faceRR(f, 50, 70, 70, h - 100, 6, { fill: withA(PAL.teal, 0.55), stroke: PAL.teal, w: 2 }); faceRR(f, 180, 100, 70, h - 130, 6, { fill: withA(PAL.amber, 0.55), stroke: PAL.amber, w: 2 });
-    isoText(f, 'ROBOT', 85, h - 10, 17, { align: 'center', color: PAL.text, font: ISOMONO }); isoText(f, 'HUMAN', 215, h - 10, 17, { align: 'center', color: PAL.text, font: ISOMONO });
-    isoText(f, '?', 85, 112, 44, { align: 'center', color: '#fff' });
+    isoText(f, 'RETURN ON ROBOTS', 16, 30, 20, { color: PAL.textD, font: ISOMONO });
+    faceRR(f, 50, 70, 70, h - 100, 6, { fill: withA(PAL.teal, 0.55), stroke: PAL.teal, w: 2 }); faceRR(f, 180, 100, 70, h - 130, 6, { stroke: PAL.amber, w: 2 });
+    isoText(f, 'SPENT', 85, h - 10, 17, { align: 'center', color: PAL.text, font: ISOMONO }); isoText(f, 'RETURN', 215, h - 10, 17, { align: 'center', color: PAL.text, font: ISOMONO });
     const xq = smoothstep(TT, Wt('a1', 6), Wt('a1', 6) + 0.35);
-    if (xq > 0) glow(PAL.red, 24, () => { faceLine(f, [[34, 50], [34 + 232 * xq, 50 + 140 * xq]], PAL.red, 11); faceLine(f, [[266, 50], [266 - 232 * xq, 50 + 140 * xq]], PAL.red, 11); });
+    if (xq > 0) glow(PAL.red, 24, () => { faceLine(f, [[170, 90], [170 + 100 * xq, 90 + 100 * xq]], PAL.red, 11); faceLine(f, [[270, 90], [270 - 100 * xq, 90 + 100 * xq]], PAL.red, 11); });
   }
   // a2: the zero
-  const zA = popS2(Ts('a2') + 0.45) * (1 - smoothstep(TT, Ts('a3') + 0.0, Ts('a3') + 0.5));
+  const zA = popS2(Ts('a2') + 0.2) * (1 - smoothstep(TT, Te('a2') + 0.2, Te('a2') + 0.7));
   if (zA > 0.02) {
     const zx = X - 100, zy = -240, z = 10 - (1 - Math.min(1, zA)) * 280;
-    glow(PAL.red, 26, () => isoPanelY(zx, zy, z, 260, 230, 12, { col: '#2a0f22', r: 12, edge: PAL.red, ew: 2.5 }));
+    glow(PAL.amber, 26, () => isoPanelY(zx, zy, z, 260, 230, 12, { col: '#2a1a08', r: 12, edge: PAL.amber, ew: 2.5 }));
     const f = panelFaceY(zx, zy, z, 260, 230, 12);
-    isoText(f, '0', 130, 150, 190, { align: 'center', color: PAL.red, glow: PAL.red });
-    isoText(f, 'HUMANOIDS IN PRODUCTION', 130, 188, 17, { align: 'center', color: PAL.text, font: ISOMONO });
-    isoText(f, 'GXO, 2026  ·  ~20,000 ROBOTS PLANNED', 130, 212, 13, { align: 'center', color: PAL.textD, font: ISOMONO });
+    isoText(f, '~2', 130, 150, 150, { align: 'center', color: PAL.amber, glow: PAL.amber });
+    isoText(f, 'YEARS TO PRODUCTION', 130, 188, 18, { align: 'center', color: PAL.text, font: ISOMONO });
+    isoText(f, 'GXO CEO ESTIMATE, 2026', 130, 212, 14, { align: 'center', color: PAL.textD, font: ISOMONO });
   }
   // a3: the scale: unproven ROI (heavy, red) against risk shift (light, teal), tipping to rent
   const sA = popS2(Ts('a3') + 0.1) * (1 - smoothstep(TT, Ts('a4') - 0.1, Ts('a4') + 0.4));
@@ -100,22 +99,16 @@ function stationDoubt(X, hx) {
       (px, py, pz) => { glow(PAL.red, 14, () => isoBox(px - 28, py - 22, pz, 56, 44, 40, { col: '#8a2432', r: 6 })); isoText(groundFace(px - 28, py - 22, pz + 40), 'ROI?', 28, 28, 22, { align: 'center', color: '#fff' }); },
       (px, py, pz) => { glow(PAL.teal, 14, () => isoBox(px - 24, py - 18, pz, 48, 36, 22, { col: '#1b9aa0', r: 6 })); });
     ctx.restore();
-    worldTag([X + 10, -110, 235], 'UNPROVEN ROI', PAL.red, 26); worldTag([X + 250, -110, 235], 'RISK SHIFT', PAL.teal, 26);
+    worldTag([X + 10, -110, 150], 'UNPROVEN ROI', PAL.red, 26); worldTag([X + 250, -110, 150], 'RISK SHIFT', PAL.teal, 26);
   }
-  // a4: risk icons fly from the hero to the vendor kiosk
-  const vA = popS2(Ts('a4') - 0.1);
+  // a4: a TEST stamp lands beside the scale
+  const vA = popS2(Ts('a4') - 0.05);
   if (vA > 0.02) {
-    const vx = X + 300, vy = -60, s = Math.min(1, vA);
-    isoBox(vx, vy, 0, 130 * s, 110 * s, 90 * s, { col: '#175c78', r: 8 });
-    const vf = faceOf([vx, vy + 110 * s, 90 * s], [1, 0, 0], [0, 0, -1]);
-    isoText(vf, 'VENDOR', 65 * s, 38 * s, 24 * s, { align: 'center', color: PAL.text, font: ISOMONO });
-    glow(PAL.teal, 12, () => faceRR(vf, 20 * s, 50 * s, 90 * s, 22 * s, 6, { fill: withA(PAL.teal, 0.8), stroke: false }));
-    isoText(vf, 'MAINTENANCE', 65 * s, 66 * s, 13 * s, { align: 'center', color: '#032a2c', font: ISOMONO });
-    for (let i = 0; i < 3; i++) {
-      const t0 = Ts('a4') + 0.5 + i * 0.45, q = (TT - t0) / 0.9; if (q <= 0 || q >= 1) continue;
-      const e = EZ.io(q), p = [lerp(hx, vx + 65, e), lerp(0, vy + 55, e), lerp(150, 120, e) + Math.sin(e * Math.PI) * 110], c = isoP(p);
-      glow(PAL.red, 14, () => { ctx.beginPath(); ctx.moveTo(c[0], c[1] - 20); ctx.lineTo(c[0] + 18, c[1] + 12); ctx.lineTo(c[0] - 18, c[1] + 12); ctx.closePath(); ctx.fillStyle = PAL.red; ctx.fill(); });
-      ctx.save(); ctx.fillStyle = '#fff'; ctx.font = `800 18px ${SANS}`; ctx.textAlign = 'center'; ctx.fillText('!', c[0], c[1] + 9); ctx.restore();
-    }
+    const vx = X + 300, vy = -90, fall = dropIn(Ts('a4') - 0.05, 300, { k: 200, damp: 0.5 });
+    glow(PAL.teal, 24, () => isoPanelX(vx, vy, 40 + fall, 170, 120, 12, { col: '#0e3d5c', r: 10, edge: PAL.teal, ew: 2.5 }));
+    const f = panelFaceX(vx, vy, 40 + fall, 170, 120, 12);
+    isoText(f, 'TEST', 85, 78, 64, { align: 'center', color: PAL.text, glow: PAL.teal });
+    isoText(f, 'FIRST', 85, 104, 22, { align: 'center', color: PAL.teal, font: ISOMONO });
+    isoCyl(vx + 6, vy + 12, 0, 7, 40 + fall, { col: PAL.steelD }); isoCyl(vx + 6, vy + 158, 0, 7, 40 + fall, { col: PAL.steelD });
   }
 }

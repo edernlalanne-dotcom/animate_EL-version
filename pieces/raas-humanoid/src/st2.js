@@ -36,7 +36,7 @@ function stationMoney(X, hx) {
     faceLine(f, [[30, 52], [30, ch - 30], [cw - 22, ch - 30]], withA('#ffffff', 0.35), 3);
     const p = clamp((TT - cT - 0.2) / 2.2), pts = []; for (let i = 0; i <= 40 * p; i++) { const q = i / 40; pts.push([34 + q * (cw - 70), 62 + (ch - 100) * (1 - Math.exp(-3.1 * q)) * 0.98]); }
     if (pts.length > 1) { glow(PAL.red, 16, () => faceLine(f, pts, PAL.red, 6)); const e = pts[pts.length - 1]; glow(PAL.red, 18, () => faceEll(f, e[0], e[1], 8, 8, { fill: PAL.red })); }
-    isoText(f, 'DEPRECIATION', cw - 20, 62, 21, { color: PAL.red, align: 'right', font: ISOMONO, al: smoothstep(TT, cT + 0.8, cT + 1.2) });
+    isoText(f, 'DEPRECIATION', cw - 20, 62, 21, { color: PAL.red, align: 'right', font: ISOMONO, al: smoothstep(TT, cT + 1.5, cT + 1.9) });
   }
   // ---- the vault
   isoBox(vx, vy, 0, vw, vd, vh, { col: '#2b3f5c', r: 12 });
@@ -49,16 +49,15 @@ function stationMoney(X, hx) {
   const crA = popS2(tOpen - 0.1) * (1 - smoothstep(TT, Ts('s1c') + 0.0, Ts('s1c') + 0.5));
   const dep = smoothstep(TT, Ts('s1b'), Ts('s1b') + 2.4);
   if (crA > 0.02) {
-    const cs = Math.min(1, crA), cx2 = X + 70, cy2 = 30;
+    const cs = Math.min(1, crA), cx2 = X + 60, cy2 = -70;
     ctx.save();
     isoBox(cx2, cy2, 0, 150 * cs, 110 * cs, 100 * cs, { col: mixC('#a86f2a', '#6b6f78', dep), r: 6, l: 0.9 });
     const top = groundFace(cx2, cy2, 100 * cs), cf = faceOf([cx2, cy2 + 110 * cs, 100 * cs], [1, 0, 0], [0, 0, -1]);
     for (const u of [20, 128]) faceLine(cf, [[u * cs, 0], [u * cs, 100 * cs]], withA('#2a1a08', 0.55), 5);
-    isoText(cf, 'HUMANOID', 75 * cs, 44 * cs, 20 * cs, { align: 'center', color: '#f4e2c0', font: ISOMONO });
+    if (cs > 0.97) isoText(cf, 'HUMANOID', 75 * cs, 44 * cs, 20 * cs, { align: 'center', color: '#f4e2c0', font: ISOMONO });
     faceRR(cf, 32 * cs, 54 * cs, 86 * cs, 30 * cs, 5, { fill: withA(PAL.red, 0.9), stroke: false });
-    isoText(cf, '$100K', 75 * cs, 77 * cs, 26 * cs, { align: 'center', color: '#fff' });
+    if (cs > 0.97) isoText(cf, 'PAID', 75 * cs, 77 * cs, 26 * cs, { align: 'center', color: '#fff' });
     ctx.restore();
-    worldTag([cx2 + 75, cy2 + 55, 118], 'ILLUSTRATIVE', PAL.textD, 22);
     // bills arc from the vault door into the crate
     for (let i = 0; i < 10; i++) {
       const t0 = tOpen + 0.3 + i * 0.13, q = (TT - t0) / 0.75;
@@ -80,7 +79,6 @@ function stationMoney(X, hx) {
     glow(PAL.amber, 12, () => faceEll(tp, 33, 47, 6, 6, { fill: PAL.amber }));
   }
   const bA = popS2(Ts('s1c') + 0.3) * (1 - smoothstep(TT, Ts('s1d') - 0.05, Ts('s1d') + 0.35));
-  if (bA > 0.02) worldTag([X + 60, hy + 20, 60], '$8.5K / MO  ILLUSTRATIVE', PAL.amber, 26);
   // ---- s1d: the balance scale, cash against rented AI, settling level
   const sA = popS2(Ts('s1d') + 0.2), fade = 1 - smoothstep(TT, Ts('s2a') - 0.3, Ts('s2a') + 0.4);
   if (sA * fade > 0.02) {

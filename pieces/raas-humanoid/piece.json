@@ -1,11 +1,11 @@
 {
   "name": "raas-humanoid",
   "title": "Buying a $100,000 Humanoid Robot Will Bankrupt You",
-  "format": { "width": 1080, "height": 1920, "fps": 24, "bpm": 120, "duration": 80.0, "frames": 1920 },
+  "format": { "width": 1080, "height": 1920, "fps": 24, "bpm": 120, "duration": 62.0, "frames": 1488 },
   "formats": ["9:16"],
   "storyFormat": "fixed-hero journey, one follow-camera sheet, voice-led",
   "style": "iso3d",
-  "scenes": ["src/world.js", "src/st0.js", "src/st1.js", "src/st2.js", "src/st3.js", "src/st4.js", "src/main.js"],
+  "scenes": ["src/world.js", "src/st0.js", "src/st2.js", "src/st3.js", "src/st4.js", "src/main.js"],
   "voice": { "file": "voice/voice.wav", "music": -14 },
   "review": { "safe": { "top": 240, "bottom": 420, "right": 140 }, "refs": {} }
 }
