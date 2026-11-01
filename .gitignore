@@ -14,3 +14,4 @@ pieces/*/voice/raw/
 pieces/*/voice/*.wav
 pieces/*/voice/*.scratch.wav
 pieces/*/index.html
+promo/*_raw.png
