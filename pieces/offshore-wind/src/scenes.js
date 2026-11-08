@@ -45,6 +45,7 @@ function sceneOpen() {
   const t = TT - E0, len = SC.open[1] - SC.open[0], u = ofEase(t / (len - 0.6)), HY = 720;
   ofBounds(-400, W + 400);
   ofSky(-800, HY, { sunX: W * 0.2 });
+  ofBirds(120, 520, 7);
   ofSeaBack(HY, H + 300);
   // the far shore (left): dark headland that the pull-back reveals
   const sa = 0.25 + 0.75 * u;
@@ -81,6 +82,7 @@ function sceneFound() {
   ofSky(-900, wl, { sunX: W * 0.82 });
   ofSeabed(sb, -400, W + 400, 400);
   ofSeaBack(wl, sb + 2, { glitter: true });
+  ofBubbles(wl + 20, sb - 10, 0, W, 34); ofBirds(60, 230, 5);
   // the installation vessel behind the action: legs on the seabed, hull above the waves
   const vx = 520, deckY = 250, J = ofJackup(vx, deckY, { w: VW, leg: sb - (deckY + 70), legTop: deckY - 300 });
   const crx = vx + CRANE_DX, A = Math.acos(clamp((px - crx) / BOOM, -1, 1)) / DEG;
@@ -105,11 +107,11 @@ function sceneFound() {
   // sea surface laps the vessel, pile and pile top; waves over everything above the seabed
   ofSeaFront(wl, { amp: 12, layers: 2, bottom: sb });
   // cross-section annotation (10.3 - 12.4): the buried length of the pile and the soil it grips
-  const ann = tr(t, 8.4, 9.0) * (1 - tr(t, 9.9, 10.5));
+  const ann = tr(t, 8.4, 8.9) * (1 - tr(t, 9.0, 9.4));
   if (ann > 0) {
     ctx.save(); ctx.globalAlpha = ann; ctx.fillStyle = 'rgba(47,227,255,0.12)'; ctx.fillRect(px - 150, sb, 300, 140); ctx.setLineDash([10, 8]); ctx.strokeStyle = OF.cyan; ctx.lineWidth = 2.5; ctx.strokeRect(px - 150, sb, 300, 140); ctx.setLineDash([]);
     ofDim(px + 190, sb, px + 190, P.pb + 4, 'DRIVEN DEEP', { p: tr(t, 8.5, 9.4), dx: 100, size: 28 });
-    ofChip('SEABED', px - 250, sb + 70, { size: 26 }); ctx.restore();
+    ofChip('SEABED', px + 420, sb + 95, { size: 26 }); ctx.restore();
   }
   if (t > 2 && t < 8.4) { ofChip('MONOPILE', px - 230, 700, { size: 28, a: tr(t, 2.2, 2.8) * (1 - tr(t, 7.8, 8.4)) }); }
   // transition piece and the first tower section (12.6 - 15), seen close up
@@ -123,9 +125,12 @@ function sceneFound() {
   ofCaption(t < 8.4 ? 'THE MONOPILE: A STEEL TUBE' : 'TRANSITION PIECE AND TOWER BASE', { at: t < 8.4 ? 0.8 : 9.2 });
 }
 function camFound(t) {
+  let sh = 0; for (let i = 0; i < F2.hitN; i++) { const d = t - (F2.hit0 + i * F2.hitDt); if (d > 0 && d < 0.5) sh += Math.sin(d * 60) * 5 * Math.exp(-d * 12); }   // a small shake on every hammer blow
   if (t < 2.0) return { z: 1, tx: 0, ty: 330 * (1 - ofEase(t / 1.8)) };
   const u = tr(t, 9.4, 10.4); if (u > 0) return camMix(CAM0, camOf({ z: 1.9, p: [F2.px, 330], to: [F2.px, 620] }), u);
-  return null;
+  const w = tr(t, 4.4, 5.4) * (1 - tr(t, 8.0, 8.8));   // track down to the pile and the seabed while it is driven
+  if (w > 0) { const c = camMix(CAM0, camOf({ z: 1.5, p: [F2.px, 820], to: [F2.px, 650] }), w); return { z: c.z, tx: c.tx, ty: c.ty + sh }; }
+  return Math.abs(sh) > 0.05 ? { z: 1, tx: 0, ty: sh } : null;
 }
 
 // ---------------------------------------------------------------------
@@ -146,13 +151,14 @@ function sceneJack() {
   ofSky(-900, wl, { sunX: W * 0.82 });
   ofSeabed(sb, -400, W + 400, 300);
   ofSeaBack(wl, sb + 2);
+  ofBubbles(wl + 20, sb - 10, 0, W, 30); ofBirds(60, 300, 6);
   foundation(FOUND_X, wl, { y1: sb + 90 });
   const V = ofJackup(J.x, J.deckY, { w: VW, leg: J.leg, legTop: J.deckY - 300 });
   // crane stowed along the deck until the lift (boom up and out)
   const crx = J.x + CRANE_DX; ofCrane(crx, J.deckY, lerp(72, 56, tr(t, 11.5, 14.0)), BOOM, { dir: 1, h: CRANE_H });
   ofSeaFront(wl, { amp: 24, layers: 3, bottom: sb });
   // the contrast: sea level line, air gap, stable platform
-  const gap = tr(t, 9.0, 11.0);
+  const gap = tr(t, 9.0, 11.0) * (1 - tr(t, 12.0, 12.6));
   if (gap > 0) {
     ctx.save(); ctx.globalAlpha = gap; ctx.setLineDash([14, 10]); ctx.strokeStyle = OF.cyan; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.moveTo(J.x - 520, wl); ctx.lineTo(J.x + 520, wl); ctx.stroke(); ctx.setLineDash([]); ctx.restore();
     ofDim(J.x - 400, wl, J.x - 400, J.bot, 'ABOVE THE WAVES', { p: tr(t, 10.0, 11.4), dx: -150, size: 28 });
@@ -165,7 +171,9 @@ function sceneJack() {
 }
 function camJack(t) {
   const u = tr(t, 5.2, 7.0) * (1 - tr(t, 8.0, 9.4));
-  return u > 0 ? camMix(CAM0, camOf({ z: 1.35, p: [F3.x1 - 100, 790], to: [900, 700] }), u) : null;
+  if (u > 0) return camMix(CAM0, camOf({ z: 1.35, p: [F3.x1 - 100, 790], to: [900, 700] }), u);
+  const e = tr(t, 12.4, 16.0);   // a slow push onto the stable platform for the closing hold
+  return e > 0 ? camMix(CAM0, camOf({ z: 1.3, p: [F3.x1 + 200, 440], to: [960, 540] }), e) : null;
 }
 
 // ---------------------------------------------------------------------
@@ -202,6 +210,7 @@ function sceneLift() {
   ofSky(-1400, wl, { sunX: W * 0.82 });
   ofSeabed(sb, -400, W + 400, 300);
   ofSeaBack(wl, sb + 2);
+  ofBubbles(wl + 20, sb - 10, 0, W, 30); ofBirds(-300, 300, 7);
   foundation(FOUND_X, wl, { y1: sb + 90 });
   const V = ofJackup(F4.x, F4.deck, { w: VW, leg: sb - (F4.deck + 70), legTop: F4.deck - 300 });
   const hk = hookAt(t), crx = F4.x + CRANE_DX;
@@ -266,6 +275,7 @@ function sceneBlade() {
   ofSky(-1400, wl, { sunX: W * 0.82 });
   ofSeabed(sb, -400, W + 400, 300);
   ofSeaBack(wl, sb + 2);
+  ofBubbles(wl + 20, sb - 10, 0, W, 30); ofBirds(-200, 330, 7);
   foundation(FOUND_X, wl, { y1: sb + 90 });
   ofJackup(F5.x, F5.deck, { w: VW, leg: sb - (F5.deck + 70), legTop: F5.deck - 300 });
   const gust = windAt(t), sway = Math.sin(t * 3.1) * 0.065 * Math.max(0, gust - 0.36) * 2.2 * (1 - tr(t, 10.8, 12.2));
@@ -317,6 +327,8 @@ function sceneBlade() {
   badge('Too windy? We wait.', 8.2, 11.4);
 }
 function camBlade(t) {
+  const f = tr(t, 2.8, 4.6) * (1 - tr(t, 7.8, 9.0));   // follow the blade up
+  if (f > 0) return camMix(CAM0, camOf({ z: 1.45, p: [1330, 300], to: [960, 520] }), f);
   const u = tr(t, 10.8, 11.7) * (1 - tr(t, 13.6, 14.4));
   return u > 0 ? camMix(CAM0, camOf({ z: 2.3, p: [F5.hub[0] - 70, F5.hub[1] + 6], to: [960, 540] }), u) : null;
 }
@@ -379,9 +391,8 @@ function camFarm(t) {
 //  7. the subscribe end card: the user's own picture, 2s
 // ---------------------------------------------------------------------
 function sceneEnd() {
-  const t = TT - E0, a = clamp(t / 0.15);
-  ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H);
-  ctx.globalAlpha = a;
+  const t = TT - E0;
+  ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H);   // a hard cut onto the card
   if (!drawAsset('subscribe.png', 0, 0, W, H, { fit: 'contain' })) { ctx.fillStyle = OF.yellow; ctx.font = `700 46px ${OFONT}`; ctx.textAlign = 'center'; ctx.fillText('assets/subscribe.png is missing', W / 2, H / 2); }
   ctx.restore();
 }

@@ -57,6 +57,23 @@ function ofSeaFront(yh, o = {}) {
     ctx.beginPath(); ctx.moveTo(P[0][0], P[0][1]); for (const p of P) ctx.lineTo(p[0], p[1]); ctx.strokeStyle = `rgba(150,215,255,${0.18 + 0.05 * k})`; ctx.lineWidth = 2; ctx.stroke();
   }
 }
+// ---- life in the frame: rising bubbles underwater, birds across the sky (deterministic, from TT)
+function ofBubbles(y0, y1, x0, x1, n) {   // bubbles rise from y1 (low) to y0 (high)
+  ctx.save(); ctx.lineWidth = 1.5;
+  for (let i = 0; i < n; i++) {
+    const per = 5 + 5 * ofRand('bbp', i), u = mod(TT / per + ofRand('bbo', i), 1), x = x0 + (x1 - x0) * ofRand('bbx', i) + Math.sin(TT * 1.4 + i) * 9, y = y1 + (y0 - y1) * u, r = 2 + 4 * ofRand('bbr', i);
+    ctx.strokeStyle = `rgba(190,235,255,${0.5 * Math.sin(u * Math.PI)})`; ctx.beginPath(); ctx.arc(x, y, r, 0, TAU); ctx.stroke();
+  }
+  ctx.restore();
+}
+function ofBirds(y0, y1, n) {
+  ctx.save(); ctx.lineWidth = 2.2; ctx.lineCap = 'round';
+  for (let i = 0; i < n; i++) {
+    const sp = 50 + 50 * ofRand('bds', i), x = mod(ofRand('bdx', i) * (W + 300) + TT * sp, W + 300) - 150, y = y0 + (y1 - y0) * ofRand('bdy', i) + Math.sin(TT * 0.9 + i * 2) * 14, w = 9 + 5 * ofRand('bdw', i), fl = Math.sin(TT * 7 + i * 3) * w * 0.55;
+    ctx.strokeStyle = 'rgba(18,28,44,0.75)'; ctx.beginPath(); ctx.moveTo(x - w, y - fl * 0.6); ctx.quadraticCurveTo(x - w * 0.4, y - fl - 3, x, y); ctx.quadraticCurveTo(x + w * 0.4, y - fl - 3, x + w, y - fl * 0.6); ctx.stroke();
+  }
+  ctx.restore();
+}
 // ---- seabed cutaway: strata, pebbles. x0..x1 across, top surface at y
 function ofSeabed(y, x0, x1, depth = 260) {
   const top = (x) => y + Math.sin(x * 0.01) * 6 + Math.sin(x * 0.031) * 3;

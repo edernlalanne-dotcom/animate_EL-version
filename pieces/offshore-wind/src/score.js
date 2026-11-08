@@ -3,8 +3,12 @@
   const S = (k, dt = 0) => SC[k][0] + dt;
   to = 'm';
   const bed = [['D2', 'A2', 'D3'], ['D2', 'A2', 'F3'], ['A1', 'E2', 'A2'], ['D2', 'A2', 'D3'], ['F2', 'C3', 'A3'], ['D2', 'A2', 'Fs4']];
-  ['open', 'found', 'jack', 'lift', 'blade', 'farm'].forEach((k, i) => pad(SC[k][0], SC[k][1] + 0.4, bed[i], 0.035, { type: 'triangle', cut: 700 + i * 140, att: 0.5, rel: 0.5, send: 0.4 }));
-  for (let t = 0.5; t < SC.farm[1]; t += BEAT * 2) bass(t, nz(['D2', 'D2', 'A1', 'D2'][Math.floor(t / (BEAT * 2)) % 4]), 0.06);
+  const HIT = S('jack', 9.4);   // the hull clears the waves: the pad drops out just before it, so the hit lands on silence
+  ['open', 'found', 'jack', 'lift', 'blade', 'farm'].forEach((k, i) => {
+    const o = { type: 'triangle', cut: 700 + i * 140, att: 0.5, rel: 0.5, send: 0.4 };
+    if (k === 'jack') { pad(SC[k][0], HIT - 1.0, bed[i], 0.035, o); pad(HIT + 0.05, SC[k][1] + 0.4, bed[i], 0.035, { ...o, att: 0.2 }); } else pad(SC[k][0], SC[k][1] + 0.4, bed[i], 0.035, o);
+  });
+  for (let t = 0.5; t < SC.farm[1]; t += BEAT * 2) if (!(t > HIT - 1.2 && t < HIT + 0.05)) bass(t, nz(['D2', 'D2', 'A1', 'D2'][Math.floor(t / (BEAT * 2)) % 4]), 0.06);
   // the payoff chord when the farm opens out
   pad(S('farm', 3.0), SC.farm[1] + 0.5, ['D3', 'A3', 'D4', 'Fs4', 'A4'], 0.05, { cut: 2000, att: 0.8, rel: 0.6, send: 0.5 });
   to = 's';
