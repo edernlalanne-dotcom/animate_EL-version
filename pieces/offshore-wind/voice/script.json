@@ -1,0 +1,84 @@
+{
+ "lead": 0.3,
+ "tail": 1,
+ "lines": [
+  {
+   "id": "open1",
+   "text": "That's an offshore wind turbine. Over 200 meters tall, and miles from shore.",
+   "file": "open1.mp3",
+   "after": 0.25
+  },
+  {
+   "id": "open2",
+   "text": "So how do engineers build something this massive, in the middle of the sea?",
+   "file": "open2.mp3",
+   "after": 1.151
+  },
+  {
+   "id": "found1",
+   "text": "It starts underwater. A steel tube called a monopile gets driven deep into the seabed.",
+   "file": "found1.mp3",
+   "after": 2.025
+  },
+  {
+   "id": "found2",
+   "text": "Then a transition piece slides on top, and the first tower section bolts to it.",
+   "file": "found2.mp3",
+   "after": 1.819
+  },
+  {
+   "id": "jack1",
+   "text": "Next comes a special ship. It parks, then lowers its steel legs to the seabed.",
+   "file": "jack1.mp3",
+   "after": 1.333
+  },
+  {
+   "id": "jack2",
+   "text": "Then it lifts its whole hull above the waves. Now the crane stands on solid ground, not a rocking boat.",
+   "file": "jack2.mp3",
+   "after": 3.137
+  },
+  {
+   "id": "tower1",
+   "text": "The crane picks up the tower sections one at a time, and each flange gets aligned and bolted down.",
+   "file": "tower1.mp3",
+   "after": 3.15
+  },
+  {
+   "id": "tower2",
+   "text": "Then the nacelle, the engine room of the turbine, goes up on top.",
+   "file": "tower2.mp3",
+   "after": 1.231
+  },
+  {
+   "id": "blade1",
+   "text": "Blades are the delicate part. Each one is lifted alone, toward the hub, slowly.",
+   "file": "blade1.mp3",
+   "after": 1.042
+  },
+  {
+   "id": "blade2",
+   "text": "A strong gust can stop the whole job. So crews wait for a calm weather window.",
+   "file": "blade2.mp3",
+   "after": 3.639
+  },
+  {
+   "id": "power1",
+   "text": "Once all three blades are on, the turbine is built. Then come the cables.",
+   "file": "power1.mp3",
+   "after": 0.3
+  },
+  {
+   "id": "power2",
+   "text": "Power runs along the seabed to a substation, and from there to shore.",
+   "file": "power2.mp3",
+   "after": 0.3
+  },
+  {
+   "id": "end",
+   "text": "A ship that stands on the seabed. That is how you build in the sea. Subscribe for more.",
+   "file": "end.mp3",
+   "after": 0.3
+  }
+ ]
+}

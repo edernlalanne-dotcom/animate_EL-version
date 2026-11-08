@@ -31,7 +31,7 @@ const SC = {
 if (typeof VOICE !== 'undefined') {
   const L = Object.fromEntries(VOICE.lines.map((l) => [l.id, l]));
   const at = (id, pre = 0.0) => +(L[id].t0 - pre).toFixed(3);
-  const starts = [0, at('found1', 0.5), at('jack1', 0.5), at('tower1', 0.5), at('blade1', 0.5), at('power1', 0.5)];
+  const starts = [0, at('found1', 0.4), at('jack1', 1.0), at('tower1', 2.4), at('blade1', 0.8), at('power1', 0.6)];
   const endAll = L.end.t1 + 0.6;
   const keys = ['open', 'found', 'jack', 'lift', 'blade', 'farm'];
   keys.forEach((k, i) => { SC[k] = [starts[i], i + 1 < keys.length ? starts[i + 1] : endAll]; });

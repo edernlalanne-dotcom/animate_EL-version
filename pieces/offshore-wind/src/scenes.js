@@ -3,7 +3,7 @@
 //  Each scene reads local time t = TT - E0 (seconds since its cut). Hard cuts between scenes (BRIDGES = []).
 //  Shared world: waterline per scene, jack-up vessel w=700 with the crane on the stern (right), foundation to its right.
 // =====================================================================
-const FACT = { tip: '250 m+', blade: '100 m+', };   // checked against sources before the build (see brief.md)
+const FACT = { tip: 'OVER 200 m TALL', blade: '100 m+' };   // rotors reach 236 m on the Vestas V236 (vestas.com); tip height then exceeds 200 m   // checked against sources before the build (see brief.md)
 const tr = (t, a, b) => ofEase(seg(t, a, b));
 const TOWER_H = 187, VW = 700, CRANE_DX = 190, CRANE_H = 190, BOOM = 620;
 const FOUND_X = 1560;
@@ -68,7 +68,7 @@ function sceneOpen() {
 // ---------------------------------------------------------------------
 //  2. building the underwater foundation (a cutaway: sky, sea, seabed in one frame)
 // ---------------------------------------------------------------------
-const F2 = { wl: 380, sb: 900, px: 960, plen: 640, hit0: 4.9, hitN: 9, hitDt: 0.6 };
+const F2 = { wl: 380, sb: 900, px: 960, plen: 640, hit0: 4.9, hitN: 7, hitDt: 0.6 };
 function f2pile(t) {
   // bottom y of the pile: lowered (1.8-4.8), then driven in with a hammer blow every 0.6s (4.9-10.3)
   let pb = lerp(230, F2.sb - 2, tr(t, 1.8, 4.8)), pen = 0;
@@ -95,7 +95,7 @@ function sceneFound() {
   if (t < F2.hit0 + 1.6) ofHook(px, C.tip[1], hookY);
   // the hammer on the pile top, with a hit every 0.6s
   const hs = tr(t, F2.hit0 - 0.3, F2.hit0 + 0.2);
-  if (hs > 0 && t < 10.6) {
+  if (hs > 0 && t < 9.6) {
     const ph = mod(t - F2.hit0, F2.hitDt) / F2.hitDt, lift = t < F2.hit0 ? 90 * (1 - hs) : 34 * Math.sin(Math.min(ph, 1) * Math.PI) ** 0.6 * (1 - ph * 0.0);
     const hy = topY - 100 - lift * (ph < 0.5 ? 1 : 0.2);
     ofRect(px - 44, hy, 88, 74, '#ffd24d', '#c78d08', { line: 'rgba(0,0,0,0.4)' }); ofRect(px - 20, hy - 30, 40, 30, '#8a97a4', '#46515d');
@@ -105,26 +105,26 @@ function sceneFound() {
   // sea surface laps the vessel, pile and pile top; waves over everything above the seabed
   ofSeaFront(wl, { amp: 12, layers: 2, bottom: sb });
   // cross-section annotation (10.3 - 12.4): the buried length of the pile and the soil it grips
-  const ann = tr(t, 10.2, 11.2) * (1 - tr(t, 12.3, 12.9));
+  const ann = tr(t, 8.4, 9.0) * (1 - tr(t, 9.9, 10.5));
   if (ann > 0) {
     ctx.save(); ctx.globalAlpha = ann; ctx.fillStyle = 'rgba(47,227,255,0.12)'; ctx.fillRect(px - 150, sb, 300, 140); ctx.setLineDash([10, 8]); ctx.strokeStyle = OF.cyan; ctx.lineWidth = 2.5; ctx.strokeRect(px - 150, sb, 300, 140); ctx.setLineDash([]);
-    ofDim(px + 190, sb, px + 190, P.pb + 4, 'DRIVEN DEEP', { p: tr(t, 10.3, 11.4), dx: 100, size: 28 });
+    ofDim(px + 190, sb, px + 190, P.pb + 4, 'DRIVEN DEEP', { p: tr(t, 8.5, 9.4), dx: 100, size: 28 });
     ofChip('SEABED', px - 250, sb + 70, { size: 26 }); ctx.restore();
   }
-  if (t > 6 && t < 10.2) { const q = ofChip('MONOPILE', px - 230, 700, { size: 28, a: tr(t, 2.2, 2.8) * (1 - tr(t, 9.6, 10.2)) }); }
+  if (t > 2 && t < 8.4) { ofChip('MONOPILE', px - 230, 700, { size: 28, a: tr(t, 2.2, 2.8) * (1 - tr(t, 7.8, 8.4)) }); }
   // transition piece and the first tower section (12.6 - 15), seen close up
-  const seat = wl - 40 + 70 - 120, tpy = lerp(wl - 40 - 380, wl - 40 + 70, tr(t, 12.4, 13.6));
-  if (t > 12.3) { ofTransition(px, tpy, 38); if (t < 14.2) ofHook(px, C.tip[1], tpy - 120 - 20); }
-  if (t > 14.0) {
-    const ty = lerp(seat - 330, seat, tr(t, 14.0, 15.0)); ofTowerSection(px, ty, TOWER_H, 36, 33);
-    if (t > 14.9) bolts(px, seat, 38, E0 + 14.9);
+  const seat = wl - 40 + 70 - 120, tpy = lerp(wl - 40 - 380, wl - 40 + 70, tr(t, 10.0, 11.2));
+  if (t > 9.9) { ofTransition(px, tpy, 38); if (t < 11.5) ofHook(px, C.tip[1], tpy - 120 - 20); }
+  if (t > 11.6) {
+    const ty = lerp(seat - 330, seat, tr(t, 11.6, 12.6)); ofTowerSection(px, ty, TOWER_H, 36, 33);
+    if (t > 12.5) bolts(px, seat, 38, E0 + 12.5);
   }
   ofTag('02', 'The foundation');
-  ofCaption(t < 10.2 ? 'THE MONOPILE: A STEEL TUBE' : 'TRANSITION PIECE AND TOWER BASE', { at: t < 10.2 ? 2.6 : 12.6 });
+  ofCaption(t < 8.4 ? 'THE MONOPILE: A STEEL TUBE' : 'TRANSITION PIECE AND TOWER BASE', { at: t < 8.4 ? 0.8 : 9.2 });
 }
 function camFound(t) {
   if (t < 2.0) return { z: 1, tx: 0, ty: 330 * (1 - ofEase(t / 1.8)) };
-  const u = tr(t, 11.9, 12.9); if (u > 0) return camMix(CAM0, camOf({ z: 1.9, p: [F2.px, 330], to: [F2.px, 620] }), u);
+  const u = tr(t, 9.4, 10.4); if (u > 0) return camMix(CAM0, camOf({ z: 1.9, p: [F2.px, 330], to: [F2.px, 620] }), u);
   return null;
 }
 
@@ -195,8 +195,9 @@ function hookAt(t) {
   const l = HK[HK.length - 1]; return [l[1], l[2]];
 }
 const SEC_WIN = [[2.2, 6.1], [7.4, 10.3], [11.4, 14.3]];      // [pick, release]
+const K4 = 0.8;   // scene 4's timeline is written in 'internal' seconds; it plays at 0.8x length
 function sceneLift() {
-  const t = TT - E0, { wl, sb } = F4;
+  const t = (TT - E0) / K4, { wl, sb } = F4;
   ofBounds(-400, W + 400);
   ofSky(-1400, wl, { sunX: W * 0.82 });
   ofSeabed(sb, -400, W + 400, 300);
@@ -212,14 +213,14 @@ function sceneLift() {
     if (t < tp) { ofTowerSection(SX[k], F4.deck, TOWER_H, lerp(36, 33, 0.5), lerp(36, 33, 0.5)); continue; }
     if (t < trl) { ofTowerSection(hk[0], hk[1] + 14 + TOWER_H, TOWER_H, 36, 33); continue; }
     seated[k] = 1; ofTowerSection(FOUND_X, SEAT(k), TOWER_H, lerp(36, 22, k / 3), lerp(36, 22, (k + 1) / 3));
-    bolts(FOUND_X, SEAT(k), lerp(36, 22, k / 3), E0 + trl);
+    bolts(FOUND_X, SEAT(k), lerp(36, 22, k / 3), E0 + trl * K4);
   }
   // the nacelle
   const nT = [15.3, 18.6];
   const nacX = t < nT[0] ? 1295 : (t < nT[1] ? hk[0] : FOUND_X), nacY = t < nT[0] ? F4.deck : (t < nT[1] ? hk[1] + 70 + 62 : 110);
   if (t < 19.5) {
     const N = ofNacelle(nacX, nacY, 1);
-    if (t >= nT[1]) { ofHub(N.hubX, N.hubY, 17); ofHub(N.hubX, N.hubY, 12); bolts(FOUND_X, 110, 22, E0 + nT[1]); }
+    if (t >= nT[1]) { ofHub(N.hubX, N.hubY, 17); ofHub(N.hubX, N.hubY, 12); bolts(FOUND_X, 110, 22, E0 + nT[1] * K4); }
   }
   ofCrane(crx, F4.deck, ca, BOOM, { dir: 1, h: CRANE_H });
   const tip = ofCraneTip(crx, F4.deck, ca, BOOM, { dir: 1, h: CRANE_H });
@@ -235,9 +236,10 @@ function sceneLift() {
   if (t > 6.1) screenChip(t < 18.6 ? `TOWER  ${n} / 3` : 'NACELLE  ON', 1720, 100, { size: 30 });
   ofTag('04', 'The assembly');
   const cap = t < 2 ? 'THE CRANE STARTS WITH THE TOWER' : (t < 14.9 ? 'EACH FLANGE IS ALIGNED AND BOLTED' : 'THEN THE NACELLE GOES UP');
-  ofCaption(cap, { at: t < 2 ? 0.4 : (t < 14.9 ? 2.4 : 15.4) });
+  ofCaption(cap, { at: (t < 2 ? 0.4 : (t < 14.9 ? 2.4 : 15.4)) * K4 });
 }
 function camLift(t) {
+  t = t / K4;
   let u = tr(t, 1.5, 2.6) * (1 - tr(t, 3.2, 4.2));
   if (u > 0) return camMix(CAM0, camOf({ z: 2.4, p: [1250, 330], to: [960, 600] }), u);
   u = tr(t, 4.4, 5.2) * (1 - tr(t, 6.3, 7.1));
@@ -251,11 +253,11 @@ function camLift(t) {
 //  5. the most delicate lift: one blade, one gust, one weather window
 // ---------------------------------------------------------------------
 const F5 = { wl: 760, sb: 1160, x: 1000, deck: 510, hub: [FOUND_X - 99, 79], L: 250 };
-function windAt(t) { return 0.34 + 0.05 * Math.sin(t * 2.1) + 0.62 * Math.exp(-(((t - 4.7) / 0.7) ** 2)) + 0.18 * Math.exp(-(((t - 6.6) / 0.6) ** 2)); }
+function windAt(t) { return 0.34 + 0.05 * Math.sin(t * 2.1) + 0.62 * Math.exp(-(((t - 8.4) / 0.7) ** 2)) + 0.18 * Math.exp(-(((t - 10.0) / 0.6) ** 2)); }
 function bladeRoot(t) {   // root position of the hoisted blade
   const rx0 = 1330, ry0 = F5.deck - 30;
   const hx = F5.hub[0], hy = F5.hub[1];
-  const lift = tr(t, 3.0, 6.4), slide = tr(t, 7.8, 10.4);
+  const lift = tr(t, 3.0, 6.4), slide = tr(t, 11.0, 13.4);
   return [lerp(rx0, hx - 70, lift) + 70 * slide, lerp(ry0, hy, lift)];
 }
 function sceneBlade() {
@@ -266,18 +268,18 @@ function sceneBlade() {
   ofSeaBack(wl, sb + 2);
   foundation(FOUND_X, wl, { y1: sb + 90 });
   ofJackup(F5.x, F5.deck, { w: VW, leg: sb - (F5.deck + 70), legTop: F5.deck - 300 });
-  const gust = windAt(t), sway = Math.sin(t * 3.1) * 0.065 * Math.max(0, gust - 0.36) * 2.2 * (1 - tr(t, 7.6, 9.0));
+  const gust = windAt(t), sway = Math.sin(t * 3.1) * 0.065 * Math.max(0, gust - 0.36) * 2.2 * (1 - tr(t, 10.8, 12.2));
   const root = bladeRoot(t), ang = Math.PI + sway;
   // turbine with tower and nacelle; rotor blades 2 and 3 arrive after the first is bolted
-  const rotStep = tr(t, 11.2, 12.2), done = t > 11.2;
+  const rotStep = tr(t, 13.6, 14.4), done = t > 13.6;
   ofTurbine(FOUND_X, 110 + TOWER_H * 3 - 0.0, 1, { sections: 0, blades: 0 });   // (tower drawn below, to keep one code path)
   for (let k = 0; k < 3; k++) ofTowerSection(FOUND_X, SEAT(k), TOWER_H, lerp(36, 22, k / 3), lerp(36, 22, (k + 1) / 3));
   const N = ofNacelle(FOUND_X, 110, 1); ofHub(N.hubX, N.hubY, 17);
   const hubX = N.hubX, hubY = N.hubY;
   if (done) {   // blade 1 stays at its mounted angle; blades 2 and 3 grow in as the rotor turns
-    const rot = Math.PI + rotStep * TAU / 3 + (t > 13.5 ? (t - 13.5) * 0.5 : 0);
+    const rot = Math.PI + rotStep * TAU / 3 + (t > 15.8 ? (t - 15.8) * 0.5 : 0);
     ofBlade(hubX, hubY, L, rot);
-    const a2 = tr(t, 12.6, 13.2), a3 = tr(t, 13.4, 14.0);
+    const a2 = tr(t, 14.8, 15.3), a3 = tr(t, 15.5, 16.0);
     if (a2 > 0) ofBlade(hubX, hubY, L * a2, rot + TAU / 3);
     if (a3 > 0) ofBlade(hubX, hubY, L * a3, rot + 2 * TAU / 3);
   } else ofBlade(root[0], root[1], L, ang);
@@ -285,7 +287,7 @@ function sceneBlade() {
   // crane and hook
   const cx = hubX - L * 0.5 + 6 * 0 + (t < 3 ? 0 : 0), rootMid = [root[0] - L * 0.5 * Math.cos(sway), root[1] + L * 0.5 * Math.sin(-sway) * -1];
   const hx = done ? hubX - 100 : rootMid[0], crx = F5.x + CRANE_DX;
-  const hy = done ? lerp(hubY - 110, hubY - 330, tr(t, 11.0, 12.0)) : (t < 3.0 ? lerp(80, F5.deck - 30 - 90, tr(t, 0.5, 2.4)) : rootMid[1] - 90);
+  const hy = done ? lerp(hubY - 110, hubY - 330, tr(t, 13.4, 14.4)) : (t < 3.0 ? lerp(80, F5.deck - 30 - 90, tr(t, 0.5, 2.4)) : rootMid[1] - 90);
   const ca = Math.acos(clamp((hx - crx) / BOOM, -1, 1)) / DEG;
   ofCrane(crx, F5.deck, ca, BOOM, { dir: 1, h: CRANE_H });
   const tip = ofCraneTip(crx, F5.deck, ca, BOOM, { dir: 1, h: CRANE_H });
@@ -294,28 +296,28 @@ function sceneBlade() {
   // tag lines pulled by crew on the deck keep the blade from swinging (two thin lines)
   if (!done && t > 3.2) { ctx.strokeStyle = 'rgba(255,255,255,0.45)'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(root[0] - L, root[1]); ctx.lineTo(F5.x + 80, F5.deck - 6); ctx.stroke(); }
   // alignment bolts
-  bolts(hubX, hubY + 4, 40, E0 + 10.4);
+  bolts(hubX, hubY + 4, 40, E0 + 13.4);
   ofSeaFront(wl, { amp: 6, layers: 2, bottom: sb });
   // wind streaks
   const ws = clamp((gust - 0.34) * 2.4); if (ws > 0.02) for (let i = 0; i < 26; i++) { const y = 80 + ofRand('ws', i) * 700, x = mod(ofRand('wx', i) * 2400 + TT * (900 + 600 * ws) * 1, 2400) - 240; ctx.strokeStyle = `rgba(255,255,255,${0.35 * ws})`; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + 90 + 120 * ws, y + 6); ctx.stroke(); }
   // the weather gauge: wind against the lift limit
   const gx = 1560, gy = 905, gw = 300;
   const f = () => {
-    const a = tr(t, 2.6, 3.4) * (1 - tr(t, 11.0, 11.8)); if (a <= 0) return; const lim = 0.7, over = gust > lim;
+    const a = tr(t, 2.6, 3.4) * (1 - tr(t, 13.4, 14.2)); if (a <= 0) return; const lim = 0.7, over = gust > lim;
     ctx.save(); ctx.globalAlpha = a; ctx.fillStyle = 'rgba(6,18,36,0.88)'; ctx.beginPath(); ctx.roundRect(gx - 24, gy - 74, gw + 48, 150, 16); ctx.fill(); ctx.strokeStyle = over ? OF.red : OF.cyan; ctx.lineWidth = 2.5; ctx.stroke();
     ctx.fillStyle = OF.white; ctx.font = `700 24px ${OFONT}`; ctx.fillText('WIND', gx, gy - 40);
     ctx.fillStyle = 'rgba(255,255,255,0.15)'; ctx.fillRect(gx, gy - 24, gw, 22); ctx.fillStyle = over ? OF.red : OF.cyan; ctx.fillRect(gx, gy - 24, gw * Math.min(1, gust), 22);
     ctx.fillStyle = OF.yellow; ctx.fillRect(gx + gw * lim - 2, gy - 34, 4, 42); ctx.font = `700 20px ${OFONT}`; ctx.fillText('LIFT LIMIT', gx + gw * lim - 46, gy + 32);
-    ctx.fillStyle = over ? OF.red : OF.cyan; ctx.font = `800 26px ${OFONT}`; ctx.fillText(over ? 'HOLD THE LIFT' : (t > 7.4 ? 'WINDOW OPEN' : 'WATCHING'), gx, gy + 62 - 6); ctx.restore();
+    ctx.fillStyle = over ? OF.red : OF.cyan; ctx.font = `800 26px ${OFONT}`; ctx.fillText(over ? 'HOLD THE LIFT' : (t > 11.0 ? 'WINDOW OPEN' : 'WATCHING'), gx, gy + 62 - 6); ctx.restore();
   };
   if (DEFER) DEFER.push(f); else f();
-  if (done) screenChip(t < 12.6 ? 'BLADE  1 / 3' : (t < 13.4 ? 'BLADE  2 / 3' : 'BLADE  3 / 3'), 1720, 100, { size: 30 });
+  if (done) screenChip(t < 14.8 ? 'BLADE  1 / 3' : (t < 15.5 ? 'BLADE  2 / 3' : 'BLADE  3 / 3'), 1720, 100, { size: 30 });
   ofTag('05', 'The delicate lift');
-  ofCaption(t < 7.4 ? 'ONE BLADE, LIFTED ALONE' : (t < 11.2 ? 'A CALM WEATHER WINDOW' : 'THREE BLADES. DONE.'), { at: t < 7.4 ? 0.8 : (t < 11.2 ? 7.5 : 11.6) });
-  badge('Too windy? We wait.', 4.0, 7.4);
+  ofCaption(t < 7.8 ? 'ONE BLADE, LIFTED ALONE' : (t < 11.0 ? 'A GUST CAN STOP THE JOB' : (t < 13.6 ? 'WAIT FOR THE WEATHER WINDOW' : 'THREE BLADES. DONE.')), { at: t < 7.8 ? 0.8 : (t < 11.0 ? 7.9 : (t < 13.6 ? 11.1 : 13.7)) });
+  badge('Too windy? We wait.', 8.2, 11.4);
 }
 function camBlade(t) {
-  const u = tr(t, 8.0, 8.9) * (1 - tr(t, 11.0, 11.8));
+  const u = tr(t, 10.8, 11.7) * (1 - tr(t, 13.6, 14.4));
   return u > 0 ? camMix(CAM0, camOf({ z: 2.3, p: [F5.hub[0] - 70, F5.hub[1] + 6], to: [960, 540] }), u) : null;
 }
 
