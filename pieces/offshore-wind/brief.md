@@ -25,7 +25,7 @@ Cuts land on the 8th grid. The voice sets the scene starts (see src/head.html).
 - Fixed-bottom only. Floating turbines are usually assembled at port and towed out.
 
 ## Open items
-- assets/subscribe.png (the user's badge) is not in the repo yet. The end card shows a missing-file message until it is.
+- assets/subscribe.png is in place (the user's badge, 2000x2000). The end card shows it for 2s.
 - Word timings are estimated (the faster-whisper model could not be downloaded through the proxy). Scenes cue on line starts only.
 - 9:16 Shorts layout not built.
 - Atlas is an invented hard-hat mascot. Replace with the real design if one exists.
