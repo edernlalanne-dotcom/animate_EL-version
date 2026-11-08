@@ -1,0 +1,9 @@
+{
+  "name": "offshore-wind",
+  "title": "How Offshore Wind Turbines Are Assembled at Sea",
+  "format": { "width": 1920, "height": 1080, "fps": 24, "bpm": 120, "duration": 87.0, "frames": 2088 },
+  "formats": ["16:9"],
+  "storyFormat": "fixed-bottom installation journey, hard cuts between six stages, then an end card",
+  "style": "offshore",
+  "review": { "safe": { "top": 60, "bottom": 110, "right": 60 }, "refs": {} }
+}
