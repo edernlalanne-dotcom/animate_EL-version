@@ -1,0 +1,72 @@
+{
+ "lead": 0.35,
+ "tail": 2.0,
+ "lines": [
+  {
+   "id": "open",
+   "text": "It is minus fifty-four degrees outside. The air is too thin to keep you awake. So why are you in a T-shirt?",
+   "after": 0.45,
+   "file": "open.mp3"
+  },
+  {
+   "id": "breath",
+   "text": "Up here, each breath holds a quarter of the oxygen.",
+   "after": 0.4,
+   "file": "breath.mp3"
+  },
+  {
+   "id": "seal",
+   "text": "So the plane seals itself, and fakes a mountain town. Eight thousand feet at most.",
+   "after": 0.4,
+   "file": "seal.mp3"
+  },
+  {
+   "id": "stale",
+   "text": "But sealed air goes stale. And one failure here gives you seconds.",
+   "after": 0.5,
+   "file": "stale.mp3"
+  },
+  {
+   "id": "engine",
+   "text": "The engine squeezes air. Some of it leaves as hot as an oven. Then a pack chills it. Hot amber, cold cyan.",
+   "after": 0.5,
+   "file": "engine.mp3"
+  },
+  {
+   "id": "cabin",
+   "text": "It falls from the ceiling. Half is reused, scrubbed by the filters hospitals use. All of it is renewed in minutes.",
+   "after": 0.5,
+   "file": "cabin.mp3"
+  },
+  {
+   "id": "valve",
+   "text": "Now the trick. One valve at the back lets air out. Open it a little, pressure falls. Close it, pressure rises.",
+   "after": 0.7,
+   "file": "valve.mp3"
+  },
+  {
+   "id": "warn",
+   "text": "If pressure drops, a horn sounds. Masks fall. It almost never happens.",
+   "after": 1.0,
+   "file": "warn.mp3"
+  },
+  {
+   "id": "b787",
+   "text": "The Boeing seven eight seven skips the engine. Electric compressors do the job.",
+   "after": 0.5,
+   "file": "b787.mp3"
+  },
+  {
+   "id": "close",
+   "text": "That is why you are in a T-shirt. A sealed bubble, kept warm and breathable.",
+   "after": 0.7,
+   "file": "close.mp3"
+  },
+  {
+   "id": "cta",
+   "text": "Want more hidden machines? Subscribe to World in the Making.",
+   "after": 0.0,
+   "file": "cta.mp3"
+  }
+ ]
+}

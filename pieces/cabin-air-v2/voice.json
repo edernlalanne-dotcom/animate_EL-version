@@ -1,0 +1,1144 @@
+{
+ "duration": 73.792,
+ "lead": 0.35,
+ "tail": 2,
+ "lines": [
+  {
+   "id": "open",
+   "text": "It is minus fifty-four degrees outside. The air is too thin to keep you awake. So why are you in a T-shirt?",
+   "t0": 0.35,
+   "t1": 8.83,
+   "take": "voice/open.mp3",
+   "words": [
+    {
+     "w": "It",
+     "t0": 0.35,
+     "t1": 0.597,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 0.597,
+     "t1": 0.844,
+     "est": true
+    },
+    {
+     "w": "minus",
+     "t0": 0.844,
+     "t1": 1.338,
+     "est": true
+    },
+    {
+     "w": "fifty-four",
+     "t0": 1.338,
+     "t1": 2.161,
+     "est": true
+    },
+    {
+     "w": "degrees",
+     "t0": 2.161,
+     "t1": 2.82,
+     "est": true
+    },
+    {
+     "w": "outside.",
+     "t0": 2.82,
+     "t1": 3.479,
+     "est": true
+    },
+    {
+     "w": "The",
+     "t0": 3.479,
+     "t1": 3.808,
+     "est": true
+    },
+    {
+     "w": "air",
+     "t0": 3.808,
+     "t1": 4.137,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 4.137,
+     "t1": 4.384,
+     "est": true
+    },
+    {
+     "w": "too",
+     "t0": 4.384,
+     "t1": 4.713,
+     "est": true
+    },
+    {
+     "w": "thin",
+     "t0": 4.713,
+     "t1": 5.125,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 5.125,
+     "t1": 5.372,
+     "est": true
+    },
+    {
+     "w": "keep",
+     "t0": 5.372,
+     "t1": 5.784,
+     "est": true
+    },
+    {
+     "w": "you",
+     "t0": 5.784,
+     "t1": 6.113,
+     "est": true
+    },
+    {
+     "w": "awake.",
+     "t0": 6.113,
+     "t1": 6.607,
+     "est": true
+    },
+    {
+     "w": "So",
+     "t0": 6.607,
+     "t1": 6.854,
+     "est": true
+    },
+    {
+     "w": "why",
+     "t0": 6.854,
+     "t1": 7.183,
+     "est": true
+    },
+    {
+     "w": "are",
+     "t0": 7.183,
+     "t1": 7.513,
+     "est": true
+    },
+    {
+     "w": "you",
+     "t0": 7.513,
+     "t1": 7.842,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 7.842,
+     "t1": 8.089,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 8.089,
+     "t1": 8.254,
+     "est": true
+    },
+    {
+     "w": "T-shirt?",
+     "t0": 8.254,
+     "t1": 8.83,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "breath",
+   "text": "Up here, each breath holds a quarter of the oxygen.",
+   "t0": 9.28,
+   "t1": 12.692,
+   "take": "voice/breath.mp3",
+   "words": [
+    {
+     "w": "Up",
+     "t0": 9.28,
+     "t1": 9.485,
+     "est": true
+    },
+    {
+     "w": "here,",
+     "t0": 9.485,
+     "t1": 9.826,
+     "est": true
+    },
+    {
+     "w": "each",
+     "t0": 9.826,
+     "t1": 10.167,
+     "est": true
+    },
+    {
+     "w": "breath",
+     "t0": 10.167,
+     "t1": 10.645,
+     "est": true
+    },
+    {
+     "w": "holds",
+     "t0": 10.645,
+     "t1": 11.054,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 11.054,
+     "t1": 11.191,
+     "est": true
+    },
+    {
+     "w": "quarter",
+     "t0": 11.191,
+     "t1": 11.737,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 11.737,
+     "t1": 11.941,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 11.941,
+     "t1": 12.214,
+     "est": true
+    },
+    {
+     "w": "oxygen.",
+     "t0": 12.214,
+     "t1": 12.692,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "seal",
+   "text": "So the plane seals itself, and fakes a mountain town. Eight thousand feet at most.",
+   "t0": 13.092,
+   "t1": 18.462,
+   "take": "voice/seal.mp3",
+   "words": [
+    {
+     "w": "So",
+     "t0": 13.092,
+     "t1": 13.293,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 13.293,
+     "t1": 13.562,
+     "est": true
+    },
+    {
+     "w": "plane",
+     "t0": 13.562,
+     "t1": 13.965,
+     "est": true
+    },
+    {
+     "w": "seals",
+     "t0": 13.965,
+     "t1": 14.367,
+     "est": true
+    },
+    {
+     "w": "itself,",
+     "t0": 14.367,
+     "t1": 14.837,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 14.837,
+     "t1": 15.106,
+     "est": true
+    },
+    {
+     "w": "fakes",
+     "t0": 15.106,
+     "t1": 15.508,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 15.508,
+     "t1": 15.643,
+     "est": true
+    },
+    {
+     "w": "mountain",
+     "t0": 15.643,
+     "t1": 16.247,
+     "est": true
+    },
+    {
+     "w": "town.",
+     "t0": 16.247,
+     "t1": 16.582,
+     "est": true
+    },
+    {
+     "w": "Eight",
+     "t0": 16.582,
+     "t1": 16.985,
+     "est": true
+    },
+    {
+     "w": "thousand",
+     "t0": 16.985,
+     "t1": 17.589,
+     "est": true
+    },
+    {
+     "w": "feet",
+     "t0": 17.589,
+     "t1": 17.925,
+     "est": true
+    },
+    {
+     "w": "at",
+     "t0": 17.925,
+     "t1": 18.126,
+     "est": true
+    },
+    {
+     "w": "most.",
+     "t0": 18.126,
+     "t1": 18.462,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "stale",
+   "text": "But sealed air goes stale. And one failure here gives you seconds.",
+   "t0": 18.862,
+   "t1": 23.649,
+   "take": "voice/stale.mp3",
+   "words": [
+    {
+     "w": "But",
+     "t0": 18.862,
+     "t1": 19.157,
+     "est": true
+    },
+    {
+     "w": "sealed",
+     "t0": 19.157,
+     "t1": 19.672,
+     "est": true
+    },
+    {
+     "w": "air",
+     "t0": 19.672,
+     "t1": 19.967,
+     "est": true
+    },
+    {
+     "w": "goes",
+     "t0": 19.967,
+     "t1": 20.335,
+     "est": true
+    },
+    {
+     "w": "stale.",
+     "t0": 20.335,
+     "t1": 20.777,
+     "est": true
+    },
+    {
+     "w": "And",
+     "t0": 20.777,
+     "t1": 21.071,
+     "est": true
+    },
+    {
+     "w": "one",
+     "t0": 21.071,
+     "t1": 21.366,
+     "est": true
+    },
+    {
+     "w": "failure",
+     "t0": 21.366,
+     "t1": 21.955,
+     "est": true
+    },
+    {
+     "w": "here",
+     "t0": 21.955,
+     "t1": 22.323,
+     "est": true
+    },
+    {
+     "w": "gives",
+     "t0": 22.323,
+     "t1": 22.765,
+     "est": true
+    },
+    {
+     "w": "you",
+     "t0": 22.765,
+     "t1": 23.06,
+     "est": true
+    },
+    {
+     "w": "seconds.",
+     "t0": 23.06,
+     "t1": 23.649,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "engine",
+   "text": "The engine squeezes air. Some of it leaves as hot as an oven. Then a pack chills it. Hot amber, cold cyan.",
+   "t0": 24.149,
+   "t1": 32.889,
+   "take": "voice/engine.mp3",
+   "words": [
+    {
+     "w": "The",
+     "t0": 24.149,
+     "t1": 24.492,
+     "est": true
+    },
+    {
+     "w": "engine",
+     "t0": 24.492,
+     "t1": 25.092,
+     "est": true
+    },
+    {
+     "w": "squeezes",
+     "t0": 25.092,
+     "t1": 25.863,
+     "est": true
+    },
+    {
+     "w": "air.",
+     "t0": 25.863,
+     "t1": 26.205,
+     "est": true
+    },
+    {
+     "w": "Some",
+     "t0": 26.205,
+     "t1": 26.634,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 26.634,
+     "t1": 26.891,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 26.891,
+     "t1": 27.148,
+     "est": true
+    },
+    {
+     "w": "leaves",
+     "t0": 27.148,
+     "t1": 27.748,
+     "est": true
+    },
+    {
+     "w": "as",
+     "t0": 27.748,
+     "t1": 28.005,
+     "est": true
+    },
+    {
+     "w": "hot",
+     "t0": 28.005,
+     "t1": 28.348,
+     "est": true
+    },
+    {
+     "w": "as",
+     "t0": 28.348,
+     "t1": 28.605,
+     "est": true
+    },
+    {
+     "w": "an",
+     "t0": 28.605,
+     "t1": 28.862,
+     "est": true
+    },
+    {
+     "w": "oven.",
+     "t0": 28.862,
+     "t1": 29.29,
+     "est": true
+    },
+    {
+     "w": "Then",
+     "t0": 29.29,
+     "t1": 29.719,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 29.719,
+     "t1": 29.89,
+     "est": true
+    },
+    {
+     "w": "pack",
+     "t0": 29.89,
+     "t1": 30.318,
+     "est": true
+    },
+    {
+     "w": "chills",
+     "t0": 30.318,
+     "t1": 30.918,
+     "est": true
+    },
+    {
+     "w": "it.",
+     "t0": 30.918,
+     "t1": 31.175,
+     "est": true
+    },
+    {
+     "w": "Hot",
+     "t0": 31.175,
+     "t1": 31.518,
+     "est": true
+    },
+    {
+     "w": "amber,",
+     "t0": 31.518,
+     "t1": 32.032,
+     "est": true
+    },
+    {
+     "w": "cold",
+     "t0": 32.032,
+     "t1": 32.461,
+     "est": true
+    },
+    {
+     "w": "cyan.",
+     "t0": 32.461,
+     "t1": 32.889,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "cabin",
+   "text": "It falls from the ceiling. Half is reused, scrubbed by the filters hospitals use. All of it is renewed in minutes.",
+   "t0": 33.389,
+   "t1": 41.27,
+   "take": "voice/cabin.mp3",
+   "words": [
+    {
+     "w": "It",
+     "t0": 33.389,
+     "t1": 33.602,
+     "est": true
+    },
+    {
+     "w": "falls",
+     "t0": 33.602,
+     "t1": 34.028,
+     "est": true
+    },
+    {
+     "w": "from",
+     "t0": 34.028,
+     "t1": 34.383,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 34.383,
+     "t1": 34.667,
+     "est": true
+    },
+    {
+     "w": "ceiling.",
+     "t0": 34.667,
+     "t1": 35.235,
+     "est": true
+    },
+    {
+     "w": "Half",
+     "t0": 35.235,
+     "t1": 35.59,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 35.59,
+     "t1": 35.803,
+     "est": true
+    },
+    {
+     "w": "reused,",
+     "t0": 35.803,
+     "t1": 36.3,
+     "est": true
+    },
+    {
+     "w": "scrubbed",
+     "t0": 36.3,
+     "t1": 36.939,
+     "est": true
+    },
+    {
+     "w": "by",
+     "t0": 36.939,
+     "t1": 37.152,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 37.152,
+     "t1": 37.436,
+     "est": true
+    },
+    {
+     "w": "filters",
+     "t0": 37.436,
+     "t1": 38.004,
+     "est": true
+    },
+    {
+     "w": "hospitals",
+     "t0": 38.004,
+     "t1": 38.714,
+     "est": true
+    },
+    {
+     "w": "use.",
+     "t0": 38.714,
+     "t1": 38.998,
+     "est": true
+    },
+    {
+     "w": "All",
+     "t0": 38.998,
+     "t1": 39.282,
+     "est": true
+    },
+    {
+     "w": "of",
+     "t0": 39.282,
+     "t1": 39.495,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 39.495,
+     "t1": 39.708,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 39.708,
+     "t1": 39.921,
+     "est": true
+    },
+    {
+     "w": "renewed",
+     "t0": 39.921,
+     "t1": 40.489,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 40.489,
+     "t1": 40.702,
+     "est": true
+    },
+    {
+     "w": "minutes.",
+     "t0": 40.702,
+     "t1": 41.27,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "valve",
+   "text": "Now the trick. One valve at the back lets air out. Open it a little, pressure falls. Close it, pressure rises.",
+   "t0": 41.77,
+   "t1": 50.123,
+   "take": "voice/valve.mp3",
+   "words": [
+    {
+     "w": "Now",
+     "t0": 41.77,
+     "t1": 42.088,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 42.088,
+     "t1": 42.406,
+     "est": true
+    },
+    {
+     "w": "trick.",
+     "t0": 42.406,
+     "t1": 42.884,
+     "est": true
+    },
+    {
+     "w": "One",
+     "t0": 42.884,
+     "t1": 43.202,
+     "est": true
+    },
+    {
+     "w": "valve",
+     "t0": 43.202,
+     "t1": 43.679,
+     "est": true
+    },
+    {
+     "w": "at",
+     "t0": 43.679,
+     "t1": 43.918,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 43.918,
+     "t1": 44.236,
+     "est": true
+    },
+    {
+     "w": "back",
+     "t0": 44.236,
+     "t1": 44.634,
+     "est": true
+    },
+    {
+     "w": "lets",
+     "t0": 44.634,
+     "t1": 45.032,
+     "est": true
+    },
+    {
+     "w": "air",
+     "t0": 45.032,
+     "t1": 45.35,
+     "est": true
+    },
+    {
+     "w": "out.",
+     "t0": 45.35,
+     "t1": 45.668,
+     "est": true
+    },
+    {
+     "w": "Open",
+     "t0": 45.668,
+     "t1": 46.066,
+     "est": true
+    },
+    {
+     "w": "it",
+     "t0": 46.066,
+     "t1": 46.304,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 46.304,
+     "t1": 46.464,
+     "est": true
+    },
+    {
+     "w": "little,",
+     "t0": 46.464,
+     "t1": 47.02,
+     "est": true
+    },
+    {
+     "w": "pressure",
+     "t0": 47.02,
+     "t1": 47.736,
+     "est": true
+    },
+    {
+     "w": "falls.",
+     "t0": 47.736,
+     "t1": 48.214,
+     "est": true
+    },
+    {
+     "w": "Close",
+     "t0": 48.214,
+     "t1": 48.691,
+     "est": true
+    },
+    {
+     "w": "it,",
+     "t0": 48.691,
+     "t1": 48.93,
+     "est": true
+    },
+    {
+     "w": "pressure",
+     "t0": 48.93,
+     "t1": 49.646,
+     "est": true
+    },
+    {
+     "w": "rises.",
+     "t0": 49.646,
+     "t1": 50.123,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "warn",
+   "text": "If pressure drops, a horn sounds. Masks fall. It almost never happens.",
+   "t0": 50.824,
+   "t1": 56.597,
+   "take": "voice/warn.mp3",
+   "words": [
+    {
+     "w": "If",
+     "t0": 50.824,
+     "t1": 51.082,
+     "est": true
+    },
+    {
+     "w": "pressure",
+     "t0": 51.082,
+     "t1": 51.858,
+     "est": true
+    },
+    {
+     "w": "drops,",
+     "t0": 51.858,
+     "t1": 52.375,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 52.375,
+     "t1": 52.547,
+     "est": true
+    },
+    {
+     "w": "horn",
+     "t0": 52.547,
+     "t1": 52.978,
+     "est": true
+    },
+    {
+     "w": "sounds.",
+     "t0": 52.978,
+     "t1": 53.581,
+     "est": true
+    },
+    {
+     "w": "Masks",
+     "t0": 53.581,
+     "t1": 54.098,
+     "est": true
+    },
+    {
+     "w": "fall.",
+     "t0": 54.098,
+     "t1": 54.529,
+     "est": true
+    },
+    {
+     "w": "It",
+     "t0": 54.529,
+     "t1": 54.788,
+     "est": true
+    },
+    {
+     "w": "almost",
+     "t0": 54.788,
+     "t1": 55.391,
+     "est": true
+    },
+    {
+     "w": "never",
+     "t0": 55.391,
+     "t1": 55.908,
+     "est": true
+    },
+    {
+     "w": "happens.",
+     "t0": 55.908,
+     "t1": 56.597,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "b787",
+   "text": "The Boeing seven eight seven skips the engine. Electric compressors do the job.",
+   "t0": 57.597,
+   "t1": 62.096,
+   "take": "voice/b787.mp3",
+   "words": [
+    {
+     "w": "The",
+     "t0": 57.597,
+     "t1": 57.828,
+     "est": true
+    },
+    {
+     "w": "Boeing",
+     "t0": 57.828,
+     "t1": 58.231,
+     "est": true
+    },
+    {
+     "w": "seven",
+     "t0": 58.231,
+     "t1": 58.578,
+     "est": true
+    },
+    {
+     "w": "eight",
+     "t0": 58.578,
+     "t1": 58.924,
+     "est": true
+    },
+    {
+     "w": "seven",
+     "t0": 58.924,
+     "t1": 59.27,
+     "est": true
+    },
+    {
+     "w": "skips",
+     "t0": 59.27,
+     "t1": 59.616,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 59.616,
+     "t1": 59.846,
+     "est": true
+    },
+    {
+     "w": "engine.",
+     "t0": 59.846,
+     "t1": 60.25,
+     "est": true
+    },
+    {
+     "w": "Electric",
+     "t0": 60.25,
+     "t1": 60.769,
+     "est": true
+    },
+    {
+     "w": "compressors",
+     "t0": 60.769,
+     "t1": 61.462,
+     "est": true
+    },
+    {
+     "w": "do",
+     "t0": 61.462,
+     "t1": 61.635,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 61.635,
+     "t1": 61.865,
+     "est": true
+    },
+    {
+     "w": "job.",
+     "t0": 61.865,
+     "t1": 62.096,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "text": "That is why you are in a T-shirt. A sealed bubble, kept warm and breathable.",
+   "t0": 62.596,
+   "t1": 67.7,
+   "take": "voice/close.mp3",
+   "words": [
+    {
+     "w": "That",
+     "t0": 62.596,
+     "t1": 62.946,
+     "est": true
+    },
+    {
+     "w": "is",
+     "t0": 62.946,
+     "t1": 63.155,
+     "est": true
+    },
+    {
+     "w": "why",
+     "t0": 63.155,
+     "t1": 63.435,
+     "est": true
+    },
+    {
+     "w": "you",
+     "t0": 63.435,
+     "t1": 63.715,
+     "est": true
+    },
+    {
+     "w": "are",
+     "t0": 63.715,
+     "t1": 63.994,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 63.994,
+     "t1": 64.204,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 64.204,
+     "t1": 64.344,
+     "est": true
+    },
+    {
+     "w": "T-shirt.",
+     "t0": 64.344,
+     "t1": 64.833,
+     "est": true
+    },
+    {
+     "w": "A",
+     "t0": 64.833,
+     "t1": 64.973,
+     "est": true
+    },
+    {
+     "w": "sealed",
+     "t0": 64.973,
+     "t1": 65.463,
+     "est": true
+    },
+    {
+     "w": "bubble,",
+     "t0": 65.463,
+     "t1": 65.952,
+     "est": true
+    },
+    {
+     "w": "kept",
+     "t0": 65.952,
+     "t1": 66.302,
+     "est": true
+    },
+    {
+     "w": "warm",
+     "t0": 66.302,
+     "t1": 66.651,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 66.651,
+     "t1": 66.931,
+     "est": true
+    },
+    {
+     "w": "breathable.",
+     "t0": 66.931,
+     "t1": 67.7,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "text": "Want more hidden machines? Subscribe to World in the Making.",
+   "t0": 68.4,
+   "t1": 71.792,
+   "take": "voice/cta.mp3",
+   "words": [
+    {
+     "w": "Want",
+     "t0": 68.4,
+     "t1": 68.687,
+     "est": true
+    },
+    {
+     "w": "more",
+     "t0": 68.687,
+     "t1": 68.975,
+     "est": true
+    },
+    {
+     "w": "hidden",
+     "t0": 68.975,
+     "t1": 69.377,
+     "est": true
+    },
+    {
+     "w": "machines?",
+     "t0": 69.377,
+     "t1": 69.895,
+     "est": true
+    },
+    {
+     "w": "Subscribe",
+     "t0": 69.895,
+     "t1": 70.47,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 70.47,
+     "t1": 70.642,
+     "est": true
+    },
+    {
+     "w": "World",
+     "t0": 70.642,
+     "t1": 70.987,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 70.987,
+     "t1": 71.16,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 71.16,
+     "t1": 71.39,
+     "est": true
+    },
+    {
+     "w": "Making.",
+     "t0": 71.39,
+     "t1": 71.792,
+     "est": true
+    }
+   ]
+  }
+ ]
+}

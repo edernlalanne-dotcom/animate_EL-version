@@ -1,0 +1,36 @@
+{
+  "name": "cabin-air",
+  "title": "How Modern Aircraft Cabins Keep Air Fresh and Pressurized",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 24,
+    "bpm": 120,
+    "duration": 115.531,
+    "frames": 2773
+  },
+  "formats": [
+    "9:16"
+  ],
+  "storyFormat": "machine process (voice-timed hard cuts with dives)",
+  "style": "cutaway",
+  "voice": {
+    "file": "voice/voice.wav",
+    "music": -13
+  },
+  "review": {
+    "safe": {
+      "top": 240,
+      "bottom": 420,
+      "right": 140
+    },
+    "refs": {}
+  },
+  "scenes": [
+    "src/common.js",
+    "src/s1.js",
+    "src/s2.js",
+    "src/s3.js",
+    "src/s4.js"
+  ]
+}

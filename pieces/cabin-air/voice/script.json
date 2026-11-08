@@ -1,0 +1,14 @@
+{ "lead": 1.0, "tail": 2.0, "lines": [
+ { "id": "open",   "text": "You cruise at thirty-five thousand feet. Outside, it is minus fifty-four degrees. The air is too thin to breathe. So why are you sitting here in a T-shirt?", "after": 0.5, "file": "open.mp3" },
+ { "id": "tube",   "text": "Out there, air pressure is a quarter of sea level. The fuselage is a sealed tube. It traps air in and keeps the thin air out.", "after": 0.4, "file": "tube.mp3" },
+ { "id": "level",  "text": "Inside, it feels like a mountain town. Between six and eight thousand feet. The rules cap it at eight thousand.", "after": 0.5, "file": "level.mp3" },
+ { "id": "bleed",  "text": "But sealed air goes stale, so the engines feed it. Rings of compressor blades squeeze incoming air. Some is tapped off. We call it bleed air. It is far too hot to breathe.", "after": 0.5, "file": "bleed.mp3" },
+ { "id": "pack",   "text": "Air conditioning packs fix that. They squeeze the air again, cool it with outside air, then expand it through a turbine. Expansion chills it. Amber turns cyan.", "after": 0.5, "file": "pack.mp3" },
+ { "id": "flow",   "text": "Fresh air drops from the ceiling and sinks past you toward the floor.", "after": 0.4, "file": "flow.mp3" },
+ { "id": "hepa",   "text": "Half of it recirculates. Fans pull it from under the floor through HEPA filters, the type hospitals use. Cabin air is replaced every two to three minutes.", "after": 0.5, "file": "hepa.mp3" },
+ { "id": "valve",  "text": "Air must also leave. The outflow valve, low on the rear fuselage, opens a little or closes a little. That motion sets the pressure of the whole cabin.", "after": 0.5, "file": "valve.mp3" },
+ { "id": "b787",   "text": "One jet does it differently. The Boeing seven eight seven skips bleed air. Electric compressors pull outside air in. Its cabin sits near six thousand feet.", "after": 0.9, "file": "b787.mp3" },
+ { "id": "warn",   "text": "What if pressure drops? A horn sounds past ten thousand feet of cabin altitude. Near fourteen thousand, oxygen masks drop.", "after": 1.2, "file": "warn.mp3" },
+ { "id": "payoff", "text": "On almost every flight, none of that happens. Valves move. Fans spin. And you sip coffee at minus fifty-four outside.", "after": 0.6, "file": "payoff.mp3" },
+ { "id": "cta",    "text": "Want more hidden machines? Subscribe to World in the Making.", "after": 0.0, "file": "cta.mp3" }
+]}
