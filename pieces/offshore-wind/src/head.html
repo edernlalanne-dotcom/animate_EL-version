@@ -19,10 +19,13 @@
 //  Six construction stages cut hard, then a 2s subscribe end card (assets/subscribe.png).
 //  Voice-over: Jeremy - Casual Guy Next Door (ElevenLabs). The voice is the clock: scene starts come from VOICE.
 // =====================================================================
-const FPS = 24, W = 1920, H = 1080;
+const FORMATS = { '16:9': [1920, 1080], '9:16': [1080, 1920] };
+const FORMAT = new URLSearchParams(location.search).get('format') || '16:9';
+const FPS = 24, [W, H] = FORMATS[FORMAT];
+const WW = 1920;   // the width of the world the scenes are drawn in; W, H = the canvas (PORTRAIT comes from kit/core.js)
 { const cv = document.getElementById('c'); cv.width = W; cv.height = H; }
 const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, E16 = BEAT / 4;
-const SAFE = { top: 60, bottom: 110, right: 60 };
+const SAFE = H > W ? { top: 240, bottom: 420, right: 140 } : { top: 60, bottom: 110, right: 60 };
 const CX = W / 2;
 // scene starts [t0, t1] in seconds. With a voice-over they follow the spoken lines (see SCENE_FROM_VOICE below).
 const SC = {
@@ -52,7 +55,7 @@ const SHOTS = [
   ['blade', 4, 'one blade, one gust, one weather window'], ['farm', 5, 'the wind farm, cables, substation, shore'], ['end', 6, 'subscribe card'],
 ].map(([key, era, title], i) => ({ id: i + 1, key, era, t0: ERA_LIST[era][0], t1: ERA_LIST[era][1], title }));
 const TIMELINE = {
-  width: W, height: H, fps: FPS, bpm: BPM, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: '16:9',
+  width: W, height: H, fps: FPS, bpm: BPM, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: FORMAT,
   format: 'morph-chain',
   shots: SHOTS,
   cuts: ERA_LIST.slice(1).map((e) => e[0]),

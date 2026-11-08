@@ -24,10 +24,13 @@ window.ASSETS_READY = Promise.all(Object.entries({"subscribe.png":"data:image/pn
 //  Six construction stages cut hard, then a 2s subscribe end card (assets/subscribe.png).
 //  Voice-over: Jeremy - Casual Guy Next Door (ElevenLabs). The voice is the clock: scene starts come from VOICE.
 // =====================================================================
-const FPS = 24, W = 1920, H = 1080;
+const FORMATS = { '16:9': [1920, 1080], '9:16': [1080, 1920] };
+const FORMAT = new URLSearchParams(location.search).get('format') || '16:9';
+const FPS = 24, [W, H] = FORMATS[FORMAT];
+const WW = 1920;   // the width of the world the scenes are drawn in; W, H = the canvas (PORTRAIT comes from kit/core.js)
 { const cv = document.getElementById('c'); cv.width = W; cv.height = H; }
 const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, E16 = BEAT / 4;
-const SAFE = { top: 60, bottom: 110, right: 60 };
+const SAFE = H > W ? { top: 240, bottom: 420, right: 140 } : { top: 60, bottom: 110, right: 60 };
 const CX = W / 2;
 // scene starts [t0, t1] in seconds. With a voice-over they follow the spoken lines (see SCENE_FROM_VOICE below).
 const SC = {
@@ -57,7 +60,7 @@ const SHOTS = [
   ['blade', 4, 'one blade, one gust, one weather window'], ['farm', 5, 'the wind farm, cables, substation, shore'], ['end', 6, 'subscribe card'],
 ].map(([key, era, title], i) => ({ id: i + 1, key, era, t0: ERA_LIST[era][0], t1: ERA_LIST[era][1], title }));
 const TIMELINE = {
-  width: W, height: H, fps: FPS, bpm: BPM, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: '16:9',
+  width: W, height: H, fps: FPS, bpm: BPM, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: FORMAT,
   format: 'morph-chain',
   shots: SHOTS,
   cuts: ERA_LIST.slice(1).map((e) => e[0]),
@@ -629,13 +632,13 @@ function ofSky(y0, y1, o = {}) {
   g.addColorStop(0, o.top ?? '#081a36'); g.addColorStop(0.55, o.mid ?? '#27527e'); g.addColorStop(1, o.bot ?? '#f2a65a');
   ctx.fillStyle = g; ctx.fillRect(OFX0, y0 - 400, OFX1 - OFX0, y1 - y0 + 400);
   if (o.sun !== false) {
-    const sx = o.sunX ?? W * 0.78, sy = y1 - 14, r = 520;
+    const sx = o.sunX ?? WW * 0.78, sy = y1 - 14, r = 520;
     const rg = ctx.createRadialGradient(sx, sy, 10, sx, sy, r);
     rg.addColorStop(0, 'rgba(255,205,130,0.85)'); rg.addColorStop(0.35, 'rgba(255,170,90,0.28)'); rg.addColorStop(1, 'rgba(255,170,90,0)');
     ctx.fillStyle = rg; ctx.fillRect(sx - r, sy - r, 2 * r, 2 * r);
   }
   for (let i = 0; i < (o.clouds ?? 4); i++) {   // flat layered clouds, slow parallax
-    const sp = 6 + i * 3, cx = mod(ofRand('cl', i) * (W + 600) + TT * sp, W + 600) - 300, cy = y0 + (y1 - y0) * (0.12 + 0.55 * ofRand('cly', i)), w = 220 + 200 * ofRand('clw', i);
+    const sp = 6 + i * 3, cx = mod(ofRand('cl', i) * (WW + 600) + TT * sp, WW + 600) - 300, cy = y0 + (y1 - y0) * (0.12 + 0.55 * ofRand('cly', i)), w = 220 + 200 * ofRand('clw', i);
     ctx.fillStyle = `rgba(255,236,214,${0.10 + 0.05 * (i % 3)})`;
     ctx.beginPath(); ctx.ellipse(cx, cy, w, 18 + 10 * (i % 2), 0, 0, TAU); ctx.fill();
     ctx.beginPath(); ctx.ellipse(cx + w * 0.3, cy - 14, w * 0.5, 16, 0, 0, TAU); ctx.fill();
@@ -649,7 +652,7 @@ function ofSeaBack(yh, yb, o = {}) {
   ctx.fillStyle = g; ctx.fillRect(OFX0, yh, OFX1 - OFX0, yb - yh);
   // sun glitter on the water
   if (o.glitter !== false) for (let i = 0; i < 38; i++) {
-    const gx = W * 0.78 + (ofRand('gl', i) - 0.5) * 380 * (0.4 + (i % 7) / 7), gy = yh + 6 + ofRand('gly', i) * 90, on = 0.5 + 0.5 * Math.sin(TT * 3 + i * 1.7);
+    const gx = WW * 0.78 + (ofRand('gl', i) - 0.5) * 380 * (0.4 + (i % 7) / 7), gy = yh + 6 + ofRand('gly', i) * 90, on = 0.5 + 0.5 * Math.sin(TT * 3 + i * 1.7);
     ctx.fillStyle = `rgba(255,214,150,${0.45 * on})`; ctx.fillRect(gx, gy, 18 + 26 * ofRand('glw', i), 2);
   }
 }
@@ -676,7 +679,7 @@ function ofBubbles(y0, y1, x0, x1, n) {   // bubbles rise from y1 (low) to y0 (h
 function ofBirds(y0, y1, n) {
   ctx.save(); ctx.lineWidth = 2.2; ctx.lineCap = 'round';
   for (let i = 0; i < n; i++) {
-    const sp = 50 + 50 * ofRand('bds', i), x = mod(ofRand('bdx', i) * (W + 300) + TT * sp, W + 300) - 150, y = y0 + (y1 - y0) * ofRand('bdy', i) + Math.sin(TT * 0.9 + i * 2) * 14, w = 9 + 5 * ofRand('bdw', i), fl = Math.sin(TT * 7 + i * 3) * w * 0.55;
+    const sp = 50 + 50 * ofRand('bds', i), x = mod(ofRand('bdx', i) * (WW + 300) + TT * sp, WW + 300) - 150, y = y0 + (y1 - y0) * ofRand('bdy', i) + Math.sin(TT * 0.9 + i * 2) * 14, w = 9 + 5 * ofRand('bdw', i), fl = Math.sin(TT * 7 + i * 3) * w * 0.55;
     ctx.strokeStyle = 'rgba(18,28,44,0.75)'; ctx.beginPath(); ctx.moveTo(x - w, y - fl * 0.6); ctx.quadraticCurveTo(x - w * 0.4, y - fl - 3, x, y); ctx.quadraticCurveTo(x + w * 0.4, y - fl - 3, x + w, y - fl * 0.6); ctx.stroke();
   }
   ctx.restore();
@@ -845,7 +848,7 @@ function ofChip(str, x, y, o = {}) {   // a dark rounded label chip with cyan te
 function ofCaption(str, o = {}) {
   const f = () => {
     const fr = ev(E0 + (o.at ?? 0.35), 0.5); if (fr <= 0) return;
-    ctx.save(); ctx.font = `700 ${o.size ?? 54}px ${OFONT}`; const w = ctx.measureText(str).width, x = 90, y = H - 110;
+    ctx.save(); ctx.font = `700 ${o.size ?? (PORTRAIT ? 38 : 54)}px ${OFONT}`; const w = ctx.measureText(str).width, x = PORTRAIT ? 50 : 90, y = PORTRAIT ? H - 440 : H - 110;
     ctx.globalAlpha = clamp(fr * 2); ctx.fillStyle = 'rgba(6,18,36,0.72)'; ctx.beginPath(); ctx.roundRect(x - 26, y - 62, w + 64, 92, 14); ctx.fill();
     ctx.fillStyle = OF.yellow; ctx.fillRect(x - 26, y - 62, 8, 92);
     ctx.beginPath(); ctx.rect(x, y - 70, w * fr + 4, 110); ctx.clip(); ctx.fillStyle = OF.white; ctx.textBaseline = 'alphabetic'; ctx.fillText(str, x, y); ctx.restore();
@@ -854,7 +857,12 @@ function ofCaption(str, o = {}) {
 }
 // the scene tag top-left: number + name, cyan
 function ofTag(num, str) {
-  const f = () => { const a = ev(E0 + 0.1, 0.35); if (a <= 0) return; ctx.save(); ctx.globalAlpha = a; ctx.font = `800 30px ${OFONT}`; ctx.fillStyle = OF.cyan; ctx.fillText(num, 90, 96); ctx.fillStyle = OF.white; ctx.font = `700 30px ${OFONT}`; ctx.fillText(str.toUpperCase(), 140, 96); ctx.fillRect(90, 112, 90 + 20 * str.length * 0.9, 3); ctx.restore(); };
+  const f = () => {
+    const a = ev(E0 + 0.1, 0.35); if (a <= 0) return;
+    const x = PORTRAIT ? 50 : 90, y = PORTRAIT ? 280 : 96;
+    ctx.save(); ctx.globalAlpha = a; ctx.font = `800 30px ${OFONT}`; ctx.fillStyle = OF.cyan; ctx.fillText(num, x, y); ctx.fillStyle = OF.white; ctx.font = `700 30px ${OFONT}`; ctx.fillText(str.toUpperCase(), x + 50, y);
+    ctx.fillRect(x, y + 16, 90 + 20 * str.length * 0.9, 3); ctx.restore();
+  };
   if (DEFER) DEFER.push(f); else f();
 }
 // =====================================================================
@@ -883,6 +891,8 @@ const FACT = { tip: 'OVER 200 m TALL', blade: '100 m+' };   // rotors reach 236 
 const tr = (t, a, b) => ofEase(seg(t, a, b));
 const TOWER_H = 187, VW = 700, CRANE_DX = 190, CRANE_H = 190, BOOM = 620;
 const FOUND_X = 1560;
+const CHIP = PORTRAIT ? [W - 330, 330] : [1720, 100], GAUGE = PORTRAIT ? [60, 430] : [1560, 905];
+let CAMBASE = null; const camBase = () => CAMBASE || CAM0;   // the scene's wide camera (identity in landscape)
 
 // the foundation: monopile from y0 to y1, transition piece with its bottom at yb. Returns the tower seat y (top of the transition piece).
 function foundation(x, wl, o = {}) {
@@ -898,7 +908,7 @@ function bolts(x, y, w, t0, n = 7) {
   if (a < 1) { ctx.strokeStyle = `rgba(47,227,255,${1 - a})`; ctx.lineWidth = 3; ctx.beginPath(); ctx.ellipse(x, y, w * (0.5 + a), 8 + 14 * a, 0, 0, TAU); ctx.stroke(); }
 }
 // the guide badge: Atlas in a ring with a short line, screen space (call through DEFER)
-function badge(str, t0, t1, x = W - 230, y = 190) {
+function badge(str, t0, t1, x = W - (PORTRAIT ? 150 : 230), y = PORTRAIT ? 380 : 190) {
   const f = () => {
     const a = clamp(Math.min(ev(E0 + t0, 0.35), 1 - ev(E0 + t1 - 0.3, 0.3))); if (a <= 0) return;
     ctx.save(); ctx.globalAlpha = a; const s = 0.85 + 0.15 * a;
@@ -919,8 +929,8 @@ const screenChip = (str, x, y, o = {}) => { const f = () => ofChip(str, x, y, o)
 // ---------------------------------------------------------------------
 function sceneOpen() {
   const t = TT - E0, len = SC.open[1] - SC.open[0], u = ofEase(t / (len - 0.6)), HY = 720;
-  ofBounds(-400, W + 400);
-  ofSky(-800, HY, { sunX: W * 0.2 });
+  ofBounds(-400, WW + 400);
+  ofSky(-800, HY, { sunX: WW * 0.2 });
   ofBirds(120, 520, 7);
   ofSeaBack(HY, H + 300);
   // the far shore (left): dark headland that the pull-back reveals
@@ -936,7 +946,7 @@ function sceneOpen() {
   const ba = ev(E0 + 2.6, 0.8); if (ba > 0) { ctx.save(); ctx.globalAlpha = ba; ofShip(x + 150 + 190 * s, HY + 36 + Math.sin(TT * 1.4) * 3, 0.9); ctx.restore(); }
   // distance and height markers
   ofDim(440, HY - 14, x - 70 * s, HY - 14, 'FAR FROM SHORE', { p: tr(t, 3.3, 4.8), dy: -34, size: 28 });
-  ofDim(x + 230 * s + 40, by + 10 * s, x + 230 * s + 40, T.top - 250 * s - 30 * s, FACT.tip, { p: tr(t, 2.2, 3.6), dx: 78, size: 28 });
+  { const dxx = PORTRAIT ? -(230 * s + 40) : 230 * s + 40; ofDim(x + dxx, by + 10 * s, x + dxx, T.top - 250 * s - 30 * s, FACT.tip, { p: tr(t, 2.2, 3.6), dx: PORTRAIT ? 0 : 78, size: 28 }); }
   ofTag('01', 'The impossible site');
   ofCaption('HOW DO YOU BUILD THIS AT SEA?', { at: len - 3.2 });
   badge('Good question.', len - 3.4, len - 0.2);
@@ -954,11 +964,11 @@ function f2pile(t) {
 }
 function sceneFound() {
   const t = TT - E0, { wl, sb, px } = F2, P = f2pile(t);
-  ofBounds(-400, W + 400);
-  ofSky(-900, wl, { sunX: W * 0.82 });
-  ofSeabed(sb, -400, W + 400, 400);
+  ofBounds(-400, WW + 400);
+  ofSky(-900, wl, { sunX: WW * 0.82 });
+  ofSeabed(sb, -400, WW + 400, 400);
   ofSeaBack(wl, sb + 2, { glitter: true });
-  ofBubbles(wl + 20, sb - 10, 0, W, 34); ofBirds(60, 230, 5);
+  ofBubbles(wl + 20, sb - 10, 0, WW, 34); ofBirds(60, 230, 5);
   // the installation vessel behind the action: legs on the seabed, hull above the waves
   const vx = 520, deckY = 250, J = ofJackup(vx, deckY, { w: VW, leg: sb - (deckY + 70), legTop: deckY - 300 });
   const crx = vx + CRANE_DX, A = Math.acos(clamp((px - crx) / BOOM, -1, 1)) / DEG;
@@ -986,8 +996,8 @@ function sceneFound() {
   const ann = tr(t, 8.4, 8.9) * (1 - tr(t, 9.0, 9.4));
   if (ann > 0) {
     ctx.save(); ctx.globalAlpha = ann; ctx.fillStyle = 'rgba(47,227,255,0.12)'; ctx.fillRect(px - 150, sb, 300, 140); ctx.setLineDash([10, 8]); ctx.strokeStyle = OF.cyan; ctx.lineWidth = 2.5; ctx.strokeRect(px - 150, sb, 300, 140); ctx.setLineDash([]);
-    ofDim(px + 190, sb, px + 190, P.pb + 4, 'DRIVEN DEEP', { p: tr(t, 8.5, 9.4), dx: 100, size: 28 });
-    ofChip('SEABED', px + 420, sb + 95, { size: 26 }); ctx.restore();
+    { const lx = px + (PORTRAIT ? -120 : 190); ofDim(lx, sb, lx, P.pb + 4, 'DRIVEN DEEP', { p: tr(t, 8.5, 9.4), dx: PORTRAIT ? -150 : 100, size: 28 }); }
+    if (PORTRAIT) ofChip('SEABED', px - 300, sb - 25, { size: 26 }); else ofChip('SEABED', px + 420, sb + 95, { size: 26 }); ctx.restore();
   }
   if (t > 2 && t < 8.4) { ofChip('MONOPILE', px - 230, 700, { size: 28, a: tr(t, 2.2, 2.8) * (1 - tr(t, 7.8, 8.4)) }); }
   // transition piece and the first tower section (12.6 - 15), seen close up
@@ -1002,11 +1012,11 @@ function sceneFound() {
 }
 function camFound(t) {
   let sh = 0; for (let i = 0; i < F2.hitN; i++) { const d = t - (F2.hit0 + i * F2.hitDt); if (d > 0 && d < 0.5) sh += Math.sin(d * 60) * 5 * Math.exp(-d * 12); }   // a small shake on every hammer blow
-  if (t < 2.0) return { z: 1, tx: 0, ty: 330 * (1 - ofEase(t / 1.8)) };
-  const u = tr(t, 9.4, 10.4); if (u > 0) return camMix(CAM0, camOf({ z: 1.9, p: [F2.px, 330], to: [F2.px, 620] }), u);
+  if (t < 2.0) { const b = camBase(); return { z: b.z, tx: b.tx, ty: b.ty + 330 * (1 - ofEase(t / 1.8)) * b.z }; }
+  const u = tr(t, 9.4, 10.4); if (u > 0) return camMix(camBase(), camOf({ z: 1.9, p: [F2.px, 330], to: [F2.px, 620] }), u);
   const w = tr(t, 4.4, 5.4) * (1 - tr(t, 8.0, 8.8));   // track down to the pile and the seabed while it is driven
-  if (w > 0) { const c = camMix(CAM0, camOf({ z: 1.5, p: [F2.px, 820], to: [F2.px, 650] }), w); return { z: c.z, tx: c.tx, ty: c.ty + sh }; }
-  return Math.abs(sh) > 0.05 ? { z: 1, tx: 0, ty: sh } : null;
+  if (w > 0) { const c = camMix(camBase(), camOf({ z: 1.5, p: [F2.px, 820], to: [F2.px, 650] }), w); return { z: c.z, tx: c.tx, ty: c.ty + sh }; }
+  { const b = camBase(); return Math.abs(sh) > 0.05 ? { z: b.z, tx: b.tx, ty: b.ty + sh } : null; }
 }
 
 // ---------------------------------------------------------------------
@@ -1023,11 +1033,11 @@ function j3(t) {   // deck y, x, leg reach
 }
 function sceneJack() {
   const t = TT - E0, { wl, sb } = F3, J = j3(t);
-  ofBounds(-400, W + 400);
-  ofSky(-900, wl, { sunX: W * 0.82 });
-  ofSeabed(sb, -400, W + 400, 300);
+  ofBounds(-400, WW + 400);
+  ofSky(-900, wl, { sunX: WW * 0.82 });
+  ofSeabed(sb, -400, WW + 400, 300);
   ofSeaBack(wl, sb + 2);
-  ofBubbles(wl + 20, sb - 10, 0, W, 30); ofBirds(60, 300, 6);
+  ofBubbles(wl + 20, sb - 10, 0, WW, 30); ofBirds(60, 300, 6);
   foundation(FOUND_X, wl, { y1: sb + 90 });
   const V = ofJackup(J.x, J.deckY, { w: VW, leg: J.leg, legTop: J.deckY - 300 });
   // crane stowed along the deck until the lift (boom up and out)
@@ -1037,7 +1047,7 @@ function sceneJack() {
   const gap = tr(t, 9.0, 11.0) * (1 - tr(t, 12.0, 12.6));
   if (gap > 0) {
     ctx.save(); ctx.globalAlpha = gap; ctx.setLineDash([14, 10]); ctx.strokeStyle = OF.cyan; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.moveTo(J.x - 520, wl); ctx.lineTo(J.x + 520, wl); ctx.stroke(); ctx.setLineDash([]); ctx.restore();
-    ofDim(J.x - 400, wl, J.x - 400, J.bot, 'ABOVE THE WAVES', { p: tr(t, 10.0, 11.4), dx: -150, size: 28 });
+    ofDim(J.x - (PORTRAIT ? 250 : 400), wl, J.x - (PORTRAIT ? 250 : 400), J.bot, 'ABOVE THE WAVES', { p: tr(t, 10.0, 11.4), dx: PORTRAIT ? -40 : -150, size: 28 });
   }
   if (t > 12.2) { const a = tr(t, 12.2, 13.0); ctx.save(); ctx.globalAlpha = a; ofChip('STABLE LIFTING PLATFORM', J.x + 30, J.deckY - 230, { size: 30 }); ctx.restore(); }
   if (t > 5.4 && t < 8.6) ofChip('LEGS DOWN', J.x - 270, sb - 110, { size: 28, a: tr(t, 5.4, 6.0) * (1 - tr(t, 8.0, 8.6)) });
@@ -1047,9 +1057,9 @@ function sceneJack() {
 }
 function camJack(t) {
   const u = tr(t, 5.2, 7.0) * (1 - tr(t, 8.0, 9.4));
-  if (u > 0) return camMix(CAM0, camOf({ z: 1.35, p: [F3.x1 - 100, 790], to: [900, 700] }), u);
+  if (u > 0) return camMix(camBase(), camOf({ z: 1.35, p: [F3.x1 - 100, 790], to: [900, 700] }), u);
   const e = tr(t, 12.4, 16.0);   // a slow push onto the stable platform for the closing hold
-  return e > 0 ? camMix(CAM0, camOf({ z: 1.3, p: [F3.x1 + 200, 440], to: [960, 540] }), e) : null;
+  return e > 0 ? camMix(camBase(), camOf({ z: 1.3, p: [F3.x1 + 200, 440], to: [960, 540] }), e) : null;
 }
 
 // ---------------------------------------------------------------------
@@ -1082,11 +1092,11 @@ const SEC_WIN = [[2.2, 6.1], [7.4, 10.3], [11.4, 14.3]];      // [pick, release]
 const K4 = 0.8;   // scene 4's timeline is written in 'internal' seconds; it plays at 0.8x length
 function sceneLift() {
   const t = (TT - E0) / K4, { wl, sb } = F4;
-  ofBounds(-400, W + 400);
-  ofSky(-1400, wl, { sunX: W * 0.82 });
-  ofSeabed(sb, -400, W + 400, 300);
+  ofBounds(-400, WW + 400);
+  ofSky(-1400, wl, { sunX: WW * 0.82 });
+  ofSeabed(sb, -400, WW + 400, 300);
   ofSeaBack(wl, sb + 2);
-  ofBubbles(wl + 20, sb - 10, 0, W, 30); ofBirds(-300, 300, 7);
+  ofBubbles(wl + 20, sb - 10, 0, WW, 30); ofBirds(-300, 300, 7);
   foundation(FOUND_X, wl, { y1: sb + 90 });
   const V = ofJackup(F4.x, F4.deck, { w: VW, leg: sb - (F4.deck + 70), legTop: F4.deck - 300 });
   const hk = hookAt(t), crx = F4.x + CRANE_DX;
@@ -1118,7 +1128,7 @@ function sceneLift() {
   ofSeaFront(wl, { amp: 5, layers: 2, bottom: sb });
   // counters
   const n = seated.reduce((a, b) => a + b, 0);
-  if (t > 6.1) screenChip(t < 18.6 ? `TOWER  ${n} / 3` : 'NACELLE  ON', 1720, 100, { size: 30 });
+  if (t > 6.1) screenChip(t < 18.6 ? `TOWER  ${n} / 3` : 'NACELLE  ON', CHIP[0], CHIP[1], { size: 30 });
   ofTag('04', 'The assembly');
   const cap = t < 2 ? 'THE CRANE STARTS WITH THE TOWER' : (t < 14.9 ? 'EACH FLANGE IS ALIGNED AND BOLTED' : 'THEN THE NACELLE GOES UP');
   ofCaption(cap, { at: (t < 2 ? 0.4 : (t < 14.9 ? 2.4 : 15.4)) * K4 });
@@ -1126,11 +1136,11 @@ function sceneLift() {
 function camLift(t) {
   t = t / K4;
   let u = tr(t, 1.5, 2.6) * (1 - tr(t, 3.2, 4.2));
-  if (u > 0) return camMix(CAM0, camOf({ z: 2.4, p: [1250, 330], to: [960, 600] }), u);
+  if (u > 0) return camMix(camBase(), camOf({ z: 2.4, p: [1250, 330], to: [960, 600] }), u);
   u = tr(t, 4.4, 5.2) * (1 - tr(t, 6.3, 7.1));
-  if (u > 0) return camMix(CAM0, camOf({ z: 2.3, p: [FOUND_X, 620], to: [960, 600] }), u);
+  if (u > 0) return camMix(camBase(), camOf({ z: 2.3, p: [FOUND_X, 620], to: [960, 600] }), u);
   u = tr(t, 17.0, 17.8) * (1 - tr(t, 18.9, 19.0));
-  if (u > 0) return camMix(CAM0, camOf({ z: 2.2, p: [FOUND_X - 40, 110], to: [960, 560] }), u);
+  if (u > 0) return camMix(camBase(), camOf({ z: 2.2, p: [FOUND_X - 40, 110], to: [960, 560] }), u);
   return null;
 }
 
@@ -1147,11 +1157,11 @@ function bladeRoot(t) {   // root position of the hoisted blade
 }
 function sceneBlade() {
   const t = TT - E0, { wl, sb } = F5, hub = F5.hub, L = F5.L;
-  ofBounds(-400, W + 400);
-  ofSky(-1400, wl, { sunX: W * 0.82 });
-  ofSeabed(sb, -400, W + 400, 300);
+  ofBounds(-400, WW + 400);
+  ofSky(-1400, wl, { sunX: WW * 0.82 });
+  ofSeabed(sb, -400, WW + 400, 300);
   ofSeaBack(wl, sb + 2);
-  ofBubbles(wl + 20, sb - 10, 0, W, 30); ofBirds(-200, 330, 7);
+  ofBubbles(wl + 20, sb - 10, 0, WW, 30); ofBirds(-200, 330, 7);
   foundation(FOUND_X, wl, { y1: sb + 90 });
   ofJackup(F5.x, F5.deck, { w: VW, leg: sb - (F5.deck + 70), legTop: F5.deck - 300 });
   const gust = windAt(t), sway = Math.sin(t * 3.1) * 0.065 * Math.max(0, gust - 0.36) * 2.2 * (1 - tr(t, 10.8, 12.2));
@@ -1185,9 +1195,9 @@ function sceneBlade() {
   bolts(hubX, hubY + 4, 40, E0 + 13.4);
   ofSeaFront(wl, { amp: 6, layers: 2, bottom: sb });
   // wind streaks
-  const ws = clamp((gust - 0.34) * 2.4); if (ws > 0.02) for (let i = 0; i < 26; i++) { const y = 80 + ofRand('ws', i) * 700, x = mod(ofRand('wx', i) * 2400 + TT * (900 + 600 * ws) * 1, 2400) - 240; ctx.strokeStyle = `rgba(255,255,255,${0.35 * ws})`; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + 90 + 120 * ws, y + 6); ctx.stroke(); }
+  const ws = clamp((gust - 0.34) * 2.4); if (ws > 0.02) for (let i = 0; i < 26; i++) { const y = (PORTRAIT ? -500 : 80) + ofRand('ws', i) * (PORTRAIT ? 1800 : 700), x = mod(ofRand('wx', i) * 2400 + TT * (900 + 600 * ws) * 1, 2400) - 240; ctx.strokeStyle = `rgba(255,255,255,${0.35 * ws})`; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + 90 + 120 * ws, y + 6); ctx.stroke(); }
   // the weather gauge: wind against the lift limit
-  const gx = 1560, gy = 905, gw = 300;
+  const gx = GAUGE[0], gy = GAUGE[1], gw = 300;
   const f = () => {
     const a = tr(t, 2.6, 3.4) * (1 - tr(t, 13.4, 14.2)); if (a <= 0) return; const lim = 0.7, over = gust > lim;
     ctx.save(); ctx.globalAlpha = a; ctx.fillStyle = 'rgba(6,18,36,0.88)'; ctx.beginPath(); ctx.roundRect(gx - 24, gy - 74, gw + 48, 150, 16); ctx.fill(); ctx.strokeStyle = over ? OF.red : OF.cyan; ctx.lineWidth = 2.5; ctx.stroke();
@@ -1197,16 +1207,16 @@ function sceneBlade() {
     ctx.fillStyle = over ? OF.red : OF.cyan; ctx.font = `800 26px ${OFONT}`; ctx.fillText(over ? 'HOLD THE LIFT' : (t > 11.0 ? 'WINDOW OPEN' : 'WATCHING'), gx, gy + 62 - 6); ctx.restore();
   };
   if (DEFER) DEFER.push(f); else f();
-  if (done) screenChip(t < 14.8 ? 'BLADE  1 / 3' : (t < 15.5 ? 'BLADE  2 / 3' : 'BLADE  3 / 3'), 1720, 100, { size: 30 });
+  if (done) screenChip(t < 14.8 ? 'BLADE  1 / 3' : (t < 15.5 ? 'BLADE  2 / 3' : 'BLADE  3 / 3'), CHIP[0], CHIP[1], { size: 30 });
   ofTag('05', 'The delicate lift');
   ofCaption(t < 7.8 ? 'ONE BLADE, LIFTED ALONE' : (t < 11.0 ? 'A GUST CAN STOP THE JOB' : (t < 13.6 ? 'WAIT FOR THE WEATHER WINDOW' : 'THREE BLADES. DONE.')), { at: t < 7.8 ? 0.8 : (t < 11.0 ? 7.9 : (t < 13.6 ? 11.1 : 13.7)) });
   badge('Too windy? We wait.', 8.2, 11.4);
 }
 function camBlade(t) {
   const f = tr(t, 2.8, 4.6) * (1 - tr(t, 7.8, 9.0));   // follow the blade up
-  if (f > 0) return camMix(CAM0, camOf({ z: 1.45, p: [1330, 300], to: [960, 520] }), f);
+  if (f > 0) return camMix(camBase(), camOf({ z: 1.45, p: [1330, 300], to: [960, 520] }), f);
   const u = tr(t, 10.8, 11.7) * (1 - tr(t, 13.6, 14.4));
-  return u > 0 ? camMix(CAM0, camOf({ z: 2.3, p: [F5.hub[0] - 70, F5.hub[1] + 6], to: [960, 540] }), u) : null;
+  return u > 0 ? camMix(camBase(), camOf({ z: 2.3, p: [F5.hub[0] - 70, F5.hub[1] + 6], to: [960, 540] }), u) : null;
 }
 
 // ---------------------------------------------------------------------
@@ -1223,8 +1233,8 @@ function cablePath() {   // along the seabed: from the westmost turbine to the s
 function sceneFarm() {
   const t = TT - E0, { wl, sb } = F6;
   ofBounds(-3200, 6400);
-  ofSky(-2200, wl, { sunX: 1560, clouds: 6 });
-  ofSeabed(sb, -3200, 6400, 1500);
+  ofSky(-3600, wl, { sunX: 1560, clouds: 6 });
+  ofSeabed(sb, -3200, 6400, 4200);
   ofSeaBack(wl, sb + 2, { glitter: false });
   // shore on the right: land, houses, a pylon
   ctx.fillStyle = '#16293f'; ctx.beginPath(); ctx.moveTo(SHOREX - 160, wl + 60); ctx.lineTo(SHOREX - 40, wl - 10); for (let x = SHOREX; x <= SHOREX + 1200; x += 60) ctx.lineTo(x, wl - 60 - 50 * Math.sin(x * 0.004) - 30 * Math.sin(x * 0.011)); ctx.lineTo(SHOREX + 1200, sb + 40); ctx.lineTo(SHOREX - 160, sb + 40); ctx.closePath(); ctx.fill();
@@ -1259,8 +1269,10 @@ function sceneFarm() {
   ofCaption(t < 4.6 ? 'ONE TURBINE BECOMES A WIND FARM' : (t < 8.6 ? 'POWER RUNS THROUGH THE SEABED' : 'A SUBSTATION SENDS IT TO SHORE'), { at: t < 4.6 ? 0.6 : (t < 8.6 ? 4.8 : 8.8) });
 }
 function camFarm(t) {
-  const len = SC.farm[1] - SC.farm[0], u = tr(t, 1.2, len - 1.6), z = lerp(1, 0.3, u);
-  return camOf({ z, p: [lerp(FOUND_X, 2300, u * 0.0 + 0), lerp(500, 500, u)], to: [lerp(FOUND_X * 1, 950, u), lerp(500, 540, u)] });
+  const len = SC.farm[1] - SC.farm[0], u = tr(t, 1.2, len - 1.6);
+  if (PORTRAIT) { const u2 = tr(t, 1.2, len - 0.3); return camOf({ z: lerp(0.9, 0.3, u2), p: [lerp(1560, 3000, u2), lerp(480, 700, u2)], to: [960, 540] }); }
+  if (false) return camOf({ z: lerp(0.9, 0.3, u), p: [lerp(1560, 3000, u), lerp(480, 700, u)], to: [960, 540] });   // zoom out and pan toward the substation and the shore
+  return camOf({ z: lerp(1, 0.3, u), p: [FOUND_X, 500], to: [lerp(FOUND_X, 950, u), lerp(500, 540, u)] });
 }
 
 // ---------------------------------------------------------------------
@@ -1274,16 +1286,20 @@ function sceneEnd() {
 }
 // =====================================================================
 //  ERAS, CAMERAS — hard cuts between the six stages (BRIDGES empty); per-scene cameras in scenes.js
+//  Portrait (9:16): each scene has a wide camera that frames its action in a 1080-wide window of the world: [zoom, world x, world y]
 // =====================================================================
 const ERA_BG = ['#0d2a4d', '#0d2a4d', '#0d2a4d', '#0d2a4d', '#0d2a4d', '#0d2a4d', '#000000'];
 const CAMFN = [null, camFound, camJack, camLift, camBlade, camFarm, null];
+const WIDE_P = [[0.8, 960, 480], [1.1, 640, 560], [0.85, 1000, 560], [0.85, 1100, 470], [0.85, 1100, 470], [0.9, 1560, 480], [1, 960, 540]];
 // every scene drifts in slowly (up to +4%) on top of its own camera, so no stretch of the picture is dead
 function pieceCam(era, t) {
   const f = CAMFN[era], t0 = ERA_LIST[era][0], len = ERA_LIST[era][1] - t0;
-  const c = (f && f(t - t0)) || CAM0;
-  if (era === ERA_LIST.length - 1) return c;
+  CAMBASE = PORTRAIT ? camOf({ z: WIDE_P[era][0], p: [WIDE_P[era][1], WIDE_P[era][2]], to: [960, 540] }) : null;
+  let c = (f && f(t - t0)) || camBase();
+  if (era === ERA_LIST.length - 1) return c;   // the end card draws on the bare canvas
   const d = 1 + 0.04 * EZ.io((t - t0) / len);
-  return { z: c.z * d, tx: c.tx * d + (1 - d) * W / 2, ty: c.ty * d + (1 - d) * H / 2 };
+  c = { z: c.z * d, tx: c.tx * d + (1 - d) * 960, ty: c.ty * d + (1 - d) * 540 };   // drift about the landscape centre
+  return PORTRAIT ? { z: c.z, tx: c.tx - 420, ty: c.ty + 420 } : c;   // portrait: that centre lands on the middle of the 1080x1920 frame
 }
 const BRIDGES = [];
 

@@ -1,6 +1,6 @@
 # How Offshore Wind Turbines Are Assembled at Sea
 
-Channel: World in the Making. Format 16:9, 1920x1080, 24 fps, about 93.75s including a 2s end card.
+Channel: World in the Making. Formats 16:9 (1920x1080) and 9:16 (1080x1920), 24 fps, about 93.75s including a 2s end card.
 Style: `offshore` (styles/offshore/kit.js), 2.5D cinematic industrial: layered vector side views, gradient light, cyan infographics.
 Voice: ElevenLabs "Jeremy - Casual Guy Next Door" (voice_id 5gaEGrWSk4v20HMfIhgC), model eleven_v4, one take per line.
 Story: a ship stands on the seabed, lifts itself above the waves, and builds a turbine on top of a monopile.
@@ -27,5 +27,5 @@ Cuts land on the 8th grid. The voice sets the scene starts (see src/head.html).
 ## Open items
 - assets/subscribe.png is in place (the user's badge, 2000x2000). The end card shows it for 2s.
 - Word timings are estimated (the faster-whisper model could not be downloaded through the proxy). Scenes cue on line starts only.
-- 9:16 Shorts layout not built.
+- 9:16 built: node tools/export.mjs pieces/offshore-wind --format 9:16 --share (portrait cameras in src/bridges.js WIDE_P, safe zone 240/420/140).
 - Atlas is an invented hard-hat mascot. Replace with the real design if one exists.

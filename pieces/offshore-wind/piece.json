@@ -10,7 +10,8 @@
     "frames": 2088
   },
   "formats": [
-    "16:9"
+    "16:9",
+    "9:16"
   ],
   "storyFormat": "fixed-bottom installation journey, hard cuts between six stages, then an end card",
   "style": "offshore",

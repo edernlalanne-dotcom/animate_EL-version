@@ -22,13 +22,13 @@ function ofSky(y0, y1, o = {}) {
   g.addColorStop(0, o.top ?? '#081a36'); g.addColorStop(0.55, o.mid ?? '#27527e'); g.addColorStop(1, o.bot ?? '#f2a65a');
   ctx.fillStyle = g; ctx.fillRect(OFX0, y0 - 400, OFX1 - OFX0, y1 - y0 + 400);
   if (o.sun !== false) {
-    const sx = o.sunX ?? W * 0.78, sy = y1 - 14, r = 520;
+    const sx = o.sunX ?? WW * 0.78, sy = y1 - 14, r = 520;
     const rg = ctx.createRadialGradient(sx, sy, 10, sx, sy, r);
     rg.addColorStop(0, 'rgba(255,205,130,0.85)'); rg.addColorStop(0.35, 'rgba(255,170,90,0.28)'); rg.addColorStop(1, 'rgba(255,170,90,0)');
     ctx.fillStyle = rg; ctx.fillRect(sx - r, sy - r, 2 * r, 2 * r);
   }
   for (let i = 0; i < (o.clouds ?? 4); i++) {   // flat layered clouds, slow parallax
-    const sp = 6 + i * 3, cx = mod(ofRand('cl', i) * (W + 600) + TT * sp, W + 600) - 300, cy = y0 + (y1 - y0) * (0.12 + 0.55 * ofRand('cly', i)), w = 220 + 200 * ofRand('clw', i);
+    const sp = 6 + i * 3, cx = mod(ofRand('cl', i) * (WW + 600) + TT * sp, WW + 600) - 300, cy = y0 + (y1 - y0) * (0.12 + 0.55 * ofRand('cly', i)), w = 220 + 200 * ofRand('clw', i);
     ctx.fillStyle = `rgba(255,236,214,${0.10 + 0.05 * (i % 3)})`;
     ctx.beginPath(); ctx.ellipse(cx, cy, w, 18 + 10 * (i % 2), 0, 0, TAU); ctx.fill();
     ctx.beginPath(); ctx.ellipse(cx + w * 0.3, cy - 14, w * 0.5, 16, 0, 0, TAU); ctx.fill();
@@ -42,7 +42,7 @@ function ofSeaBack(yh, yb, o = {}) {
   ctx.fillStyle = g; ctx.fillRect(OFX0, yh, OFX1 - OFX0, yb - yh);
   // sun glitter on the water
   if (o.glitter !== false) for (let i = 0; i < 38; i++) {
-    const gx = W * 0.78 + (ofRand('gl', i) - 0.5) * 380 * (0.4 + (i % 7) / 7), gy = yh + 6 + ofRand('gly', i) * 90, on = 0.5 + 0.5 * Math.sin(TT * 3 + i * 1.7);
+    const gx = WW * 0.78 + (ofRand('gl', i) - 0.5) * 380 * (0.4 + (i % 7) / 7), gy = yh + 6 + ofRand('gly', i) * 90, on = 0.5 + 0.5 * Math.sin(TT * 3 + i * 1.7);
     ctx.fillStyle = `rgba(255,214,150,${0.45 * on})`; ctx.fillRect(gx, gy, 18 + 26 * ofRand('glw', i), 2);
   }
 }
@@ -69,7 +69,7 @@ function ofBubbles(y0, y1, x0, x1, n) {   // bubbles rise from y1 (low) to y0 (h
 function ofBirds(y0, y1, n) {
   ctx.save(); ctx.lineWidth = 2.2; ctx.lineCap = 'round';
   for (let i = 0; i < n; i++) {
-    const sp = 50 + 50 * ofRand('bds', i), x = mod(ofRand('bdx', i) * (W + 300) + TT * sp, W + 300) - 150, y = y0 + (y1 - y0) * ofRand('bdy', i) + Math.sin(TT * 0.9 + i * 2) * 14, w = 9 + 5 * ofRand('bdw', i), fl = Math.sin(TT * 7 + i * 3) * w * 0.55;
+    const sp = 50 + 50 * ofRand('bds', i), x = mod(ofRand('bdx', i) * (WW + 300) + TT * sp, WW + 300) - 150, y = y0 + (y1 - y0) * ofRand('bdy', i) + Math.sin(TT * 0.9 + i * 2) * 14, w = 9 + 5 * ofRand('bdw', i), fl = Math.sin(TT * 7 + i * 3) * w * 0.55;
     ctx.strokeStyle = 'rgba(18,28,44,0.75)'; ctx.beginPath(); ctx.moveTo(x - w, y - fl * 0.6); ctx.quadraticCurveTo(x - w * 0.4, y - fl - 3, x, y); ctx.quadraticCurveTo(x + w * 0.4, y - fl - 3, x + w, y - fl * 0.6); ctx.stroke();
   }
   ctx.restore();
@@ -238,7 +238,7 @@ function ofChip(str, x, y, o = {}) {   // a dark rounded label chip with cyan te
 function ofCaption(str, o = {}) {
   const f = () => {
     const fr = ev(E0 + (o.at ?? 0.35), 0.5); if (fr <= 0) return;
-    ctx.save(); ctx.font = `700 ${o.size ?? 54}px ${OFONT}`; const w = ctx.measureText(str).width, x = 90, y = H - 110;
+    ctx.save(); ctx.font = `700 ${o.size ?? (PORTRAIT ? 38 : 54)}px ${OFONT}`; const w = ctx.measureText(str).width, x = PORTRAIT ? 50 : 90, y = PORTRAIT ? H - 440 : H - 110;
     ctx.globalAlpha = clamp(fr * 2); ctx.fillStyle = 'rgba(6,18,36,0.72)'; ctx.beginPath(); ctx.roundRect(x - 26, y - 62, w + 64, 92, 14); ctx.fill();
     ctx.fillStyle = OF.yellow; ctx.fillRect(x - 26, y - 62, 8, 92);
     ctx.beginPath(); ctx.rect(x, y - 70, w * fr + 4, 110); ctx.clip(); ctx.fillStyle = OF.white; ctx.textBaseline = 'alphabetic'; ctx.fillText(str, x, y); ctx.restore();
@@ -247,7 +247,12 @@ function ofCaption(str, o = {}) {
 }
 // the scene tag top-left: number + name, cyan
 function ofTag(num, str) {
-  const f = () => { const a = ev(E0 + 0.1, 0.35); if (a <= 0) return; ctx.save(); ctx.globalAlpha = a; ctx.font = `800 30px ${OFONT}`; ctx.fillStyle = OF.cyan; ctx.fillText(num, 90, 96); ctx.fillStyle = OF.white; ctx.font = `700 30px ${OFONT}`; ctx.fillText(str.toUpperCase(), 140, 96); ctx.fillRect(90, 112, 90 + 20 * str.length * 0.9, 3); ctx.restore(); };
+  const f = () => {
+    const a = ev(E0 + 0.1, 0.35); if (a <= 0) return;
+    const x = PORTRAIT ? 50 : 90, y = PORTRAIT ? 280 : 96;
+    ctx.save(); ctx.globalAlpha = a; ctx.font = `800 30px ${OFONT}`; ctx.fillStyle = OF.cyan; ctx.fillText(num, x, y); ctx.fillStyle = OF.white; ctx.font = `700 30px ${OFONT}`; ctx.fillText(str.toUpperCase(), x + 50, y);
+    ctx.fillRect(x, y + 16, 90 + 20 * str.length * 0.9, 3); ctx.restore();
+  };
   if (DEFER) DEFER.push(f); else f();
 }
 // =====================================================================

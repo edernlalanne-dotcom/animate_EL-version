@@ -5,3 +5,4 @@
 - Review known NOTE: the loudest hit is the hull rise at 35.9s in act 3 by design. A 0.6s silence precedes it. The voice speaks over it.
 - Fixed during review: chips cut off during zooms (faded before pushes), SEABED chip overlapped the caption, dead stretches (tracking cameras, bubbles, birds, hammer shake), cuts snapped to the 8th grid.
 - Not verified: the mix by ear, word-level timing.
+- 9:16 review: cuts on grid PASS, text PASS (0 cut-off, 0 in the safe zone), dead beats PASS, loudness -15.0 LUFS.
